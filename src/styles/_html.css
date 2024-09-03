@@ -1,0 +1,5 @@
+html {
+    height: 100%;
+    scrollbar-gutter: stable; /* Reserve ~15px of empty space under the scrollbar when the modal window is active. */
+    margin: 0 !important; /* Revoke the space reserved by Magnific Popup or any other library. Native scrollbar-gutter works better since it doesn’t conflict with elements with position: fixed;" */
+}

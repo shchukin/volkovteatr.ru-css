@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>.label</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../styles/styles.css">
+    </head>
+    <body>
+
+        <div style="max-width: 720px; margin: 0 auto; padding: 0 var(--container-padding);">
+            <br>
+            <br>
+            <h1>.label</h1>
+            <p>
+                Обычно используется с <a href="_input.html"><b><i>input</i></b></a>:
+            </p>
+
+
+            <label class="label" for="ooygvb8t">
+                Ваше имя
+            </label>
+
+            <div class="input">
+                <input class="input__widget" type="text" id="ooygvb8t">
+            </div>
+
+
+            <br>
+            <p>
+                Однако это не часть инпута. Компоненты идут друг за другом. Это делает <b><i>.label</i></b> более универсальным.
+                Его можно использовать с любым другим элементом:
+            </p>
+
+
+            <div class="label">
+                Файловый менеджер
+            </div>
+
+            <!-- temp -->
+            <div style="display: flex; align-items: center; justify-content: center; height: 200px; background-color: purple; color: white;">
+                Random element
+            </div>
+            <!--/temp -->
+
+            <br>
+            <p>
+                Алсо заметим: если имеем дело не с элементом формы, то в качестве тега можно использовать
+                <b><i>&lt;div&gt;</i></b> вместо <b><i>&lt;label&gt;</i></b>, как в примере выше.
+            </p>
+
+
+
+
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+        </div>
+
+
+        <script src="../vendors/jquery/jquery-3.7.1.min.js"></script>
+        <script src="../vendors/magnific-popup/jquery.magnific-popup.min.js"></script>
+        <script src="../vendors/inputmask/jquery.inputmask.min.js"></script>
+        <script src="../vendors/inputmask.phone/inputmask.phone.extensions.min.js"></script>
+        <script src="../vendors/inputmask.phone/phone-codes/phone-ru.min.js"></script>
+        <script src="../scripts/_mfp.js"></script>
+        <script src="../scripts/_input.js"></script>
+        <script src="../scripts/_inputmask.js"></script>
+
+
+    </body>
+</html>

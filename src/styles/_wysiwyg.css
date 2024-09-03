@@ -1,0 +1,72 @@
+.wysiwyg {
+    overflow-wrap: break-word;
+    font-size: var(--body-font-size);
+    line-height: var(--body-line-height);
+}
+
+.wysiwyg p,
+.wysiwyg ul,
+.wysiwyg ol,
+.wysiwyg hr,
+.wysiwyg figure,
+.wysiwyg blockquote {
+    margin-top: var(--body-line-height);
+    margin-bottom: var(--body-line-height);
+}
+
+.wysiwyg p:first-child,
+.wysiwyg ul:first-child,
+.wysiwyg ol:first-child,
+.wysiwyg hr:first-child,
+.wysiwyg figure:first-child,
+.wysiwyg blockquote:first-child {
+    margin-top: 0;
+}
+
+.wysiwyg p:last-child,
+.wysiwyg ul:last-child,
+.wysiwyg ol:last-child,
+.wysiwyg hr:last-child,
+.wysiwyg figure:last-child,
+.wysiwyg blockquote:last-child {
+    margin-bottom: 0;
+}
+
+
+.wysiwyg h2 {
+
+}
+
+.wysiwyg h3 {
+
+}
+
+.wysiwyg h4 {
+
+}
+
+.wysiwyg h2:first-child,
+.wysiwyg h3:first-child,
+.wysiwyg h4:first-child {
+    margin-top: 0;
+}
+
+.wysiwyg h2:last-child,
+.wysiwyg h3:last-child,
+.wysiwyg h4:last-child {
+    margin-bottom: 0;
+}
+
+
+.wysiwyg img {
+    width: 100%;
+    height: auto;
+    vertical-align: top;
+}
+
+.wysiwyg a {
+    /* See .link component */
+}
+
+
+

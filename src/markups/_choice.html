@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>.choice</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../styles/styles.css">
+    </head>
+    <body>
+
+        <div style="max-width: 720px; margin: 0 auto; padding: 0 var(--container-padding);">
+            <br>
+            <br>
+            <h1>.choice</h1>
+
+
+            <label class="choice">
+                <input class="choice__widget" type="checkbox">
+                <span class="choice__label">Paris</span>
+                <i class="choice__icon" role="presentation"></i>
+            </label>
+
+            <label class="choice">
+                <input class="choice__widget" type="radio" name="PFdomUtPW5">
+                <span class="choice__label">Tokyo</span>
+                <i class="choice__icon" role="presentation"></i>
+            </label>
+
+            <label class="choice">
+                <input class="choice__widget" type="checkbox" checked>
+                <span class="choice__label">New York</span>
+                <i class="choice__icon" role="presentation"></i>
+            </label>
+
+            <label class="choice">
+                <input class="choice__widget" type="radio" name="PFdomUtPW5" checked>
+                <span class="choice__label">Sydney</span>
+                <i class="choice__icon" role="presentation"></i>
+            </label>
+
+
+            <br>
+            <br>
+            <h2>.choice--bolder</h2>
+
+            <label class="choice choice--bolder">
+                <input class="choice__widget" type="checkbox">
+                <span class="choice__label">Yellow</span>
+                <i class="choice__icon" role="presentation"></i>
+            </label>
+
+            <label class="choice choice--bolder">
+                <input class="choice__widget" type="radio" name="PFdomUtPW5">
+                <span class="choice__label">Purple</span>
+                <i class="choice__icon" role="presentation"></i>
+            </label>
+
+            <label class="choice choice--bolder">
+                <input class="choice__widget" type="checkbox" checked>
+                <span class="choice__label">Red</span>
+                <i class="choice__icon" role="presentation"></i>
+            </label>
+
+            <label class="choice choice--bolder">
+                <input class="choice__widget" type="radio" name="PFdomUtPW5" checked>
+                <span class="choice__label">Blue</span>
+                <i class="choice__icon" role="presentation"></i>
+            </label>
+
+
+            <br>
+            <br>
+            <h2>:disabled</h2>
+            <br>
+
+
+            <label class="choice">
+                <input class="choice__widget" type="checkbox" disabled>
+                <span class="choice__label">Pepperoni</span>
+                <i class="choice__icon" role="presentation"></i>
+            </label>
+
+            <label class="choice">
+                <input class="choice__widget" type="radio" name="Szf0XOC" disabled>
+                <span class="choice__label">Mushrooms</span>
+                <i class="choice__icon" role="presentation"></i>
+            </label>
+
+            <label class="choice">
+                <input class="choice__widget" type="checkbox" checked disabled>
+                <span class="choice__label">Onions</span>
+                <i class="choice__icon" role="presentation"></i>
+            </label>
+
+            <label class="choice">
+                <input class="choice__widget" type="radio" name="Szf0XOC" checked disabled>
+                <span class="choice__label">Olives</span>
+                <i class="choice__icon" role="presentation"></i>
+            </label>
+
+
+            <br>
+            <br>
+            <h2>.choice--full-width</h2>
+
+            <p>
+                By default, the <b><i>.choice</i></b> component has a width based on the text inside
+                <b class="nobr"><i>(fit-content)</i></b>. However, in some cases, we want it to be <span class="nobr">full-width</span>,
+                for example, in a list of options in the sidebar or in a dropdown. In this case,
+                we want to move the cursor over all checkboxes and be able to click them even if
+                some of them are shorter.
+            </p>
+
+
+            <label class="choice choice--full-width">
+                <input class="choice__widget" type="checkbox">
+                <span class="choice__label">Mystery</span>
+                <i class="choice__icon" role="presentation"></i>
+            </label>
+
+            <label class="choice choice--full-width">
+                <input class="choice__widget" type="checkbox">
+                <span class="choice__label">Fantasy</span>
+                <i class="choice__icon" role="presentation"></i>
+            </label>
+
+            <label class="choice choice--full-width">
+                <input class="choice__widget" type="checkbox" checked>
+                <span class="choice__label">Romance</span>
+                <i class="choice__icon" role="presentation"></i>
+            </label>
+
+            <label class="choice choice--full-width">
+                <input class="choice__widget" type="checkbox" checked>
+                <span class="choice__label">Science Fiction</span>
+                <i class="choice__icon" role="presentation"></i>
+            </label>
+
+
+            <br>
+            <p>
+                Although, if it’s not a tiny sidebar but a wide area, it feels weird to be able
+                to hover or click too far to the right, like in the example above. It makes sense
+                to wrap checkboxes in the vertical <b class="nobr"><i>fit-content</i></b> flex or
+                <b><i>inline-flex</i></b>, so all checkboxes will be stretch to <span class="nobr">full-width</span> but
+                whole thing will be limited by the width of the longest item:
+            </p>
+
+            <div style="display: flex; width: fit-content; flex-direction: column;">
+
+                <label class="choice choice--full-width">
+                    <input class="choice__widget" type="checkbox">
+                    <span class="choice__label">Mystery</span>
+                    <i class="choice__icon" role="presentation"></i>
+                </label>
+
+                <label class="choice choice--full-width">
+                    <input class="choice__widget" type="checkbox">
+                    <span class="choice__label">Fantasy</span>
+                    <i class="choice__icon" role="presentation"></i>
+                </label>
+
+                <label class="choice choice--full-width">
+                    <input class="choice__widget" type="checkbox" checked>
+                    <span class="choice__label">Romance</span>
+                    <i class="choice__icon" role="presentation"></i>
+                </label>
+
+                <label class="choice choice--full-width">
+                    <input class="choice__widget" type="checkbox" checked>
+                    <span class="choice__label">Science Fiction</span>
+                    <i class="choice__icon" role="presentation"></i>
+                </label>
+
+            </div>
+
+
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+        </div>
+
+
+        <script src="../vendors/jquery/jquery-3.7.1.min.js"></script>
+        <script src="../vendors/magnific-popup/jquery.magnific-popup.min.js"></script>
+        <script src="../vendors/inputmask/jquery.inputmask.min.js"></script>
+        <script src="../vendors/inputmask.phone/inputmask.phone.extensions.min.js"></script>
+        <script src="../vendors/inputmask.phone/phone-codes/phone-ru.min.js"></script>
+        <script src="../scripts/_mfp.js"></script>
+        <script src="../scripts/_input.js"></script>
+        <script src="../scripts/_inputmask.js"></script>
+
+
+    </body>
+</html>

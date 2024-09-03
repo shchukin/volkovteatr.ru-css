@@ -1,0 +1,60 @@
+.link,
+.wysiwyg a {
+    display: inline;
+    vertical-align: baseline;
+    padding: 6px 0; /* Extend the clickable area and ensure the link remains clickable even if the cursor is between lines */
+    background-color: transparent;
+    border: none;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    color: #1B73E8;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.25em;
+    cursor: pointer;
+    transition: text-decoration-color var(--transition-hover);
+}
+
+.link:hover,
+.wysiwyg a:hover {
+    text-decoration-color: transparent;
+}
+
+.link:active,
+.wysiwyg a:active {
+    color: #777777;
+    transition: none;
+}
+
+
+.link--text-alike,
+.wysiwyg .link--text-alike {
+    color: inherit;
+}
+
+
+.link--no-hover,
+.link--no-hover:hover,
+.link--no-hover:active,
+.wysiwyg .link--no-hover,
+.wysiwyg .link--no-hover:hover,
+.wysiwyg .link--no-hover:active {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+.link--fake,
+.link--fake:hover,
+.link--fake:active,
+.wysiwyg .link--fake,
+.wysiwyg .link--fake:hover,
+.wysiwyg .link--fake:active {
+    text-decoration: none;
+    color: inherit;
+    cursor: text;
+}
+
+
+

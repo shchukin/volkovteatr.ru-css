@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="https://schema.org/Thing">
+    <head>
+        <meta charset="utf-8">
+        <title>[%title%]</title>
+        <meta name="description" content="[%description%]">
+
+        <!-- schema.org (google plus) -->
+        <meta itemprop="url" content="[%url%]">
+        <meta itemprop="image" content="[%img%]">
+        <meta itemprop="name" content="[%title%]">
+        <meta itemprop="description" content="[%description%]">
+
+        <!-- ogp.me (facebook & vkontakte) -->
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="[%url%]">
+        <meta property="og:image" content="[%img%]">
+        <meta property="og:image:width" content="1200">
+        <meta property="og:image:height" content="675">
+        <meta property="og:title" content="[%title%]">
+        <meta property="og:description" content="[%description%]">
+        <meta property="fb:app_id" content="[%facebook-app-id%]">
+
+        <!-- twitter -->
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:url" content="[%url%]">
+        <meta name="twitter:image" content="[%img%]">
+        <meta name="twitter:title" content="[%title%]">
+        <meta name="twitter:description" content="[%description%]">
+        <meta name="twitter:site" content="@user">
+        <meta name="twitter:creator" content="@user">
+
+        <!-- favicon -->
+        <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
+        <link rel="mask-icon" href="../favicon/safari-pinned-tab.svg" color="#FFFFFF">
+
+        <!-- manifest -->
+        <link rel="manifest" href="../manifest.json">
+        <meta name="theme-color" content="#FFFFFF">
+        <meta name="msapplication-config" content="../browserconfig.xml">
+        <meta name="msapplication-TileColor" content="#FFFFFF">
+
+        <!-- assets -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../styles/styles.css">
+
+    </head>
+    <body>
+
+        <!--[if IE]>
+            <div class="browser">
+                Вы используете устаревший браузер. Для корректной работы этого сайта и большинства других вам необходимо перейти на современный&nbsp;браузер.
+            </div>
+        <![endif]-->
+
+        <!--[if IE]>
+        <div class="browser">
+            It appears that you’re using an outdated browser. For this site and most others to work correctly, you need to switch to a modern browser.
+        </div>
+        <![endif]-->
+
+        <div class="container">
+            Hello, World!
+
+            <a class="link mfp-handler" href="#login">Login</a>
+
+
+        </div>
+
+
+        <!-- .mfp -->
+        <div class="window mfp-hide" id="login">
+            <button class="window__close mfp-close" type="button">
+                Close
+            </button>
+            <div class="login">
+                <h2 class="login__heading">
+                    Magnific Popup!
+                </h2>
+                <div class="login__body">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut consequatur debitis eligendi fugiat provident sed, velit! At debitis dolore fuga ipsum laudantium nemo reiciendis temporibus voluptates? Ab, accusantium aspernatur cumque dicta ducimus eaque eius eos eum in maxime nihil nulla numquam velit. Accusamus, aliquid atque beatae culpa cupiditate fugiat iure iusto non odit pariatur quae saepe ullam voluptatibus.
+                </div>
+            </div>
+        </div>
+
+
+        <script src="../vendors/jquery/jquery-3.7.1.min.js"></script>
+        <script src="../vendors/magnific-popup/jquery.magnific-popup.min.js"></script>
+        <script src="../vendors/inputmask/jquery.inputmask.min.js"></script>
+        <script src="../vendors/inputmask.phone/inputmask.phone.extensions.min.js"></script>
+        <script src="../vendors/inputmask.phone/phone-codes/phone-ru.min.js"></script>
+        <script src="../scripts/_mfp.js"></script>
+        <script src="../scripts/_input.js"></script>
+        <script src="../scripts/_inputmask.js"></script>
+
+    </body>
+</html>

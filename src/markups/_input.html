@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>.input</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../styles/styles.css">
+    </head>
+    <body>
+
+        <div style="max-width: 720px; margin: 0 auto; padding: 0 var(--container-padding);">
+            <br>
+            <br>
+            <h1>.input</h1>
+
+            <div class="input">
+                <input class="input__widget" type="text" placeholder="First name">
+            </div>
+
+            <br>
+
+            <div class="input">
+                <input class="input__widget" type="text" placeholder="First name" value="Konstantin Konstantinopolsky">
+            </div>
+
+
+            <br>
+            <br>
+            <br>
+            <h2>With <a href="_label.html">.label</a> and <a href="_helper.html">.helper</a></h2>
+            <p>
+                These two are not part of <b><i>.input</i></b> component. However, they often used together,
+                placed before and after, like so:
+            </p>
+
+            <label class="label" for="bp24napi">
+                First name
+            </label>
+
+            <div class="input">
+                <input class="input__widget" type="text" id="bp24napi">
+            </div>
+
+            <div class="helper">
+                Can’t be changed later
+            </div>
+
+            <p>
+                Also, the same <b><i>.helper</i></b> component will be used to output messages in cases covering errors.
+            </p>
+
+            <br>
+            <br>
+            <br>
+            <h2>:disabled</h2>
+
+            <div class="input">
+                <input class="input__widget" type="text" placeholder="First name" disabled>
+            </div>
+            <div class="helper">
+                Please choose contract type before filling the name
+            </div>
+
+            <br>
+
+            <div class="input">
+                <input class="input__widget" type="text" placeholder="First name" value="Konstantin Konstantinopolsky" disabled>
+            </div>
+            <div class="helper">
+                Name can’t be changed
+            </div>
+
+
+            <br>
+            <br>
+            <br>
+            <h2>.input--error</h2>
+            <p>
+                Despite the fact that native <b><i>:invalid</i></b> attribute is widely supported,
+                we still expect that validation to be coded manually. So here are the classes
+                and error messages coded manually as well.
+            </p>
+
+            <div class="input input--error">
+                <input class="input__widget" type="text" placeholder="First name">
+            </div>
+            <div class="helper helper--error">
+                This field is required
+            </div>
+
+            <br>
+
+            <div class="input input--error">
+                <input class="input__widget" type="email" placeholder="Email" value="foobar@example.">
+            </div>
+            <div class="helper helper--error">
+                Email is not valid
+            </div>
+
+            <br>
+            <p>In the multi-error case, helpers should be output one after another, like so:</p>
+
+            <div class="input input--error">
+                <input class="input__widget" type="password" placeholder="Password" value="0xFoo">
+            </div>
+            <div class="helper helper--error">
+                Password is too short
+            </div>
+            <div class="helper helper--error">
+                Password must contain a special character
+            </div>
+            <div class="helper helper--error">
+                Password must be hard to guess: dates, phone numbers and names are not allowed and either it shouldn’t be based on public data
+            </div>
+            <div class="helper helper--error">
+                New password is similar to previous password
+            </div>
+
+
+            <br>
+            <br>
+            <br>
+            <h2>type="password"</h2>
+            <p>
+                The font was changed here for better-looking dots.
+            </p>
+
+            <div class="input">
+                <input class="input__widget" type="password" value="0xFoo">
+            </div>
+
+
+            <br>
+            <br>
+            <br>
+            <h2>&lt;textarea&gt;</h2>
+            <p>
+                Don’t forget to use the <b><i>rows</i></b> attribute to specify number of lines.
+            </p>
+
+            <div class="input">
+                <textarea class="input__widget" placeholder="Your message" rows="3"></textarea>
+            </div>
+
+            <br>
+            <h3>.input--expandable</h3>
+            <p>
+                Using JavaScript, calculate the height to make the textarea expand as the user types.
+                In this case, the <b><i>rows</i></b> attribute will serve as a starting point, and the <b><i>max-height</i></b>
+                set in the styles will limit the computed height, even if it exceeds any reasonable value.
+            </p>
+            <p>
+                The value for this <b><i>max-height</i></b> should be calculated based on the number of lines plus vertical paddings and borders. Currently, it is <b>266px</b>:
+                <br>• <b>10 lines</b> of <b>24px</b> each (line-height)
+                <br>• Plus <b>2×11px</b> — two vertical paddings (top and bottom ones)
+                <br>• Plus <b>4px</b> of border
+            </p>
+
+            <div class="input input--expandable">
+                <textarea class="input__widget" placeholder="Your message" rows="3"></textarea>
+            </div>
+
+            <br>
+            <br>
+            <br>
+            <h2>&lt;select&gt;</h2>
+
+            <div class="input">
+                <select class="input__widget">
+                    <option selected>Bangkok</option>
+                    <option>Moscow</option>
+                    <option>...</option>
+                    <option>Washington</option>
+                </select>
+            </div>
+
+            <br>
+
+            <div class="input">
+                <select class="input__widget" disabled>
+                    <option selected>Bangkok</option>
+                    <option>Moscow</option>
+                    <option>...</option>
+                    <option>Washington</option>
+                </select>
+            </div>
+
+            <br>
+
+            <div class="input input--error">
+                <select class="input__widget">
+                    <option selected>Bangkok</option>
+                    <option>Moscow</option>
+                    <option>...</option>
+                    <option>Washington</option>
+                </select>
+            </div>
+
+
+            <br>
+            <br>
+            <h3>Placeholder in the &lt;select&gt;</h3>
+            <p>
+                Notice that there is a problem with the <b><i>&lt;select&gt;</i></b> tag.
+                It doesn’t work with the <b><i>placeholder</i></b> attribute.
+                It’s expected that at least one option is always selected.
+            </p>
+            <p>
+                However, it doesn’t match the rest of the inputs, especially when there are a few of them in a row along with a select.
+                So let’s fake it.
+            </p>
+            <p>
+                Assign first option to be a placeholder: <b><i>&lt;option value="placeholder"&gt;</i></b>. Then
+                use JS to check if this option is selected and toggle the <b><i>.input--placeholder-is-chosen</i></b>
+                class to change the color.
+            </p>
+
+
+            <div class="input">
+                <select class="input__widget">
+                    <option value="placeholder" selected>City</option>
+                    <option>Bangkok</option>
+                    <option>Moscow</option>
+                    <option>...</option>
+                    <option>Washington</option>
+                </select>
+            </div>
+
+            <br>
+
+            <div class="input">
+                <select class="input__widget" disabled>
+                    <option value="placeholder" selected>City</option>
+                    <option>Bangkok</option>
+                    <option>Moscow</option>
+                    <option>...</option>
+                    <option>Washington</option>
+                </select>
+            </div>
+
+            <br>
+
+            <div class="input input--error">
+                <select class="input__widget">
+                    <option value="placeholder" selected>City</option>
+                    <option>Bangkok</option>
+                    <option>Moscow</option>
+                    <option>...</option>
+                    <option>Washington</option>
+                </select>
+            </div>
+
+            <p>
+                Don’t make option with placeholder to be disabled. Users may want to leave this field untouched, or clear it by re-selecting placeholder.
+                If the form was submitted with <b><i>"placeholder"</i></b> as the value for the select, it should be treated as equivalent to an empty text field.
+            </p>
+            <p>
+                On the other hand, if the field is required, ensure that it does not pass validation with the placeholder selected.
+            </p>
+
+
+            <br>
+            <br>
+            <br>
+            <h2>Other types</h2>
+            <br>
+
+            <label class="label" for="uzoyce97">
+                type="email"
+            </label>
+            <div class="input">
+                <input class="input__widget" type="email" id="uzoyce97">
+            </div>
+
+            <br>
+
+            <label class="label" for="qv6hko4q">
+                type="tel"
+            </label>
+            <div class="input">
+                <input class="input__widget" type="tel" id="qv6hko4q">
+            </div>
+
+            <br>
+
+            <label class="label" for="dqx2iwgu">
+                type="url"
+            </label>
+            <div class="input">
+                <input class="input__widget" type="url" id="dqx2iwgu">
+            </div>
+
+            <br>
+
+            <label class="label" for="ey58yjk9">
+                type="search"
+            </label>
+            <div class="input">
+                <input class="input__widget" type="search" id="ey58yjk9">
+            </div>
+
+            <br>
+
+            <label class="label" for="h68i9f7g">
+                type="number"
+            </label>
+            <div class="input">
+                <input class="input__widget" type="number" id="h68i9f7g">
+            </div>
+
+            <br>
+
+            <label class="label" for="8fq2k8fo">
+                type="color"
+            </label>
+            <div class="input">
+                <input class="input__widget" type="color" id="8fq2k8fo">
+            </div>
+
+            <br>
+
+            <label class="label" for="vecqj15p">
+                type="date"
+            </label>
+            <div class="input">
+                <input class="input__widget" type="date" id="vecqj15p">
+            </div>
+
+            <br>
+
+            <label class="label" for="8xg4jfb3">
+                type="datetime-local"
+            </label>
+            <div class="input">
+                <input class="input__widget" type="datetime-local" id="8xg4jfb3">
+            </div>
+
+            <br>
+
+            <label class="label" for="brif3gg2">
+                type="week"
+            </label>
+            <div class="input">
+                <input class="input__widget" type="week" id="brif3gg2">
+            </div>
+
+            <br>
+
+            <label class="label" for="iei6tkvf">
+                type="month"
+            </label>
+            <div class="input">
+                <input class="input__widget" type="month" id="iei6tkvf">
+            </div>
+
+            <br>
+
+            <label class="label" for="33s23mr7">
+                type="time"
+            </label>
+            <div class="input">
+                <input class="input__widget" type="time" id="33s23mr7">
+            </div>
+
+
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+        </div>
+
+
+        <script src="../vendors/jquery/jquery-3.7.1.min.js"></script>
+        <script src="../vendors/magnific-popup/jquery.magnific-popup.min.js"></script>
+        <script src="../vendors/inputmask/jquery.inputmask.min.js"></script>
+        <script src="../vendors/inputmask.phone/inputmask.phone.extensions.min.js"></script>
+        <script src="../vendors/inputmask.phone/phone-codes/phone-ru.min.js"></script>
+        <script src="../scripts/_mfp.js"></script>
+        <script src="../scripts/_input.js"></script>
+        <script src="../scripts/_inputmask.js"></script>
+
+
+    </body>
+</html>

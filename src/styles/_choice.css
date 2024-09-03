@@ -1,0 +1,127 @@
+.choice {
+    position: relative;
+    display: block;
+    width: fit-content;
+    min-width: 20px;
+    min-height: 34px;
+}
+    .choice__widget {
+        opacity: 0;
+        position: absolute;
+        left: 2px;
+        top: 12px;
+    }
+
+    .choice__label {
+        position: relative;
+        display: flex;
+        vertical-align: top;
+        padding: 7px 0 7px 30px;
+        font-size: 14px;
+        line-height: 20px;
+        color: #0E132B;
+        cursor: pointer;
+        user-select: none;
+    }
+
+    .choice__icon {
+        position: absolute;
+        left: 0;
+        top: 8px;
+        width: 18px;
+        height: 18px;
+        border: 2px solid var(--input-border);
+        background-color: #FFFFFF;
+        background-size: 16px 16px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        border-radius: 2px;
+        pointer-events: none; /* Since this icon is positioned higher than label, let's make it possible to click through, so that the user interacts only with the label. For now, this icon won't generate its own cursor, for example. */
+        transition: background-color var(--transition-hover),
+                    border-color var(--transition-hover);
+    }
+
+    .choice__widget[type="checkbox"] ~ .choice__icon {
+        background-image: url("../vectors/choice-checkbox.svg"); /* by default it can't be seen because of white background */
+    }
+
+    .choice__widget[type="radio"] ~ .choice__icon {
+        background-image: url("../vectors/choice-radio.svg"); /* by default it can't be seen because of white background */
+        border-radius: 50%;
+    }
+
+
+/* Hovered */
+
+.choice__label:hover ~ .choice__icon {
+    background-color: transparent;
+    border-color: var(--input-border-hover-and-focus);
+}
+
+
+/* Checked */
+
+.choice__widget:checked ~ .choice__icon {
+    transition: none;
+    background-color: var(--action-color);
+    border-color: transparent;
+}
+
+
+/* Checked & Hovered */
+
+.choice__widget:checked ~ .choice__label:hover ~ .choice__icon {
+    background-color: var(--action-color-hover);
+    border-color: var(--action-color-hover);
+}
+
+.choice__widget[type="radio"]:checked ~ .choice__label {
+    cursor: default; /* checked radio button can’t be hovered */
+}
+
+.choice__widget[type="radio"]:checked ~ .choice__label:hover ~ .choice__icon {
+    background-color: var(--action-color); /* checked radio button can’t be hovered, so taket the original color back */
+    border-color: transparent; /* checked radio button can’t be hovered, so taket the original color back */
+}
+
+
+/* Focused */
+
+.choice__widget:focus-visible ~ .choice__icon {
+    outline: auto;
+}
+
+
+/* Disabled */
+.choice__widget:disabled ~ .choice__label {
+    cursor: default;
+    color: var(--disabled-color);
+}
+
+.choice__widget:disabled ~ .choice__icon,
+.choice__widget:disabled ~ .choice__label:hover ~ .choice__icon {
+    background-color: transparent;
+    border-color: var(--input-border);
+}
+
+.choice__widget:disabled:checked ~ .choice__icon,
+.choice__widget:disabled:checked ~ .choice__label:hover ~ .choice__icon {
+    background-color: var(--input-border);
+    border-color: transparent;
+}
+
+
+
+.choice--bolder {
+
+}
+    .choice--bolder .choice__label {
+        font-weight: 600;
+        font-size: 13px;
+        line-height: 20px;
+    }
+
+
+.choice--full-width {
+    width: 100%;
+}

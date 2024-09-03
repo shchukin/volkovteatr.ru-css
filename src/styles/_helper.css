@@ -1,0 +1,14 @@
+.helper {
+    padding-top: 6px;
+    font-size: 14px;
+    line-height: 20px;
+    color: #7E7E7E;
+}
+
+.helper--error {
+    color: var(--error);
+}
+
+.helper + .helper {
+    padding-top: 4px;
+}

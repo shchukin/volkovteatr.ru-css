@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>.input</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../styles/styles.css">
+    </head>
+    <body>
+
+        <div style="max-width: 720px; margin: 0 auto; padding: 0 var(--container-padding);">
+            <br>
+            <br>
+            <h1>.input</h1>
+
+            <div class="input">
+                <input class="input__widget" type="text" placeholder="Ваше имя">
+            </div>
+
+            <br>
+
+            <div class="input">
+                <input class="input__widget" type="text" placeholder="Ваше имя" value="Константин Константинопольский">
+            </div>
+
+
+            <br>
+            <br>
+            <br>
+            <h2>С <a href="_label.html">.label</a> и <a href="_helper.html">.helper</a></h2>
+            <p>
+                Эти два компонента, вообще говоря, не часть <b><i>.input</i></b>.
+                Но очень часто используются вместе. Выводим их друг за другом:
+            </p>
+
+            <label class="label" for="bp24napi">
+                Ваше имя
+            </label>
+
+            <div class="input">
+                <input class="input__widget" type="text" id="bp24napi">
+            </div>
+
+            <div class="helper">
+                Нельзя будет изменить
+            </div>
+
+            <p>
+                Далее этот же компонент <b><i>.helper</i></b> будет использоваться для вывода ошибок.
+            </p>
+
+            <br>
+            <br>
+            <br>
+            <h2>:disabled</h2>
+
+            <div class="input">
+                <input class="input__widget" type="text" placeholder="Ваше имя" disabled>
+            </div>
+            <div class="helper">
+                Пожалуйста, сначала выберите контракт
+            </div>
+
+            <br>
+
+            <div class="input">
+                <input class="input__widget" type="text" placeholder="Ваше имя" value="Konstantin Konstantinopolsky" disabled>
+            </div>
+            <div class="helper">
+                Нельзя будет изменить
+            </div>
+
+
+            <br>
+            <br>
+            <br>
+            <h2>.input--error</h2>
+            <p>
+                Несмотря на то, что нативный атрибут <b><i>:invalid</i></b> хорошо поддерживается,
+                ожидаем, что валидация будет программироваться вручную. Вот класс и хелпер для вывода ошибок:
+            </p>
+
+            <div class="input input--error">
+                <input class="input__widget" type="text" placeholder="First name">
+            </div>
+            <div class="helper helper--error">
+                Обязательно для заполнения
+            </div>
+
+            <br>
+
+            <div class="input input--error">
+                <input class="input__widget" type="email" placeholder="Email" value="foobar@example.">
+            </div>
+            <div class="helper helper--error">
+                Неверный формат почты
+            </div>
+
+            <br>
+            <p>Если ошибок несколько, то выводим <b><i>.helper</i></b>`ы друг за другом:</p>
+
+            <div class="input input--error">
+                <input class="input__widget" type="password" placeholder="Password" value="0xFoo">
+            </div>
+            <div class="helper helper--error">
+                Пароль слишком короткий
+            </div>
+            <div class="helper helper--error">
+                Пароль должен содержать хотя бы один спецсимвол
+            </div>
+            <div class="helper helper--error">
+                Пароль должно быть сложно подобрать. Не допускается использование дат, номеров телефона. Так же не доспукается использование информации доступной публично
+            </div>
+            <div class="helper helper--error">
+                Новый пароль совпадает с текущим
+            </div>
+
+
+            <br>
+            <br>
+            <br>
+            <h2>type="password"</h2>
+            <p>
+                Меняем шрифт на Тахому, чтобы точки выглядили получше:
+            </p>
+
+            <div class="input">
+                <input class="input__widget" type="password" value="0xFoo">
+            </div>
+
+
+            <br>
+            <br>
+            <br>
+            <h2>&lt;textarea&gt;</h2>
+            <p>
+                Используем атрибут <b><i>rows</i></b> чтобы задать количество строк:
+            </p>
+
+            <div class="input">
+                <textarea class="input__widget" placeholder="Your message" rows="3"></textarea>
+            </div>
+
+            <br>
+            <h3>.input--expandable</h3>
+            <p>
+                Будем расхлопывать textarea скриптом. Обсчитываем высоту по ходу печати.
+                Атрибут <b><i>rows</i></b>, в этом случае, задаёт начальное количество строк, а <b><i>max-height</i></b>
+                в стилях ограничит высоту если ввели слишком много текста.
+            </p>
+            <p>
+                Значение <b><i>max-height</i></b> следует подбираться кратно количеству строк плюс вертикальные паддинги
+                и бордюры. Сейчас выставлено <b>266px</b> — это:
+                <br>• <b>10 строк</b> по <b>24px</b> каждая (line-height)
+                <br>• Плюс <b>2×11px</b> -- это два вертикальных паддинга (верхний и нижний)
+                <br>• Плюс <b>4px</b> пикселя бордюров
+            </p>
+
+            <div class="input input--expandable">
+                <textarea class="input__widget" placeholder="Your message" rows="3"></textarea>
+            </div>
+
+            <br>
+            <br>
+            <br>
+            <h2>&lt;select&gt;</h2>
+
+            <div class="input">
+                <select class="input__widget">
+                    <option selected>Bangkok</option>
+                    <option>Moscow</option>
+                    <option>...</option>
+                    <option>Washington</option>
+                </select>
+            </div>
+
+            <br>
+
+            <div class="input">
+                <select class="input__widget" disabled>
+                    <option selected>Bangkok</option>
+                    <option>Moscow</option>
+                    <option>...</option>
+                    <option>Washington</option>
+                </select>
+            </div>
+
+            <br>
+
+            <div class="input input--error">
+                <select class="input__widget">
+                    <option selected>Bangkok</option>
+                    <option>Moscow</option>
+                    <option>...</option>
+                    <option>Washington</option>
+                </select>
+            </div>
+
+
+            <br>
+            <br>
+            <h3>Плейсхолдер у селекта</h3>
+            <p>
+                С тегом <b><i>&lt;select&gt;</i></b> есть проблема.
+                Оне не умеет работать с атрибутом <b><i>placeholder</i></b>.
+                Ожидается, что хотя бы один элемент в селекте всегда выбран.
+            </p>
+            <p>
+                Но визуально это не вяжется с остальными инпутами.
+                Особенно если несколько инпутов и селект идут друг за другом.
+                Подделаем что-то похожее на плейсхолдер.
+            </p>
+            <p>
+                Плейсхолдером назначим первый из опшнов: <b><i>&lt;option value="placeholder"&gt;</i></b>.
+                Далее скриптом проверяем: если выбран этот элемент, то на весь компонент добавляем модификатор
+                <b><i>.input--placeholder-is-chosen</i></b>
+                и цвет виджета поменяется на серый.
+            </p>
+
+
+            <div class="input">
+                <select class="input__widget">
+                    <option value="placeholder" selected>City</option>
+                    <option>Bangkok</option>
+                    <option>Moscow</option>
+                    <option>...</option>
+                    <option>Washington</option>
+                </select>
+            </div>
+
+            <br>
+
+            <div class="input">
+                <select class="input__widget" disabled>
+                    <option value="placeholder" selected>City</option>
+                    <option>Bangkok</option>
+                    <option>Moscow</option>
+                    <option>...</option>
+                    <option>Washington</option>
+                </select>
+            </div>
+
+            <br>
+
+            <div class="input input--error">
+                <select class="input__widget">
+                    <option value="placeholder" selected>City</option>
+                    <option>Bangkok</option>
+                    <option>Moscow</option>
+                    <option>...</option>
+                    <option>Washington</option>
+                </select>
+            </div>
+
+            <p>
+                Важно не добавлять этому опшну атрибут <b><i>disabled</i></b>. Пользователь может решить оставить
+                поле нетронутым, или очистить его выбрав плейсхолдер. Если данные из формы были получены со значением
+                <b><i>"placeholder"</i></b> в селекте, то это следует воспринимать аналогично пустому <b><i>&lt;input&gt;</i></b>.
+            </p>
+            <p>
+                С другой стороны, если селект обязателен для заполнения, то важно, чтобы он не прошёл валидацию.
+            </p>
+
+
+            <br>
+            <br>
+            <br>
+            <h2>Остальные типы</h2>
+            <br>
+
+            <label class="label" for="uzoyce97">
+                type="email"
+            </label>
+            <div class="input">
+                <input class="input__widget" type="email" id="uzoyce97">
+            </div>
+
+            <br>
+
+            <label class="label" for="qv6hko4q">
+                type="tel"
+            </label>
+            <div class="input">
+                <input class="input__widget" type="tel" id="qv6hko4q">
+            </div>
+
+            <br>
+
+            <label class="label" for="dqx2iwgu">
+                type="url"
+            </label>
+            <div class="input">
+                <input class="input__widget" type="url" id="dqx2iwgu">
+            </div>
+
+            <br>
+
+            <label class="label" for="ey58yjk9">
+                type="search"
+            </label>
+            <div class="input">
+                <input class="input__widget" type="search" id="ey58yjk9">
+            </div>
+
+            <br>
+
+            <label class="label" for="h68i9f7g">
+                type="number"
+            </label>
+            <div class="input">
+                <input class="input__widget" type="number" id="h68i9f7g">
+            </div>
+
+            <br>
+
+            <label class="label" for="8fq2k8fo">
+                type="color"
+            </label>
+            <div class="input">
+                <input class="input__widget" type="color" id="8fq2k8fo">
+            </div>
+
+            <br>
+
+            <label class="label" for="vecqj15p">
+                type="date"
+            </label>
+            <div class="input">
+                <input class="input__widget" type="date" id="vecqj15p">
+            </div>
+
+            <br>
+
+            <label class="label" for="8xg4jfb3">
+                type="datetime-local"
+            </label>
+            <div class="input">
+                <input class="input__widget" type="datetime-local" id="8xg4jfb3">
+            </div>
+
+            <br>
+
+            <label class="label" for="brif3gg2">
+                type="week"
+            </label>
+            <div class="input">
+                <input class="input__widget" type="week" id="brif3gg2">
+            </div>
+
+            <br>
+
+            <label class="label" for="iei6tkvf">
+                type="month"
+            </label>
+            <div class="input">
+                <input class="input__widget" type="month" id="iei6tkvf">
+            </div>
+
+            <br>
+
+            <label class="label" for="33s23mr7">
+                type="time"
+            </label>
+            <div class="input">
+                <input class="input__widget" type="time" id="33s23mr7">
+            </div>
+
+
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+        </div>
+
+
+        <script src="../vendors/jquery/jquery-3.7.1.min.js"></script>
+        <script src="../vendors/magnific-popup/jquery.magnific-popup.min.js"></script>
+        <script src="../vendors/inputmask/jquery.inputmask.min.js"></script>
+        <script src="../vendors/inputmask.phone/inputmask.phone.extensions.min.js"></script>
+        <script src="../vendors/inputmask.phone/phone-codes/phone-ru.min.js"></script>
+        <script src="../scripts/_mfp.js"></script>
+        <script src="../scripts/_input.js"></script>
+        <script src="../scripts/_inputmask.js"></script>
+
+
+    </body>
+</html>
