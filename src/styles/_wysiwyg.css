@@ -1,7 +1,7 @@
 .wysiwyg {
     overflow-wrap: break-word;
-    font-size: var(--body-l-font-size);
-    line-height: var(--body-l-line-height);
+    font-size: var(--body-font-size);
+    line-height: var(--body-line-height);
 }
 
 .wysiwyg p,
@@ -10,8 +10,8 @@
 .wysiwyg hr,
 .wysiwyg figure,
 .wysiwyg blockquote {
-    margin-top: var(--body-l-line-height);
-    margin-bottom: var(--body-l-line-height);
+    margin-top: var(--body-line-height);
+    margin-bottom: var(--body-line-height);
 }
 
 .wysiwyg p:first-child,

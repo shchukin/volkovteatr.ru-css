@@ -1,14 +1,22 @@
 .container {
-    width: 960px;
-    border-left: var(--container-padding) solid transparent;
-    border-right: var(--container-padding) solid transparent;
+    width: 1200px;
     margin-left: auto;
     margin-right: auto;
+}
+
+@media (1850px <= width) {
+
+    .container {
+        width: 1760px;
+    }
 }
 
 @media (width < 740px) {
 
     .container {
         width: auto;
+        max-width: 440px;
+        padding-left: var(--container-padding);
+        padding-right: var(--container-padding);
     }
 }

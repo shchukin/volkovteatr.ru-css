@@ -1,13 +1,12 @@
 :root {
     --font: "Nunito Sans";
     --font-heading: "Brygada 1918";
-    --body-l-font-size: 16px;
-    --body-l-line-height: 20px;
+    --body-font-size: 18px;
+    --body-line-height: 25px;
     /*--ease-out-quint: cubic-bezier(0.22, 1, 0.36, 1);*/
     --transition-hover: 100ms ease;
     /*--transition-show: 1200ms var(--ease-out-quint);*/
     /*--image-fallback: #F3F5F4;*/
-    /*--container-padding: 40px;*/
     /*--action-color: #0D7FC5;*/
     /*--action-color-hover: #2FA5ED;*/
     /*--input-border: #B3B3B3;*/
@@ -16,9 +15,19 @@
     /*--disabled-background: #F6F6F6;*/
     /*--disabled-color: #999999;*/
     /*--error: #FF0033;*/
+    --article-top-padding: 20px;
 }
 
-@media (350px <= width < 740px) {
+@media (1850px <= width) {
+
+    :root {
+        --article-top-padding: 40px;
+        --body-font-size: 20px;
+        --body-line-height: 27px;
+    }
+}
+
+@media (width < 740px) {
     :root {
         --container-padding: 24px;
     }
