@@ -1,0 +1,11 @@
+.footer {
+    background-color: #EBD7B2;
+    color: #303F64;
+    color-scheme: light;
+}
+    .footer__wrap {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 624px;
+    }
