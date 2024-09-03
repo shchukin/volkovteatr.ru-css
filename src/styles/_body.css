@@ -2,7 +2,10 @@ body {
     height: 100%;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
+    background-color: #0B1E3A;
+    color-scheme: dark;
     font-family: var(--font);
-    font-size: var(--body-font-size);
-    line-height: var(--body-line-height);
+    font-size: var(--body-l-font-size);
+    line-height: var(--body-l-line-height);
+    color: #FFFFFF;
 }
