@@ -19,9 +19,9 @@
             content: "";
             position: absolute;
             right: 3px;
-            top: 9px;
+            top: 10px;
             width: 1px;
-            height: 18px;
+            height: 16px;
             background-color: #8E8E8E;
         }
 
@@ -32,7 +32,7 @@
         .breadcrumbs__link {
             display: block;
             padding: 8px;
-            font-size: 14px;
+            font-size: 13px;
             line-height: 20px;
             color: #C4BFB9;
             text-decoration: 1px underline transparent;
@@ -54,3 +54,41 @@
             line-height: 20px;
             color: #FFFFFF;
         }
+
+
+
+@media (1700px <= width) {
+
+    .breadcrumbs {
+
+    }
+        .breadcrumbs__item {
+
+        }
+
+        .breadcrumbs__item:last-child {
+
+        }
+            .breadcrumbs__item::after {
+                top: 9px;
+                height: 18px;
+            }
+
+            .breadcrumbs__item:last-child::after {
+
+            }
+
+            .breadcrumbs__link {
+                font-size: 14px;
+                line-height: 20px;
+
+            }
+
+            .breadcrumbs__link:hover {
+
+            }
+
+            .breadcrumbs__title {
+
+            }
+}

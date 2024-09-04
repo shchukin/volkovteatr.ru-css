@@ -26,11 +26,11 @@
             content: "";
             position: absolute;
             left: 10px;
-            top: 4px;
+            top: 5px;
             display: block;
             flex-shrink: 0;
-            width: 10px;
-            height: 10px;
+            width: 8px;
+            height: 8px;
             background-color: currentColor;
             border-radius: 50%;
         }
@@ -67,3 +67,78 @@
         .article__widget {
             margin-top: 30px;
         }
+
+
+
+@media (1700px <= width) {
+
+    .article {
+        /*margin-top: var(--article-top-padding);*/
+    }
+        .article__heading {
+            /*margin-top: 0;*/
+            /*margin-bottom: 0;*/
+        }
+
+        .article__info {
+            margin-top: 24px;
+            /*display: flex;*/
+            /*align-items: flex-start;*/
+        }
+            .article__param {
+                /*position: relative;*/
+                /*padding-left: 30px;*/
+                font-size: 20px;
+                line-height: 27px;
+            }
+
+            .article__param:first-child {
+                /*padding-left: 0;*/
+            }
+
+            .article__param::before {
+                /*content: "";*/
+                /*position: absolute;*/
+                /*left: 10px;*/
+                top: 8px;
+                /*display: block;*/
+                /*flex-shrink: 0;*/
+                width: 10px;
+                height: 10px;
+                /*background-color: currentColor;*/
+                /*border-radius: 50%;*/
+            }
+
+            .article__param:first-child::before {
+                /*display: none;*/
+            }
+
+        .article__body {
+            margin-top: 40px;
+        }
+
+        .article__additional-section {
+            margin-top: 80px;
+        }
+            .article__sub-heading {
+                /*margin-top: 0;*/
+                /*margin-bottom: 0;*/
+            }
+
+            .article__sub-content {
+                margin-top: 24px;
+            }
+
+        .article__attachment-section {
+            margin-top: 100px;
+        }
+            .article__attachment-heading {
+                /*margin-top: 0;*/
+                /*margin-bottom: 0;*/
+                /*color: #E4BB6B;*/
+            }
+
+            .article__widget {
+                margin-top: 40px;
+            }
+}

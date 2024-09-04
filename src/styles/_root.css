@@ -18,7 +18,7 @@
     --article-top-padding: 20px;
 }
 
-@media (1850px <= width) {
+@media (1700px <= width) {
 
     :root {
         --article-top-padding: 40px;

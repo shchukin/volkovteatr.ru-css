@@ -11,7 +11,7 @@
 }
 
 
-@media (1850px <= width) {
+@media (1700px <= width) {
 
     .title--main {
         font-size: 42px;
@@ -26,7 +26,7 @@
     line-height: 28px;
 }
 
-@media (1850px <= width) {
+@media (1700px <= width) {
 
     .title--smaller {
         font-size: 26px;
@@ -41,7 +41,7 @@
     line-height: 47px;
 }
 
-@media (1850px <= width) {
+@media (1700px <= width) {
 
     .title--larger {
         font-size: 48px;

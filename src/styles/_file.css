@@ -7,12 +7,18 @@
     line-height: 32px;
     color: #0B1E3A;
     text-decoration: none;
+    transition: background-color var(--transition-hover);
 }
+
+.file:hover {
+    background-color: #FFFFFF;
+}
+
     .file__icon {
         position: absolute;
         left: 29px;
         top: 50%;
-        margin-top: -17px;
+        margin-top: -14px;
         width: 22px;
         height: 28px;
         fill: currentColor;
@@ -22,8 +28,51 @@
         position: absolute;
         right: 24px;
         top: 50%;
-        margin-top: -12px;
+        margin-top: -11px;
         width: 20px;
         height: 21px;
         fill: currentColor;
     }
+
+
+
+@media (1700px <= width) {
+
+    .file {
+        /*position: relative;*/
+        /*padding: 22px 73px;*/
+        padding-top: 28px;
+        padding-bottom: 28px;
+        /*background-color: #F8F0E5;*/
+        /*border-radius: 6px;*/
+        font-size: 28px;
+        line-height: 34px;
+        /*color: #0B1E3A;*/
+        /*text-decoration: none;*/
+        /*transition: background-color var(--transition-hover);*/
+    }
+
+    .file:hover {
+        /*background-color: #FFFFFF;*/
+    }
+
+        .file__icon {
+            /*position: absolute;*/
+            /*left: 29px;*/
+            /*top: 50%;*/
+            margin-top: -17px;
+            width: 28px;
+            height: 35px;
+            /*fill: currentColor;*/
+        }
+
+        .file__download {
+            /*position: absolute;*/
+            /*right: 24px;*/
+            /*top: 50%;*/
+            margin-top: -12px;
+            width: 24px;
+            height: 25px;
+            /*fill: currentColor;*/
+        }
+}
