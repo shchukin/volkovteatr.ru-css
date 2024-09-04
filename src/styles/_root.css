@@ -29,9 +29,24 @@
 
 @media (width < 740px) {
     :root {
+        --article-top-padding: 10px;
+        --body-font-size: 18px;
+        --body-line-height: 25px;
+
+
+    }
+}
+
+
+
+/* Только на смартфонах */
+
+@media (width < 740px) {
+    :root {
         --container-padding: 24px;
     }
 }
+
 
 @media (width < 350px) {
     :root {

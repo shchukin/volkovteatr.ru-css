@@ -3,7 +3,6 @@
     padding-bottom: 13px;
     display: flex;
     align-items: flex-start;
-    flex-wrap: wrap;
     margin-left: -8px;
     margin-right: -8px;
 }
@@ -14,6 +13,8 @@
 
     .breadcrumbs__item:last-child {
         padding-right: 0;
+        flex-grow: 1;
+        overflow: hidden; /* Имеет смысл на смартфонах, последний айтем -- сколько влезло, столько влезло */
     }
         .breadcrumbs__item::after {
             content: "";
@@ -92,3 +93,67 @@
 
             }
 }
+
+
+
+@media (width < 740px) {
+
+    .breadcrumbs {
+        /*padding-top: 13px;*/
+        /*padding-bottom: 13px;*/
+        /*display: flex;*/
+        /*align-items: flex-start;*/
+        /*margin-left: -8px;*/
+        /*margin-right: -8px;*/
+    }
+        .breadcrumbs__item {
+            /*position: relative;*/
+            padding-right: 4px;
+        }
+
+        .breadcrumbs__item:last-child {
+            /*padding-right: 0;*/
+            /*flex-grow: 1;*/
+            /*overflow: hidden; !* Имеет смысл на смартфонах, последний айтем -- сколько влезло, столько влезло *!*/
+        }
+            .breadcrumbs__item::after {
+                /*content: "";*/
+                /*position: absolute;*/
+                right: 1px;
+                /*top: 10px;*/
+                /*width: 1px;*/
+                height: 14px;
+                /*background-color: #8E8E8E;*/
+            }
+
+            .breadcrumbs__item:last-child::after {
+                /*display: none;*/
+            }
+
+            .breadcrumbs__link {
+                /*display: block;*/
+                /*padding: 8px;*/
+                font-size: 12px;
+                line-height: 16px;
+                /*color: #C4BFB9;*/
+                /*text-decoration: 1px underline transparent;*/
+                /*text-underline-offset: 3px;*/
+                /*transition: text-decoration-color var(--transition-hover);*/
+            }
+
+            .breadcrumbs__link:hover {
+                /*text-decoration-color: currentColor;*/
+            }
+
+            .breadcrumbs__title {
+                /*padding: 8px;*/
+                /*max-width: 235px;*/
+                /*overflow: hidden;*/
+                /*white-space: nowrap;*/
+                /*text-overflow: ellipsis;*/
+                font-size: 12px;
+                line-height: 16px;
+                /*color: #FFFFFF;*/
+            }
+}
+
