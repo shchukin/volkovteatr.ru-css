@@ -1,0 +1,26 @@
+.thumbnail {
+    border-radius: 8px;
+    overflow: hidden;
+}
+    .thumbnail__image {
+        vertical-align: top;
+        background-image: var(--image-fallback);
+        width: 100%;
+        height: auto;
+        transition: filter var(--transition-hover);
+    }
+
+    .thumbnail:hover .thumbnail__image {
+        filter: brightness(110%) contrast(110%);
+    }
+
+
+@media (1850px <= width) {
+
+    .thumbnail {
+        border-radius: 10px;
+    }
+        .thumbnail__image {
+
+        }
+}

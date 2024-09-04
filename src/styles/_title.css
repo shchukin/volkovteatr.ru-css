@@ -2,12 +2,12 @@
     font-family: var(--font-heading);
     font-weight: normal;
     font-style: italic;
+    text-transform: uppercase;
 }
 
 .title--main {
     font-size: 32px;
     line-height: 37px;
-    text-transform: uppercase;
 }
 
 
@@ -16,5 +16,35 @@
     .title--main {
         font-size: 42px;
         line-height: 49px;
+    }
+}
+
+
+
+.title--smaller {
+    font-size: 24px;
+    line-height: 28px;
+}
+
+@media (1850px <= width) {
+
+    .title--smaller {
+        font-size: 26px;
+        line-height: 30px;
+    }
+}
+
+
+
+.title--larger {
+    font-size: 40px;
+    line-height: 47px;
+}
+
+@media (1850px <= width) {
+
+    .title--larger {
+        font-size: 48px;
+        line-height: 56px;
     }
 }

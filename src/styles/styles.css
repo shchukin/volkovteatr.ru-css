@@ -12,7 +12,7 @@
 @import url("_nobr.css");
 @import url("_hide-scrollbar.css");
 
-/*@import url("_link.css");*/
+@import url("_link.css");
 /*@import url("_button.css");*/
 /*@import url("_input.css");*/
 /*@import url("_choice.css");*/
@@ -30,5 +30,7 @@
 @import url("_breadcrumbs.css");
 @import url("_title.css");
 @import url("_article.css");
+@import url("_thumbnail.css");
+@import url("_gallery.css");
 
 

@@ -14,6 +14,17 @@
     margin-bottom: var(--body-line-height);
 }
 
+.wysiwyg--half p,
+.wysiwyg--half ul,
+.wysiwyg--half ol,
+.wysiwyg--half hr,
+.wysiwyg--half figure,
+.wysiwyg--half blockquote {
+    margin-top: calc(var(--body-line-height) / 2);
+    margin-bottom: calc(var(--body-line-height) / 2);
+}
+
+
 .wysiwyg p:first-child,
 .wysiwyg ul:first-child,
 .wysiwyg ol:first-child,

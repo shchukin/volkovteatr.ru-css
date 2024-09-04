@@ -7,7 +7,7 @@
     }
 
     .article__info {
-        margin-top: 12px;
+        margin-top: 18px;
         display: flex;
         align-items: flex-start;
     }
@@ -40,5 +40,30 @@
         }
 
     .article__body {
-        margin-top: 40px;
+        margin-top: 30px;
     }
+
+    .article__additional-section {
+        margin-top: 60px;
+    }
+        .article__sub-heading {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        .article__sub-content {
+            margin-top: 18px;
+        }
+
+    .article__attachment-section {
+        margin-top: 80px;
+    }
+        .article__attachment-heading {
+            margin-top: 0;
+            margin-bottom: 0;
+            color: #E4BB6B;
+        }
+
+        .article__widget {
+            margin-top: 30px;
+        }
