@@ -1,0 +1,6 @@
+@media (width < 740px) {
+
+    .swiper--gallery {
+        overflow: visible;
+    }
+}
