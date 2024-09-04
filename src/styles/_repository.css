@@ -1,0 +1,12 @@
+.repository {
+    max-width: 688px;
+    display: grid;
+    gap: 18px;
+}
+
+@media (1850px <= width) {
+
+    .repository {
+        gap: 24px;
+    }
+}

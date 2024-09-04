@@ -1,0 +1,29 @@
+.file {
+    position: relative;
+    padding: 22px 73px;
+    background-color: #F8F0E5;
+    border-radius: 6px;
+    font-size: 25px;
+    line-height: 32px;
+    color: #0B1E3A;
+    text-decoration: none;
+}
+    .file__icon {
+        position: absolute;
+        left: 29px;
+        top: 50%;
+        margin-top: -17px;
+        width: 22px;
+        height: 28px;
+        fill: currentColor;
+    }
+
+    .file__download {
+        position: absolute;
+        right: 24px;
+        top: 50%;
+        margin-top: -12px;
+        width: 20px;
+        height: 21px;
+        fill: currentColor;
+    }
