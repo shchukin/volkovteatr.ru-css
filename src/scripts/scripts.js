@@ -10,8 +10,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     /* Слайдеры */
 
-    // Слайдеры чувствителен к количеству контента внутри. По-этому ждём пока прогрузятся картинки и применятся шрифты
-    window.addEventListener('load', function() {
+    // Слайдеры чувствительны к количеству контента внутри. По-этому ждём пока прогрузятся картинки и применятся шрифты
+    // window.addEventListener('load', function() {
 
         /* Слайдер "Service" */
 
@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 nextEl: '.swiper--gallery .swiper-button-next',
             }
         });
-    });
+    // });
 
 
 });
