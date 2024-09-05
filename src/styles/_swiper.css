@@ -1,6 +1,26 @@
-.swiper--gallery {
+/* Глобальные стили для всех каруселей */
+
+.swiper-button-next,
+.swiper-button-prev {
+    user-select: none;
+}
+
+.swiper-button-next.swiper-button-disabled,
+.swiper-button-prev.swiper-button-disabled {
+    pointer-events: auto; /* Не отменяем чтобы при клике не выделялся соседний текст, чтобы сработал user-select: none; выше */
+}
+
+
+
+
+
+
+
+
+.swiper--photo-gallery {
 
 }
+
 
 /* Если оставить overflow: hidden по дефолту, то получается странный эффект
    когда карусель уходит не в край экрана, а в край контейнера. Отменяем это
@@ -9,7 +29,69 @@
 */
 @media (width < 740px) {
 
-    .swiper--gallery {
+    .swiper--photo-gallery {
         overflow: visible;
     }
 }
+
+
+
+
+
+.swiper--skin-basic {
+
+}
+    .swiper--skin-basic .swiper-controls {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: -16px; /* Потому что нижний паддинг у кнопок */
+    }
+        .swiper--skin-basic .swiper-pagination {
+            width: auto;
+            position: static;
+            font-size: 15px;
+            line-height: 20px;
+            user-select: none; /* При клике по стрелочкам иногда текст выделяется */
+        }
+
+        .swiper--skin-basic .swiper-button {
+            position: static;
+            margin: 0;
+            width: 49px;
+            height: 49px;
+        }
+
+        .swiper--skin-basic .swiper-button::after {
+            display: none;
+        }
+            .swiper--skin-basic .swiper-arrow {
+                flex-shrink: 0;
+                vertical-align: top;
+                stroke: #FFFFFF;
+                width: 27px;
+                height: 17px;
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

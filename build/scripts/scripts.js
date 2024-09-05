@@ -15,15 +15,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
         /* Слайдер "Service" */
 
-        new Swiper('.swiper--gallery', {
+        new Swiper('.swiper--photo-gallery', {
             slidesPerView: 1,
             slidesPerGroup: 1,
             spaceBetween: responsiveSpacing,
             autoHeight: true,
 
             navigation: {
-                prevEl: '.swiper--gallery .swiper-button-prev',
-                nextEl: '.swiper--gallery .swiper-button-next',
+                prevEl: '.swiper--photo-gallery .swiper-button-prev',
+                nextEl: '.swiper--photo-gallery .swiper-button-next',
             }
         });
     // });
