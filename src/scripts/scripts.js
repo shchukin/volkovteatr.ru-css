@@ -7,15 +7,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const headerHeight = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--header')) || 0;
 
 
+    /* Слайдер "Photo Gallery" */
 
-    /* Слайдеры */
-
-    // Слайдеры чувствительны к количеству контента внутри. По-этому ждём пока прогрузятся картинки и применятся шрифты
-    // window.addEventListener('load', function() {
-
-        /* Слайдер "Service" */
-
-        new Swiper('.swiper--photo-gallery', {
+    if (!isDesktop) {
+        new Swiper('.swiper--init-gallery', {
             slidesPerView: 1,
             slidesPerGroup: 1,
             spaceBetween: responsiveSpacing,
@@ -31,12 +26,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 nextEl: '.swiper-button-next',
             }
         });
-    // });
+    }
 
 
 });
-
-
 
 
 /* Модалка -- здесь кусок кода на jQuery поскольку пока не могу
@@ -52,27 +45,26 @@ document.addEventListener('DOMContentLoaded', () => {
         removalDelay: 200,
         showCloseBtn: false,
         callbacks: {
-            open: function() {
+            open: function () {
 
                 // Перезапускаем обсчёт expanding textareas для инстансов внутри откртой модалки
                 const instance = $.magnificPopup.instance;
                 const modalContent = instance.content[0];
                 const textareas = $(modalContent).find('.input--expandable .input__widget');
-                textareas.each(function() {
+                textareas.each(function () {
                     expandTextarea(this);
                 });
 
                 /* Шапка фиксированная, ей тоже надо корректировать пропавшее пространство подскроллбаром */
                 $fixedHeader.css({'margin-right': scrollWidth});
             },
-            close: function() {
+            close: function () {
                 $fixedHeader.css({'margin-right': '0'});
             }
         }
     });
 
 })(jQuery);
-
 
 
 /* Маска для телефона -- используем старую версию input.mask

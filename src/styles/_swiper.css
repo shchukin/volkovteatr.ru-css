@@ -12,6 +12,63 @@
 
 
 
+/* Скин basic */
+
+.swiper--skin-basic {
+    /* Если оставить overflow: hidden по дефолту, то получается странный эффект
+       когда карусель уходит не в край экрана, а в край контейнера. Отменяем это поведение.
+       overflow: hidden; возвращается на уровне .page, уже за пределами контейнера.
+    */
+    overflow: visible;
+}
+
+@media (740px <= width) {
+
+    .swiper--skin-basic .swiper-controls {
+        display: none;
+    }
+}
+
+
+@media (width < 740px) {
+
+    .swiper--skin-basic {
+
+    }
+        .swiper--skin-basic .swiper-controls {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: -16px; /* Потому что нижний паддинг у кнопок */
+        }
+            .swiper--skin-basic .swiper-pagination {
+                width: auto;
+                position: static;
+                font-size: 15px;
+                line-height: 20px;
+                user-select: none; /* При клике по стрелочкам иногда текст выделяется */
+            }
+
+            .swiper--skin-basic .swiper-button {
+                position: static;
+                margin: 0;
+                width: 49px;
+                height: 49px;
+                transition: opacity var(--transition-hover);
+            }
+
+            .swiper--skin-basic .swiper-button::after {
+                display: none;
+            }
+                .swiper--skin-basic .swiper-arrow {
+                    flex-shrink: 0;
+                    vertical-align: top;
+                    stroke: #FFFFFF;
+                    width: 27px;
+                    height: 17px;
+                }
+}
+
 
 
 
@@ -21,64 +78,32 @@
 
 }
 
+@media (740px <= width) {
 
-/* Если оставить overflow: hidden по дефолту, то получается странный эффект
-   когда карусель уходит не в край экрана, а в край контейнера. Отменяем это
-   поведение.
-   overflow: hidden; возвращается на уровне .page, уже за пределами контейнера.
-*/
+    .swiper--photo-gallery .swiper-wrapper {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 285fr));
+        gap: 20px;
+    }
+
+    @media (1700px <= width) {
+
+        .swiper--photo-gallery .swiper-wrapper {
+            grid-template-columns: repeat(6, minmax(0, 273px)); /* если оставить 1fr, то получится 273.33px, по-этому вручную пишем 273px */
+            gap: 24px;
+        }
+    }
+
+}
+
+
 @media (width < 740px) {
 
+    /* Здесь применится просто скинчик .swiper--skin-basic */
     .swiper--photo-gallery {
-        overflow: visible;
+
     }
 }
-
-
-
-
-
-.swiper--skin-basic {
-
-}
-    .swiper--skin-basic .swiper-controls {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: -16px; /* Потому что нижний паддинг у кнопок */
-    }
-        .swiper--skin-basic .swiper-pagination {
-            width: auto;
-            position: static;
-            font-size: 15px;
-            line-height: 20px;
-            user-select: none; /* При клике по стрелочкам иногда текст выделяется */
-        }
-
-        .swiper--skin-basic .swiper-button {
-            position: static;
-            margin: 0;
-            width: 49px;
-            height: 49px;
-        }
-
-        .swiper--skin-basic .swiper-button::after {
-            display: none;
-        }
-            .swiper--skin-basic .swiper-arrow {
-                flex-shrink: 0;
-                vertical-align: top;
-                stroke: #FFFFFF;
-                width: 27px;
-                height: 17px;
-            }
-
-
-
-
-
-
-
 
 
 
