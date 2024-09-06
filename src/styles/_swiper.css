@@ -117,14 +117,14 @@
 
     .swiper--video-gallery .swiper-wrapper {
         display: grid;
-        grid-template-columns: repeat(4, minmax(0, 285fr));
+        grid-template-columns: repeat(3, minmax(0, 386px)); /* если оставить 1fr, то получится 386.66px, по-этому вручную пишем 387px */
         gap: 20px;
     }
 
     @media (1700px <= width) {
 
         .swiper--video-gallery .swiper-wrapper {
-            grid-template-columns: repeat(6, minmax(0, 273px)); /* если оставить 1fr, то получится 273.33px, по-этому вручную пишем 273px */
+            grid-template-columns: repeat(3, minmax(0, 570px)); /* если оставить 1fr, то получится 570.66px, по-этому вручную пишем 570px */
             gap: 24px;
         }
     }
