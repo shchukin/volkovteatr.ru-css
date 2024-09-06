@@ -32,6 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!isSwiperInit) {
                 isSwiperInit = true;
 
+                // (1) Свайпер может сразу инициализировать несколько слайдеров, без forEach, но ...
                 gallerySwiper = new Swiper('.swiper--init-gallery', {
                     slidesPerView: 1,
                     slidesPerGroup: 1,
@@ -47,14 +48,21 @@ document.addEventListener('DOMContentLoaded', () => {
                         prevEl: '.swiper-button-prev',
                         nextEl: '.swiper-button-next',
                     }
-
                 });
             }
-
         } else {
+
             if (isSwiperInit) {
-                gallerySwiper.destroy();
                 isSwiperInit = false;
+
+                // (2) ... но для дестроя нужно уже знать, массив слайдеров ли это, или отдельный инстанс в объекте
+                if (Array.isArray(gallerySwiper)) {
+                    gallerySwiper.forEach(function(swiper) {
+                        swiper.destroy();
+                    });
+                } else {
+                    gallerySwiper.destroy();
+                }
             }
         }
     }
