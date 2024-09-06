@@ -39,20 +39,23 @@
 
 
 
-/* Только на смартфонах */
+/* Паддинг у контейнера существует только на смартфонах */
 
+/* Большие Pro, Plus и Max телефоны типа iPhone 15 Plus*/
 @media (400px <= width < 740px) {
     :root {
         --container-padding: 24px;
     }
 }
 
+/* Обычные телефоны типа iPhone 15 */
 @media (350px <= width < 400px) {
     :root {
         --container-padding: 20px;
     }
 }
 
+/* Старенькие телефоны типа iPhone SE 1st gen */
 @media (width < 350px) {
     :root {
         --container-padding: 16px;
