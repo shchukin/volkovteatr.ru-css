@@ -2,9 +2,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
     /* Глобальные константы */
 
-    const isDesktop = window.matchMedia("(min-width: 740px)").matches;
-    const responsiveSpacing = isDesktop ? 24 : parseInt(getComputedStyle(document.documentElement).getPropertyValue('--container-padding'));
-    const headerHeight = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--header')) || 0;
+    let isDesktop;
+    let responsiveSpacing;
+    let headerHeight;
+
+    function initGlobalConstant() {
+        isDesktop = window.matchMedia("(min-width: 740px)").matches;
+        responsiveSpacing = !isDesktop ? parseInt(getComputedStyle(document.documentElement).getPropertyValue('--container-padding')) : 0;
+        headerHeight = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--header-height')) || 0;
+
+        console.log(isDesktop)
+    }
+
+    /* При открытии страницы */
+    initGlobalConstant();
+
+    /* При ресайзе страницы */
+    window.addEventListener('resize', initGlobalConstant);
+
 
 
     /* Слайдер "Photo Gallery" */

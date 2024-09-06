@@ -93,20 +93,30 @@
             gap: 24px;
         }
     }
-
 }
 
 
-@media (width < 740px) {
 
-    /* Здесь применится просто скинчик .swiper--skin-basic */
-    .swiper--photo-gallery {
+.swiper--video-gallery {
 
+}
+
+@media (740px <= width) {
+
+    .swiper--video-gallery .swiper-wrapper {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 285fr));
+        gap: 20px;
+    }
+
+    @media (1700px <= width) {
+
+        .swiper--video-gallery .swiper-wrapper {
+            grid-template-columns: repeat(6, minmax(0, 273px)); /* если оставить 1fr, то получится 273.33px, по-этому вручную пишем 273px */
+            gap: 24px;
+        }
     }
 }
-
-
-
 
 
 
