@@ -41,12 +41,17 @@
 
 /* Только на смартфонах */
 
-@media (width < 740px) {
+@media (400px <= width < 740px) {
     :root {
         --container-padding: 24px;
     }
 }
 
+@media (350px <= width < 400px) {
+    :root {
+        --container-padding: 20px;
+    }
+}
 
 @media (width < 350px) {
     :root {

@@ -15,7 +15,9 @@
 
     .container {
         width: auto;
-        max-width: 440px;
+        max-width: 430px; /* Максимальный поддерживаемый телефон -- это стандартные
+                             430px для "iPhone 15 Plus" и "iPhone 15 Pro Max".
+                             На устройствах больше будет прост центрирование. */
         padding-left: var(--container-padding);
         padding-right: var(--container-padding);
     }
