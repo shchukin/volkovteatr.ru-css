@@ -10,8 +10,6 @@ document.addEventListener('DOMContentLoaded', () => {
         isDesktop = window.matchMedia("(min-width: 740px)").matches;
         responsiveSpacing = !isDesktop ? parseInt(getComputedStyle(document.documentElement).getPropertyValue('--container-padding')) : 0;
         headerHeight = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--header-height')) || 0;
-
-        console.log(isDesktop)
     }
 
     /* При открытии страницы */
@@ -22,26 +20,50 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-    /* Слайдер "Photo Gallery" */
+    /* Swiper */
 
-    if (!isDesktop) {
-        new Swiper('.swiper--init-gallery', {
-            slidesPerView: 1,
-            slidesPerGroup: 1,
-            spaceBetween: responsiveSpacing,
-            autoHeight: true,
+    var gallerySwiper;
+    var isSwiperInit = false;
 
-            pagination: {
-                el: ".swiper-pagination",
-                type: "fraction",
-            },
+    function initSwiper() {
 
-            navigation: {
-                prevEl: '.swiper-button-prev',
-                nextEl: '.swiper-button-next',
+        if (!isDesktop) {
+
+            if (!isSwiperInit) {
+                isSwiperInit = true;
+
+                gallerySwiper = new Swiper('.swiper--init-gallery', {
+                    slidesPerView: 1,
+                    slidesPerGroup: 1,
+                    spaceBetween: responsiveSpacing,
+                    autoHeight: true,
+
+                    pagination: {
+                        el: ".swiper-pagination",
+                        type: "fraction",
+                    },
+
+                    navigation: {
+                        prevEl: '.swiper-button-prev',
+                        nextEl: '.swiper-button-next',
+                    }
+
+                });
             }
-        });
+
+        } else {
+            if (isSwiperInit) {
+                gallerySwiper.destroy();
+                isSwiperInit = false;
+            }
+        }
     }
+
+    initSwiper();
+
+    window.addEventListener('resize', function () {
+        initSwiper();
+    });
 
 
 });

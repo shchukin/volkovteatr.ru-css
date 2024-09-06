@@ -35,11 +35,23 @@
     .swiper--skin-basic {
 
     }
+        .swiper--skin-basic .swiper-slide:not(:first-child) {
+            display: none;
+        }
+
+        .swiper--skin-basic.swiper-initialized .swiper-slide {
+            display: block;
+        }
+
         .swiper--skin-basic .swiper-controls {
-            display: flex;
+            display: none;
             align-items: center;
             justify-content: center;
             margin-bottom: -16px; /* Потому что нижний паддинг у кнопок */
+        }
+
+        .swiper--skin-basic.swiper-initialized .swiper-controls {
+            display: flex;
         }
             .swiper--skin-basic .swiper-pagination {
                 width: auto;
