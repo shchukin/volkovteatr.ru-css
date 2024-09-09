@@ -17,6 +17,7 @@
     /*--error: #FF0033;*/
     --article-top-padding: 20px;
     --header-height: 100px;
+    --blue-hover: #223046;
 }
 
 @media (1700px <= width) {

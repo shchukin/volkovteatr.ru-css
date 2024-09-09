@@ -1,0 +1,29 @@
+.net {
+    display: block;
+    width: fit-content;
+    padding: 8px;
+}
+    .net__icon {
+        vertical-align: top;
+        width: 28px;
+        height: 28px;
+        fill: #0B1E3A;
+        transition: opacity var(--transition-hover);
+    }
+
+    .net:hover .net__icon {
+        opacity: 80%;
+    }
+
+
+
+@media (1700px <= width) {
+
+    .net {
+
+    }
+        .net__icon {
+            width: 32px;
+            height: 32px;
+        }
+}

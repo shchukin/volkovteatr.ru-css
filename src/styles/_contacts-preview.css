@@ -1,0 +1,122 @@
+.contacts-preview {
+
+}
+    .contacts-preview__tel-heading {
+        font-size: 17px;
+        line-height: 22px;
+        color: #6073A2;
+        text-transform: uppercase;
+    }
+
+    .contacts-preview__phone {
+        display: block;
+        width: fit-content;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 27px;
+        color: #303F64;
+        text-decoration: none;
+    }
+
+    .contacts-preview__media {
+        display: flex;
+        align-items: flex-start;
+        margin: 10px -8px 0;
+    }
+
+    .contacts-preview__features {
+        margin-top: 14px;
+        display: flex;
+        flex-direction: column;
+        gap: 21px;
+    }
+        .contacts-preview__shield {
+            text-indent: 200%;
+            white-space: nowrap;
+            overflow: hidden;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+
+
+        /* pushkin-card */
+        .contacts-preview__shield--pushkin-card {
+            width: 219px;
+            aspect-ratio: 337/97;
+            background-image: url("../images/contacts-preview/contacts-pushkin-card@1x.jpg");
+        }
+
+        @media (min-resolution: 2dppx) {
+            .contacts-preview__shield--pushkin-card {
+                background-image: url("../images/contacts-preview/contacts-pushkin-card@2x.jpg");
+            }
+        }
+
+
+        /* quality */
+        .contacts-preview__shield--quality {
+            width: 236px;
+            aspect-ratio: 337/45;
+            background-image: url("../images/contacts-preview/contacts-preview-quality@1x.jpg");
+        }
+
+        @media (min-resolution: 2dppx) {
+            .contacts-preview__shield--quality {
+                background-image: url("../images/contacts-preview/contacts-preview-quality@2x.jpg");
+            }
+        }
+
+
+
+@media (1700px <= width) {
+
+    .contacts-preview {
+
+    }
+        .contacts-preview__tel-heading {
+
+        }
+
+        .contacts-preview__phone {
+            /*display: block;*/
+            /*width: fit-content;*/
+            /*padding-top: 10px;*/
+            /*padding-bottom: 10px;*/
+            /*font-weight: 600;*/
+            /*font-size: 20px;*/
+            /*line-height: 27px;*/
+            /*color: #303F64;*/
+            /*text-decoration: none;*/
+        }
+
+        .contacts-preview__media {
+            /*display: flex;*/
+            /*align-items: flex-start;*/
+            /*margin: 10px -8px 0;*/
+        }
+
+        .contacts-preview__features {
+            margin-top: 20px;
+            gap: 28px;
+        }
+            .contacts-preview__shield {
+
+            }
+
+
+            /* pushkin-card */
+            .contacts-preview__shield--pushkin-card {
+                width: 337px;
+            }
+
+
+            /* quality */
+            .contacts-preview__shield--quality {
+                width: 337px;
+            }
+
+}
+

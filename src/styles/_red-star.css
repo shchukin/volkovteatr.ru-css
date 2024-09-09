@@ -24,3 +24,35 @@
         white-space: nowrap;
         overflow: hidden;
     }
+
+
+
+@media (1700px <= width) {
+
+    .red-star {
+        /*display: flex;*/
+        /*align-items: baseline;*/
+        /*gap: 7px;*/
+        padding-top: 4px;
+        /*padding-bottom: 1px;*/
+        font-size: 12px;
+        line-height: 14px;
+        /*color: #181818;*/
+        /*text-decoration: none;*/
+    }
+        .red-star__logo {
+            /*position: relative;*/
+            top: -2px;
+            /*display: inline-block;*/
+            /*vertical-align: baseline;*/
+            width: 90px;
+            height: 18px;
+            /*background-image: url("../vectors/red-star.svg");*/
+            /*background-size: contain;*/
+            /*background-repeat: no-repeat;*/
+            /*background-position: center center;*/
+            /*text-indent: 200%;*/
+            /*white-space: nowrap;*/
+            /*overflow: hidden;*/
+        }
+}
