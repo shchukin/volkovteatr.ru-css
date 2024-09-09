@@ -5,11 +5,34 @@
     color-scheme: light;
 }
     .footer__wrap {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 624px;
+
     }
+        .footer__primary-section {
+
+        }
+
+        .footer__secondary-section {
+            margin-top: 60px;
+            border-top: 1px solid #6073A2;
+            padding-top: 26px;
+            padding-bottom: 28px;
+            display: flex;
+            align-items: center;
+        }
+            .footer__legalities {
+                display: flex;
+                align-items: baseline;
+                gap: 40px;
+            }
+                .footer__item {
+                    font-size: 16px;
+                    line-height: 20px;
+                    color: #5F73A3;
+                }
+
+            .footer__developer {
+                margin-left: auto;
+            }
 
 
 @media (1700px <= width) {

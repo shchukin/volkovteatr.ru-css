@@ -1,0 +1,41 @@
+.nav {
+    columns: 3;
+    gap: 45px;
+}
+    .nav__item {
+        margin-top: 15px;
+        break-inside: avoid;
+    }
+
+    .nav__item:first-child {
+        margin-top: 0;
+    }
+        .nav__link {
+            display: block;
+            width: fit-content;
+            padding-top: 7px;
+            padding-bottom: 7px;
+            font-family: var(--font-heading);
+            font-weight: bold;
+            font-style: italic;
+            font-size: 22px;
+            line-height: 26px;
+            color: #303F64;
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+
+        .nav__sub-nav {
+
+        }
+            .nav__sub-link {
+                display: block;
+                width: fit-content;
+                padding-top: 7px;
+                padding-bottom: 7px;
+                font-weight: 600;
+                font-size: 20px;
+                line-height: 27px;
+                color: #303F64;
+                text-decoration: none;
+            }
