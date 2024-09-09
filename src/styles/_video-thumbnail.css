@@ -6,7 +6,7 @@
     }
 
     .video-thumbnail__name {
-        margin-top: 15px;
+        margin-top: 14px;
         font-family: var(--font-heading);
         font-style: italic;
         font-weight: 500;
@@ -20,7 +20,7 @@
         }
 
     .video-thumbnail__description {
-        margin-top: 4px;
+        margin-top: 7px;
         font-size: 18px;
         line-height: 22px;
     }
