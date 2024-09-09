@@ -34,6 +34,19 @@
 }
 
 
+.link--inverted-text-alike,
+.wysiwyg .link--inverted-text-alike {
+    color: inherit;
+    text-decoration-color: transparent;
+}
+
+.link--inverted-text-alike:hover,
+.wysiwyg .link--inverted-text-alike:hover {
+    color: inherit;
+    text-decoration-color: currentColor;
+}
+
+
 .link--no-hover,
 .link--no-hover:hover,
 .link--no-hover:active,

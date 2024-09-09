@@ -1,19 +1,39 @@
 .thumbnail {
+    position: relative;
     display: block;
     border-radius: 8px;
     overflow: hidden;
+    transition: filter var(--transition-hover);
+}
+
+.thumbnail:hover {
+    filter: brightness(110%) contrast(110%);
 }
     .thumbnail__image {
         vertical-align: top;
-        background-image: var(--image-fallback);
+        background-color: var(--image-fallback);
         width: 100%;
         height: auto;
-        transition: filter var(--transition-hover);
     }
 
-    .thumbnail:hover .thumbnail__image {
-        filter: brightness(110%) contrast(110%);
+    .thumbnail__play {
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        width: 16.3157%;
+        aspect-ratio: 1/1;
+        background-color: #303F64;
+        border-radius: 50%;
     }
+        .thumbnail__icon {
+            vertical-align: top;
+            width: 100%;
+            height: auto;
+            fill: #E4BB6B;
+        }
 
 
 @media (1700px <= width) {
