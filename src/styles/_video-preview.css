@@ -1,11 +1,11 @@
-.video-thumbnail {
+.video-preview {
 
 }
-    .video-thumbnail__viewport {
+    .video-preview__viewport {
 
     }
 
-    .video-thumbnail__name {
+    .video-preview__name {
         margin-top: 14px;
         font-family: var(--font-heading);
         font-style: italic;
@@ -15,11 +15,11 @@
         color: #E4BB6B;
         text-transform: uppercase;
     }
-        .video-thumbnail__link {
+        .video-preview__link {
 
         }
 
-    .video-thumbnail__description {
+    .video-preview__description {
         margin-top: 7px;
         font-size: 18px;
         line-height: 22px;
@@ -29,28 +29,23 @@
 
 @media (1700px <= width) {
 
-    .video-thumbnail {
+    .video-preview {
 
     }
-        .video-thumbnail__viewport {
+        .video-preview__viewport {
 
         }
 
-        .video-thumbnail__name {
+        .video-preview__name {
             margin-top: 20px;
-            /*font-family: var(--font-heading);*/
-            /*font-style: italic;*/
-            /*font-weight: 500;*/
             font-size: 26px;
             line-height: 30px;
-            /*color: #E4BB6B;*/
-            /*text-transform: uppercase;*/
         }
-            .video-thumbnail__link {
+            .video-preview__link {
 
             }
 
-        .video-thumbnail__description {
+        .video-preview__description {
             margin-top: 8px;
             font-size: 22px;
             line-height: 28px;

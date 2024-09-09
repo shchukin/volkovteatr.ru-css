@@ -1,5 +1,6 @@
 .file {
     position: relative;
+    display: block;
     padding: 22px 73px;
     background-color: #F8F0E5;
     border-radius: 6px;

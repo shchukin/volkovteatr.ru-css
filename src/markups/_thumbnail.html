@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <title>.thumbnail</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../styles/styles.css">
+    </head>
+    <body>
+
+        <div style="max-width: 462px; margin: 0 auto; padding: 0 40px;">
+            <br>
+            <br>
+            <h1>.thumbnail</h1>
+
+            <a class="thumbnail" href="#">
+                <img class="thumbnail__image"
+                     srcset="../temp/thumbnails/thumbnail-c@2x.jpg 2x"
+                     src="../temp/thumbnails/thumbnail-c@1x.jpg"
+                     width="382"
+                     height="287"
+                     alt=""
+                >
+            </a>
+
+            <br>
+            <br>
+            <br>
+            <h2>С кнопкой Play</h2>
+
+            <a class="thumbnail" href="#">
+                <img class="thumbnail__image"
+                     srcset="../temp/video-thumbnails/video-thumbnail-c@2x.jpg 2x"
+                     src="../temp/video-thumbnails/video-thumbnail-c@1x.jpg"
+                     width="571"
+                     height="321"
+                     alt=""
+                >
+                <div class="thumbnail__play">
+                    <svg class="thumbnail__icon" width="93" height="93" viewBox="0 0 93 93" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M37.2 67.425V25.575L65.0999 46.5L37.2 67.425Z"/>
+                    </svg>
+                </div>
+            </a>
+
+            <p>
+                По-мимо самой плитки существует ещё компонент для видео-превьюшек <a class="nobr link" href="_video-preview.html"><b><i>.video-preview</i></b></a>
+            </p>
+
+
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+        </div>
+
+
+        <!-- jQuery dependant -->
+        <script src="../vendors/jquery/jquery-3.7.1.min.js"></script>
+        <script src="../vendors/magnific-popup/jquery.magnific-popup.min.js"></script>
+        <script src="../vendors/inputmask/jquery.inputmask.min.js"></script>
+        <script src="../vendors/inputmask.phone/inputmask.phone.extensions.min.js"></script>
+        <script src="../vendors/inputmask.phone/phone-codes/phone-ru.min.js"></script>
+
+        <!-- Vanilla JS -->
+        <script src="../vendors/swiper/swiper-bundle.min.js"></script>
+
+        <!-- Scripts -->
+        <script src="../scripts/scripts.js"></script>
+
+
+    </body>
+</html>

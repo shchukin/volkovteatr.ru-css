@@ -11,7 +11,7 @@
     color: #E4BB6B;
     text-decoration: underline;
     text-decoration-thickness: 1px;
-    text-underline-offset: 0.25em;
+    text-underline-offset: 0.2em;
     cursor: pointer;
     transition: text-decoration-color var(--transition-hover);
 }
