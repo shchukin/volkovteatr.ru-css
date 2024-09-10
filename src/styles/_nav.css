@@ -224,3 +224,140 @@
             /*order: -1;*/
         }
 }
+
+
+
+@media (width < 740px) {
+
+    .nav {
+        display: block;
+        /*align-items: flex-start;*/
+        /*justify-content: space-between;*/
+        /*gap: 46px;*/
+    }
+        .nav__section {
+            /*display: grid;*/
+        }
+            .nav__item {
+                margin-top: 0;
+            }
+
+            .nav__item:first-child {
+                /*margin-top: 0;*/
+            }
+                .nav__link {
+                    display: flex;
+                    align-items: center;
+                    /*width: fit-content;*/
+                    padding-top: 11px;
+                    padding-bottom: 11px;
+                    /*font-family: var(--font-heading);*/
+                    /*font-weight: bold;*/
+                    /*font-style: italic;*/
+                    font-size: 18px;
+                    line-height: 22px;
+                    /*color: #303F64;*/
+                    /*text-transform: uppercase;*/
+                    /*text-decoration: 1.5px underline transparent;*/
+                    /*text-underline-offset: 4px;*/
+                    /*white-space: nowrap;*/
+                    /*transition: text-decoration-color var(--transition-hover);*/
+                }
+
+                .nav__link:hover {
+                    /*text-decoration-color: currentColor;*/
+                }
+
+                .nav__sub-nav {
+                    display: none;
+                }
+                    .nav__sub-link {
+                        /*display: block;*/
+                        /*width: fit-content;*/
+                        /*padding-top: 7px;*/
+                        /*padding-bottom: 7px;*/
+                        /*font-weight: 600;*/
+                        /*font-size: 20px;*/
+                        /*line-height: 27px;*/
+                        /*color: #303F64;*/
+                        /*text-decoration: 1.5px underline transparent;*/
+                        /*text-underline-offset: 2px;*/
+                        /*white-space: nowrap;*/
+                        /*transition: text-decoration-color var(--transition-hover);*/
+                    }
+
+                    .nav__sub-link:hover {
+                        /*text-decoration-color: currentColor;*/
+                    }
+
+
+                .nav__item--contacts {
+
+                }
+                    .nav__item--contacts .nav__link {
+                        /*font-size: 20px;*/
+                        /*line-height: 24px;*/
+                    }
+
+                .nav__item--encyclopedia {
+
+                }
+                    .nav__item--encyclopedia .nav__link {
+                        /*display: block;*/
+                        padding: 12px 24px;
+                        /*background-color: #0B1E3A;*/
+                        /*border-radius: 27px;*/
+                        /*font-family: var(--font-heading);*/
+                        /*font-weight: bold;*/
+                        /*font-style: italic;*/
+                        font-size: 18px;
+                        /*line-height: 21px;*/
+                        /*color: #E4BB6B;*/
+                        /*text-transform: uppercase;*/
+                        /*text-decoration: none;*/
+                        /*user-select: none;*/
+                        /*transition: opacity var(--transition-hover);*/
+                    }
+
+                    @media (370px <= width < 400px) {
+                        .nav__item--encyclopedia .nav__link {
+                            font-size: 17px;
+                        }
+                    }
+
+                    @media (350px <= width < 370px) {
+                        .nav__item--encyclopedia .nav__link {
+                            font-size: 16px;
+                        }
+                    }
+
+                    @media (width < 350px) {
+                        .nav__item--encyclopedia .nav__link {
+                            padding: 10px 16px;
+                            font-size: 15px;
+                        }
+                    }
+
+                    .nav__item--encyclopedia .nav__link:hover {
+                        /*opacity: 90%;*/
+                    }
+
+            .nav__addition {
+                margin-top: 4px;
+            }
+
+
+
+    .nav--footer {
+
+    }
+        .nav--footer .nav__item--contacts {
+            margin-top: 12px;
+        }
+
+        .nav--footer .nav__item--encyclopedia {
+            margin-top: 12px;
+        }
+}
+
+

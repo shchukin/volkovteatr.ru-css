@@ -27,3 +27,25 @@
             height: 32px;
         }
 }
+
+
+
+@media (width < 740px) {
+
+    .net {
+        /*display: block;*/
+        /*width: fit-content;*/
+        /*padding: 8px;*/
+    }
+        .net__icon {
+            /*vertical-align: top;*/
+            width: 36px;
+            height: 36px;
+            /*fill: #0B1E3A;*/
+            /*transition: opacity var(--transition-hover);*/
+        }
+
+        .net:hover .net__icon {
+            /*opacity: 80%;*/
+        }
+}

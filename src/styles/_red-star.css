@@ -2,6 +2,7 @@
     display: flex;
     align-items: baseline;
     gap: 7px;
+    width: fit-content;
     padding-top: 3px;
     padding-bottom: 1px;
     font-size: 11px;

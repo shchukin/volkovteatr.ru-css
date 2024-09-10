@@ -125,3 +125,16 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 })(jQuery);
+
+
+
+
+/* Навигация на смартфонах */
+
+(function ($) {
+
+    $('.nav__link').on('click', function (event) {
+
+    });
+
+})(jQuery);
