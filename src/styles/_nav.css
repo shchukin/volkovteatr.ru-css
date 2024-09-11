@@ -373,6 +373,20 @@
         .nav--footer .nav__item--encyclopedia {
             margin-top: 12px;
         }
+
+
+    .nav--header {
+
+    }
+        .nav--header .nav__link {
+            padding-top: 13px;
+            padding-bottom: 13px;
+            font-weight: 600;
+        }
+
+        .nav--header .nav__item--encyclopedia {
+            margin-top: 13px;
+        }
 }
 
 
