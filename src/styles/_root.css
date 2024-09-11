@@ -33,6 +33,7 @@
 @media (width < 740px) {
 
     :root {
+        --header-height: 90px;
         --article-top-padding: 12px;
         --body-font-size: 18px;
         --body-line-height: 25px;
