@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+(function ($) {
 
     /* Глобальные константы */
 
@@ -74,13 +74,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 
-});
 
 
-/* Модалка -- здесь кусок кода на jQuery поскольку пока не могу
-   найти хорошую замену magnific popup */
 
-(function ($) {
+
+    /* Модалка */
 
     const $fixedHeader = $('.header__fixed-part');
     const scrollWidth = $(window).outerWidth() - $(window).width();
@@ -109,32 +107,61 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-})(jQuery);
 
 
-/* Маска для телефона -- используем старую версию input.mask
- * Для неё есть плагин для номеров телефонов, который понимает
- * русские города. Например, при ввооде +74852 скобочка увеличивается
- * с трёх до четырёх штук.
- */
+    /* Маска для телефона -- используем старую версию input.mask
+     * Для неё есть плагин для номеров телефонов, который понимает
+     * русские города. Например, при ввооде +74852 скобочка увеличивается
+     * с трёх до четырёх штук.
+     */
 
-(function ($) {
 
     $('[type="tel"]').inputmask({
         alias: 'phoneru',
     });
 
-})(jQuery);
 
 
 
 
-/* Навигация на смартфонах */
+    /* Бургер */
 
-(function ($) {
+    const $html = $('html');
+    let rememberedPageScrollPosition = 0;
 
-    $('.nav__link').on('click', function (event) {
+    $('.header__toggle-menu').on('click', function () {
 
+        if( ! $html.hasClass('burger-expanded') ) {
+            if(!isDesktop) {
+                rememberedPageScrollPosition = $(window).scrollTop(); /* Запомнить скролл пользователя, так как display: none на .page его сбросит (смотри .burger-expanded .page) */
+            }
+            $html.addClass('burger-expanded');
+            $(window).scrollTop(0); /* При открытии меню, его скролл должен быть в начале */
+        } else {
+            $html.removeClass('burger-expanded');
+            if(!isDesktop) {
+                $(window).scrollTop(rememberedPageScrollPosition);/* При закрытии меню скролл должен быть там, где пользователь его оставил */
+            }
+        }
+    });
+
+
+    /* hide popup by overlay click ( goo.gl/SJG2Hw ) */
+
+    $(document).on('click', function(event) {
+        if (!$(event.target).closest('.header__dropdown, .header__toggle-menu').length) {
+            $html.removeClass('burger-expanded');
+        }
+    });
+
+
+    /* hide popup by Esc press */
+
+    $(document).on('keyup', function(event) {
+        if (event.keyCode == 27) {
+            $html.removeClass('burger-expanded');
+        }
     });
 
 })(jQuery);
+
