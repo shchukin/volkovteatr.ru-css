@@ -23,7 +23,7 @@ Brygada 1918:
     font-family: "Nunito Sans";
     font-style: normal;
     font-weight: 400;
-    src: url("../fonts/nunito-sans-v15-cyrillic_latin-regular.woff2") format("woff2");"
+    src: url("../fonts/nunito-sans-v15-cyrillic_latin-regular.woff2") format("woff2");
 }
 
 @font-face {
@@ -31,7 +31,7 @@ Brygada 1918:
     font-family: "Nunito Sans";
     font-style: italic;
     font-weight: 400;
-    src: url("../fonts/nunito-sans-v15-cyrillic_latin-italic.woff2") format("woff2");"
+    src: url("../fonts/nunito-sans-v15-cyrillic_latin-italic.woff2") format("woff2");
 }
 
 @font-face {
@@ -39,7 +39,7 @@ Brygada 1918:
     font-family: "Nunito Sans";
     font-style: normal;
     font-weight: 600;
-    src: url("../fonts/nunito-sans-v15-cyrillic_latin-600.woff2") format("woff2");"
+    src: url("../fonts/nunito-sans-v15-cyrillic_latin-600.woff2") format("woff2");
 }
 
 @font-face {
@@ -47,7 +47,7 @@ Brygada 1918:
     font-family: "Nunito Sans";
     font-style: italic;
     font-weight: 600;
-    src: url("../fonts/nunito-sans-v15-cyrillic_latin-600italic.woff2") format("woff2");"
+    src: url("../fonts/nunito-sans-v15-cyrillic_latin-600italic.woff2") format("woff2");
 }
 
 @font-face {
@@ -55,7 +55,7 @@ Brygada 1918:
     font-family: "Nunito Sans";
     font-style: normal;
     font-weight: 700;
-    src: url("../fonts/nunito-sans-v15-cyrillic_latin-700.woff2") format("woff2");"
+    src: url("../fonts/nunito-sans-v15-cyrillic_latin-700.woff2") format("woff2");
 }
 
 @font-face {
@@ -63,7 +63,7 @@ Brygada 1918:
     font-family: "Nunito Sans";
     font-style: italic;
     font-weight: 700;
-    src: url("../fonts/nunito-sans-v15-cyrillic_latin-700italic.woff2") format("woff2");"
+    src: url("../fonts/nunito-sans-v15-cyrillic_latin-700italic.woff2") format("woff2");
 }
 
 
@@ -74,7 +74,7 @@ Brygada 1918:
     font-family: "Brygada 1918";
     font-style: normal;
     font-weight: 400;
-    src: url("../fonts/brygada-1918-v22-cyrillic_latin-regular.woff2") format("woff2");"
+    src: url("../fonts/brygada-1918-v22-cyrillic_latin-regular.woff2") format("woff2");
 }
 
 @font-face {
@@ -82,7 +82,7 @@ Brygada 1918:
     font-family: "Brygada 1918";
     font-style: italic;
     font-weight: 400;
-    src: url("../fonts/brygada-1918-v22-cyrillic_latin-italic.woff2") format("woff2");"
+    src: url("../fonts/brygada-1918-v22-cyrillic_latin-italic.woff2") format("woff2");
 }
 
 @font-face {
@@ -90,7 +90,7 @@ Brygada 1918:
     font-family: "Brygada 1918";
     font-style: normal;
     font-weight: 500;
-    src: url("../fonts/brygada-1918-v22-cyrillic_latin-500.woff2") format("woff2");"
+    src: url("../fonts/brygada-1918-v22-cyrillic_latin-500.woff2") format("woff2");
 }
 
 @font-face {
@@ -98,7 +98,7 @@ Brygada 1918:
     font-family: "Brygada 1918";
     font-style: italic;
     font-weight: 500;
-    src: url("../fonts/brygada-1918-v22-cyrillic_latin-500italic.woff2") format("woff2");"
+    src: url("../fonts/brygada-1918-v22-cyrillic_latin-500italic.woff2") format("woff2");
 }
 
 @font-face {
@@ -106,7 +106,7 @@ Brygada 1918:
     font-family: "Brygada 1918";
     font-style: italic;
     font-weight: 600;
-    src: url("../fonts/brygada-1918-v22-cyrillic_latin-600italic.woff2") format("woff2");"
+    src: url("../fonts/brygada-1918-v22-cyrillic_latin-600italic.woff2") format("woff2");
 }
 
 @font-face {
@@ -114,5 +114,5 @@ Brygada 1918:
     font-family: "Brygada 1918";
     font-style: italic;
     font-weight: 700;
-    src: url("../fonts/brygada-1918-v22-cyrillic_latin-700italic.woff2") format("woff2");"
+    src: url("../fonts/brygada-1918-v22-cyrillic_latin-700italic.woff2") format("woff2");
 }
