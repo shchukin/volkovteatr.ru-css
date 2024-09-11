@@ -126,6 +126,7 @@
         width: fit-content;
         margin-left: auto;
         margin-right: auto;
+        display: none;
     }
         .header__drop-wrap {
 
