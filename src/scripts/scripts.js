@@ -122,11 +122,24 @@
 
 
 
+    /* Скролл страницы */
+
+    const $html = $('html');
+
+    $(window).on('scroll', isPageScrolled);
+    $(document).ready(isPageScrolled);
+
+    function isPageScrolled() {
+        if( $(window).scrollTop() > 10 ) {
+            $html.addClass('page-scrolled');
+        } else {
+            $html.removeClass('page-scrolled');
+        }
+    }
 
 
     /* Бургер */
 
-    const $html = $('html');
     let rememberedPageScrollPosition = 0;
 
     $('.header__toggle-menu').on('click', function () {

@@ -15,16 +15,16 @@
     /*--disabled-background: #F6F6F6;*/
     /*--disabled-color: #999999;*/
     /*--error: #FF0033;*/
-    --article-top-padding: 20px;
-    --header-height: 100px;
+    --article-top-padding: 33px;
+    --header-height: 113px;
     --blue-hover: #223046;
 }
 
 @media (1700px <= width) {
 
     :root {
-        --header-height: 144px;
-        --article-top-padding: 40px;
+        --header-height: 156px;
+        --article-top-padding: 53px;
         --body-font-size: 20px;
         --body-line-height: 27px;
     }
