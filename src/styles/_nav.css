@@ -111,6 +111,21 @@
 
 
 
+
+.nav--header {
+
+}
+    .nav--header .nav__item--encyclopedia .nav__link {
+        background-color: #E4BB6B;
+        color: #0B1E3A;
+    }
+
+    .nav--header .nav__item--encyclopedia {
+
+    }
+
+
+
 @media (1700px <= width) {
 
     .nav {
