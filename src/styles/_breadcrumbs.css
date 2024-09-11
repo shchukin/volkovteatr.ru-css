@@ -145,7 +145,7 @@
 
             .breadcrumbs__title {
                 /*padding: 8px;*/
-                /*max-width: 235px;*/
+                max-width: none;
                 /*overflow: hidden;*/
                 /*white-space: nowrap;*/
                 /*text-overflow: ellipsis;*/

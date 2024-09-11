@@ -159,8 +159,6 @@
     });
 
 
-    /* hide popup by overlay click ( goo.gl/SJG2Hw ) */
-
     $(document).on('click', function(event) {
         if (!$(event.target).closest('.header__dropdown, .header__toggle-menu').length) {
             $html.removeClass('burger-expanded');
@@ -168,13 +166,15 @@
     });
 
 
-    /* hide popup by Esc press */
-
     $(document).on('keyup', function(event) {
         if (event.keyCode == 27) {
             $html.removeClass('burger-expanded');
         }
     });
+
+    $('.header__close-menu').on('click', function () {
+        $html.removeClass('burger-expanded');
+    })
 
 })(jQuery);
 
