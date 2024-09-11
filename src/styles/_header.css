@@ -61,6 +61,10 @@
                     padding: 5px;
                 }
 
+                .header__action:first-child {
+                    margin-left: -7px;
+                }
+
                 .header__action:last-child {
                     margin-right: -5px;
                 }
@@ -124,9 +128,19 @@
                         transition: fill var(--transition-hover);
                     }
 
+                    .header__burger-cross {
+                        display: none;
+                    }
+
                     .header__toggle-menu:hover .header__burger {
                         fill: #FFFFFF;
                     }
+
+
+    @keyframes header-dropdown {
+        from { opacity: 50%; transform: translateY(-20px); }
+        to { opacity: 100%; transform: translateY(0); }
+    }
 
     .header__dropdown {
         position: fixed;
@@ -142,6 +156,7 @@
 
     .burger-expanded .header__dropdown {
         display: block;
+        animation: header-dropdown 800ms var(--ease-out-quint);
     }
         .header__drop-wrap {
 
@@ -164,12 +179,12 @@
                     border: none;
                     cursor: pointer;
                 }
-                    .header__cross {
+                    .header__nav-cross {
                         vertical-align: top;
                         fill: #6073A2;
                     }
 
-                    .header__close-menu:hover .header__cross {
+                    .header__close-menu:hover .header__nav-cross {
                         fill: #0B1E3A;
                     }
 
@@ -297,6 +312,10 @@
                             /*height: auto;*/
                             /*fill: #E4BB6B;*/
                             /*transition: fill var(--transition-hover);*/
+                        }
+
+                        .header__burger-cross {
+
                         }
 
                         .header__toggle-menu:hover .header__burger {
@@ -480,9 +499,22 @@
                             /*transition: fill var(--transition-hover);*/
                         }
 
-                        .header__toggle-menu:hover .header__burger {
-                            /*fill: #FFFFFF;*/
+                        .burger-expanded .header__burger {
+                            display: none;
                         }
+
+
+                        /* Крестик закрытия бургера: */
+                        .header__burger-cross {
+                            margin-right: -24px;
+                            fill: #303F64;
+                        }
+
+                        .burger-expanded .header__burger-cross {
+                            display: block;
+                        }
+
+
 
         .header__dropdown {
             position: static;
@@ -495,6 +527,7 @@
             /*margin-left: auto;*/
             /*margin-right: auto;*/
             /*display: none;*/
+            animation: none;
         }
 
         .burger-expanded .header__dropdown {

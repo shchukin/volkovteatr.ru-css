@@ -19,7 +19,6 @@
     window.addEventListener('resize', initGlobalConstant);
 
 
-
     /* Swiper */
 
     var gallerySwiper;
@@ -57,7 +56,7 @@
 
                 // (2) ... но для дестроя нужно уже знать, массив слайдеров ли это, или отдельный инстанс в объекте
                 if (Array.isArray(gallerySwiper)) {
-                    gallerySwiper.forEach(function(swiper) {
+                    gallerySwiper.forEach(function (swiper) {
                         swiper.destroy();
                     });
                 } else {
@@ -72,10 +71,6 @@
     window.addEventListener('resize', function () {
         initSwiper();
     });
-
-
-
-
 
 
     /* Модалка */
@@ -108,7 +103,6 @@
     });
 
 
-
     /* Маска для телефона -- используем старую версию input.mask
      * Для неё есть плагин для номеров телефонов, который понимает
      * русские города. Например, при ввооде +74852 скобочка увеличивается
@@ -121,7 +115,6 @@
     });
 
 
-
     /* Скролл страницы */
 
     const $html = $('html');
@@ -130,7 +123,7 @@
     $(document).ready(isPageScrolled);
 
     function isPageScrolled() {
-        if( $(window).scrollTop() > 10 ) {
+        if ($(window).scrollTop() > 10) {
             $html.addClass('page-scrolled');
         } else {
             $html.removeClass('page-scrolled');
@@ -144,29 +137,37 @@
 
     $('.header__toggle-menu').on('click', function () {
 
-        if( ! $html.hasClass('burger-expanded') ) {
-            if(!isDesktop) {
+        if (!$html.hasClass('burger-expanded')) {
+
+            if (!isDesktop) {
                 rememberedPageScrollPosition = $(window).scrollTop(); /* Запомнить скролл пользователя, так как display: none на .page его сбросит (смотри .burger-expanded .page) */
             }
+
             $html.addClass('burger-expanded');
-            $(window).scrollTop(0); /* При открытии меню, его скролл должен быть в начале */
+
+            if (!isDesktop) {
+                $(window).scrollTop(0); /* При открытии меню, его скролл должен быть в начале */
+            }
+
         } else {
+
             $html.removeClass('burger-expanded');
-            if(!isDesktop) {
+
+            if (!isDesktop) {
                 $(window).scrollTop(rememberedPageScrollPosition);/* При закрытии меню скролл должен быть там, где пользователь его оставил */
             }
         }
     });
 
 
-    $(document).on('click', function(event) {
+    $(document).on('click', function (event) {
         if (!$(event.target).closest('.header__dropdown, .header__toggle-menu').length) {
             $html.removeClass('burger-expanded');
         }
     });
 
 
-    $(document).on('keyup', function(event) {
+    $(document).on('keyup', function (event) {
         if (event.keyCode == 27) {
             $html.removeClass('burger-expanded');
         }
