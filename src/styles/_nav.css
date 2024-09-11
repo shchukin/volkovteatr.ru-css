@@ -17,13 +17,13 @@
             .nav__link {
                 display: block;
                 width: fit-content;
-                padding-top: 7px;
-                padding-bottom: 7px;
+                padding-top: 4px;
+                padding-bottom: 4px;
                 font-family: var(--font-heading);
                 font-weight: bold;
                 font-style: italic;
-                font-size: 22px;
-                line-height: 26px;
+                font-size: 19px;
+                line-height: 22px;
                 color: #303F64;
                 text-transform: uppercase;
                 text-decoration: 1.5px underline transparent;
@@ -42,11 +42,11 @@
                 .nav__sub-link {
                     display: block;
                     width: fit-content;
-                    padding-top: 7px;
-                    padding-bottom: 7px;
+                    padding-top: 5px;
+                    padding-bottom: 5px;
                     font-weight: 600;
-                    font-size: 20px;
-                    line-height: 27px;
+                    font-size: 18px;
+                    line-height: 25px;
                     color: #303F64;
                     text-decoration: 1.5px underline transparent;
                     text-underline-offset: 2px;
@@ -72,13 +72,13 @@
             }
                 .nav__item--encyclopedia .nav__link {
                     display: block;
-                    padding: 16px 14px;
+                    padding: 12px 14px;
                     background-color: #0B1E3A;
                     border-radius: 27px;
                     font-family: var(--font-heading);
                     font-weight: bold;
                     font-style: italic;
-                    font-size: 18px;
+                    font-size: 16px;
                     line-height: 21px;
                     color: #E4BB6B;
                     text-transform: uppercase;
@@ -147,13 +147,13 @@
                 .nav__link {
                     /*display: block;*/
                     /*width: fit-content;*/
-                    /*padding-top: 7px;*/
-                    /*padding-bottom: 7px;*/
+                    padding-top: 7px;
+                    padding-bottom: 7px;
                     /*font-family: var(--font-heading);*/
                     /*font-weight: bold;*/
                     /*font-style: italic;*/
-                    /*font-size: 22px;*/
-                    /*line-height: 26px;*/
+                    font-size: 22px;
+                    line-height: 26px;
                     /*color: #303F64;*/
                     /*text-transform: uppercase;*/
                     /*text-decoration: 1.5px underline transparent;*/
@@ -172,11 +172,11 @@
                     .nav__sub-link {
                         /*display: block;*/
                         /*width: fit-content;*/
-                        /*padding-top: 7px;*/
-                        /*padding-bottom: 7px;*/
+                        padding-top: 7px;
+                        padding-bottom: 7px;
                         /*font-weight: 600;*/
-                        /*font-size: 20px;*/
-                        /*line-height: 27px;*/
+                        font-size: 20px;
+                        line-height: 27px;
                         /*color: #303F64;*/
                         /*text-decoration: 1.5px underline transparent;*/
                         /*text-underline-offset: 2px;*/
@@ -202,7 +202,7 @@
                 }
                     .nav__item--encyclopedia .nav__link {
                         /*display: block;*/
-                        /*padding: 16px 14px;*/
+                        padding: 16px 14px;
                         /*background-color: #0B1E3A;*/
                         border-radius: 29px;
                         /*font-family: var(--font-heading);*/
