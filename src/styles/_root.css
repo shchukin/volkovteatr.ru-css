@@ -20,7 +20,7 @@
     --blue-hover: #223046;
 }
 
-@media (1700px <= width) {
+@media (1850px <= width) {
 
     :root {
         --header-height: 156px;
@@ -35,8 +35,6 @@
     :root {
         --header-height: 90px;
         --article-top-padding: 12px;
-        --body-font-size: 18px;
-        --body-line-height: 25px;
     }
 }
 

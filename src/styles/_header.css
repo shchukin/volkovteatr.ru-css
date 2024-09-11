@@ -13,9 +13,8 @@
     }
 
     .page-scrolled .header__detachable-part {
-        background-color: rgb(11 30 58 / 60%);
+        background-color: #0B1E3A;
     }
-
         .header__wrap {
             position: relative;
         }
@@ -210,7 +209,7 @@
                     }
 
 
-@media (1700px <= width) {
+@media (1850px <= width) {
 
     .header {
         /*height: var(--header-height);*/

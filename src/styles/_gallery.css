@@ -4,7 +4,7 @@
     gap: 20px;
 }
 
-@media (1700px <= width) {
+@media (1850px <= width) {
 
     .gallery {
         grid-template-columns: repeat(6, minmax(0, 273px)); /* если оставить 1fr, то получится 273.33px, по-этому вручную пишем 273px */
