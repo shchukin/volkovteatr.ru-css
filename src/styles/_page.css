@@ -13,4 +13,8 @@
     .page {
         overflow: hidden;
     }
+
+    .burger-expanded .page {
+        display: none;
+    }
 }

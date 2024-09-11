@@ -327,6 +327,10 @@
                     /*overflow: hidden;*/
                 }
 
+                .burger-expanded .header__logo {
+                    display: none;
+                }
+
                 .header__first-line {
                     /*width: fit-content;*/
                     /*margin-left: auto;*/
@@ -334,6 +338,11 @@
                     /*align-items: center;*/
                     /*gap: 10px;*/
                     display: none;
+                }
+
+                .burger-expanded .header__first-line {
+                    display: flex;
+                    margin-left: 0;
                 }
                     .header__action {
                         /*display: block;*/
@@ -347,6 +356,10 @@
                             /*vertical-align: top;*/
                             /*fill: #DAC0A3;*/
                             /*transition: fill var(--transition-hover);*/
+                        }
+
+                        .burger-expanded .header__icon {
+                            fill: #6073A2;
                         }
 
                         .header__action:hover .header__icon {
@@ -382,6 +395,9 @@
                         }
 
                     .header__toggle-menu {
+                        position: absolute;
+                        right: 0;
+                        top: 0;
                         /*display: flex;*/
                         /*align-items: center;*/
                         /*justify-content: center;*/
