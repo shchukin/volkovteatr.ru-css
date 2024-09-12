@@ -96,8 +96,6 @@
 @media (width < 740px) {
 
     .breadcrumbs {
-        padding-top: 8px;
-        padding-bottom: 8px;
         /*display: flex;*/
         /*align-items: flex-start;*/
         /*margin-left: -8px;*/

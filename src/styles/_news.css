@@ -42,3 +42,26 @@
             margin-top: 60px;
         }
 }
+
+
+
+@media (width < 740px) {
+
+    .news {
+
+    }
+        .news__heading {
+
+        }
+
+        .news__list {
+            margin-top: 26px;
+            display: grid;
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+        }
+
+        .news__navigation {
+            margin-top: 26px;
+        }
+}
+
