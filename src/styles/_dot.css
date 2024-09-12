@@ -1,0 +1,24 @@
+.dot {
+    position: relative;
+    top: -1px;
+    display: inline-block;
+    vertical-align: baseline;
+    margin-left: 4px;
+    margin-right: 4px;
+    flex-shrink: 0;
+    width: 8px;
+    height: 8px;
+    background-color: currentColor;
+    border-radius: 50%;
+}
+
+
+@media (1700px <= width) {
+
+    .dot {
+        width: 10px;
+        height: 10px;
+        margin-left: 6px;
+        margin-right: 6px;
+    }
+}

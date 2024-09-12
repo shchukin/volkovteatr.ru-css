@@ -5,26 +5,49 @@
     text-transform: uppercase;
 }
 
-.title--main {
+
+
+.title--article {
     font-size: 32px;
     line-height: 37px;
 }
 
-
 @media (1850px <= width) {
 
-    .title--main {
+    .title--article {
         font-size: 42px;
         line-height: 49px;
     }
 }
 
+@media (width < 740px) {
+
+    .title--article {
+        font-size: 20px;
+        line-height: 23px;
+    }
+}
+
+
+
+.title--main {
+    font-size: 48px;
+    line-height: 56px;
+}
+
+@media (1850px <= width) {
+
+    .title--main {
+        font-size: 52px;
+        line-height: 61px;
+    }
+}
 
 @media (width < 740px) {
 
     .title--main {
-        font-size: 20px;
-        line-height: 23px;
+        font-size: 32px;
+        line-height: 37px;
     }
 }
 

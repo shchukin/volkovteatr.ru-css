@@ -1,0 +1,21 @@
+.news-preview {
+
+}
+    .news-preview__viewport {
+
+    }
+
+    .news-preview__info {
+        margin-top: 24px;
+        font-style: italic;
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    .news-preview__name {
+        margin-top: 10px;
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 30px;
+        color: #F8F0E5;
+    }
