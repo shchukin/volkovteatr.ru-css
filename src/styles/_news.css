@@ -11,7 +11,7 @@
         margin-top: 40px;
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 40px 18px;
+        gap: 40px 20px;
     }
 
     .news__navigation {
@@ -20,7 +20,7 @@
 
 
 
-@media (1850px <= width) {
+@media (1700px <= width) {
 
     .news {
         /*margin-top: var(--article-top-padding);*/

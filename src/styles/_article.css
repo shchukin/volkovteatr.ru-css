@@ -43,7 +43,7 @@
 
 
 
-@media (1850px <= width) {
+@media (1700px <= width) {
 
     .article {
         /*margin-top: var(--article-top-padding);*/
@@ -93,7 +93,7 @@
 
 
 
-@media (width < 1850px) {
+@media (width < 1700px) {
 
     .article {
         /*margin-top: var(--article-top-padding);*/

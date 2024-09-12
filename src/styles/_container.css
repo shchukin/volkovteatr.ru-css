@@ -4,7 +4,7 @@
     margin-right: auto;
 }
 
-@media (1850px <= width) {
+@media (1700px <= width) {
 
     .container {
         width: 1760px;
