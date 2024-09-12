@@ -1,4 +1,4 @@
-.dot {
+.bullet {
     position: relative;
     top: -1px;
     display: inline-block;
@@ -15,7 +15,7 @@
 
 @media (1700px <= width) {
 
-    .dot {
+    .bullet {
         width: 10px;
         height: 10px;
         margin-left: 6px;

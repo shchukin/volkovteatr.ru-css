@@ -14,7 +14,6 @@
 .file:hover {
     background-color: #FFFFFF;
 }
-
     .file__icon {
         position: absolute;
         left: 29px;
@@ -34,7 +33,6 @@
         height: 21px;
         fill: currentColor;
     }
-
 
 
 @media (1700px <= width) {

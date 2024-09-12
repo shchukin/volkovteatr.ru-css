@@ -4,10 +4,18 @@
     gap: 18px;
 }
 
+.repository--full-width {
+    max-width: none;
+}
+
 @media (1700px <= width) {
 
     .repository {
         max-width: 872px;
         gap: 24px;
+    }
+
+    .repository--full-width {
+        max-width: none;
     }
 }
