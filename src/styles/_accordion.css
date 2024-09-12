@@ -1,0 +1,30 @@
+.accordion {
+
+}
+    .accordion__item {
+
+    }
+        .accordion__file-heading {
+            
+        }
+            .accordion__handler {
+                width: 100%;
+                padding: 15px 0;
+                border: none;
+                border-bottom: 1px solid currentColor;
+                background-color: transparent;
+                font-family: var(--font-heading);
+                font-size: 26px;
+                line-height: 30px;
+                font-style: italic;
+                text-align: left;
+                text-transform: uppercase;
+            }
+
+            .accordion__chevron {
+                stroke: #F8F0E5;
+            }
+
+        .accordion__dropdown {
+
+        }

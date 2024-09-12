@@ -10,6 +10,9 @@
     height: 8px;
     background-color: currentColor;
     border-radius: 50%;
+    text-indent: 200%;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 
