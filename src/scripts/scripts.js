@@ -8,7 +8,7 @@
 
     function initGlobalConstant() {
         isDesktop = window.matchMedia("(min-width: 740px)").matches;
-        responsiveSpacing = !isDesktop ? parseInt(getComputedStyle(document.documentElement).getPropertyValue('--container-padding')) : 0;
+        responsiveSpacing = !isDesktop ? parseInt(getComputedStyle(document.documentElement).getPropertyValue('--container-padding')) : 40;
         headerHeight = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--header-height')) || 0;
     }
 
@@ -19,7 +19,7 @@
     window.addEventListener('resize', initGlobalConstant);
 
 
-    /* Swiper */
+    /* Swiper для галерей */
 
     var gallerySwiper;
     var isSwiperInit = false;
@@ -70,6 +70,26 @@
 
     window.addEventListener('resize', function () {
         initSwiper();
+    });
+
+
+
+    /* Swiper для слайдера */
+
+    gallerySwiper = new Swiper('.swiper--init-slider-in-js', {
+        slidesPerView: 1,
+        slidesPerGroup: 1,
+        spaceBetween: responsiveSpacing,
+
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true
+        },
+
+        navigation: {
+            prevEl: '.swiper-button-prev',
+            nextEl: '.swiper-button-next',
+        }
     });
 
 

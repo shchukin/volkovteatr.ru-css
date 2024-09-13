@@ -133,9 +133,29 @@
 
 
 
+.swiper--skin-slider {
+
+}
+    .swiper--skin-slider .swiper-button-prev {
+        position: absolute;
+        left: -20px;
+    }
+
+    .swiper--skin-slider .swiper-button-next {
+
+    }
+
+    .swiper--skin-slider .swiper-button::after {
+        display: none;
+    }
+        .swiper--skin-slider .swiper-arrow {
+            stroke: #F8F0E5;
+        }
 
 
-
+    .swiper--skin-slider .swiper-pagination {
+        position: static;
+    }
 
 
 

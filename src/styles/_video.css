@@ -1,0 +1,6 @@
+.video {
+    vertical-align: top;
+    width: 100%;
+    aspect-ratio: 16/9;
+    background-color: #000000;
+}
