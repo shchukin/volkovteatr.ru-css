@@ -3,7 +3,7 @@ html {
     min-width: 1250px; /* Планшеты */
 }
 
-@media (1700px <= width) {
+@media (1850px <= width) {
 
     html {
         /* Здесь минимальная ширина не нужна */

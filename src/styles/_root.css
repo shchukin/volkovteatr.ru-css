@@ -21,7 +21,7 @@
     --blue-hover: #223046;
 }
 
-@media (1700px <= width) {
+@media (1850px <= width) {
 
     :root {
         --header-height: 156px;
