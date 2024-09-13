@@ -207,10 +207,19 @@
                 background-color: transparent; /* конфликт со стилями swiper */
                 border-radius: 4px;
                 opacity: 100%;
+                cursor: pointer;
             }
 
             .carousel--css-skin-slider .carousel__bullet:hover {
                 background-color: rgb(255 255 255 / 10%);
+            }
+
+            .carousel--css-skin-slider .carousel__bullet--current {
+                cursor: default;
+            }
+
+            .carousel--css-skin-slider .carousel__bullet--current:hover {
+                background-color: transparent;
             }
                 .carousel--css-skin-slider .carousel__bullet::after {
                     content: "";
