@@ -22,3 +22,20 @@
             /*object-fit: contain;*/
         }
 }
+
+
+
+@media (width < 740px) {
+
+    .slider-entry {
+
+    }
+        .slider-entry__image {
+            width: 100%;
+            height: auto;
+            /*border-radius: var(--slider-rounding);*/
+            /*object-fit: contain;*/
+        }
+}
+
+

@@ -82,6 +82,7 @@
             slidesPerView: 1,
             slidesPerGroup: 1,
             spaceBetween: responsiveSpacing,
+            autoHeight: true,
 
             pagination: {
                 el: $carousel.querySelector('.carousel__pagination'),
@@ -94,7 +95,7 @@
             },
 
             breakpoints: {
-                1024: {
+                740: {
                     pagination: {
                         el: $carousel.querySelector('.carousel__pagination'),
                         type: "bullets",
