@@ -1,30 +1,61 @@
+:root {
+    --accordion-padding-horizontal: 16px;
+}
+
 .accordion {
 
 }
     .accordion__item {
-
+        margin-top: 42px;
     }
         .accordion__file-heading {
-            
+            margin-top: 0;
+            margin-bottom: 0;
         }
             .accordion__handler {
+                position: relative;
                 width: 100%;
-                padding: 15px 0;
+                margin-left: -20px;
+                margin-right: -20px;
+                padding: 25px calc(40px + var(--accordion-padding-horizontal)) 25px var(--accordion-padding-horizontal);
                 border: none;
-                border-bottom: 1px solid currentColor;
                 background-color: transparent;
+                border-radius: 6px;
                 font-family: var(--font-heading);
                 font-size: 26px;
                 line-height: 30px;
                 font-style: italic;
                 text-align: left;
                 text-transform: uppercase;
+                cursor: pointer;
+                transition: background-color var(--transition-hover);
             }
 
+            .accordion__handler:hover {
+                background-color: rgb(255 255 255 / 10%);
+            }
+                .accordion__handler::after {
+                    content: "";
+                    position: absolute;
+                    left: var(--accordion-padding-horizontal);
+                    right: var(--accordion-padding-horizontal);
+                    bottom: 10px;
+                    display: block;
+                    height: 1px;
+                    background-color: currentColor;
+                }
+
             .accordion__chevron {
-                stroke: #F8F0E5;
+                position: absolute;
+                right: var(--accordion-padding-horizontal);
+                top: 50%;
+                margin-top: -12px;
+                stroke: currentColor;
+                width: 30px;
+                height: auto;
             }
 
         .accordion__dropdown {
-
+            margin-top: 40px;
+            display: none;
         }
