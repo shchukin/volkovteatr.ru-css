@@ -2,8 +2,23 @@
     text-align: center;
 }
     .slider-entry__image {
+        vertical-align: top;
         width: auto;   /* 992x558 -- расчёт на 16:9. Более широкоформатно нельзя. */
         height: 558px;
         border-radius: var(--slider-rounding);
         object-fit: contain;
     }
+
+
+@media (1850px <= width) {
+
+    .slider-entry {
+        /*text-align: center;*/
+    }
+        .slider-entry__image {
+            /*width: auto;   !* 992x558 -- расчёт на 16:9. Более широкоформатно нельзя. *!*/
+            height: 837px;
+            /*border-radius: var(--slider-rounding);*/
+            /*object-fit: contain;*/
+        }
+}

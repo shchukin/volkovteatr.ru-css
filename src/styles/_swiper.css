@@ -141,86 +141,184 @@
         overflow: hidden;
     }
 
-    .carousel--css-skin-slider .carousel__button {
-        position: absolute;
-        top: 0;
-        bottom: 56px; /* Высота пагинатора */
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 92px;
-        border: none;
-        padding: 0;
-        background-color: transparent;
-        border-radius: var(--slider-rounding);
-        cursor: pointer;
-        transition: background-color var(--transition-hover);
-    }
-
-    .carousel--css-skin-slider .carousel__button:hover {
-        background-color: rgb(255 255 255 / 5%);
-    }
-
-    .carousel--css-skin-slider .carousel__button.swiper-button-disabled,
-    .carousel--css-skin-slider .carousel__button.swiper-button-disabled:hover {
-        opacity: 50%;
-        background-color: transparent;
-        cursor: default;
-        user-select: none;
-    }
-
-    .carousel--css-skin-slider .carousel__button--prev {
-        left: 0;
-    }
-
-    .carousel--css-skin-slider .carousel__button--next {
-        right: 0;
-    }
-        .carousel--css-skin-slider .carousel__arrow {
-            flex-shrink: 0;
-            vertical-align: top;
-            stroke: #F8F0E5;
-            width: 28px;
-        }
-
-    .carousel--css-skin-slider .carousel__pagination {
-        z-index: 2; /* выше чем .swiper */
-        width: fit-content;
+    .carousel--css-skin-slider .carousel__controls {
         margin-top: 20px;
-        margin-left: auto;
-        margin-right: auto;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 0;
     }
-        .carousel--css-skin-slider .swiper-pagination-bullet {
+        .carousel--css-skin-slider .carousel__button {
+            position: absolute;
+            top: 0;
+            bottom: 56px; /* Высота пагинатора */
             display: flex;
             align-items: center;
-            width: 36px;
-            height: 36px;
-            padding-left: 6px;
-            padding-right: 6px;
-            margin: 0 !important; /* конфликт со стилями swiper */
-            background-color: transparent; /* конфликт со стилями swiper */
-            border-radius: 4px;
-            opacity: 100%;
+            justify-content: center;
+            width: 92px;
+            border: none;
+            padding: 0;
+            background-color: transparent;
+            border-radius: var(--slider-rounding);
+            cursor: pointer;
+            transition: background-color var(--transition-hover);
         }
 
-        .carousel--css-skin-slider .swiper-pagination-bullet:hover {
-            background-color: rgb(255 255 255 / 10%);
+        .carousel--css-skin-slider .carousel__button:hover {
+            background-color: rgb(255 255 255 / 5%);
         }
 
-            .carousel--css-skin-slider .swiper-pagination-bullet::after {
-                content: "";
-                display: block;
-                width: 100%;
-                height: 2px;
-                border-radius: 1px;
-                background-color: #F8F0E5;
+        .carousel--css-skin-slider .carousel__button.swiper-button-disabled,
+        .carousel--css-skin-slider .carousel__button.swiper-button-disabled:hover {
+            opacity: 50%;
+            background-color: transparent;
+            cursor: default;
+            user-select: none;
+        }
+
+        .carousel--css-skin-slider .carousel__button--prev {
+            left: 0;
+        }
+
+        .carousel--css-skin-slider .carousel__button--next {
+            right: 0;
+        }
+            .carousel--css-skin-slider .carousel__arrow {
+                flex-shrink: 0;
+                vertical-align: top;
+                stroke: #F8F0E5;
+                width: 28px;
             }
 
-            .carousel--css-skin-slider .swiper-pagination-bullet-active::after {
-                background-color: #E4BB6B;
+        .carousel--css-skin-slider .carousel__pagination {
+            z-index: 2; /* выше чем .swiper */
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0;
+        }
+            .carousel--css-skin-slider .carousel__bullet {
+                display: flex;
+                align-items: center;
+                width: 36px;
+                height: 36px;
+                padding-left: 6px;
+                padding-right: 6px;
+                margin: 0 !important; /* конфликт со стилями swiper */
+                background-color: transparent; /* конфликт со стилями swiper */
+                border-radius: 4px;
+                opacity: 100%;
             }
+
+            .carousel--css-skin-slider .carousel__bullet:hover {
+                background-color: rgb(255 255 255 / 10%);
+            }
+                .carousel--css-skin-slider .carousel__bullet::after {
+                    content: "";
+                    display: block;
+                    width: 100%;
+                    height: 2px;
+                    border-radius: 1px;
+                    background-color: #F8F0E5;
+                }
+
+                .carousel--css-skin-slider .carousel__bullet--current::after {
+                    background-color: #E4BB6B;
+                }
+
+
+@media (1850px <= width) {
+
+    .carousel--css-skin-slider {
+        /*position: relative;*/
+        padding-left: 136px;
+        padding-right: 136px;
+    }
+        .carousel--css-skin-slider .carousel__widget {
+
+        }
+
+        .carousel--css-skin-slider .carousel__controls {
+            margin-top: 24px;
+        }
+            .carousel--css-skin-slider .carousel__button {
+                /*position: absolute;*/
+                /*top: 0;*/
+                bottom: 82px; /* Высота пагинатора */
+                /*display: flex;*/
+                /*align-items: center;*/
+                /*justify-content: center;*/
+                width: 120px;
+                /*border: none;*/
+                /*padding: 0;*/
+                /*background-color: transparent;*/
+                /*border-radius: var(--slider-rounding);*/
+                /*cursor: pointer;*/
+                /*transition: background-color var(--transition-hover);*/
+            }
+
+            .carousel--css-skin-slider .carousel__button:hover {
+                /*background-color: rgb(255 255 255 / 5%);*/
+            }
+
+            .carousel--css-skin-slider .carousel__button.swiper-button-disabled,
+            .carousel--css-skin-slider .carousel__button.swiper-button-disabled:hover {
+                /*opacity: 50%;*/
+                /*background-color: transparent;*/
+                /*cursor: default;*/
+                /*user-select: none;*/
+            }
+
+            .carousel--css-skin-slider .carousel__button--prev {
+                /*left: 0;*/
+            }
+
+            .carousel--css-skin-slider .carousel__button--next {
+                /*right: 0;*/
+            }
+                .carousel--css-skin-slider .carousel__arrow {
+                    /*flex-shrink: 0;*/
+                    /*vertical-align: top;*/
+                    /*stroke: #F8F0E5;*/
+                    width: 40px;
+                }
+
+            .carousel--css-skin-slider .carousel__pagination {
+                /*z-index: 2; !* выше чем .swiper *!*/
+                /*width: fit-content;*/
+                /*margin-left: auto;*/
+                /*margin-right: auto;*/
+                /*display: flex;*/
+                /*align-items: center;*/
+                /*justify-content: center;*/
+                /*gap: 0;*/
+            }
+                .carousel--css-skin-slider .carousel__bullet {
+                    /*display: flex;*/
+                    /*align-items: center;*/
+                    width: 58px;
+                    height: 58px;
+                    padding-left: 8px;
+                    padding-right: 8px;
+                    /*margin: 0 !important; !* конфликт со стилями swiper *!*/
+                    /*background-color: transparent; !* конфликт со стилями swiper *!*/
+                    border-radius: 5px;
+                    /*opacity: 100%;*/
+                }
+
+                .carousel--css-skin-slider .carousel__bullet:hover {
+                    /*background-color: rgb(255 255 255 / 10%);*/
+                }
+                    .carousel--css-skin-slider .carousel__bullet::after {
+                        /*content: "";*/
+                        /*display: block;*/
+                        /*width: 100%;*/
+                        height: 4px;
+                        border-radius: 2px;
+                        /*background-color: #F8F0E5;*/
+                    }
+
+                    .carousel--css-skin-slider .carousel__bullet--current::after {
+                        /*background-color: #E4BB6B;*/
+                    }
+}
 

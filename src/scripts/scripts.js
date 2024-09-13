@@ -85,13 +85,25 @@
 
             pagination: {
                 el: $carousel.querySelector('.carousel__pagination'),
-                clickable: true
+                type: "fraction",
             },
 
             navigation: {
                 prevEl: $carousel.querySelector('.carousel__button--prev'),
                 nextEl: $carousel.querySelector('.carousel__button--next'),
-            }
+            },
+
+            breakpoints: {
+                1024: {
+                    pagination: {
+                        el: $carousel.querySelector('.carousel__pagination'),
+                        type: "bullets",
+                        bulletClass: 'carousel__bullet',
+                        bulletActiveClass: 'carousel__bullet--current',
+                        clickable: true
+                    },
+                },
+            },
         });
     });
 
