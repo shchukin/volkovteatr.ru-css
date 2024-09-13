@@ -4,6 +4,9 @@
     .news-preview__viewport {
 
     }
+        .news-preview__viewport .thumbnail__image {
+            border-radius: 16px;
+        }
 
     .news-preview__info {
         margin-top: 24px;
@@ -30,6 +33,9 @@
         .news-preview__viewport {
 
         }
+            .news-preview__viewport .thumbnail__image {
+                border-radius: 20px;
+            }
 
         .news-preview__info {
             font-size: 16px;
