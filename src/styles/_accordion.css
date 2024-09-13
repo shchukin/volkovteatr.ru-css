@@ -6,7 +6,7 @@
 
 }
     .accordion__item {
-        margin-top: 33px;
+        margin-top: 22px;
     }
 
     .accordion__item:first-child {
@@ -21,13 +21,13 @@
                 width: calc(100% + 2 * var(--accordion-padding-horizontal));
                 margin-left: calc(-1 * var(--accordion-padding-horizontal));
                 margin-right: calc(-1 * var(--accordion-padding-horizontal));
-                padding: 30px calc(40px + var(--accordion-padding-horizontal)) 30px var(--accordion-padding-horizontal);
+                padding: 25px calc(40px + var(--accordion-padding-horizontal)) 25px var(--accordion-padding-horizontal);
                 border: none;
                 background-color: transparent;
                 border-radius: 6px;
                 font-family: var(--font-heading);
-                font-size: 26px;
-                line-height: 30px;
+                font-size: 24px;
+                line-height: 28px;
                 font-style: italic;
                 text-align: left;
                 text-transform: uppercase;
@@ -43,7 +43,7 @@
                     position: absolute;
                     left: var(--accordion-padding-horizontal);
                     right: var(--accordion-padding-horizontal);
-                    bottom: 15px;
+                    bottom: 16px;
                     display: block;
                     height: 1px;
                     background-color: currentColor;
@@ -53,9 +53,9 @@
                 position: absolute;
                 right: var(--accordion-padding-horizontal);
                 top: 50%;
-                margin-top: -12px;
+                margin-top: -8px;
                 stroke: currentColor;
-                width: 30px;
+                width: 22px;
                 height: auto;
             }
 
@@ -63,3 +63,75 @@
             margin-top: 40px;
             display: none;
         }
+
+
+
+@media (1850px <= width) {
+
+    :root {
+        --accordion-padding-horizontal: 20px;
+    }
+
+    .accordion {
+
+    }
+        .accordion__item {
+            margin-top: 33px;
+        }
+
+        .accordion__item:first-child {
+            /*margin-top: 0;*/
+        }
+            .accordion__file-heading {
+                /*margin-top: 0;*/
+                /*margin-bottom: 0;*/
+            }
+                .accordion__handler {
+                    /*position: relative;*/
+                    /*width: calc(100% + 2 * var(--accordion-padding-horizontal));*/
+                    /*margin-left: calc(-1 * var(--accordion-padding-horizontal));*/
+                    /*margin-right: calc(-1 * var(--accordion-padding-horizontal));*/
+                    padding-top: 30px;
+                    padding-bottom: 30px;
+                    /*border: none;*/
+                    /*background-color: transparent;*/
+                    /*border-radius: 6px;*/
+                    /*font-family: var(--font-heading);*/
+                    font-size: 26px;
+                    line-height: 30px;
+                    /*font-style: italic;*/
+                    /*text-align: left;*/
+                    /*text-transform: uppercase;*/
+                    /*cursor: pointer;*/
+                    /*transition: background-color var(--transition-hover);*/
+                }
+
+                .accordion__handler:hover {
+                    /*background-color: rgb(255 255 255 / 10%);*/
+                }
+                    .accordion__handler::after {
+                        /*content: "";*/
+                        /*position: absolute;*/
+                        /*left: var(--accordion-padding-horizontal);*/
+                        /*right: var(--accordion-padding-horizontal);*/
+                        bottom: 15px;
+                        /*display: block;*/
+                        /*height: 1px;*/
+                        /*background-color: currentColor;*/
+                    }
+
+                .accordion__chevron {
+                    /*position: absolute;*/
+                    /*right: var(--accordion-padding-horizontal);*/
+                    /*top: 50%;*/
+                    margin-top: -12px;
+                    /*stroke: currentColor;*/
+                    width: 30px;
+                    /*height: auto;*/
+                }
+
+            .accordion__dropdown {
+                /*margin-top: 40px;*/
+                /*display: none;*/
+            }
+}

@@ -8,36 +8,89 @@
     }
 
     .documents__founder {
-        margin-top: 60px;
+        margin-top: 40px;
         display: grid;
-        grid-template-columns: 422px 1fr;
+        grid-template-columns: 384px 1fr;
         gap: 24px;
     }
         .documents__founder-emblem {
-            border-radius: 20px;
+            border-radius: 16px;
+            width: 100%;
+            height: auto;
         }
 
         .documents__body {
-            margin-top: 6px;
+            margin-top: 4px;
         }
             .documents__founder-heading {
                 margin-top: 0;
                 margin-bottom: 0;
+                color: #F8F0E5;
             }
 
             .documents__founder-description {
                 margin-top: 24px;
-                max-width: 697px;
-                font-size: 22px;
-                line-height: 30px;
+                max-width: 560px;
+                font-size: 20px;
+                line-height: 27px;
+                color: #F8F0E5;
             }
 
     .documents__docs-heading {
-        margin-top: 100px;
+        margin-top: 70px;
         margin-bottom: 0;
         color: #E4BB6B;
     }
 
     .documents__list {
-        margin-top: 27px;
+        margin-top: 20px;
     }
+
+
+
+@media (1850px <= width) {
+
+    .documents {
+        /*margin-top: var(--page-top-padding-small);*/
+    }
+        .documents__heading {
+            /*margin-top: 0;*/
+            /*margin-bottom: 0;*/
+            /*text-align: center;*/
+        }
+
+        .documents__founder {
+            margin-top: 60px;
+            /*display: grid;*/
+            grid-template-columns: 422px 1fr;
+            /*gap: 24px;*/
+        }
+            .documents__founder-emblem {
+                border-radius: 20px;
+            }
+
+            .documents__body {
+                margin-top: 6px;
+            }
+                .documents__founder-heading {
+                    /*margin-top: 0;*/
+                    /*margin-bottom: 0;*/
+                }
+
+                .documents__founder-description {
+                    /*margin-top: 24px;*/
+                    /*max-width: 697px;*/
+                    font-size: 22px;
+                    line-height: 30px;
+                }
+
+        .documents__docs-heading {
+            margin-top: 100px;
+            /*margin-bottom: 0;*/
+            /*color: #E4BB6B;*/
+        }
+
+        .documents__list {
+            margin-top: 27px;
+        }
+}
