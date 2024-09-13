@@ -145,7 +145,7 @@
             }
 
             .carousel__pagination {
-                width: auto; /* Конфликт со стилями слайдера */
+                width: auto !important; /* Конфликт со стилями слайдера */
                 font-size: 15px;
                 line-height: 20px;
                 user-select: none; /* При клике по стрелочкам иногда текст выделяется */
