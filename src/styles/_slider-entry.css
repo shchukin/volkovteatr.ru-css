@@ -2,7 +2,5 @@
     vertical-align: top;
     aspect-ratio: 16/9;
     width: 100%;
-    height: auto;
     object-fit: contain;
-    border-radius: 32px;
 }

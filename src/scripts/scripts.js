@@ -76,20 +76,23 @@
 
     /* Swiper для слайдера */
 
-    gallerySwiper = new Swiper('.swiper--init-slider-in-js', {
-        slidesPerView: 1,
-        slidesPerGroup: 1,
-        spaceBetween: responsiveSpacing,
+    document.querySelectorAll('.carousel--js-init-slider').forEach(($carousel) => {
 
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true
-        },
+        new Swiper($carousel.querySelector('.swiper'), {
+            slidesPerView: 1,
+            slidesPerGroup: 1,
+            spaceBetween: responsiveSpacing,
 
-        navigation: {
-            prevEl: '.swiper-button-prev',
-            nextEl: '.swiper-button-next',
-        }
+            pagination: {
+                el: $carousel.querySelector('.carousel__pagination'),
+                clickable: true
+            },
+
+            navigation: {
+                prevEl: $carousel.querySelector('.carousel__button--prev'),
+                nextEl: $carousel.querySelector('.carousel__button--next'),
+            }
+        });
     });
 
 
