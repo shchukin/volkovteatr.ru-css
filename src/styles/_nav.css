@@ -29,7 +29,6 @@
                 text-decoration: 1.5px underline transparent;
                 text-underline-offset: 4px;
                 white-space: nowrap;
-                transition: text-decoration-color var(--transition-hover);
             }
 
             .nav__link:hover {
@@ -51,7 +50,6 @@
                     text-decoration: 1.5px underline transparent;
                     text-underline-offset: 2px;
                     white-space: nowrap;
-                    transition: text-decoration-color var(--transition-hover);
                 }
 
                 .nav__sub-link:hover {

@@ -203,8 +203,14 @@
             padding-right: 6px;
             margin: 0 !important; /* конфликт со стилями swiper */
             background-color: transparent; /* конфликт со стилями swiper */
+            border-radius: 4px;
             opacity: 100%;
         }
+
+        .carousel--css-skin-slider .swiper-pagination-bullet:hover {
+            background-color: rgb(255 255 255 / 10%);
+        }
+
             .carousel--css-skin-slider .swiper-pagination-bullet::after {
                 content: "";
                 display: block;
