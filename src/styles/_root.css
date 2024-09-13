@@ -37,7 +37,7 @@
     :root {
         --header-height: 90px;
         --page-top-padding-default: 12px;
-        --page-top-padding-small: 10px;
+        --page-top-padding-small: 20px;
         --body-font-size: 16px;
         --body-line-height: 24px;
     }

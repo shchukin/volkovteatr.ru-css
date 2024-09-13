@@ -135,3 +135,75 @@
                 /*display: none;*/
             }
 }
+
+
+
+@media (width < 740px) {
+
+    :root {
+        /*--accordion-padding-horizontal: 16px;*/
+    }
+
+    .accordion {
+
+    }
+        .accordion__item {
+            margin-top: 18px;
+        }
+
+        .accordion__item:first-child {
+            /*margin-top: 0;*/
+        }
+            .accordion__file-heading {
+                /*margin-top: 0;*/
+                /*margin-bottom: 0;*/
+            }
+                .accordion__handler {
+                    /*position: relative;*/
+                    /*width: calc(100% + 2 * var(--accordion-padding-horizontal));*/
+                    /*margin-left: calc(-1 * var(--accordion-padding-horizontal));*/
+                    /*margin-right: calc(-1 * var(--accordion-padding-horizontal));*/
+                    /*padding: 25px calc(40px + var(--accordion-padding-horizontal)) 25px var(--accordion-padding-horizontal);*/
+                    /*border: none;*/
+                    /*background-color: transparent;*/
+                    /*border-radius: 6px;*/
+                    /*font-family: var(--font-heading);*/
+                    font-size: 20px;
+                    line-height: 23px;
+                    /*font-style: italic;*/
+                    /*text-align: left;*/
+                    /*text-transform: uppercase;*/
+                    /*cursor: pointer;*/
+                    /*transition: background-color var(--transition-hover);*/
+                }
+
+                .accordion__handler:hover {
+                    background-color: transparent;
+                }
+                    .accordion__handler::after {
+                        /*content: "";*/
+                        /*position: absolute;*/
+                        /*left: var(--accordion-padding-horizontal);*/
+                        /*right: var(--accordion-padding-horizontal);*/
+                        bottom: 11px;
+                        /*display: block;*/
+                        /*height: 1px;*/
+                        /*background-color: currentColor;*/
+                    }
+
+                .accordion__chevron {
+                    /*position: absolute;*/
+                    /*right: var(--accordion-padding-horizontal);*/
+                    /*top: 50%;*/
+                    margin-top: -9px;
+                    /*stroke: currentColor;*/
+                    width: 26px;
+                    /*height: auto;*/
+                }
+
+            .accordion__dropdown {
+                /*margin-top: 40px;*/
+                /*display: none;*/
+            }
+}
+
