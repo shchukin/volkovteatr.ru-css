@@ -177,5 +177,23 @@
         $html.removeClass('burger-expanded');
     })
 
+
+    /* Аккордеон */
+
+    $('.accordion__handler').on('click', function () {
+        const item = $(this).parents('.accordion__item');
+        const expandedSibling = item.siblings('.accordion__item--expanded');
+
+        if( ! item.hasClass('accordion__item--expanded') ) {
+            expandedSibling.removeClass('accordion__item--expanded');
+            expandedSibling.find('.accordion__dropdown').slideUp(300);
+            item.addClass('accordion__item--expanded');
+            item.find('.accordion__dropdown').slideDown(300);
+        } else  {
+            item.removeClass('accordion__item--expanded');
+            item.find('.accordion__dropdown').slideUp(300);
+        }
+    });
+
 })(jQuery);
 
