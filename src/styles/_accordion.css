@@ -57,6 +57,11 @@
                 stroke: currentColor;
                 width: 22px;
                 height: auto;
+                transition: transform 300ms ease;
+            }
+
+            .accordion__item--expanded .accordion__chevron {
+                transform: scaleY(-1);
             }
 
         .accordion__dropdown {
