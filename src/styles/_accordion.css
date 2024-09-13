@@ -65,7 +65,7 @@
             }
 
         .accordion__dropdown {
-            margin-top: 40px;
+            margin-top: 8px;
             display: none;
         }
 
@@ -136,7 +136,7 @@
                 }
 
             .accordion__dropdown {
-                /*margin-top: 40px;*/
+                margin-top: 25px;
                 /*display: none;*/
             }
 }
@@ -207,7 +207,7 @@
                 }
 
             .accordion__dropdown {
-                /*margin-top: 40px;*/
+                margin-top: 13px;
                 /*display: none;*/
             }
 }
