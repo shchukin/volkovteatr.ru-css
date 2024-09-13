@@ -21,57 +21,54 @@
 
     /* Swiper для галерей */
 
-    var gallerySwiper;
+    var gallerySwiper = [];
     var isSwiperInit = false;
 
-    function initSwiper() {
 
-        if (!isDesktop) {
+    if (!isDesktop) {
 
-            if (!isSwiperInit) {
-                isSwiperInit = true;
+        document.querySelectorAll('.carousel--js-init-gallery').forEach(($carousel) => {
 
-                // (1) Свайпер может сразу инициализировать несколько слайдеров, без forEach, но ...
-                gallerySwiper = new Swiper('.swiper--init-gallery', {
-                    slidesPerView: 1,
-                    slidesPerGroup: 1,
-                    spaceBetween: responsiveSpacing,
-                    autoHeight: true,
+            new Swiper($carousel.querySelector('.swiper'), {
+                slidesPerView: 1,
+                slidesPerGroup: 1,
+                spaceBetween: responsiveSpacing,
+                autoHeight: true,
 
-                    pagination: {
-                        el: ".swiper-pagination",
-                        type: "fraction",
-                    },
+                pagination: {
+                    el: $carousel.querySelector('.carousel__pagination'),
+                    type: "fraction",
+                },
 
-                    navigation: {
-                        prevEl: '.swiper-button-prev',
-                        nextEl: '.swiper-button-next',
-                    }
-                });
-            }
-        } else {
-
-            if (isSwiperInit) {
-                isSwiperInit = false;
-
-                // (2) ... но для дестроя нужно уже знать, массив слайдеров ли это, или отдельный инстанс в объекте
-                if (Array.isArray(gallerySwiper)) {
-                    gallerySwiper.forEach(function (swiper) {
-                        swiper.destroy();
-                    });
-                } else {
-                    gallerySwiper.destroy();
+                navigation: {
+                    prevEl: $carousel.querySelector('.carousel__button--prev'),
+                    nextEl: $carousel.querySelector('.carousel__button--next'),
                 }
-            }
-        }
+            });
+        });
+
+    } else {
+        //
+        // // (2) ... но для дестроя нужно уже знать, массив слайдеров ли это, или отдельный инстанс в объекте
+        // if (Array.isArray(gallerySwiper)) {
+        //     gallerySwiper.forEach(function (swiper) {
+        //         swiper.destroy();
+        //     });
+        // } else {
+        //     gallerySwiper.destroy();
+        // }
     }
 
-    initSwiper();
+    // function initSwiper() {
 
-    window.addEventListener('resize', function () {
-        initSwiper();
-    });
+    // }
 
+    // initSwiper();
+    //
+    // window.addEventListener('resize', function () {
+    //     initSwiper();
+    // });
+    //
 
 
     /* Swiper для слайдера */
