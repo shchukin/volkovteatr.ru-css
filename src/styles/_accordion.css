@@ -6,7 +6,11 @@
 
 }
     .accordion__item {
-        margin-top: 42px;
+        margin-top: 33px;
+    }
+
+    .accordion__item:first-child {
+        margin-top: 0;
     }
         .accordion__file-heading {
             margin-top: 0;
@@ -14,10 +18,10 @@
         }
             .accordion__handler {
                 position: relative;
-                width: 100%;
-                margin-left: -20px;
-                margin-right: -20px;
-                padding: 25px calc(40px + var(--accordion-padding-horizontal)) 25px var(--accordion-padding-horizontal);
+                width: calc(100% + 2 * var(--accordion-padding-horizontal));
+                margin-left: calc(-1 * var(--accordion-padding-horizontal));
+                margin-right: calc(-1 * var(--accordion-padding-horizontal));
+                padding: 30px calc(40px + var(--accordion-padding-horizontal)) 30px var(--accordion-padding-horizontal);
                 border: none;
                 background-color: transparent;
                 border-radius: 6px;
@@ -39,7 +43,7 @@
                     position: absolute;
                     left: var(--accordion-padding-horizontal);
                     right: var(--accordion-padding-horizontal);
-                    bottom: 10px;
+                    bottom: 15px;
                     display: block;
                     height: 1px;
                     background-color: currentColor;

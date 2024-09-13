@@ -1,5 +1,5 @@
 .news {
-    margin-top: var(--article-top-padding);
+    margin-top: var(--page-top-padding-default);
 }
     .news__heading {
         margin-top: 0;
