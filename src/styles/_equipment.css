@@ -1,0 +1,39 @@
+.equipment {
+
+}
+    .equipment__heading {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .equipment__section {
+        position: relative;
+    }
+        .equipment__sub-heading {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        .equipment__download {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+
+        .equipment__gallery {
+
+        }
+
+        .equipment__plan {
+
+        }
+            .equipment__plan-heading {
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+
+            .equipment__plan-list {
+                display: grid;
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+                gap: 16px 24px;
+            }
