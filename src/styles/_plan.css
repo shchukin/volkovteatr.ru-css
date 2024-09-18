@@ -78,3 +78,89 @@
             .plan__download:hover .plan__download-icon {
                 fill: #FFFFFF;
             }
+
+
+
+@media (1850px <= width) {
+
+    .plan {
+        /*width: fit-content;*/
+    }
+        .plan__preview {
+            /*position: relative;*/
+        }
+            .plan__viewport {
+                /*display: block;*/
+                /*width: fit-content;*/
+                /*position: relative;*/
+                /*border-radius: 18px;*/
+                /*overflow: hidden;*/
+            }
+                .plan__image {
+                    /*vertical-align: top;*/
+                    /*width: 100%;*/
+                    /*height: auto;*/
+                    /*background-color: #FFFFFF;*/
+                    /*transition: transform 400ms var(--ease-out-quint);*/
+                }
+
+                .plan__viewport:hover .plan__image {
+                    /*transform: scale(105%);*/
+                }
+
+            .plan__expand {
+                /*position: absolute;*/
+                /*right: 13px;*/
+                /*bottom: 13px;*/
+                /*padding: 12px;*/
+                /*background-color: #E4BB6B;*/
+                /*border-radius: 50%;*/
+                /*transition: transform var(--transition-hover);*/
+            }
+
+            .plan__expand:hover {
+                /*transform: scale(110%);*/
+            }
+                .plan__expand-icon {
+                    /*vertical-align: top;*/
+                    /*width: 24px;*/
+                    /*fill: #303F64;*/
+                }
+
+        .plan__body {
+            /*position: relative;*/
+            /*margin-top: 9px;*/
+            /*padding-right: 40px;*/
+        }
+            .plan__heading {
+                /*display: block;*/
+                /*width: fit-content;*/
+                /*padding-top: 7px;*/
+                /*padding-bottom: 6px;*/
+                /*font-size: 20px;*/
+                /*line-height: 27px;*/
+                /*color: #8E8E8E;*/
+                /*text-decoration: none;*/
+                /*transition: color var(--transition-hover);*/
+            }
+
+            .plan__heading:hover {
+                /*color: #FFFFFF;*/
+            }
+
+            .plan__download {
+                /*position: absolute;*/
+                /*right: -7px;*/
+                /*top: 0;*/
+                /*padding: 7px;*/
+            }
+                .plan__download-icon {
+                    /*vertical-align: top;*/
+                    /*fill: #E4BB6B;*/
+                    /*transition: fill var(--transition-hover);*/
+                }
+
+                .plan__download:hover .plan__download-icon {
+                    /*fill: #FFFFFF;*/
+                }
+}
