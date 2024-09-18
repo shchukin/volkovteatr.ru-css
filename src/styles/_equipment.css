@@ -119,3 +119,79 @@
                 margin-top: 66px;
             }
 }
+
+
+
+@media (width < 740px) {
+
+    .equipment {
+        /*margin-top: var(--page-top-padding-small);*/
+    }
+        .equipment__heading {
+            /*margin-top: 0;*/
+            /*margin-bottom: 0;*/
+            /*text-align: center;*/
+        }
+
+        .equipment__body {
+            margin-top: 32px;
+        }
+
+        .equipment__section {
+            /*position: relative;*/
+            margin-top: 35px;
+        }
+
+        .equipment__section:first-child {
+            /*margin-top: 0;*/
+        }
+            .equipment__sub-heading {
+                /*margin-top: 0;*/
+                /*margin-bottom: 0;*/
+                /*font-family: var(--font-heading);*/
+                /*font-weight: normal;*/
+                /*font-style: italic;*/
+                font-size: 28px;
+                line-height: 47px;
+                /*color: #E4BB6B;*/
+                /*text-transform: uppercase;*/
+            }
+
+            .equipment__download {
+                margin-top: 16px;
+                position: static;
+                /*right: 0;*/
+                /*top: 0;*/
+            }
+
+            .equipment__gallery {
+                margin-top: 40px;
+            }
+
+            .equipment__plan {
+                margin-top: 40px;
+            }
+                .equipment__plan-heading {
+                    /*margin-top: 0;*/
+                    /*margin-bottom: 0;*/
+                    /*font-family: var(--font-heading);*/
+                    /*font-weight: 500;*/
+                    /*font-style: italic;*/
+                    font-size: 20px;
+                    line-height: 24px;
+                    /*color: #E4BB6B;*/
+                    /*text-transform: uppercase;*/
+                }
+
+                .equipment__plan-list {
+                    margin-top: 24px;
+                    display: grid;
+                    grid-template-columns: repeat(1, minmax(0, 1fr));
+                    gap: 24px;
+                }
+
+            .equipment__riders {
+                margin-top: 23px;
+            }
+}
+
