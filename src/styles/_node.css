@@ -1,4 +1,8 @@
 .node {
+    --node-radius: 6px;
+}
+
+.node {
 
 }
     .node__heading {
@@ -13,11 +17,8 @@
     }
         .node__link {
             position: absolute;
-            display: flex;
-            align-items: flex-end;
-            padding: 16px 20px;
             text-decoration: none;
-            clip-path: inset(0 round 8px 8px 8px 8px); /* Лучше чем border-radius, потому что обрезает область кликабельности */
+            clip-path: inset(0 round var(--node-radius)); /* Лучше чем border-radius, потому что обрезает область кликабельности */
         }
             .node__image {
                 position: absolute;
@@ -53,7 +54,9 @@
 
 
             .node__label {
-                position: relative;
+                position: absolute;
+                left: 20px;
+                bottom: 16px;
                 font-family: var(--font-heading);
                 font-weight: 500;
                 font-style: italic;
@@ -70,6 +73,84 @@
 
 
 
+@media (1850px <= width) {
+
+    .node {
+        --node-radius: 8px;
+    }
+
+    .node {
+
+    }
+        .node__heading {
+            /*margin-top: 0;*/
+            /*margin-bottom: 0;*/
+            /*text-align: center;*/
+        }
+
+        .node__body {
+            margin-top: 60px;
+            /*position: relative;*/
+        }
+            .node__link {
+                /*position: absolute;*/
+                /*text-decoration: none;*/
+                /*clip-path: inset(0 round var(--node-radius)); !* Лучше чем border-radius, потому что обрезает область кликабельности *!*/
+            }
+                .node__image {
+                    /*position: absolute;*/
+                    /*left: 0;*/
+                    /*top: 0;*/
+                    /*right: 0;*/
+                    /*bottom: 0;*/
+                    /*display: block;*/
+                    /*filter: blur(4px);*/
+                    /*background-repeat: no-repeat;*/
+                    /*transition: filter var(--transition-hover);*/
+                }
+
+                .node__link:hover .node__image {
+                    /*filter: blur(0);*/
+                }
+
+
+                .node__overlay {
+                    /*position: absolute;*/
+                    /*left: 0;*/
+                    /*top: 0;*/
+                    /*right: 0;*/
+                    /*bottom: 0;*/
+                    /*display: block;*/
+                    /*background-color: rgb(11 30 58 / 70%);*/
+                    /*transition: opacity var(--transition-hover);*/
+                }
+
+                .node__link:hover .node__overlay {
+                    /*opacity: 0;*/
+                }
+
+
+                .node__label {
+                    /*position: absolute;*/
+                    left: 24px;
+                    bottom: 20px;
+                    /*font-family: var(--font-heading);*/
+                    /*font-weight: 500;*/
+                    /*font-style: italic;*/
+                    font-size: 32px;
+                    line-height: 37px;
+                    /*color: #EBD7B2;*/
+                    /*text-transform: uppercase;*/
+                    /*transition: color var(--transition-hover);*/
+                }
+
+                .node__link:hover .node__label {
+                    /*color: #303F64;*/
+                }
+}
+
+
+
 
 .node__body--about {
     width: 1200px;
@@ -80,12 +161,18 @@
         background-size: 1200px 396px;
     }
 
+    @media (min-resolution: 1.5dppx) {
+        .node__body--about .node__image {
+            background-image: url("../images/node-about/node-about-laptop@2x.jpg");
+        }
+    }
+
     .node__link--people {
         left: 0;
         top: 0;
         width: 390px;
         height: 396px;
-        clip-path: inset(0 round 390px 8px 8px 8px); /* Лучше чем border-radius, потому что обрезает область кликабельности */
+        clip-path: inset(0 round 390px var(--node-radius) var(--node-radius) var(--node-radius)); /* Лучше чем border-radius, потому что обрезает область кликабельности */
     }
         .node__link--people .node__image {
             background-position: 0 0;
@@ -116,8 +203,69 @@
         top: 0;
         width: 390px;
         height: 396px;
-        clip-path: inset(0 round 8px 390px 8px 8px); /* Лучше чем border-radius, потому что обрезает область кликабельности */
+        clip-path: inset(0 round var(--node-radius) 390px var(--node-radius) var(--node-radius)); /* Лучше чем border-radius, потому что обрезает область кликабельности */
     }
         .node__link--documents .node__image {
             background-position: -808px 0;
         }
+
+
+
+@media (1850px <= width) {
+
+    .node__body--about {
+        width: 1760px;
+        height: 674px;
+    }
+        .node__body--about .node__image {
+            background-image: url("../images/node-about/node-about-monitor@1x.jpg");
+            background-size: 1760px 674px;
+        }
+
+        @media (min-resolution: 1.5dppx) {
+            .node__body--about .node__image {
+                background-image: url("../images/node-about/node-about-monitor@2x.jpg");
+            }
+        }
+
+
+        .node__link--people {
+            width: 571px;
+            height: 674px;
+            clip-path: inset(0 round 571px var(--node-radius) var(--node-radius) var(--node-radius)); /* Лучше чем border-radius, потому что обрезает область кликабельности */
+        }
+            .node__link--people .node__image {
+                background-position: 0 0;
+            }
+
+        .node__link--first-russian {
+            left: 595px;
+            /*top: 0;*/
+            width: 570px;
+            height: 250px;
+        }
+            .node__link--first-russian .node__image {
+                background-position: -570px 0;
+            }
+
+        .node__link--equipment {
+            left: 595px;
+            top: 274px;
+            width: 570px;
+            height: 400px;
+        }
+            .node__link--equipment .node__image {
+                background-position: -570px -274px;
+            }
+
+        .node__link--documents {
+            left: 1189px;
+            /*top: 0;*/
+            width: 571px;
+            height: 674px;
+            clip-path: inset(0 round var(--node-radius) 571px var(--node-radius) var(--node-radius)); /* Лучше чем border-radius, потому что обрезает область кликабельности */
+        }
+            .node__link--documents .node__image {
+                background-position: -571px 0;
+            }
+}
