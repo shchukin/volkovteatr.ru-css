@@ -18,7 +18,6 @@
             padding: 16px 20px;
             text-decoration: none;
             clip-path: inset(0 round 8px 8px 8px 8px); /* Лучше чем border-radius, потому что обрезает область кликабельности */
-            /*border-top-left-radius: 8px; !* На случай если браузер не умеет в clip-path *!*/
         }
             .node__image {
                 position: absolute;
@@ -87,7 +86,6 @@
         width: 390px;
         height: 396px;
         clip-path: inset(0 round 390px 8px 8px 8px); /* Лучше чем border-radius, потому что обрезает область кликабельности */
-        /*border-top-left-radius: 500px; !* На случай если браузер не умеет в clip-path *!*/
     }
         .node__link--people .node__image {
             background-position: 0 0;
@@ -119,7 +117,6 @@
         width: 390px;
         height: 396px;
         clip-path: inset(0 round 8px 390px 8px 8px); /* Лучше чем border-radius, потому что обрезает область кликабельности */
-        /*border-top-right-radius: 500px; !* На случай если браузер не умеет в clip-path *!*/
     }
         .node__link--documents .node__image {
             background-position: -808px 0;
