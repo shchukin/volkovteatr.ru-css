@@ -1,0 +1,126 @@
+.node {
+
+}
+    .node__heading {
+        margin-top: 0;
+        margin-bottom: 0;
+        text-align: center;
+    }
+
+    .node__body {
+        margin-top: 40px;
+        position: relative;
+    }
+        .node__link {
+            position: absolute;
+            display: flex;
+            align-items: flex-end;
+            padding: 16px 20px;
+            text-decoration: none;
+            clip-path: inset(0 round 8px); /* Лучше чем border-radius, потому что обрезает область кликабельности */
+            border-top-left-radius: 8px; /* На случай если браузер не умеет в clip-path */
+        }
+            .node__image {
+                position: absolute;
+                left: 0;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                display: block;
+                filter: blur(4px);
+                background-repeat: no-repeat;
+                transition: filter var(--transition-hover);
+            }
+
+            .node__link:hover .node__image {
+                filter: blur(0);
+            }
+
+
+            .node__overlay {
+                position: absolute;
+                left: 0;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                display: block;
+                background-color: rgb(11 30 58 / 70%);
+                transition: opacity var(--transition-hover);
+            }
+
+            .node__link:hover .node__overlay {
+                opacity: 0;
+            }
+
+
+            .node__label {
+                position: relative;
+                font-family: var(--font-heading);
+                font-weight: 500;
+                font-style: italic;
+                font-size: 24px;
+                line-height: 28px;
+                color: #EBD7B2;
+                text-transform: uppercase;
+                transition: color var(--transition-hover);
+            }
+
+            .node__link:hover .node__label {
+                color: #303F64;
+            }
+
+
+
+
+.node__body--about {
+    width: 1200px;
+    height: 396px;
+}
+    .node__body--about .node__image {
+        background-image: url("../images/node-about/node-about-laptop@1x.jpg");
+        background-size: 1200px 396px;
+    }
+
+    .node__link--people {
+        left: 0;
+        top: 0;
+        width: 390px;
+        height: 396px;
+        clip-path: inset(0 round 500px 8px 8px 8px); /* Лучше чем border-radius, потому что обрезает область кликабельности */
+        border-top-left-radius: 500px; /* На случай если браузер не умеет в clip-path */
+    }
+        .node__link--people .node__image {
+            background-position: 0 0;
+        }
+
+    .node__link--first-russian {
+        left: 406px;
+        top: 0;
+        width: 388px;
+        height: 178px;
+    }
+        .node__link--first-russian .node__image {
+            background-position: -404px 0;
+        }
+
+    .node__link--equipment {
+        left: 406px;
+        top: 194px;
+        width: 388px;
+        height: 202px;
+    }
+        .node__link--equipment .node__image {
+            background-position: -404px -194px;
+        }
+
+    .node__link--documents {
+        left: 810px;
+        top: 0;
+        width: 390px;
+        height: 396px;
+        clip-path: inset(0 round 8px 500px 8px 8px); /* Лучше чем border-radius, потому что обрезает область кликабельности */
+        border-top-right-radius: 500px; /* На случай если браузер не умеет в clip-path */
+    }
+        .node__link--documents .node__image {
+            background-position: -808px 0;
+        }
