@@ -3,7 +3,7 @@
 }
 
 .node {
-
+    padding-top: var(--page-top-padding-default);
 }
     .node__heading {
         margin-top: 0;
@@ -17,6 +17,7 @@
     }
         .node__link {
             position: absolute;
+            display: block;
             text-decoration: none;
             clip-path: inset(0 round var(--node-radius)); /* Лучше чем border-radius, потому что обрезает область кликабельности */
         }
@@ -54,9 +55,11 @@
 
 
             .node__label {
-                position: absolute;
-                left: 20px;
-                bottom: 16px;
+                position: relative;
+                display: flex;
+                align-items: flex-end;
+                height: 100%;
+                padding: 16px 20px;
                 font-family: var(--font-heading);
                 font-weight: 500;
                 font-style: italic;
@@ -70,161 +73,6 @@
             .node__link:hover .node__label {
                 color: #303F64;
             }
-
-
-
-@media (1850px <= width) {
-
-    .node {
-        --node-radius: 8px;
-    }
-
-    .node {
-
-    }
-        .node__heading {
-            /*margin-top: 0;*/
-            /*margin-bottom: 0;*/
-            /*text-align: center;*/
-        }
-
-        .node__body {
-            margin-top: 60px;
-            /*position: relative;*/
-        }
-            .node__link {
-                /*position: absolute;*/
-                /*text-decoration: none;*/
-                /*clip-path: inset(0 round var(--node-radius)); !* Лучше чем border-radius, потому что обрезает область кликабельности *!*/
-            }
-                .node__image {
-                    /*position: absolute;*/
-                    /*left: 0;*/
-                    /*top: 0;*/
-                    /*right: 0;*/
-                    /*bottom: 0;*/
-                    /*display: block;*/
-                    /*filter: blur(4px);*/
-                    /*background-repeat: no-repeat;*/
-                    /*transition: filter var(--transition-hover);*/
-                }
-
-                .node__link:hover .node__image {
-                    /*filter: blur(0);*/
-                }
-
-
-                .node__overlay {
-                    /*position: absolute;*/
-                    /*left: 0;*/
-                    /*top: 0;*/
-                    /*right: 0;*/
-                    /*bottom: 0;*/
-                    /*display: block;*/
-                    /*background-color: rgb(11 30 58 / 70%);*/
-                    /*transition: opacity var(--transition-hover);*/
-                }
-
-                .node__link:hover .node__overlay {
-                    /*opacity: 0;*/
-                }
-
-
-                .node__label {
-                    /*position: absolute;*/
-                    left: 24px;
-                    bottom: 20px;
-                    /*font-family: var(--font-heading);*/
-                    /*font-weight: 500;*/
-                    /*font-style: italic;*/
-                    font-size: 32px;
-                    line-height: 37px;
-                    /*color: #EBD7B2;*/
-                    /*text-transform: uppercase;*/
-                    /*transition: color var(--transition-hover);*/
-                }
-
-                .node__link:hover .node__label {
-                    /*color: #303F64;*/
-                }
-}
-
-
-
-@media (width < 740px) {
-
-    .node {
-        --node-radius: 8px;
-    }
-
-    .node {
-
-    }
-        .node__heading {
-
-        }
-
-        .node__body {
-            /*margin-top: 40px;*/
-            /*position: relative;*/
-        }
-            .node__link {
-                /*position: absolute;*/
-                /*text-decoration: none;*/
-                /*clip-path: inset(0 round var(--node-radius)); !* Лучше чем border-radius, потому что обрезает область кликабельности *!*/
-            }
-                .node__image {
-                    /*position: absolute;*/
-                    /*left: 0;*/
-                    /*top: 0;*/
-                    /*right: 0;*/
-                    /*bottom: 0;*/
-                    /*display: block;*/
-                    /*filter: blur(4px);*/
-                    /*background-repeat: no-repeat;*/
-                    /*transition: filter var(--transition-hover);*/
-                }
-
-                .node__link:hover .node__image {
-                    /*filter: blur(0);*/
-                }
-
-
-                .node__overlay {
-                    /*position: absolute;*/
-                    /*left: 0;*/
-                    /*top: 0;*/
-                    /*right: 0;*/
-                    /*bottom: 0;*/
-                    /*display: block;*/
-                    /*background-color: rgb(11 30 58 / 70%);*/
-                    /*transition: opacity var(--transition-hover);*/
-                }
-
-                .node__link:hover .node__overlay {
-                    /*opacity: 0;*/
-                }
-
-
-                .node__label {
-                    /*position: absolute;*/
-                    /*left: 20px;*/
-                    /*bottom: 16px;*/
-                    /*font-family: var(--font-heading);*/
-                    /*font-weight: 500;*/
-                    /*font-style: italic;*/
-                    /*font-size: 24px;*/
-                    /*line-height: 28px;*/
-                    /*color: #EBD7B2;*/
-                    /*text-transform: uppercase;*/
-                    /*transition: color var(--transition-hover);*/
-                }
-
-                .node__link:hover .node__label {
-                    /*color: #303F64;*/
-                }
-}
-
 
 
 
@@ -243,6 +91,16 @@
         }
     }
 
+    .node__link--first-russian {
+        left: 406px;
+        top: 0;
+        width: 388px;
+        height: 178px;
+    }
+        .node__link--first-russian .node__image {
+            background-position: -404px 0;
+        }
+
     .node__link--people {
         left: 0;
         top: 0;
@@ -252,16 +110,6 @@
     }
         .node__link--people .node__image {
             background-position: 0 0;
-        }
-
-    .node__link--first-russian {
-        left: 406px;
-        top: 0;
-        width: 388px;
-        height: 178px;
-    }
-        .node__link--first-russian .node__image {
-            background-position: -404px 0;
         }
 
     .node__link--equipment {
@@ -289,6 +137,53 @@
 
 @media (1850px <= width) {
 
+    .node {
+        --node-radius: 8px;
+    }
+
+    .node {
+
+    }
+        .node__heading {
+
+        }
+
+        .node__body {
+            margin-top: 60px;
+        }
+            .node__link {
+
+            }
+                .node__image {
+
+                }
+
+                .node__link:hover .node__image {
+
+                }
+
+
+                .node__overlay {
+
+                }
+
+                .node__link:hover .node__overlay {
+
+                }
+
+
+                .node__label {
+                    padding: 20px 24px;
+                    font-size: 32px;
+                    line-height: 37px;
+                }
+
+                .node__link:hover .node__label {
+
+                }
+
+
+
     .node__body--about {
         width: 1760px;
         height: 674px;
@@ -304,6 +199,16 @@
             }
         }
 
+        .node__link--first-russian {
+            left: 595px;
+            top: 0;
+            width: 570px;
+            height: 250px;
+        }
+            .node__link--first-russian .node__image {
+                background-position: -570px 0;
+            }
+
 
         .node__link--people {
             width: 571px;
@@ -312,16 +217,6 @@
         }
             .node__link--people .node__image {
                 background-position: 0 0;
-            }
-
-        .node__link--first-russian {
-            left: 595px;
-            /*top: 0;*/
-            width: 570px;
-            height: 250px;
-        }
-            .node__link--first-russian .node__image {
-                background-position: -570px 0;
             }
 
         .node__link--equipment {
@@ -336,7 +231,7 @@
 
         .node__link--documents {
             left: 1189px;
-            /*top: 0;*/
+            top: 0;
             width: 571px;
             height: 674px;
             clip-path: inset(0 round var(--node-radius) 571px var(--node-radius) var(--node-radius)); /* Лучше чем border-radius, потому что обрезает область кликабельности */
@@ -350,61 +245,108 @@
 
 @media (width < 740px) {
 
+    .node {
+        --node-radius: 8px;
+    }
+
+    .node {
+
+    }
+        .node__heading {
+
+        }
+
+        .node__body {
+            margin-top: 24px;
+            width: auto;
+            height: auto;
+        }
+            .node__link {
+                position: relative;
+                inset: auto;
+                margin-top: 10px;
+                width: auto;
+                clip-path: none; /* Переключаемся на border-radius. На мобилках разницы нет, но с ним проще работать */
+                border-radius: var(--node-radius);
+                overflow: hidden;
+            }
+
+            .node__link:first-child {
+                margin-top: 0;
+            }
+                .node__image {
+
+                }
+
+                .node__link:hover .node__image {
+
+                }
+
+
+                .node__overlay {
+
+                }
+
+                .node__link:hover .node__overlay {
+
+                }
+
+
+                .node__label {
+                    padding: 16px;
+                    font-size: 22px;
+                    line-height: 26px;
+                }
+
+                .node__link:hover .node__label {
+
+                }
+
+
+
     .node__body--about {
-        width: 100%;
-        height: 585px;
+
     }
         .node__body--about .node__image {
-            /*background-image: url("../images/node-about/node-about-laptop@1x.jpg");*/
-            /*background-size: 1200px 396px;*/
+            background-image: url("../images/node-about/node-about-smartphone@1x.jpg");
+            background-size: 430px 579px;
         }
 
         @media (min-resolution: 1.5dppx) {
             .node__body--about .node__image {
-                /*background-image: url("../images/node-about/node-about-laptop@2x.jpg");*/
+                background-image: url("../images/node-about/node-about-smartphone@2x.jpg");
             }
         }
-
-        .node__link--people {
-            /*left: 0;*/
-            /*top: 0;*/
-            width: 100%;
-            /*height: 396px;*/
-            /*clip-path: inset(0 round 390px var(--node-radius) var(--node-radius) var(--node-radius)); !* Лучше чем border-radius, потому что обрезает область кликабельности *!*/
-        }
-            .node__link--people .node__image {
-                /*background-position: 0 0;*/
-            }
 
         .node__link--first-russian {
-            /*left: 406px;*/
-            /*top: 0;*/
-            width: 100%;
-            /*height: 178px;*/
+            height: 195px;
+            border-radius: 50% 50% var(--node-radius) var(--node-radius) / 160px 160px var(--node-radius) var(--node-radius);
         }
             .node__link--first-russian .node__image {
-                /*background-position: -404px 0;*/
+                background-position: center 0;
+            }
+                .node__link--first-russian .node__label {
+                    justify-content: center;
+                }
+
+        .node__link--people {
+            height: 122px;
+        }
+            .node__link--people .node__image {
+                background-position: center -205px;
             }
 
         .node__link--equipment {
-            /*left: 406px;*/
-            /*top: 194px;*/
-            width: 100%;
-            /*height: 202px;*/
+            height: 119px;
         }
             .node__link--equipment .node__image {
-                /*background-position: -404px -194px;*/
+                background-position: center -337px;
             }
 
         .node__link--documents {
-            /*left: 810px;*/
-            /*top: 0;*/
-            width: 100%;
-            /*height: 396px;*/
-            /*clip-path: inset(0 round var(--node-radius) 390px var(--node-radius) var(--node-radius)); !* Лучше чем border-radius, потому что обрезает область кликабельности *!*/
+            height: 113px;
         }
             .node__link--documents .node__image {
-                /*background-position: -808px 0;*/
+                background-position: center -466px;
             }
 }
-
