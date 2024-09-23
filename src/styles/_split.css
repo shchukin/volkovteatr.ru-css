@@ -36,17 +36,17 @@
                 background-position: center center;
             }
 
-        .split__link--tours {
+        .split__link--map {
             /* Лучше чем border-radius, потому что обрезает область кликабельности (139px -- это высота 145px, минус 6px угол с другой стороны): */
             clip-path: inset(0 round 139px var(--split-radius) var(--split-radius) var(--split-radius));
         }
-            .split__link--tours .split__image {
-                background-image: url("../images/tours/tours-laptop-and-monitor@1x.jpg");
+            .split__link--map .split__image {
+                background-image: url("../images/tours/tours-map-laptop-and-monitor@1x.jpg");
             }
 
             @media (min-resolution: 1.5dppx) {
-                .split__link--tours .split__image {
-                    background-image: url("../images/tours/tours-laptop-and-monitor@2x.jpg");
+                .split__link--map .split__image {
+                    background-image: url("../images/tours/tours-map-laptop-and-monitor@2x.jpg");
                 }
             }
 
@@ -56,12 +56,12 @@
             clip-path: inset(0 round var(--split-radius) var(--split-radius) 139px var(--split-radius));
         }
             .split__link--guests .split__image {
-                background-image: url("../images/tours/guests-laptop-and-monitor@1x.jpg");
+                background-image: url("../images/tours/tours-guests-laptop-and-monitor@1x.jpg");
             }
 
             @media (min-resolution: 1.5dppx) {
                 .split__link--guests .split__image {
-                    background-image: url("../images/tours/guests-laptop-and-monitor@2x.jpg");
+                    background-image: url("../images/tours/tours-guests-laptop-and-monitor@2x.jpg");
                 }
             }
 
@@ -116,7 +116,7 @@
             }
 
 
-            .split__link--tours .split__label {
+            .split__link--map .split__label {
                 justify-content: flex-end;
             }
 
@@ -150,7 +150,7 @@
 
                 }
 
-            .split__link--tours {
+            .split__link--map {
                 /* Лучше чем border-radius, потому что обрезает область кликабельности (204px -- это высота 212px, минус 6px угол с другой стороны): */
                 clip-path: inset(0 round 204px var(--split-radius) var(--split-radius) var(--split-radius));
             }
@@ -179,7 +179,7 @@
                     line-height: 37px;
                 }
 
-                .split__link--tours .split__label {
+                .split__link--map .split__label {
 
                 }
 
@@ -215,17 +215,17 @@
 
                 }
 
-            .split__link--tours {
+            .split__link--map {
                 /* Лучше чем border-radius, потому что обрезает область кликабельности (128px -- это высота 136px, минус 6px угол с другой стороны): */
                 clip-path: inset(0 round var(--split-radius) 128px var(--split-radius) var(--split-radius));
             }
-                .split__link--tours .split__image {
-                    background-image: url("../images/tours/tours-smartphone@1x.jpg");
+                .split__link--map .split__image {
+                    background-image: url("../images/tours/tours-map-smartphone@1x.jpg");
                 }
 
                 @media (min-resolution: 1.5dppx) {
-                    .split__link--tours .split__image {
-                        background-image: url("../images/tours/tours-smartphone@2x.jpg");
+                    .split__link--map .split__image {
+                        background-image: url("../images/tours/tours-map-smartphone@2x.jpg");
                     }
                 }
 
@@ -234,12 +234,12 @@
                 clip-path: inset(0 round var(--split-radius) var(--split-radius) var(--split-radius) 128px);
             }
                 .split__link--guests .split__image {
-                    background-image: url("../images/tours/guests-smartphone@1x.jpg");
+                    background-image: url("../images/tours/tours-guests-smartphone@1x.jpg");
                 }
 
                 @media (min-resolution: 1.5dppx) {
                     .split__link--guests .split__image {
-                        background-image: url("../images/tours/guests-smartphone@2x.jpg");
+                        background-image: url("../images/tours/tours-guests-smartphone@2x.jpg");
                     }
                 }
 
@@ -269,7 +269,7 @@
                 }
 
 
-                .split__link--tours .split__label {
+                .split__link--map .split__label {
 
                 }
 
