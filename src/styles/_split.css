@@ -41,12 +41,12 @@
             clip-path: inset(0 round 139px var(--split-radius) var(--split-radius) var(--split-radius));
         }
             .split__link--tours .split__image {
-                background-image: url("../images/tours/tours@1x.jpg");
+                background-image: url("../images/tours/tours-laptop-and-monitor@1x.jpg");
             }
 
             @media (min-resolution: 1.5dppx) {
                 .split__link--tours .split__image {
-                    background-image: url("../images/tours/tours@2x.jpg");
+                    background-image: url("../images/tours/tours-laptop-and-monitor@2x.jpg");
                 }
             }
 
@@ -56,12 +56,12 @@
             clip-path: inset(0 round var(--split-radius) var(--split-radius) 139px var(--split-radius));
         }
             .split__link--guests .split__image {
-                background-image: url("../images/tours/guests@1x.jpg");
+                background-image: url("../images/tours/guests-laptop-and-monitor@1x.jpg");
             }
 
             @media (min-resolution: 1.5dppx) {
                 .split__link--guests .split__image {
-                    background-image: url("../images/tours/guests@2x.jpg");
+                    background-image: url("../images/tours/guests-laptop-and-monitor@2x.jpg");
                 }
             }
 
@@ -188,6 +188,95 @@
                 }
 }
 
+
+
+@media (width < 740px) {
+
+    .split {
+        --split-radius: 8px;
+    }
+
+    .split {
+
+    }
+        .split__heading {
+
+        }
+
+        .split__body {
+            margin-top: 24px;
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+            gap: 16px;
+        }
+            .split__link {
+                height: 136px;
+            }
+                .split__image {
+
+                }
+
+            .split__link--tours {
+                /* Лучше чем border-radius, потому что обрезает область кликабельности (128px -- это высота 136px, минус 6px угол с другой стороны): */
+                clip-path: inset(0 round var(--split-radius) 128px var(--split-radius) var(--split-radius));
+            }
+                .split__link--tours .split__image {
+                    background-image: url("../images/tours/tours-smartphone@1x.jpg");
+                }
+
+                @media (min-resolution: 1.5dppx) {
+                    .split__link--tours .split__image {
+                        background-image: url("../images/tours/tours-smartphone@2x.jpg");
+                    }
+                }
+
+            .split__link--guests {
+                /* Лучше чем border-radius, потому что обрезает область кликабельности (128px -- это высота 136px, минус 6px угол с другой стороны): */
+                clip-path: inset(0 round var(--split-radius) var(--split-radius) var(--split-radius) 128px);
+            }
+                .split__link--guests .split__image {
+                    background-image: url("../images/tours/guests-smartphone@1x.jpg");
+                }
+
+                @media (min-resolution: 1.5dppx) {
+                    .split__link--guests .split__image {
+                        background-image: url("../images/tours/guests-smartphone@2x.jpg");
+                    }
+                }
+
+
+                .split__overlay {
+
+                }
+
+
+                .split__hover {
+
+                }
+
+                .split__link:hover .split__hover {
+
+                }
+
+
+                .split__label {
+                    padding: 16px;
+                    font-size: 22px;
+                    line-height: 26px;
+                }
+
+                .split__link:hover .split__label {
+
+                }
+
+
+                .split__link--tours .split__label {
+
+                }
+
+                .split__link--guests .split__label {
+
+                }
+}
 
 
 
