@@ -54,6 +54,23 @@
             }
 
 
+            .node__hover {
+                position: absolute;
+                left: 0;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                display: block;
+                background-color: rgb(228 187 107 / 50%);
+                opacity: 0;
+                transition: opacity var(--transition-hover);
+            }
+
+            .node__link:hover .node__hover {
+                opacity: 100%;
+            }
+
+
             .node__label {
                 position: relative;
                 display: flex;
