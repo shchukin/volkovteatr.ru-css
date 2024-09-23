@@ -8,7 +8,7 @@
 
     function initGlobalConstant() {
         isDesktop = window.matchMedia("(min-width: 740px)").matches;
-        responsiveSpacing = !isDesktop ? parseInt(getComputedStyle(document.documentElement).getPropertyValue('--container-padding')) : 0;
+        responsiveSpacing = !isDesktop ? parseInt(getComputedStyle(document.documentElement).getPropertyValue('--container-padding')) : 40;
         headerHeight = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--header-height')) || 0;
     }
 
@@ -19,58 +19,92 @@
     window.addEventListener('resize', initGlobalConstant);
 
 
-    /* Swiper */
 
-    var gallerySwiper;
-    var isSwiperInit = false;
 
-    function initSwiper() {
 
+    /* Все слайдеры в одной функции, чтобы их можно было переинициализировать при ресайзе */
+    function initCarousels() {
+
+        /* Swiper для галерей */
+
+        let gallerySwipers = [];
         if (!isDesktop) {
 
-            if (!isSwiperInit) {
-                isSwiperInit = true;
+            document.querySelectorAll('.carousel--js-init-gallery').forEach(($carousel) => {
 
-                // (1) Свайпер может сразу инициализировать несколько слайдеров, без forEach, но ...
-                gallerySwiper = new Swiper('.swiper--init-gallery', {
+                const swiperInstance = new Swiper($carousel.querySelector('.swiper'), {
                     slidesPerView: 1,
                     slidesPerGroup: 1,
                     spaceBetween: responsiveSpacing,
                     autoHeight: true,
 
                     pagination: {
-                        el: ".swiper-pagination",
+                        el: $carousel.querySelector('.carousel__pagination'),
                         type: "fraction",
                     },
 
                     navigation: {
-                        prevEl: '.swiper-button-prev',
-                        nextEl: '.swiper-button-next',
+                        prevEl: $carousel.querySelector('.carousel__button--prev'),
+                        nextEl: $carousel.querySelector('.carousel__button--next'),
                     }
                 });
-            }
+
+                gallerySwipers.push(swiperInstance);
+
+            });
+
         } else {
 
-            if (isSwiperInit) {
-                isSwiperInit = false;
-
-                // (2) ... но для дестроя нужно уже знать, массив слайдеров ли это, или отдельный инстанс в объекте
-                if (Array.isArray(gallerySwiper)) {
-                    gallerySwiper.forEach(function (swiper) {
-                        swiper.destroy();
-                    });
-                } else {
-                    gallerySwiper.destroy();
-                }
-            }
+            gallerySwipers.forEach(function (swiper) {
+                swiper.destroy();
+            });
         }
+
+
+
+        /* Swiper для слайдера */
+
+        document.querySelectorAll('.carousel--js-init-slider').forEach(($carousel) => {
+
+            new Swiper($carousel.querySelector('.swiper'), {
+                slidesPerView: 1,
+                slidesPerGroup: 1,
+                spaceBetween: responsiveSpacing,
+                autoHeight: true,
+
+                pagination: {
+                    el: $carousel.querySelector('.carousel__pagination'),
+                    type: "fraction",
+                },
+
+                navigation: {
+                    prevEl: $carousel.querySelector('.carousel__button--prev'),
+                    nextEl: $carousel.querySelector('.carousel__button--next'),
+                },
+
+                breakpoints: {
+                    740: {
+                        pagination: {
+                            el: $carousel.querySelector('.carousel__pagination'),
+                            type: "bullets",
+                            bulletClass: 'carousel__bullet',
+                            bulletActiveClass: 'carousel__bullet--current',
+                            clickable: true
+                        },
+                    },
+                },
+            });
+        });
     }
 
-    initSwiper();
 
-    window.addEventListener('resize', function () {
-        initSwiper();
+
+    $(document).ready(initCarousels);
+
+    $(window).on('resize', function () {
+        setTimeout(initCarousels, 1000)
     });
+
 
 
     /* Модалка */
