@@ -1,0 +1,195 @@
+.split {
+    --split-radius: 6px;
+}
+
+.split {
+    padding-top: var(--page-top-padding-default);
+}
+    .split__heading {
+        margin-top: 0;
+        margin-bottom: 0;
+        text-align: center;
+    }
+
+    .split__body {
+        margin-top: 40px;
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+    }
+        .split__link {
+            position: relative;
+            display: block;
+            height: 145px;
+            text-decoration: none;
+        }
+            .split__image {
+                position: absolute;
+                left: 0;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                display: block;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center center;
+            }
+
+        .split__link--tours {
+            /* Лучше чем border-radius, потому что обрезает область кликабельности (139px -- это высота 145px, минус 6px угол с другой стороны): */
+            clip-path: inset(0 round 139px var(--split-radius) var(--split-radius) var(--split-radius));
+        }
+            .split__link--tours .split__image {
+                background-image: url("../images/tours/tours@1x.jpg");
+            }
+
+            @media (min-resolution: 1.5dppx) {
+                .split__link--tours .split__image {
+                    background-image: url("../images/tours/tours@2x.jpg");
+                }
+            }
+
+
+        .split__link--guests {
+            /* Лучше чем border-radius, потому что обрезает область кликабельности (139px -- это высота 145px, минус 6px угол с другой стороны): */
+            clip-path: inset(0 round var(--split-radius) var(--split-radius) 139px var(--split-radius));
+        }
+            .split__link--guests .split__image {
+                background-image: url("../images/tours/guests@1x.jpg");
+            }
+
+            @media (min-resolution: 1.5dppx) {
+                .split__link--guests .split__image {
+                    background-image: url("../images/tours/guests@2x.jpg");
+                }
+            }
+
+
+            .split__overlay {
+                position: absolute;
+                left: 0;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                display: block;
+                background-color: rgb(11 30 58 / 70%);
+                transition: opacity var(--transition-hover);
+            }
+
+
+            .split__hover {
+                position: absolute;
+                left: 0;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                display: block;
+                background-color: #EBD7B2;
+                opacity: 100%;
+                transition: opacity var(--transition-hover);
+            }
+
+            .split__link:hover .split__hover {
+                opacity: 0;
+            }
+
+
+            .split__label {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+                padding: 30px;
+                font-family: var(--font-heading);
+                font-weight: 500;
+                font-style: italic;
+                font-size: 24px;
+                line-height: 28px;
+                color: #303F64;
+                text-transform: uppercase;
+                transition: color var(--transition-hover);
+            }
+
+            .split__link:hover .split__label {
+                color: #EBD7B2;
+            }
+
+
+            .split__link--tours .split__label {
+                justify-content: flex-end;
+            }
+
+            .split__link--guests .split__label {
+                padding-left: 18px;
+            }
+
+
+
+@media (1850px <= width) {
+
+    .split {
+        --split-radius: 8px;
+    }
+
+    .split {
+
+    }
+        .split__heading {
+
+        }
+
+        .split__body {
+            margin-top: 60px;
+            gap: 24px;
+        }
+            .split__link {
+                height: 212px;
+            }
+                .split__image {
+
+                }
+
+            .split__link--tours {
+                /* Лучше чем border-radius, потому что обрезает область кликабельности (204px -- это высота 212px, минус 6px угол с другой стороны): */
+                clip-path: inset(0 round 204px var(--split-radius) var(--split-radius) var(--split-radius));
+            }
+
+            .split__link--guests {
+                /* Лучше чем border-radius, потому что обрезает область кликабельности (204px -- это высота 212px, минус 6px угол с другой стороны): */
+                clip-path: inset(0 round var(--split-radius) var(--split-radius) 204px var(--split-radius));
+            }
+                .split__overlay {
+
+                }
+
+
+                .split__hover {
+
+                }
+
+                .split__link:hover .split__hover {
+
+                }
+
+
+                .split__label {
+                    padding: 40px;
+                    font-size: 32px;
+                    line-height: 37px;
+                }
+
+                .split__link--tours .split__label {
+
+                }
+
+                .split__link--guests .split__label {
+                    padding-left: 24px;
+                }
+}
+
+
+
+
+
+
