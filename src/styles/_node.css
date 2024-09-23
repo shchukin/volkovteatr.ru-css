@@ -97,6 +97,8 @@
 
 
 
+/* Страница "О театре" */
+
 .node__body--about {
     width: 1200px;
     height: 396px;
@@ -128,7 +130,8 @@
         top: 0;
         width: 390px;
         height: 396px;
-        clip-path: inset(0 round 390px var(--node-radius) var(--node-radius) var(--node-radius)); /* Лучше чем border-radius, потому что обрезает область кликабельности */
+        /* Лучше чем border-radius, потому что обрезает область кликабельности (382px -- это ширина 390px, минус 8px угол с другой стороны): */
+        clip-path: inset(0 round 382px var(--node-radius) var(--node-radius) var(--node-radius));
     }
         .node__link--people .node__image {
             background-position: 0 0;
@@ -149,13 +152,16 @@
         top: 0;
         width: 390px;
         height: 396px;
-        clip-path: inset(0 round var(--node-radius) 390px var(--node-radius) var(--node-radius)); /* Лучше чем border-radius, потому что обрезает область кликабельности */
+        /* Лучше чем border-radius, потому что обрезает область кликабельности (382px -- это ширина 390px, минус 8px угол с другой стороны): */
+        clip-path: inset(0 round var(--node-radius) 382px var(--node-radius) var(--node-radius));
     }
         .node__link--documents .node__image {
             background-position: -808px 0;
         }
 
 
+
+/* Страница "Проекты и события" */
 
 .node__body--projects {
     width: 1200px;
@@ -178,6 +184,7 @@
         top: 0;
         width: 390px;
         height: 490px;
+        /* Лучше чем border-radius, потому что обрезает область кликабельности (318px -- это высота левого-верхнего айтема 326px, минус 8px угол снизу): */
         clip-path: inset(0 round var(--node-radius) 318px var(--node-radius) var(--node-radius)); /* Лучше чем border-radius, потому что обрезает область кликабельности */
     }
         .node__link--275-anniversary .node__image {
@@ -229,6 +236,7 @@
         top: 0;
         width: 390px;
         height: 326px;
+        /* Лучше чем border-radius, потому что обрезает область кликабельности (318px -- это высота левого-верхнего айтема 326px, минус 8px угол снизу): */
         clip-path: inset(0 round 318px var(--node-radius) var(--node-radius) var(--node-radius)); /* Лучше чем border-radius, потому что обрезает область кликабельности */
     }
         .node__link--future .node__image {
