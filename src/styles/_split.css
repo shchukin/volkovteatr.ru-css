@@ -3,7 +3,7 @@
 }
 
 .split {
-    padding-top: var(--page-top-padding-default);
+    padding-top: var(--page-top-padding);
 }
     .split__heading {
         margin-top: 0;

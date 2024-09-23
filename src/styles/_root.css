@@ -7,16 +7,15 @@
     --transition-hover: 100ms ease;
     /*--transition-show: 1200ms var(--ease-out-quint);*/
     --image-fallback: #F3F5F4;
-    /*--action-color: #0D7FC5;*/
-    /*--action-color-hover: #2FA5ED;*/
+    --action-color: #E4BB6B;
+    --action-color-hover: #EBD7B2;
     /*--input-border: #B3B3B3;*/
     /*--input-border-hover-and-focus: #7E7E7E;*/
     /*--placeholder-color: #999999;*/
     /*--disabled-background: #F6F6F6;*/
     /*--disabled-color: #999999;*/
     /*--error: #FF0033;*/
-    --page-top-padding-default: 33px;
-    --page-top-padding-small: 24px;
+    --page-top-padding: 24px;
     --header-height: 113px;
     --blue-hover: #223046;
     --slider-rounding: 32px;
@@ -26,8 +25,7 @@
 
     :root {
         --header-height: 156px;
-        --page-top-padding-default: 53px;
-        --page-top-padding-small: 34px;
+        --page-top-padding: 34px;
         --body-font-size: 20px;
         --body-line-height: 27px;
         --slider-rounding: 40px;
@@ -38,8 +36,7 @@
 
     :root {
         --header-height: 90px;
-        --page-top-padding-default: 12px;
-        --page-top-padding-small: 20px;
+        --page-top-padding: 20px;
         --body-font-size: 16px;
         --body-line-height: 24px;
         --slider-rounding: 12px;

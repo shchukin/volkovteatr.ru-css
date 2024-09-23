@@ -1,5 +1,5 @@
 .documents {
-    margin-top: var(--page-top-padding-small);
+    margin-top: var(--page-top-padding);
 }
     .documents__heading {
         margin-top: 0;
@@ -51,7 +51,7 @@
 @media (1850px <= width) {
 
     .documents {
-        /*margin-top: var(--page-top-padding-small);*/
+        /*margin-top: var(--page-top-padding);*/
     }
         .documents__heading {
             /*margin-top: 0;*/
@@ -100,7 +100,7 @@
 @media (width < 740px) {
 
     .documents {
-        /*margin-top: var(--page-top-padding-small);*/
+        /*margin-top: var(--page-top-padding);*/
     }
         .documents__heading {
             /*margin-top: 0;*/

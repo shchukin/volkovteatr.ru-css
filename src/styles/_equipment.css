@@ -1,5 +1,5 @@
 .equipment {
-    margin-top: var(--page-top-padding-small);
+    margin-top: var(--page-top-padding);
 }
     .equipment__heading {
         margin-top: 0;
@@ -125,7 +125,7 @@
 @media (width < 740px) {
 
     .equipment {
-        /*margin-top: var(--page-top-padding-small);*/
+        /*margin-top: var(--page-top-padding);*/
     }
         .equipment__heading {
             /*margin-top: 0;*/

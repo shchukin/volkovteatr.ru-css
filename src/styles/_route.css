@@ -1,0 +1,192 @@
+.route {
+    padding-top: var(--page-top-padding);
+}
+    .route__heading {
+        margin-top: 0;
+        margin-bottom: 0;
+        text-align: center;
+    }
+
+    .route__table {
+        margin-top: 40px;
+        vertical-align: top;
+        width: 100%;
+        border-collapse: collapse;
+    }
+        .route__section {
+
+        }
+            .route__row {
+                border-bottom: 1px solid #FFFFFF;
+            }
+                .route__cell {
+                    vertical-align: center;
+                    height: 99px; /* по-сути min-height, потому что таблица */
+                    padding: 15px 10px;
+                    font-size: 17px;
+                    line-height: 22px;
+                    color: #F8F0E5;
+                    text-align: center;
+                }
+
+                .route__cell--city {
+                    width: 285px;
+                }
+                    .route__pin {
+                        width: 18px;
+                        height: 18px;
+                        vertical-align: top;
+                        margin-right: 2px;
+                        margin-top: 2px;
+                        fill: currentColor;
+                    }
+
+                .route__cell--date-time {
+                    width: 298px;
+                }
+                    .route__time {
+                        margin-top: 3px;
+                    }
+
+                .route__cell--title {
+                    width: 446px;
+                }
+
+                .route__cell--location {
+                    width: 446px;
+                }
+                    .route__address {
+                        margin-top: 4px;
+                        font-size: 14px;
+                        line-height: 20px;
+                        color: #EBD7B2;
+                    }
+
+                .route__cell--tickets {
+                    width: 285px;
+                }
+                    .route__cell--tickets .button {
+                        width: 100%;
+                    }
+
+                .route__cell--heading {
+                    height: auto;
+                    padding-top: 15px;
+                    padding-bottom: 15px;
+                    font-family: var(--font-heading);
+                    font-style: italic;
+                    font-weight: 500;
+                    font-size: 17px;
+                    line-height: 22px;
+                    color: #E4BB6B;
+                    text-transform: uppercase;
+                }
+
+    .route__sub-heading {
+        margin-top: 87px;
+        margin-bottom: 0;
+        color: #E4BB6B;
+    }
+
+    .route__map {
+        margin-top: 30px;
+        height: 500px;
+    }
+
+
+
+
+@media (1850px <= width) {
+
+    .route {
+
+    }
+        .route__heading {
+
+        }
+
+        .route__table {
+            margin-top: 60px;
+        }
+            .route__section {
+
+            }
+                .route__row {
+
+                }
+                    .route__cell {
+                        height: 131px; /* по-сути min-height, потому что таблица */
+                        padding: 20px 12px;
+                        font-size: 22px;
+                        line-height: 29px;
+                    }
+
+                    .route__cell--city {
+                        /*width: 285px;*/
+                    }
+                        .route__pin {
+                            margin-right: 4px;
+                            margin-top: 2px;
+                            width: 24px;
+                            height: 24px;
+                        }
+
+                    .route__cell--date-time {
+                        /*width: 298px;*/
+                    }
+                        .route__time {
+                            margin-top: 5px;
+                        }
+
+                    .route__cell--title {
+                        /*width: 446px;*/
+                    }
+
+                    .route__cell--location {
+                        /*width: 446px;*/
+                    }
+                        .route__address {
+                            margin-top: 9px;
+                            font-size: 17px;
+                            line-height: 23px;
+                        }
+
+                    .route__cell--tickets {
+                        /*width: 285px;*/
+                    }
+                        .route__cell--tickets .button {
+
+                        }
+
+                    .route__cell--heading {
+                        padding-top: 20px;
+                        padding-bottom: 20px;
+                        font-size: 20px;
+                        line-height: 24px;
+                    }
+
+        .route__sub-heading {
+            margin-top: 116px;
+        }
+
+        .route__map {
+            margin-top: 40px;
+            height: 665px;
+        }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

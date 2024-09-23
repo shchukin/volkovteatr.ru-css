@@ -1,5 +1,5 @@
 .article {
-    margin-top: var(--page-top-padding-default);
+    margin-top: var(--page-top-padding);
 }
     .article__heading {
         margin-top: 0;
