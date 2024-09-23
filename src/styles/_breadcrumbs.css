@@ -1,20 +1,16 @@
 .breadcrumbs {
-
+    --breadcrumbs-padding: 8px;
 }
     .breadcrumbs__scroll {
-        overflow-x: auto;
-        margin-left: calc(-1 * var(--container-padding));
-        margin-right: calc(-1 * var(--container-padding));
-        padding-left: calc(var(--container-padding) - 8px);
-        padding-right: calc(var(--container-padding) - 8px);
+        margin-left: calc(-1 * var(--breadcrumbs-padding));
+        margin-right: calc(-1 * var(--breadcrumbs-padding));
     }
         .breadcrumbs__ribbon {
-            display: inline-flex;
-            align-items: flex-start;
+            display: flex;
         }
             .breadcrumbs__item {
                 position: relative;
-                padding-right: 8px;
+                padding-right: var(--breadcrumbs-padding);
                 white-space: nowrap;
             }
 
@@ -27,7 +23,7 @@
                     content: "";
                     position: absolute;
                     right: 3px;
-                    top: 10px;
+                    top: calc(var(--breadcrumbs-padding) + 2px);
                     width: 1px;
                     height: 16px;
                     background-color: #8E8E8E;
@@ -39,7 +35,7 @@
 
                 .breadcrumbs__link {
                     display: block;
-                    padding: 8px;
+                    padding: var(--breadcrumbs-padding);
                     font-size: 13px;
                     line-height: 20px;
                     color: #C4BFB9;
@@ -53,7 +49,7 @@
                 }
 
                 .breadcrumbs__title {
-                    padding: 8px;
+                    padding: var(--breadcrumbs-padding);
                     max-width: 235px;
                     overflow: hidden;
                     white-space: nowrap;
@@ -84,7 +80,7 @@
 
                 }
                     .breadcrumbs__item::after {
-                        top: 9px;
+                        top: calc(var(--breadcrumbs-padding) + 1px);
                         height: 18px;
                     }
 
@@ -117,10 +113,15 @@
         /*margin-right: -8px;*/
     }
         .breadcrumbs__scroll {
-
+            overflow-x: auto;
+            margin-left: calc(-1 * var(--container-padding));
+            margin-right: calc(-1 * var(--container-padding));
+            padding-left: calc(var(--container-padding) - var(--breadcrumbs-padding));
+            padding-right: calc(var(--container-padding) - var(--breadcrumbs-padding));
         }
             .breadcrumbs__ribbon {
-
+                display: inline-flex;
+                align-items: flex-start;
             }
                 .breadcrumbs__item {
                     /*position: relative;*/
