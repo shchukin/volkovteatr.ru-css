@@ -1,0 +1,19 @@
+.join-net {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    border: 1px solid #E4BB6B;
+    border-radius: 10px;
+    padding: 22px;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+    color: #E4BB6B;
+    text-transform: lowercase;
+    text-decoration: none;
+}
+    .join-net__icon {
+        width: 40px;
+        height: 40px;
+        fill: currentColor;
+    }

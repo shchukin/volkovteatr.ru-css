@@ -1,3 +1,40 @@
 .center {
 
 }
+    .center__heading {
+
+    }
+
+    .center__gallery {
+
+    }
+
+    .center__content {
+
+    }
+
+    .center__sub-heading {
+
+    }
+
+    .center__connect {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 16px;
+    }
+        .center__social {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 16px;
+        }
+
+        .center__email {
+            background-color: #F8F0E5;
+            border-radius: 10px;
+        }
+            .center__email-heading {
+
+            }
+
+            .center__form" {
