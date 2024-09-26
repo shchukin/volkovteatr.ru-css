@@ -11,6 +11,11 @@
     color: #E4BB6B;
     text-transform: lowercase;
     text-decoration: none;
+    transition: background-color var(--transition-hover);
+}
+
+.join-net:hover {
+    background-color: rgb(255 255 255 / 10%);
 }
     .join-net__icon {
         width: 40px;
