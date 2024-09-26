@@ -1,7 +1,7 @@
 .engage {
     display: grid;
-    grid-template-columns: 573px 1fr;
-    gap: 22px;
+    grid-template-columns: 573fr 1165fr;
+    gap: 18px;
 }
     .engage__header {
 
@@ -12,8 +12,8 @@
             font-family: var(--font-heading);
             font-weight: normal;
             font-style: italic;
-            font-size: 32px;
-            line-height: 37px;
+            font-size: 26px;
+            line-height: 32px;
             text-transform: uppercase;
             color: #E4BB6B;
         }
@@ -24,7 +24,7 @@
         .engage__fieldset {
             display: grid;
             grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 24px 30px;
+            gap: 16px 22px;
         }
             .engage__field {
 
@@ -35,19 +35,63 @@
             }
 
         .engage__footer {
-            margin-top: 44px;
+            margin-top: 33px;
             display: flex;
             align-items: center;
             justify-content: flex-end;
-            gap: 24px;
+            gap: 18px;
         }
             .engage__agreement {
-                max-width: 390px;
-                font-size: 17px;
-                line-height: 23px;
+                max-width: 350px;
+                font-size: 15px;
+                line-height: 22px;
                 text-align: right;
             }
 
             .engage__submit {
 
             }
+
+
+
+@media (1850px <= width) {
+
+    .engage {
+        gap: 22px;
+    }
+        .engage__header {
+
+        }
+            .engage__heading {
+                font-size: 32px;
+                line-height: 37px;
+            }
+
+        .engage__body {
+
+        }
+            .engage__fieldset {
+                gap: 24px 30px;
+            }
+                .engage__field {
+
+                }
+
+                .engage__field--full-width {
+
+                }
+
+            .engage__footer {
+                margin-top: 44px;
+                gap: 24px;
+            }
+                .engage__agreement {
+                    max-width: 390px;
+                    font-size: 17px;
+                    line-height: 23px;
+                }
+
+                .engage__submit {
+
+                }
+}
