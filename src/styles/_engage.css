@@ -1,6 +1,7 @@
 .engage {
     display: grid;
     grid-template-columns: 573px 1fr;
+    gap: 22px;
 }
     .engage__header {
 
