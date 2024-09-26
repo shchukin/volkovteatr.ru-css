@@ -106,7 +106,7 @@ select.input__widget {
     appearance: none;
     padding-right: 50px;
     background-image: url("../vectors/dropdown.svg");
-    background-size: 16px 16px;
+    background-size: 24px 15px;
     background-repeat: no-repeat;
     background-position: right 16px center;
     cursor: pointer;
@@ -119,6 +119,7 @@ select.input__widget:hover {
 /* Disabled */
 select.input__widget:disabled {
     background-color: var(--disabled-background);
+    background-image: url("../vectors/dropdown-disabled.svg");
     cursor: default;
 }
 
