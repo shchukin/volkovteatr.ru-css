@@ -5,20 +5,22 @@
         vertical-align: top;
         width: 100%;
         height: 50px;
-        padding: 11px 22px;
-        background-color: #FFFFFF; /* reset grey background in some cases, such as <select> */
+        padding: 13px 16px;
+        background-color: #F8F0E5; /* reset grey background in some cases, such as <select> */
+        color-scheme: light;
         background-clip: padding-box; /* hack for iOS to make box-shadow works (same as border-radius in the past) */
-        border: 2px solid var(--input-border);
+        box-shadow: 0 0 0 3px transparent;
+        border: none;
         outline: none;
-        border-radius: 4px;
+        border-radius: 8px;
         font-family: inherit;
-        font-size: 16px; /* not less than 16px (otherwise mobile browsers will zoom in on focus) */
+        font-size: 17px; /* not less than 16px (otherwise mobile browsers will zoom in on focus) */
         line-height: 24px;
-        color: #000000;
+        color: #0F1216;
         opacity: 1; /* reset select:disabled default fade on iOS */
         -webkit-tap-highlight-color: transparent;
         transition: background-color var(--transition-hover),
-                    border-color var(--transition-hover);
+                    box-shadow var(--transition-hover);
     }
 
     .input__widget::placeholder {
@@ -27,12 +29,13 @@
     }
 
     .input__widget:hover {
-        border-color: var(--input-border-hover-and-focus);
+        background-color: #FFFFFF;
+        /*box-shadow: 0 0 0 3px var(--input-border-hover);*/
     }
 
     .input__widget:focus-visible {
-        border-color: var(--input-border-hover-and-focus);
-        box-shadow: 0 0 0 1px var(--input-border-hover-and-focus);
+        background-color: #FFFFFF;
+        box-shadow: 0 0 0 3px var(--input-border-focus);
         transition: none;
     }
 
@@ -61,8 +64,8 @@
 
 /* Disabled */
 .input__widget:disabled {
-    border-color: var(--input-border);
     background-color: var(--disabled-background);
+    box-shadow: none;
     color: var(--disabled-color);
 }
 
@@ -81,7 +84,7 @@
     }
 
     .input--error .input__widget:hover {
-        border-color: var(--input-border-hover-and-focus);
+        border-color: var(--input-border-hover);
     }
 
     .input--error .input__widget::placeholder {
@@ -93,7 +96,7 @@
 textarea.input__widget {
     height: auto; /* user rows="" attribute to set a default height */
     min-height: 50px; /* 1 row */
-    max-height: calc(10*24px + 2*11px + 2*2px); /* rows + vertical paddings + vertical borders */
+    max-height: calc(10*24px + 2*13px); /* rows + vertical paddings + vertical borders */
     resize: vertical;
 }
 /* stylelint-enable */
@@ -110,13 +113,12 @@ select.input__widget {
 }
 
 select.input__widget:hover {
-    box-shadow: none; /* same as base, not hover input */
-    border-color: var(--input-border); /* same as base, not hover input */
-    background-color: #F6F6F6;
+
 }
 
 /* Disabled */
 select.input__widget:disabled {
+    background-color: var(--disabled-background);
     cursor: default;
 }
 

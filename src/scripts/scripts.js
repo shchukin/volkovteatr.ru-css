@@ -231,6 +231,43 @@
 
 
 
+    /* Инпуты */
+
+    /* Select placeholder */
+    function selectPlaceholder($element) {
+        if ($element.val() === 'placeholder') {
+            $element.parent('.input').addClass('input--placeholder-is-chosen');
+        } else {
+            $element.parent('.input').removeClass('input--placeholder-is-chosen');
+        }
+    }
+
+    $('select.input__widget').each(function () {
+        selectPlaceholder($(this));
+    }).on('change', function () {
+        selectPlaceholder($(this));
+    });
+
+    /* Expanding textarea */
+    function expandTextarea($element) {
+        $element.css('height', 'auto');
+        $element.css('height', ($element[0].scrollHeight + 2 * parseInt($element.css('border-width'), 10)) + 'px');
+    }
+
+    $('.input--expandable .input__widget').each(function () {
+        expandTextarea($(this));
+    }).on('input', function () {
+        expandTextarea($(this));
+    });
+
+    /* Error field */
+    $('.input__widget').on('focus', function () {
+        $(this).parents('.input').removeClass('input--error');
+        $(this).parents('.input').nextUntil(':not(.helper--error)').remove();
+    });
+
+
+
 
     /* Форма */
 
@@ -251,9 +288,9 @@
 
 
     /* Сама форма */
-    document.querySelectorAll('.callback__form').forEach(function (subscriptionForm) {
-        const subscriptionInputs = subscriptionForm.querySelectorAll('.input');
-        const subscriptionSubmit = subscriptionForm.querySelector('.callback__submit');
+    document.querySelectorAll('.js-form').forEach(function (form) {
+        const subscriptionInputs = form.querySelectorAll('.input');
+        const subscriptionSubmit = form.querySelector('.js-submit');
         const subscriptionSuccessAlert = document.querySelector('.notifications-center__callback-success');
         const subscriptionFailureAlert = document.querySelector('.notifications-center__callback-failure');
 
@@ -309,7 +346,7 @@
 
 
         /* Отправка */
-        subscriptionForm.addEventListener('submit', function (event) {
+        form.addEventListener('submit', function (event) {
             event.preventDefault();
 
             /* Если с прошлой попытки висит уведомление об ошибке: */
