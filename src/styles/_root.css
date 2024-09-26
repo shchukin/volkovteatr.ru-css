@@ -10,11 +10,12 @@
     --action-color: #E4BB6B;
     --action-color-hover: #EBD7B2;
     /*--input-border: #B3B3B3;*/
-    /*--input-border-hover-and-focus: #7E7E7E;*/
-    /*--placeholder-color: #999999;*/
-    /*--disabled-background: #F6F6F6;*/
-    /*--disabled-color: #999999;*/
-    /*--error: #FF0033;*/
+    --input-border-hover: rgb(228 187 107 / 80%);
+    --input-border-focus: #E4BB6B;
+    --placeholder-color: #6073A2;
+    --disabled-background: #CED2D8;
+    --disabled-color: #999999;
+    --error: #FF0033;
     --page-top-padding: 24px;
     --header-height: 113px;
     --blue-hover: #223046;

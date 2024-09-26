@@ -47,9 +47,27 @@
 }
 
 
-.button--larger {
 
+.button--larger {
+    padding: 12px 36px;
+    border-radius: 25px;
+    font-size: 18px;
+    line-height: 26px;
 }
+
+@media (1850px <= width) {
+
+    .button--larger {
+        padding: 14px 40px;
+        border-radius: 28px;
+        font-size: 20px;
+        line-height: 28px;
+    }
+}
+
+
+
+
 
 /*.button:disabled,*/
 /*.button:disabled:hover,*/
