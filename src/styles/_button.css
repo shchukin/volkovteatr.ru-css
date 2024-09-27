@@ -1,7 +1,9 @@
 .button {
     position: relative;
-    display: inline-block;
     vertical-align: top;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
     border: none;
     padding: 10px 20px;
     min-width: 100px;
@@ -28,6 +30,11 @@
     translate: 0 1px;
     transition: none;
 }
+    .button__icon {
+        width: 16px;
+        height: 16px;
+        fill: currentColor;
+    }
 
 @media (1850px <= width) {
 
@@ -36,7 +43,12 @@
         border-radius: 24px;
         font-size: 18px;
         line-height: 24px;
+        gap: 10px;
     }
+        .button__icon {
+            width: 18px;
+            height: 18px;
+        }
 }
 
 @media (width < 740px) {
@@ -44,6 +56,10 @@
     .button {
 
     }
+        .button__icon {
+            width: 20px;
+            height: 20px;
+        }
 }
 
 
@@ -182,6 +198,10 @@
     margin-top: -14px;
     margin-left: -14px;
 }
+    .button--larger .button__icon {
+        width: 18px;
+        height: 18px;
+    }
 
 
 @media (1850px <= width) {
@@ -191,6 +211,7 @@
         border-radius: 28px;
         font-size: 20px;
         line-height: 28px;
+        gap: 10px;
     }
     .button--larger.button--loading::after,
     .button--larger.button--success::after,
@@ -200,5 +221,10 @@
         margin-top: -16px;
         margin-left: -16px;
     }
+        .button--larger .button__icon {
+            width: 20px;
+            height: 20px;
+            gap: 12px;
+        }
 }
 

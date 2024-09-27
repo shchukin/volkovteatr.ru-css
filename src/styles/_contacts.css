@@ -1,0 +1,139 @@
+.contacts {
+    padding-top: var(--page-top-padding);
+}
+    .contacts__heading {
+        margin-top: 0;
+        margin-bottom: 0;
+        text-align: center;
+    }
+
+    .contacts__summary {
+        margin-top: 45px;
+        display: grid;
+        grid-template-columns: 1fr 500px;
+    }
+        .contacts__data {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+            .contacts__address {
+
+            }
+
+            .contacts__phone {
+
+            }
+
+            .contacts__requisites {
+
+            }
+
+            .contacts__social {
+
+            }
+                .contacts__social-heading {
+                    max-width: 525px;
+                    font-size: 18px;
+                    line-height: 24px;
+                }
+
+                .contacts__social-links {
+                    margin-left: -10px;
+                    margin-bottom: -10px;
+                    margin-top: 5px;
+                    display: flex;
+                    align-items: flex-start;
+                }
+
+        .contacts__map {
+            height: 100%;
+        }
+
+    .contacts__form {
+        margin-top: 86px;
+    }
+
+    .contacts__sub-heading {
+        margin-top: 75px;
+        margin-bottom: 0;
+        font-family: var(--font-heading);
+        font-style: italic;
+        font-weight: normal;
+        font-size: 32px;
+        line-height: 38px;
+        color: #E4BB6B;
+        text-transform: uppercase;
+    }
+
+    .contacts__addition {
+        margin-top: 30px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px 18px;
+    }
+
+
+
+@media (1850px <= width) {
+
+    .contacts {
+
+    }
+        .contacts__heading {
+
+        }
+
+        .contacts__summary {
+            margin-top: 60px;
+            grid-template-columns: 1fr 867px;
+        }
+            .contacts__data {
+                gap: 40px;
+            }
+                .contacts__address {
+
+                }
+
+                .contacts__phone {
+
+                }
+
+                .contacts__requisites {
+
+                }
+
+                .contacts__social {
+
+                }
+                    .contacts__social-heading {
+                        max-width: 712px;
+                        font-size: 22px;
+                        line-height: 30px;
+                    }
+
+                    .contacts__social-links {
+                        margin-left: -10px;
+                        margin-bottom: -10px;
+                        margin-top: 6px;
+                    }
+
+            .contacts__map {
+
+            }
+
+        .contacts__form {
+            margin-top: 114px;
+        }
+
+        .contacts__sub-heading {
+            margin-top: 100px;
+            font-size: 42px;
+            line-height: 49px;
+        }
+
+        .contacts__addition {
+            margin-top: 40px;
+            gap: 40px 24px;
+        }
+}
