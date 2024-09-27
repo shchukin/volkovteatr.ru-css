@@ -1,6 +1,6 @@
 .engage {
     display: grid;
-    grid-template-columns: 573fr 1165fr;
+    grid-template-columns: 1fr 600px;
     gap: 18px;
 }
     .engage__header {
@@ -16,6 +16,13 @@
             line-height: 32px;
             text-transform: uppercase;
             color: #E4BB6B;
+        }
+
+        .engage__description {
+            margin-top: 14px;
+            max-width: 430px;
+            font-size: 16px;
+            line-height: 20px;
         }
 
     .engage__body {
@@ -44,7 +51,7 @@
             .engage__agreement {
                 max-width: 350px;
                 font-size: 15px;
-                line-height: 22px;
+                line-height: 20px;
                 text-align: right;
             }
 
@@ -57,6 +64,7 @@
 @media (1850px <= width) {
 
     .engage {
+        grid-template-columns: 1fr 1015px;
         gap: 22px;
     }
         .engage__header {
@@ -65,6 +73,13 @@
             .engage__heading {
                 font-size: 32px;
                 line-height: 37px;
+            }
+
+            .engage__description {
+                margin-top: 24px;
+                max-width: 520px;
+                font-size: 20px;
+                line-height: 27px;
             }
 
         .engage__body {
