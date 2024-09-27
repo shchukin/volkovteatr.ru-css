@@ -69,7 +69,7 @@
     .contacts__addition {
         margin-top: 30px;
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 24px 18px;
     }
 
@@ -137,3 +137,87 @@
             gap: 40px 24px;
         }
 }
+
+
+
+@media (width < 740px) {
+
+    .contacts {
+        /*padding-top: var(--page-top-padding);*/
+    }
+        .contacts__heading {
+            /*margin-top: 0;*/
+            /*margin-bottom: 0;*/
+            /*text-align: center;*/
+        }
+
+        .contacts__summary {
+            margin-top: 20px;
+            display: block;
+            /*grid-template-columns: 1fr 500px;*/
+        }
+            .contacts__data {
+                /*flex-direction: column;*/
+                gap: 24px;
+            }
+                .contacts__address {
+                    margin-top: -4px;
+                }
+                    .contacts__address .channel__heading {
+                        font-size: 20px;
+                        line-height: 28px;
+                    }
+
+                .contacts__phone {
+                    order: -1;
+                }
+                    .contacts__phone .channel__heading {
+                        font-size: 20px;
+                        line-height: 28px;
+                    }
+
+                .contacts__requisites {
+
+                }
+
+                .contacts__social {
+
+                }
+                    .contacts__social-heading {
+                        /*max-width: 525px;*/
+                        /*font-size: 18px;*/
+                        /*line-height: 24px;*/
+                    }
+
+                    .contacts__social-links {
+                        /*margin-left: -10px;*/
+                        /*margin-bottom: -10px;*/
+                        /*margin-top: 5px;*/
+                        /*display: flex;*/
+                        /*align-items: flex-start;*/
+                    }
+
+            .contacts__map {
+                margin-top: 40px;
+                height: 252px;
+            }
+
+        .contacts__form {
+            margin-top: 40px;
+        }
+
+        .contacts__sub-heading {
+            margin-top: 59px;
+            font-size: 24px;
+            line-height: 28px;
+        }
+
+        .contacts__addition {
+            margin-top: 24px;
+            display: grid;
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+            gap: 20px;
+        }
+}
+
+

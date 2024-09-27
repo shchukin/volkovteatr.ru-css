@@ -12,7 +12,7 @@
     }
 
     .net:hover .net__icon {
-        opacity: 80%;
+        fill: var(--action-color-hover);
     }
 
 
