@@ -10,7 +10,7 @@
     .contacts__summary {
         margin-top: 45px;
         display: grid;
-        grid-template-columns: 1fr 500px;
+        grid-template-columns: 1fr 600px;
     }
         .contacts__data {
             display: flex;

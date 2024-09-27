@@ -247,7 +247,7 @@
     }).on('change', function () {
         selectPlaceholder($(this));
     });
-    
+
     /* Expanding textarea */
     function expandTextarea($element) {
         $element.css('height', 'auto');
