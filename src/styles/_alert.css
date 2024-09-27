@@ -3,10 +3,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 14px 15px 16px;
+    padding: 20px 50px;
     background-color: #FD8902;
     border-radius: 4px;
-    font-size: 15px;
+    font-size: 16px;
     line-height: 20px;
     color: #FFFFFF;
     text-align: center;
@@ -30,43 +30,71 @@
     }
 
     .alert__dismiss {
-        display: none;
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        margin-top: -12px;
+        display: inline-block;
+        vertical-align: top;
+        width: 22px;
+        height: 22px;
+        background-color: transparent;
+        padding: 0;
+        border: none;
+        background-image: url("../vectors/alert-dismiss.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center;
+        text-indent: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        cursor: pointer;
+        transition: opacity 0.1s ease;
+    }
+
+    .alert__dismiss:hover {
+        opacity: 0.8;
     }
 
 
-@media (740px <= width) {
+
+@media (1850px <= width) {
 
     .alert {
-        padding: 19px 50px 21px;
+        padding: 26px 60px;
+        border-radius: 6px;
+        font-size: 18px;
+        line-height: 24px;
     }
         .alert__label {
 
         }
 
         .alert__dismiss {
-            position: absolute;
-            right: 20px;
-            top: 50%;
-            margin-top: -12px;
-            display: inline-block;
-            vertical-align: top;
-            width: 24px;
-            height: 24px;
-            background-color: transparent;
-            padding: 0;
-            border: none;
-            background-image: url("../vectors/alert-dismiss.svg");
-            background-size: 22px 22px;
-            background-repeat: no-repeat;
-            background-position: center center;
-            text-indent: 100%;
-            white-space: nowrap;
-            overflow: hidden;
-            cursor: pointer;
-            transition: opacity 0.1s ease;
+            width: 26px;
+            height: 26px;
+            margin-top: -15px;
+            right: 24px;
         }
 
-        .alert__dismiss:hover {
-            opacity: 0.8;
+
+    .alert + .alert {
+        margin-top: 18px;
+    }
+}
+
+
+@media (width < 740px) {
+
+    .alert {
+        padding: 16px 15px;
+    }
+        .alert__label {
+
         }
+
+        .alert__dismiss {
+            display: none;
+        }
+
 }

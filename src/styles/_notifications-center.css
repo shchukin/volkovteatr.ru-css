@@ -8,6 +8,16 @@
 }
 
 
+@media (1850px <= width) {
+
+    .notifications-center {
+        top: 30px;
+        margin-left: -320px;
+        width: 640px;
+    }
+}
+
+
 @media (width < 740px) {
 
     .notifications-center {
