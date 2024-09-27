@@ -312,28 +312,29 @@
 
             subscriptionInputs.forEach((input) => {
 
-                const inputWidget = input.querySelector('.input__widget');
+                /* Есть три варианта инпутов: */
 
-                if (inputWidget) {
+                // 1) Текстовые инпуты внутри компонента .input (это всё, что не тег <select>):
+                const textInputs = input.querySelector('.input__widget:not(select)');
+                if (textInputs) {
+                    textInputs.value = '';
+                }
 
-                    if (inputWidget.tagName !== 'SELECT') {
-                        inputWidget.value = '';
-                    } else {
-                        // 2. If input__widget is a <select>, select the option with name "placeholder"
-                        const placeholderOption = Array.from(inputWidget.options).find(option => option.getAttribute('value') === 'placeholder');
-                        if (placeholderOption) {
-                            inputWidget.value = placeholderOption.value;
-                            input.classList.add('input--placeholder-is-chosen');
-                        }
+                // 2) <select> внутри .input
+                const selects = input.querySelector('select.input__widget');
+                if (selects) {
+                    const placeholderOption = Array.from(selects.options).find(option => option.getAttribute('value') === 'placeholder');
+                    if (placeholderOption) {
+                        selects.value = placeholderOption.value;
+                        input.classList.add('input--placeholder-is-chosen');
                     }
                 }
 
-                // 3. Find and uncheck any .choice__widget checkboxes
-                const choiceWidget = input.querySelector('.choice__widget');
-                if (choiceWidget) {
-                    choiceWidget.checked = false;
+                // 3) .choice__widget
+                const choices = input.querySelector('.choice__widget');
+                if (choices) {
+                    choices.checked = false;
                 }
-
             });
         }
 
