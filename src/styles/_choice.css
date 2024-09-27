@@ -51,12 +51,12 @@
 
 
 /* Hovered */
-
-.choice__label:hover {
+/* не :disabled, и не чекнутая радиокнопка */
+.choice__widget:not(:disabled):not([type="radio"]:checked) ~ .choice__label:hover {
     color: var(--action-color);
 }
 
-.choice__label:hover ~ .choice__icon {
+.choice__widget:not(:disabled):not([type="radio"]:checked) ~ .choice__label:hover ~ .choice__icon {
     box-shadow: inset 0 0 0 1px var(--action-color);
 }
 
@@ -93,15 +93,6 @@
     cursor: default; /* checked radio button can’t be hovered */
 }
 
-
-/* Отменяем наведение на чекнутую радиокнопку: */
-.choice__widget[type="radio"]:checked ~ .choice__label:hover {
-    color: #FFFFFF;
-}
-
-.choice__widget[type="radio"]:checked ~ .choice__label:hover ~ .choice__icon {
-    box-shadow: inset 0 0 0 1px #FFFFFF;
-}
 
 
 /* Focused */
