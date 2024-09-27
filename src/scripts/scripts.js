@@ -247,19 +247,26 @@
     }).on('change', function () {
         selectPlaceholder($(this));
     });
-
+    
     /* Expanding textarea */
     function expandTextarea($element) {
         $element.css('height', 'auto');
         $element.css('height', ($element[0].scrollHeight + 2 * parseInt($element.css('border-width'), 10)) + 'px');
     }
 
-    $('.input--expandable .input__widget').each(function () {
+    const $expandableInputs = $('.input--expandable .input__widget');
+
+    $expandableInputs.each(function () {
         expandTextarea($(this));
     }).on('input', function () {
         expandTextarea($(this));
     });
 
+    $(window).on('resize', function () {
+        $expandableInputs.each(function () {
+            expandTextarea($(this));
+        });
+    });
     /* Error field */
     $('.input__widget').on('focus', function () {
         $(this).parents('.input').removeClass('input--error');
