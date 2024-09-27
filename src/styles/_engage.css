@@ -139,6 +139,11 @@
                 /*color: #E4BB6B;*/
             }
 
+            .engage__description {
+                font-size: 18px;
+                line-height: 25px;
+            }
+
         .engage__body {
             margin-top: 24px;
         }
