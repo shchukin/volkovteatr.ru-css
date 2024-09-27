@@ -289,7 +289,7 @@
 
     /* Сама форма */
     document.querySelectorAll('.js-form').forEach(function (form) {
-        const subscriptionInputs = form.querySelectorAll('.input');
+        const subscriptionInputs = form.querySelectorAll('.input, .choice');
         const subscriptionSubmit = form.querySelector('.js-submit');
         const subscriptionSuccessAlert = document.querySelector('.notifications-center__callback-success');
         const subscriptionFailureAlert = document.querySelector('.notifications-center__callback-failure');
@@ -297,22 +297,43 @@
         /* Состояния инпутов (на время отправки формы инпуты должны блокироваться) */
         function disableSubscriptionInputs() {
             subscriptionInputs.forEach((input) => {
-                input.classList.add('input--loading');
-                input.querySelector('.input__widget').setAttribute('disabled', 'disabled');
+                input.querySelector('.input__widget, .choice__widget').setAttribute('disabled', 'disabled');
             });
         }
 
         function enableSubscriptionInputs() {
             subscriptionInputs.forEach((input) => {
-                input.classList.remove('input--loading');
-                input.querySelector('.input__widget').removeAttribute('disabled');
+                input.querySelector('.input__widget, .choice__widget').removeAttribute('disabled');
             });
         }
 
         /* Очистка инпутов (после успешной отправки форму должны очищаться) */
         function cleanSubscriptionInputs() {
+
             subscriptionInputs.forEach((input) => {
-                input.querySelector('.input__widget').value = '';
+
+                const inputWidget = input.querySelector('.input__widget');
+
+                if (inputWidget) {
+
+                    if (inputWidget.tagName !== 'SELECT') {
+                        inputWidget.value = '';
+                    } else {
+                        // 2. If input__widget is a <select>, select the option with name "placeholder"
+                        const placeholderOption = Array.from(inputWidget.options).find(option => option.getAttribute('value') === 'placeholder');
+                        if (placeholderOption) {
+                            inputWidget.value = placeholderOption.value;
+                            input.classList.add('input--placeholder-is-chosen');
+                        }
+                    }
+                }
+
+                // 3. Find and uncheck any .choice__widget checkboxes
+                const choiceWidget = input.querySelector('.choice__widget');
+                if (choiceWidget) {
+                    choiceWidget.checked = false;
+                }
+
             });
         }
 

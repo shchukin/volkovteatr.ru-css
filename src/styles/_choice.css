@@ -64,11 +64,11 @@
 /* Checked */
 
 .choice__widget:checked ~ .choice__label {
-    transition: none;
+
 }
 
 .choice__widget:checked ~ .choice__icon {
-    transition: none;
+
 }
 
 

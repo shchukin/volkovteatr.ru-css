@@ -41,6 +41,10 @@
                 grid-column: span 2;
             }
 
+        .engage__options {
+            margin-top: 18px;
+        }
+
         .engage__footer {
             margin-top: 33px;
             display: flex;
