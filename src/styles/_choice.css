@@ -30,6 +30,10 @@
     }
 
     .choice--inverted .choice__label {
+        padding-left: 28px;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 16px;
         color: #505050;
     }
 
@@ -50,6 +54,8 @@
     }
 
     .choice--inverted .choice__icon {
+        width: 16px;
+        height: 16px;
         box-shadow: inset 0 0 0 1px #505050;
     }
 
@@ -190,4 +196,16 @@
             height: 24px;
             border-radius: 4px;
         }
+
+
+    .choice--inverted .choice__icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    .choice--inverted .choice__label {
+        padding-left: 32px;
+        font-size: 14px;
+        line-height: 19px;
+    }
 }

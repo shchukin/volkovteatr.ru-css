@@ -6,7 +6,7 @@
     align-items: center;
     gap: 8px;
     border: none;
-    padding: 10px 20px;
+    padding: 11px 20px;
     min-width: 100px;
     background-color: #E4BB6B;
     border-radius: 21px;
@@ -40,7 +40,7 @@
 @media (1850px <= width) {
 
     .button {
-        padding: 12px 24px;
+        padding: 13px 24px;
         border-radius: 24px;
         font-size: 18px;
         line-height: 24px;

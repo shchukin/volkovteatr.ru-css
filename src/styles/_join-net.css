@@ -1,6 +1,7 @@
 .join-net {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 16px;
     border: 1px solid #E4BB6B;
     border-radius: 10px;
