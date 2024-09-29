@@ -298,8 +298,8 @@
     document.querySelectorAll('[data-js-form]').forEach(function (form) {
         const subscriptionInputs = form.querySelectorAll('.input, .choice');
         const subscriptionSubmit = form.querySelector('[data-js-submit]');
-        const subscriptionSuccessAlert = document.querySelector('.notifications-center__callback-success');
-        const subscriptionFailureAlert = document.querySelector('.notifications-center__callback-failure');
+        const subscriptionSuccessAlert = document.querySelector('[data-js-alert-success]');
+        const subscriptionFailureAlert = document.querySelector('[data-js-alert-failure]');
 
         /* Состояния инпутов (на время отправки формы инпуты должны блокироваться) */
         function disableSubscriptionInputs() {
