@@ -37,3 +37,40 @@
         }
 }
 
+
+
+@media (width < 740px) {
+
+    .application {
+
+    }
+        .application__heading {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 22px;
+        }
+            .application__heading .switch {
+
+            }
+
+        .application__form {
+            margin-top: 32px;
+        }
+}
+
+
+
+
+
+@media (width < 400px) {
+
+    .application__heading.title,
+    .application__heading .title {
+        font-size: 28px;
+        line-height: 32px;
+    }
+}
+
+
+
