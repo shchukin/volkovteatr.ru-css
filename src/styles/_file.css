@@ -3,6 +3,7 @@
     display: block;
     padding: 22px 73px;
     background-color: #F8F0E5;
+    color-scheme: light;
     border-radius: 6px;
     font-size: 25px;
     line-height: 32px;
@@ -13,6 +14,10 @@
 
 .file:hover {
     background-color: #FFFFFF;
+}
+
+.file:active {
+    translate: 0 1px;
 }
     .file__icon {
         position: absolute;

@@ -31,6 +31,7 @@
 
         .center__email {
             background-color: #F8F0E5;
+            color-scheme: light;
             border-radius: 10px;
         }
             .center__email-heading {
