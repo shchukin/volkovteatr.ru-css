@@ -295,9 +295,9 @@
 
 
     /* Сама форма */
-    document.querySelectorAll('.js-form').forEach(function (form) {
+    document.querySelectorAll('[data-js-form]').forEach(function (form) {
         const subscriptionInputs = form.querySelectorAll('.input, .choice');
-        const subscriptionSubmit = form.querySelector('.js-submit');
+        const subscriptionSubmit = form.querySelector('[data-js-submit]');
         const subscriptionSuccessAlert = document.querySelector('.notifications-center__callback-success');
         const subscriptionFailureAlert = document.querySelector('.notifications-center__callback-failure');
 
