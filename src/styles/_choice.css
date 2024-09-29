@@ -4,6 +4,11 @@
     width: fit-content;
     min-height: 30px;
 }
+
+.choice--inverted {
+
+}
+
     .choice__widget {
         opacity: 0;
         position: absolute;
@@ -24,6 +29,10 @@
         transition: color var(--transition-hover);
     }
 
+    .choice--inverted .choice__label {
+        color: #505050;
+    }
+
     .choice__icon {
         position: absolute;
         left: 0;
@@ -38,6 +47,10 @@
         border-radius: 3px;
         pointer-events: none; /* Since this icon is positioned higher than label, let's make it possible to click through, so that the user interacts only with the label. For now, this icon won't generate its own cursor, for example. */
         transition: box-shadow var(--transition-hover);
+    }
+
+    .choice--inverted .choice__icon {
+        box-shadow: inset 0 0 0 1px #505050;
     }
 
     .choice__widget[type="checkbox"] ~ .choice__icon {
@@ -55,8 +68,18 @@
     color: var(--action-color);
 }
 
+.choice--inverted .choice__widget:not(:disabled):not([type="radio"]:checked) ~ .choice__label:hover {
+    color: #0B1E3A;
+}
+
+
+
 .choice__widget:not(:disabled):not([type="radio"]:checked) ~ .choice__label:hover ~ .choice__icon {
     box-shadow: inset 0 0 0 1px var(--action-color);
+}
+
+.choice--inverted .choice__widget:not(:disabled):not([type="radio"]:checked) ~ .choice__label:hover ~ .choice__icon {
+    box-shadow: inset 0 0 0 1px #0B1E3A;
 }
 
 
@@ -74,6 +97,10 @@
 .choice__widget[type="checkbox"]:checked ~ .choice__icon {
     background-color: #F8F0E5;
     background-image: url("../vectors/choice-checkbox.svg");
+}
+
+.choice--inverted .choice__widget[type="checkbox"]:checked ~ .choice__icon {
+    background-color: #E4BB6B;
 }
 
 .choice__widget[type="radio"]:checked ~ .choice__icon {
@@ -133,14 +160,6 @@
 
 
 
-.choice--bolder {
-
-}
-    .choice--bolder .choice__label {
-        font-weight: 600;
-        font-size: 13px;
-        line-height: 20px;
-    }
 
 
 .choice--full-width {
