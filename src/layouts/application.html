@@ -180,6 +180,18 @@
                 <div class="application">
                     <h1 class="application__heading title title--main">
                         Групповая заявка
+                        <span class="switch">
+                            <button class="switch__item switch__item--current" type="button" data-js-application-performances>
+                                <span class="switch__label">
+                                    Спектакли
+                                </span>
+                            </button>
+                            <button class="switch__item" type="button" data-js-application-excursions>
+                                <span class="switch__label">
+                                    Экскурсии
+                                </span>
+                            </button>
+                        </span>
                     </h1>
                     <div class="application__form">
                         <div class="engage">
@@ -193,9 +205,25 @@
                             </div>
                             <form class="engage__body js-form">
                                 <div class="engage__fieldset">
+                                    <div class="engage__field engage__field--full-width" data-js-application-select-show>
+                                        <div class="input">
+                                            <select class="input__widget">
+                                                <option value="placeholder">Выбор спектакля</option>
+                                                <option>Lorem ipsum dolor sit amet</option>
+                                                <option>Consectetur adipisicing elit</option>
+                                                <option>...</option>
+                                                <option>Necessitatibus, nesciunt</option>
+                                            </select>
+                                        </div>
+                                    </div>
                                     <div class="engage__field">
                                         <div class="input">
-                                            <input class="input__widget" type="text" placeholder="Ваше имя">
+                                            <input class="input__widget" type="text" placeholder="Ваше имя *" required>
+                                        </div>
+                                    </div>
+                                    <div class="engage__field">
+                                        <div class="input">
+                                            <input class="input__widget" type="text" placeholder="Кол-во человек в группе (от 20 до 25) *" required>
                                         </div>
                                     </div>
                                     <div class="engage__field">
@@ -203,15 +231,9 @@
                                             <input class="input__widget" type="email" placeholder="E-mail *" required>
                                         </div>
                                     </div>
-                                    <div class="engage__field engage__field--full-width">
+                                    <div class="engage__field">
                                         <div class="input">
-                                            <select class="input__widget">
-                                                <option value="placeholder">Тема</option>
-                                                <option>Lorem ipsum dolor sit amet</option>
-                                                <option>Consectetur adipisicing elit</option>
-                                                <option>...</option>
-                                                <option>Necessitatibus, nesciunt</option>
-                                            </select>
+                                            <input class="input__widget" type="tel" placeholder="Телефон *" required>
                                         </div>
                                     </div>
                                     <div class="engage__field engage__field--full-width">

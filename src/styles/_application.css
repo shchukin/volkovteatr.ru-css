@@ -2,11 +2,38 @@
     padding-top: var(--page-top-padding);
 }
     .application__heading {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         margin-top: 0;
         margin-bottom: 0;
         text-align: center;
+        gap: 18px;
     }
+        .application__heading .switch {
+            font-family: var(--font);
+        }
 
     .application__form {
-        margin-top: 60px;
+        margin-top: 40px;
     }
+
+
+
+@media (1850px <= width) {
+
+    .application {
+
+    }
+        .application__heading {
+            gap: 24px;
+        }
+            .application__heading .switch {
+
+            }
+
+        .application__form {
+            margin-top: 60px;
+        }
+}
+

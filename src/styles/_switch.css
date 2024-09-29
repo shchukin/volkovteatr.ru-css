@@ -1,0 +1,102 @@
+.switch {
+    box-shadow: inset 0 0 0 1px #F8F0E5;
+    border-radius: 36px;
+    display: flex;
+    align-items: flex-start;
+    width: fit-content;
+}
+    .switch__item {
+        position: relative;
+        background-color: transparent;
+        border-radius: 28px;
+        border: none;
+        padding: 15px 20px;
+        font-family: inherit;
+        font-size: 18px;
+        line-height: 24px;
+        color: #F8F0E5;
+        cursor: pointer;
+    }
+        .switch__item::before {
+            content: "";
+            position: absolute;
+            left: 5px;
+            top: 5px;
+            right: 5px;
+            bottom: 5px;
+            display: block;
+            border-radius: 28px;
+            transition: background-color var(--transition-hover);
+        }
+
+        .switch__label {
+            position: relative;
+        }
+
+    .switch__item:hover::before {
+        background-color: rgb(255 255 255 / 10%);
+    }
+
+    .switch__item--current,
+    .switch__item--current:hover {
+        color: #303F64;
+        cursor: default;
+    }
+        .switch__item--current::before,
+        .switch__item--current:hover::before {
+            background-color: #E4BB6B;
+        }
+
+
+
+@media (1850px <= width) {
+
+    .switch {
+        /*box-shadow: inset 0 0 0 1px #F8F0E5;*/
+        /*border-radius: 36px;*/
+        /*display: flex;*/
+        /*align-items: flex-start;*/
+        /*width: fit-content;*/
+    }
+        .switch__item {
+            /*position: relative;*/
+            /*background-color: transparent;*/
+            /*border-radius: 28px;*/
+            /*border: none;*/
+            padding: 20px 27px;
+            /*font-family: inherit;*/
+            font-size: 24px;
+            line-height: 32px;
+            /*color: #F8F0E5;*/
+            /*cursor: pointer;*/
+        }
+            .switch__item::before {
+                /*content: "";*/
+                /*position: absolute;*/
+                left: 7px;
+                top: 7px;
+                right: 7px;
+                bottom: 7px;
+                /*display: block;*/
+                /*border-radius: 28px;*/
+                /*transition: background-color var(--transition-hover);*/
+            }
+
+            .switch__label {
+                /*position: relative;*/
+            }
+
+        .switch__item:hover::before {
+            /*background-color: rgb(255 255 255 / 10%);*/
+        }
+
+        .switch__item--current,
+        .switch__item--current:hover {
+            /*color: #303F64;*/
+            /*cursor: default;*/
+        }
+            .switch__item--current::before,
+            .switch__item--current:hover::before {
+                /*background-color: #E4BB6B;*/
+            }
+}

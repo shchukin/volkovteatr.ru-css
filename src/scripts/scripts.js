@@ -434,5 +434,34 @@
         });
     });
 
+
+    /* Переключатель в групповой заявке */
+
+    document.addEventListener("DOMContentLoaded", function () {
+
+        const switchItems = document.querySelectorAll('[data-js-application-performances], [data-js-application-excursions]');
+        const selectField = document.querySelector('[data-js-application-select-show]');
+        console.log(switchItems)
+
+        function toggleField(showField) {
+            const fieldContainer = selectField.closest('.engage__field');
+            fieldContainer.style.display = showField ? 'block' : 'none';
+        }
+
+        switchItems.forEach((item) => {
+            item.addEventListener('click', function () {
+                switchItems.forEach(btn => btn.classList.remove('switch__item--current'));
+                this.classList.add('switch__item--current');
+
+                const isSpectaclesSelected = this.hasAttribute('data-js-application-performances');
+                toggleField(isSpectaclesSelected);
+            });
+        });
+
+        const isSpectaclesSelected = document.querySelector('.switch__item--current').textContent.trim() === 'Спектакли';
+        toggleField(isSpectaclesSelected);
+    });
+
+
 })(jQuery);
 
