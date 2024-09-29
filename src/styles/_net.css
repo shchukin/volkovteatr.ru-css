@@ -15,6 +15,10 @@
         fill: var(--action-color-hover);
     }
 
+    .net:active .net__icon {
+        translate: 0 1px;
+    }
+
 
 
 @media (1850px <= width) {
