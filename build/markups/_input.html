@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <title>.input</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="../styles/styles.css?1727071607">
+        <link rel="stylesheet" href="../styles/styles.css?1727709690">
     </head>
     <body>
 
@@ -23,19 +23,36 @@
                 <input class="input__widget" type="text" placeholder="Ваше имя" value="Константин Константинопольский">
             </div>
 
+            <br>
+            <h2>.input--inverted</h2>
 
-            <br>
-            <br>
-            <br>
-            <h2>С <a href="_label.html">.label</a> и <a href="_helper.html">.helper</a></h2>
+
+            <div style="padding: 20px; margin: -20px; background: #F8F0E5;">
+
+                <div class="input input--inverted">
+                    <input class="input__widget" type="text" placeholder="Ваше имя">
+                </div>
+
+                <br>
+
+                <div class="input input--inverted">
+                    <input class="input__widget" type="text" placeholder="Ваше имя" value="Константин Константинопольский">
+                </div>
+            </div>
+
             <p>
-                Эти два компонента, вообще говоря, не часть <b><i>.input</i></b>.
-                Но очень часто используются вместе. Выводим их друг за другом:
+                Используется только в одном месте, так что кейсы ниже для этого варианта не разложены.
             </p>
 
-            <label class="label" for="bp24napi">
-                Ваше имя
-            </label>
+
+            <br>
+            <br>
+            <br>
+            <h2>С <a href="_helper.html">.helper</a></h2>
+            <p>
+                Этот, вообще говоря, не часть <b><i>.input</i></b>.
+                Но очень часто используются вместе. Выводим их друг за другом:
+            </p>
 
             <div class="input">
                 <input class="input__widget" type="text" id="bp24napi">
@@ -149,11 +166,7 @@
                 в стилях ограничит высоту если ввели слишком много текста.
             </p>
             <p>
-                Значение <b><i>max-height</i></b> следует подбираться кратно количеству строк плюс вертикальные паддинги
-                и бордюры. Сейчас выставлено <b>266px</b> — это:
-                <br>• <b>10 строк</b> по <b>24px</b> каждая (line-height)
-                <br>• Плюс <b>2×11px</b> -- это два вертикальных паддинга (верхний и нижний)
-                <br>• Плюс <b>4px</b> пикселя бордюров
+                Значение <b><i>max-height</i></b> следует подбираться кратно количеству строк плюс вертикальные паддинги.
             </p>
 
             <div class="input input--expandable">
@@ -268,7 +281,7 @@
             <h2>Остальные типы</h2>
             <br>
 
-            <label class="label" for="uzoyce97">
+            <label for="uzoyce97">
                 type="email"
             </label>
             <div class="input">
@@ -277,7 +290,7 @@
 
             <br>
 
-            <label class="label" for="qv6hko4q">
+            <label for="qv6hko4q">
                 type="tel"
             </label>
             <div class="input">
@@ -286,7 +299,7 @@
 
             <br>
 
-            <label class="label" for="dqx2iwgu">
+            <label for="dqx2iwgu">
                 type="url"
             </label>
             <div class="input">
@@ -295,7 +308,7 @@
 
             <br>
 
-            <label class="label" for="ey58yjk9">
+            <label for="ey58yjk9">
                 type="search"
             </label>
             <div class="input">
@@ -304,7 +317,7 @@
 
             <br>
 
-            <label class="label" for="h68i9f7g">
+            <label for="h68i9f7g">
                 type="number"
             </label>
             <div class="input">
@@ -313,7 +326,7 @@
 
             <br>
 
-            <label class="label" for="8fq2k8fo">
+            <label for="8fq2k8fo">
                 type="color"
             </label>
             <div class="input">
@@ -322,7 +335,7 @@
 
             <br>
 
-            <label class="label" for="vecqj15p">
+            <label for="vecqj15p">
                 type="date"
             </label>
             <div class="input">
@@ -331,7 +344,7 @@
 
             <br>
 
-            <label class="label" for="8xg4jfb3">
+            <label for="8xg4jfb3">
                 type="datetime-local"
             </label>
             <div class="input">
@@ -340,7 +353,7 @@
 
             <br>
 
-            <label class="label" for="brif3gg2">
+            <label for="brif3gg2">
                 type="week"
             </label>
             <div class="input">
@@ -349,7 +362,7 @@
 
             <br>
 
-            <label class="label" for="iei6tkvf">
+            <label for="iei6tkvf">
                 type="month"
             </label>
             <div class="input">
@@ -358,7 +371,7 @@
 
             <br>
 
-            <label class="label" for="33s23mr7">
+            <label for="33s23mr7">
                 type="time"
             </label>
             <div class="input">
@@ -391,7 +404,7 @@
         <script src="../vendors/swiper/swiper-bundle.min.js"></script>
 
         <!-- Scripts -->
-        <script src="../scripts/scripts.js?1727071607"></script>
+        <script src="../scripts/scripts.js?1727709690"></script>
 
 
     </body>
