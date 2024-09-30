@@ -1,8 +1,16 @@
 .wysiwyg {
+    max-width: 1090px;
     overflow-wrap: break-word;
     font-size: var(--body-font-size);
     line-height: var(--body-line-height);
 }
+
+@media (1850px <= width) {
+    .wysiwyg {
+        max-width: 1244px;
+    }
+}
+
 
 .wysiwyg p,
 .wysiwyg ul,
