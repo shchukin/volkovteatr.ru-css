@@ -2,12 +2,12 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 24px;
-    padding: 29px 24px;
+    gap: 18px;
+    padding: 19px 16px;
     background-color: #F8F0E5;
-    border-radius: 8px;
-    font-size: 28px;
-    line-height: 32px;
+    border-radius: 6px;
+    font-size: 22px;
+    line-height: 28px;
     color: #0B1E3A;
     text-decoration: none;
 }
@@ -15,3 +15,30 @@
         vertical-align: top;
         fill: currentColor;
     }
+
+
+
+@media (1850px <= width) {
+
+    .panel-link {
+        gap: 24px;
+        padding: 29px 24px;
+        font-size: 28px;
+        line-height: 32px;
+    }
+        .panel-link__icon {
+
+        }
+}
+
+
+
+@media (width < 740px) {
+
+    .panel-link {
+
+    }
+        .panel-link__icon {
+
+        }
+}
