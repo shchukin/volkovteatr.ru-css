@@ -8,7 +8,7 @@
             vertical-align: top;
             width: 100%;
             height: auto;
-            background-color: var(--image-fallback);
+            background-color: var(--black-image-fallback);
             border-radius: 7px;
             transition: filter var(--transition-hover);
         }

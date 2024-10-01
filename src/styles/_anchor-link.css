@@ -1,0 +1,24 @@
+.anchor-link {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    width: fit-content;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 32px;
+    color: #E4BB6B;
+    text-decoration: 1px underline transparent;
+    text-underline-offset: 5px;
+    transition: text-decoration-color var(--transition-hover);
+}
+
+.anchor-link:hover {
+    text-decoration-color: currentColor;
+}
+    .anchor-link__icon {
+        vertical-align: top;
+        margin-top: 7px;
+        stroke: currentColor;
+    }
