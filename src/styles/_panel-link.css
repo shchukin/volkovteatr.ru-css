@@ -10,6 +10,11 @@
     line-height: 28px;
     color: #0B1E3A;
     text-decoration: none;
+    transition: background-color var(--transition-hover);
+}
+
+.panel-link:hover {
+    background-color: #FFFFFF;
 }
     .panel-link__icon {
         vertical-align: top;
