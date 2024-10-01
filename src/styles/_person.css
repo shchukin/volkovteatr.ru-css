@@ -114,4 +114,7 @@
 
             .person__press-list {
                 margin-top: 40px;
+                display: grid;
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+                gap: 24px;
             }

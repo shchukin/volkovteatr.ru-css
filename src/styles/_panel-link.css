@@ -1,0 +1,17 @@
+.panel-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 29px 24px;
+    background-color: #F8F0E5;
+    border-radius: 8px;
+    font-size: 28px;
+    line-height: 32px;
+    color: #0B1E3A;
+    text-decoration: none;
+}
+    .panel-link__icon {
+        vertical-align: top;
+        fill: currentColor;
+    }
