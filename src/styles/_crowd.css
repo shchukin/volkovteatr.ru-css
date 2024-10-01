@@ -15,11 +15,29 @@
 
     .crowd__body {
         margin-top: 30px;
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        gap: 30px 18px;
-        justify-content: center;
     }
+        .crowd__sub-heading {
+            margin-top: 75px;
+            margin-bottom: 30px;
+            font-family: var(--font-heading);
+            font-weight: normal;
+            font-style: italic;
+            font-size: 32px;
+            line-height: 32px;
+            color: #E4BB6B;
+            text-transform: uppercase;
+        }
+
+        .crowd__sub-heading:first-child {
+            margin-top: 40px;
+        }
+
+        .crowd__list {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 30px 18px;
+            justify-content: center;
+        }
 
 
 
@@ -39,9 +57,22 @@
 
         .crowd__body {
             margin-top: 40px;
-            grid-template-columns: repeat(6, 1fr);
-            gap: 40px 24px;
         }
+            .crowd__sub-heading {
+                margin-top: 100px;
+                margin-bottom: 40px;
+                font-size: 48px;
+                line-height: 48px;
+            }
+
+            .crowd__sub-heading:first-child {
+                margin-top: 53px;
+            }
+
+            .crowd__list {
+                grid-template-columns: repeat(6, 1fr);
+                gap: 40px 24px;
+            }
 }
 
 
@@ -60,8 +91,15 @@
         }
 
         .crowd__body {
-            grid-template-columns: repeat(2, 1fr);
-            gap: 30px 16px;
+
         }
+            .crowd__sub-heading {
+
+            }
+
+            .crowd__list {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 30px 16px;
+            }
 }
 
