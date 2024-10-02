@@ -1,3 +1,12 @@
 .bio {
-    margin-bottom: -8px; /* паддинг у ссылки */
+    margin-bottom: -6px; /* паддинг у ссылки */
+}
+
+
+
+@media (1850px <= width) {
+
+    .bio {
+        margin-bottom: -8px; /* паддинг у ссылки */
+    }
 }

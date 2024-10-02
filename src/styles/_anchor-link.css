@@ -1,6 +1,6 @@
 .anchor-link {
-    padding-top: 8px;
-    padding-bottom: 8px;
+    padding-top: 6px;
+    padding-bottom: 6px;
     display: flex;
     align-items: flex-start;
     gap: 12px;
@@ -19,7 +19,7 @@
 }
     .anchor-link__icon {
         vertical-align: top;
-        margin-top: 7px;
+        margin-top: 5px;
         stroke: currentColor;
         width: 10px;
         height: auto;
@@ -30,8 +30,8 @@
 @media (1850px <= width) {
 
     .anchor-link {
-        /*padding-top: 8px;*/
-        /*padding-bottom: 8px;*/
+        padding-top: 8px;
+        padding-bottom: 8px;
         /*display: flex;*/
         /*align-items: flex-start;*/
         gap: 16px;
@@ -50,7 +50,7 @@
     }
         .anchor-link__icon {
             /*vertical-align: top;*/
-            /*margin-top: 7px;*/
+            margin-top: 7px;
             /*stroke: currentColor;*/
             width: 13px;
             height: 21px;
