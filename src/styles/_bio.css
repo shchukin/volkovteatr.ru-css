@@ -1,8 +1,13 @@
 .bio {
     margin-bottom: -6px; /* паддинг у ссылки */
 }
+    .bio__cut {
 
+    }
 
+    .bio__expand {
+
+    }
 
 @media (1850px <= width) {
 

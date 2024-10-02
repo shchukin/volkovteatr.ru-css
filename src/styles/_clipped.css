@@ -1,0 +1,122 @@
+:root {
+    --clipped-handler-height: 34px; /* 29 is a height of a button + 5px of space before it */
+}
+
+.clipped {
+    position: relative;
+}
+    .clipped__viewport {
+        position: relative;
+        overflow: hidden;
+        transition: height var(--transition-show);
+    }
+        .clipped__content {
+            padding-bottom: var(--clipped-handler-height);
+        }
+
+    .clipped__handler {
+        position: absolute;
+        z-index: 50;
+        left: 0;
+        bottom: 0;
+        display: none;
+        vertical-align: top;
+        font-size: var(--body-font-size);
+        line-height: var(--body-line-height);
+    }
+
+        .clipped__handler--centered {
+            margin: 0 auto;
+        }
+
+        .clipped__more {
+
+        }
+
+        .clipped__less {
+            display: none;
+        }
+
+        .clipped__handler::before {
+            content: "";
+            display: block;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: -5px;
+            bottom: -12px;
+        }
+
+        .clipped__handler::after {
+            content: "";
+            position: absolute;
+            right: -20px;
+            left: 100%;
+            top: -5px;
+            bottom: -12px;
+            background-image: url("../vectors/clipped.svg");
+            background-size: 12px 12px;
+            background-repeat: no-repeat;
+            background-position: center center;
+            transition: transform var(--transition-show);
+        }
+
+        .clipped--no-arrow .clipped__handler::after {
+            display: none;
+        }
+
+.clipped--expandable {
+
+}
+    .clipped--expandable .clipped__viewport {
+
+    }
+        .clipped--expandable .clipped__viewport::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: calc(40px + var(--clipped-handler-height)); /* 40px -- desired height plus some space for "read more" */
+            display: block;
+            background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.8) 70%, rgba(255, 255, 255, 1));
+            border-bottom: var(--clipped-handler-height) solid #FFFFFF;
+            transition: opacity var(--transition-show);
+            pointer-events: none;
+        }
+
+    .clipped--expandable .clipped__handler {
+        display: block;
+    }
+
+
+/* while calculating */
+.clipped--measurement {
+
+}
+    .clipped--measurement .clipped__viewport {
+        height: auto !important;
+    }
+        .clipped--measurement .clipped__content {
+            height: auto !important;
+        }
+
+
+.clipped--open {
+
+}
+    .clipped--open .clipped__viewport::after {
+        opacity: 0;
+    }
+
+    .clipped--open .clipped__more {
+        display: none;
+    }
+
+    .clipped--open .clipped__less {
+        display: inline;
+    }
+
+    .clipped--open .clipped__handler::after {
+        transform: scaleY(-1);
+    }
