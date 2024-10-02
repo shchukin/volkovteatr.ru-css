@@ -11,7 +11,8 @@
         transition: height var(--transition-show);
     }
         .clipped__content {
-            padding-bottom: var(--clipped-handler-height);
+            padding-bottom: 24px; /* отступ перед кнопкой "Подробнее" */
+            border-bottom: var(--clipped-handler-height) solid transparent;
         }
 
     .clipped__handler {
@@ -20,48 +21,12 @@
         left: 0;
         bottom: 0;
         display: none;
-        vertical-align: top;
-        font-size: var(--body-font-size);
-        line-height: var(--body-line-height);
     }
-
-        .clipped__handler--centered {
-            margin: 0 auto;
-        }
-
         .clipped__more {
 
         }
 
         .clipped__less {
-            display: none;
-        }
-
-        .clipped__handler::before {
-            content: "";
-            display: block;
-            position: absolute;
-            left: 0;
-            right: 0;
-            top: -5px;
-            bottom: -12px;
-        }
-
-        .clipped__handler::after {
-            content: "";
-            position: absolute;
-            right: -20px;
-            left: 100%;
-            top: -5px;
-            bottom: -12px;
-            background-image: url("../vectors/clipped.svg");
-            background-size: 12px 12px;
-            background-repeat: no-repeat;
-            background-position: center center;
-            transition: transform var(--transition-show);
-        }
-
-        .clipped--no-arrow .clipped__handler::after {
             display: none;
         }
 
@@ -79,14 +44,14 @@
             bottom: 0;
             height: calc(40px + var(--clipped-handler-height)); /* 40px -- desired height plus some space for "read more" */
             display: block;
-            background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.8) 70%, rgba(255, 255, 255, 1));
-            border-bottom: var(--clipped-handler-height) solid #FFFFFF;
+            background-image: linear-gradient(rgba(11 30 58 / 0), rgba(11 30 58 / 80%) 70%, rgba(11 30 58 / 100%));
+            border-bottom: var(--clipped-handler-height) solid #0B1E3A;
             transition: opacity var(--transition-show);
             pointer-events: none;
         }
 
     .clipped--expandable .clipped__handler {
-        display: block;
+        display: flex;
     }
 
 
@@ -117,6 +82,6 @@
         display: inline;
     }
 
-    .clipped--open .clipped__handler::after {
+    .clipped--open .clipped__handler .anchor-link__icon {
         transform: scaleY(-1);
     }

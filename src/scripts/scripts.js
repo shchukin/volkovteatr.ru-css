@@ -2,12 +2,14 @@
 
     /* Глобальные константы */
 
-    let isDesktop;
+    let isDesktop; /* т.е. не смартфон, а любой десктоп */
+    let isMonitor; /* т.е. монитор типа 1920 */
     let responsiveSpacing;
     let headerHeight;
 
     function initGlobalConstant() {
         isDesktop = window.matchMedia("(min-width: 740px)").matches;
+        isMonitor = window.matchMedia("(min-width: 1850px)").matches;
         responsiveSpacing = !isDesktop ? parseInt(getComputedStyle(document.documentElement).getPropertyValue('--container-padding')) : 40;
         headerHeight = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--header-height')) || 0;
     }
@@ -477,6 +479,13 @@
             /* Measure */
             height = $clipped.find('.clipped__content').outerHeight();
             canonicalHeight = parseInt( $clipped.attr('data-canonical-height') );
+
+            /* if Monitor */
+            if(isMonitor) {
+                canonicalHeight = canonicalHeight * 1.2;
+                $clipped.attr('data-canonical-height', canonicalHeight)
+            }
+
             $clipped.attr('data-actual-height', height);
 
             /* Back to what it was before measurement */
