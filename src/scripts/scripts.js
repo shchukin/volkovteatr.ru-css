@@ -517,5 +517,30 @@
 
 
 
+    /* Tabs */
+
+    $('.tabs__tag').on('click', function (event) {
+        event.preventDefault();
+        const $tabs = $(this).parents('.tabs');
+        const index = $(this).index();
+        console.log(index)
+
+
+        /* tag */
+        $tabs.find('.tabs__tag--current').removeClass('tabs__tag--current');
+        $(this).addClass('tabs__tag--current');
+
+
+        /* body */
+
+        $tabs.find('.tabs__item--current').removeClass('tabs__item--current');
+        $tabs.find('.tabs__item:eq('+index+')').addClass('tabs__item--current');
+
+    });
+
+
+
+
+
 })(jQuery);
 
