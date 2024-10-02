@@ -5,7 +5,7 @@
     --body-line-height: 25px;
     --ease-out-quint: cubic-bezier(0.22, 1, 0.36, 1);
     --transition-hover: 100ms ease;
-    --transition-show: 1200ms var(--ease-out-quint);
+    --transition-show: 900ms var(--ease-out-quint);
     --image-fallback: #F3F5F4;
     --black-image-fallback: #09182E;
     --action-color: #E4BB6B;
