@@ -523,22 +523,31 @@
         event.preventDefault();
         const $tabs = $(this).parents('.tabs');
         const index = $(this).index();
-        console.log(index)
 
+        const $handler = $tabs.find('.tabs__handler');
+        const label = $(this).text();
 
         /* tag */
         $tabs.find('.tabs__tag--current').removeClass('tabs__tag--current');
         $(this).addClass('tabs__tag--current');
 
-
         /* body */
-
         $tabs.find('.tabs__item--current').removeClass('tabs__item--current');
         $tabs.find('.tabs__item:eq('+index+')').addClass('tabs__item--current');
 
+        /* handler */
+        $handler.text(label);
     });
 
+    $('.tabs__handler').on('click', function () {
+        $(this).parents('.tabs').toggleClass('tabs--expanded');
+    })
 
+    $(document).on('click', function (event) {
+        if (!$(event.target).closest('.tabs__handler, .tabs__nav').length) {
+            $('.tabs').removeClass('tabs--expanded');
+        }
+    });
 
 
 
