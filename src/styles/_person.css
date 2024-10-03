@@ -40,16 +40,60 @@
                 color: #FFFFFF;
             }
 
+            .person__contacts {
+                margin-top: 24px;
+                max-width: 650px;
+                font-size: 18px;
+                line-height: 24px;
+                color: #FFFFFF;
+            }
+
             .person__more {
                 margin-top: 12px;
                 margin-bottom: -6px;
             }
 
 
-        .person__schedule {
-            margin-top: 60px;
+    .person__schedule {
+        margin-top: 60px;
+    }
+        .person__schedule-heading {
+            margin-top: 0;
+            margin-bottom: 0;
+            font-family: var(--font-heading);
+            font-weight: normal;
+            font-style: italic;
+            font-size: 36px;
+            line-height: 42px;
+            color: #E4BB6B;
+            text-transform: uppercase;
         }
-            .person__schedule-heading {
+
+        .person__schedule-widget {
+            margin-top: 2px;
+        }
+
+        .person__schedule-note {
+            margin-top: 54px;
+            font-size: 16px;
+            line-height: 22px;
+            color: #F8F0E5;
+        }
+
+    .person__data {
+        margin-top: 75px;
+    }
+
+    .person__additional-info {
+        margin-top: 75px;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+    }
+        .person__additional-section {
+
+        }
+            .person__additional-heading {
                 margin-top: 0;
                 margin-bottom: 0;
                 font-family: var(--font-heading);
@@ -61,68 +105,35 @@
                 text-transform: uppercase;
             }
 
-            .person__schedule-widget {
-                margin-top: 2px;
+            .person__additional-widget {
+                margin-top: 18px;
             }
 
-            .person__schedule-note {
-                margin-top: 54px;
-                font-size: 16px;
-                line-height: 22px;
-                color: #F8F0E5;
-            }
-
-        .person__data {
-            margin-top: 75px;
+    .person__press {
+        margin-top: 75px;
+    }
+        .person__press-heading {
+            margin-top: 0;
+            margin-bottom: 0;
+            font-family: var(--font-heading);
+            font-weight: normal;
+            font-style: italic;
+            font-size: 36px;
+            line-height: 42px;
+            color: #E4BB6B;
+            text-transform: uppercase;
         }
 
-        .person__additional-info {
-            margin-top: 75px;
+        .person__press-list {
+            margin-top: 30px;
             display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
+            grid-template-columns: repeat(3, minmax(0, 1fr));
             gap: 18px;
         }
-            .person__additional-section {
 
-            }
-                .person__additional-heading {
-                    margin-top: 0;
-                    margin-bottom: 0;
-                    font-family: var(--font-heading);
-                    font-weight: normal;
-                    font-style: italic;
-                    font-size: 36px;
-                    line-height: 42px;
-                    color: #E4BB6B;
-                    text-transform: uppercase;
-                }
-
-                .person__additional-widget {
-                    margin-top: 18px;
-                }
-
-        .person__press {
-            margin-top: 75px;
-        }
-            .person__press-heading {
-                margin-top: 0;
-                margin-bottom: 0;
-                font-family: var(--font-heading);
-                font-weight: normal;
-                font-style: italic;
-                font-size: 36px;
-                line-height: 42px;
-                color: #E4BB6B;
-                text-transform: uppercase;
-            }
-
-            .person__press-list {
-                margin-top: 30px;
-                display: grid;
-                grid-template-columns: repeat(3, minmax(0, 1fr));
-                gap: 18px;
-            }
-
+    .person__simpler-bio {
+        margin-top: 30px;
+    }
 
 
 @media (1850px <= width) {
@@ -141,82 +152,93 @@
                     border-radius: 20px;
                 }
 
-            .person__summary {
+        .person__summary {
+
+        }
+            .person__heading {
 
             }
-                .person__heading {
 
-                }
-
-                .person__post {
-                    margin-top: 16px;
-                    font-size: 20px;
-                    line-height: 27px;
-                }
-
-                .person__bio {
-                    margin-top: 24px;
-                    max-width: 868px;
-                    font-size: 24px;
-                    line-height: 30px;
-                }
-
-                .person__more {
-                    margin-top: 16px;
-                    margin-bottom: -8px;
-                }
-
-
-            .person__schedule {
-                margin-top: 80px;
+            .person__post {
+                margin-top: 16px;
+                font-size: 20px;
+                line-height: 27px;
             }
-                .person__schedule-heading {
+
+            .person__bio {
+                margin-top: 24px;
+                max-width: 868px;
+                font-size: 24px;
+                line-height: 30px;
+            }
+
+            .person__contacts {
+                margin-top: 38px;
+                max-width: 868px;
+                font-size: 24px;
+                line-height: 30px;
+            }
+
+            .person__more {
+                margin-top: 16px;
+                margin-bottom: -8px;
+            }
+
+
+        .person__schedule {
+            margin-top: 80px;
+        }
+            .person__schedule-heading {
+                font-size: 48px;
+                line-height: 56px;
+            }
+
+            .person__schedule-widget {
+                /*margin-top: 2px;*/
+            }
+
+            .person__schedule-note {
+                margin-top: 72px;
+                font-size: 20px;
+                line-height: 24px;
+            }
+
+        .person__data {
+            margin-top: 100px;
+        }
+
+        .person__additional-info {
+            margin-top: 100px;
+            gap: 24px;
+        }
+            .person__additional-section {
+
+            }
+                .person__additional-heading {
                     font-size: 48px;
                     line-height: 56px;
                 }
 
-                .person__schedule-widget {
-                    /*margin-top: 2px;*/
+                .person__additional-widget {
+                    margin-top: 24px;
                 }
 
-                .person__schedule-note {
-                    margin-top: 72px;
-                    font-size: 20px;
-                    line-height: 24px;
-                }
-
-            .person__data {
-                margin-top: 100px;
+        .person__press {
+            margin-top: 100px;
+        }
+            .person__press-heading {
+                font-size: 48px;
+                line-height: 56px;
             }
 
-            .person__additional-info {
-                margin-top: 100px;
+            .person__press-list {
+                margin-top: 40px;
                 gap: 24px;
             }
-                .person__additional-section {
 
-                }
-                    .person__additional-heading {
-                        font-size: 48px;
-                        line-height: 56px;
-                    }
-
-                    .person__additional-widget {
-                        margin-top: 24px;
-                    }
-
-            .person__press {
-                margin-top: 100px;
-            }
-                .person__press-heading {
-                    font-size: 48px;
-                    line-height: 56px;
-                }
-
-                .person__press-list {
-                    margin-top: 40px;
-                    gap: 24px;
-                }
+        .person__simpler-bio {
+            margin-top: 40px;
+        }
 }
 
 
@@ -265,70 +287,59 @@
                     /*color: #FFFFFF;*/
                 }
 
+                .person__contacts {
+                    /*margin-top: 18px;*/
+                    /*max-width: 650px;*/
+                    /*font-size: 18px;*/
+                    /*line-height: 24px;*/
+                    /*color: #FFFFFF;*/
+                }
+
                 .person__more {
                     /*margin-top: 12px;*/
                 }
 
 
-            .person__schedule {
-                /*margin-top: 60px;*/
-            }
-                .person__schedule-heading {
-                    /*margin-top: 0;*/
-                    /*margin-bottom: 0;*/
-                    /*font-family: var(--font-heading);*/
-                    /*font-weight: normal;*/
-                    /*font-style: italic;*/
-                    font-size: 22px;
-                    line-height: 26px;
-                    /*color: #E4BB6B;*/
-                    /*text-transform: uppercase;*/
-                }
-
-                .person__schedule-widget {
-                    /*margin-top: 2px;*/
-                }
-
-                .person__schedule-note {
-                    margin-top: 27px;
-                    /*font-size: 16px;*/
-                    /*line-height: 22px;*/
-                    /*color: #F8F0E5;*/
-                }
-
-            .person__data {
-                margin-top: 60px;
+        .person__schedule {
+            /*margin-top: 60px;*/
+        }
+            .person__schedule-heading {
+                /*margin-top: 0;*/
+                /*margin-bottom: 0;*/
+                /*font-family: var(--font-heading);*/
+                /*font-weight: normal;*/
+                /*font-style: italic;*/
+                font-size: 22px;
+                line-height: 26px;
+                /*color: #E4BB6B;*/
+                /*text-transform: uppercase;*/
             }
 
-            .person__additional-info {
-                margin-top: 60px;
-                display: flex;
-                flex-direction: column-reverse;
-                gap: 60px;
+            .person__schedule-widget {
+                /*margin-top: 2px;*/
             }
-                .person__additional-section {
 
-                }
-                    .person__additional-heading {
-                        /*margin-top: 0;*/
-                        /*margin-bottom: 0;*/
-                        /*font-family: var(--font-heading);*/
-                        /*font-weight: normal;*/
-                        /*font-style: italic;*/
-                        font-size: 28px;
-                        line-height: 33px;
-                        /*color: #E4BB6B;*/
-                        /*text-transform: uppercase;*/
-                    }
-
-                    .person__additional-widget {
-                        /*margin-top: 18px;*/
-                    }
-
-            .person__press {
-                margin-top: 60px;
+            .person__schedule-note {
+                margin-top: 27px;
+                /*font-size: 16px;*/
+                /*line-height: 22px;*/
+                /*color: #F8F0E5;*/
             }
-                .person__press-heading {
+
+        .person__data {
+            margin-top: 60px;
+        }
+
+        .person__additional-info {
+            margin-top: 60px;
+            display: flex;
+            flex-direction: column-reverse;
+            gap: 60px;
+        }
+            .person__additional-section {
+
+            }
+                .person__additional-heading {
                     /*margin-top: 0;*/
                     /*margin-bottom: 0;*/
                     /*font-family: var(--font-heading);*/
@@ -340,11 +351,34 @@
                     /*text-transform: uppercase;*/
                 }
 
-                .person__press-list {
-                    margin-top: 24px;
-                    display: grid;
-                    grid-template-columns: auto;
-                    gap: 24px;
+                .person__additional-widget {
+                    /*margin-top: 18px;*/
                 }
+
+        .person__press {
+            margin-top: 60px;
+        }
+            .person__press-heading {
+                /*margin-top: 0;*/
+                /*margin-bottom: 0;*/
+                /*font-family: var(--font-heading);*/
+                /*font-weight: normal;*/
+                /*font-style: italic;*/
+                font-size: 28px;
+                line-height: 33px;
+                /*color: #E4BB6B;*/
+                /*text-transform: uppercase;*/
+            }
+
+            .person__press-list {
+                margin-top: 24px;
+                display: grid;
+                grid-template-columns: auto;
+                gap: 24px;
+            }
+
+        .person__simpler-bio {
+            margin-top: 40px;
+        }
 }
 
