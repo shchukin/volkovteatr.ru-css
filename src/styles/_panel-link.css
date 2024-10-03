@@ -13,7 +13,7 @@
     transition: background-color var(--transition-hover);
 }
 
-.panel-link:hover {
+.panel-link--clickable:hover {
     background-color: #FFFFFF;
 }
     .panel-link__icon {
