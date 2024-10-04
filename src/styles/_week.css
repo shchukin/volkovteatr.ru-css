@@ -195,10 +195,24 @@
                     }
                         .week__mobile-number {
                             display: block;
+                            font-family: var(--font-heading);
+                            font-style: italic;
+                            font-size: 40px;
+                            line-height: 38px;
+                            color: #FFFFFF;
+                            text-align: right;
                         }
 
                         .week__mobile-day-title {
                             display: block;
+                            margin-bottom: 24px;
+                            text-align: right;
+                            font-family: var(--font-heading);
+                            font-style: italic;
+                            font-size: 16px;
+                            line-height: 19px;
+                            color: #B9B9B9;
+                            text-transform: lowercase;
                         }
 
                         .week__show {
