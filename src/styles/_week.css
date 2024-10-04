@@ -36,7 +36,7 @@
                 color: #FFFFFF;
             }
 
-            .week__number--weekend {
+            .week__day--weekend .week__number {
                 color: #E4BB6B;
             }
 
@@ -203,6 +203,10 @@
                             text-align: right;
                         }
 
+                        .week__day--weekend .week__mobile-number {
+                            color: #E4BB6B;
+                        }
+
                         .week__mobile-day-title {
                             display: block;
                             margin-bottom: 24px;
@@ -213,6 +217,10 @@
                             line-height: 19px;
                             color: #B9B9B9;
                             text-transform: lowercase;
+                        }
+
+                        .week__day--weekend .week__mobile-day-title {
+                            color: #EBD7B2;
                         }
 
                         .week__show {
