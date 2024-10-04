@@ -4,14 +4,29 @@
     display: grid;
     grid-template-columns: repeat(7, 230px);
     gap: 25px;
+    background-image: linear-gradient(to right, transparent, transparent 254px, red 254px, red 255px);
+    background-size: 255px 1px;
+    background-repeat: repeat;
+    background-position: -12px top;
 }
     .calendar__day {
 
     }
         .calendar__number {
-
+            font-family: var(--font-heading);
+            font-style: italic;
+            font-size: 48px;
+            line-height: 48px;
+            text-align: right;
         }
 
-        .calendar__program {
+        .calendar__number--weekend {
+            color: #E4BB6B;
+        }
 
+        .calendar__today-shows {
+            margin-top: 21px;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
         }

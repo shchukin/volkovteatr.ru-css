@@ -2,9 +2,12 @@
     display: block;
     width: fit-content;
     padding: 4px 16px;
+    border-radius: 14px;
+    font-family: var(--font-heading);
+    font-style: italic;
     font-size: 16px;
     line-height: 19px;
-    border-radius: 14px;
+    white-space: nowrap;
     text-decoration: none;
 }
 
