@@ -1,12 +1,12 @@
 .badge {
     display: block;
     width: fit-content;
-    padding: 4px 16px;
+    padding: 3px 12px;
     border-radius: 14px;
     font-family: var(--font-heading);
     font-style: italic;
-    font-size: 16px;
-    line-height: 19px;
+    font-size: 14px;
+    line-height: 17px;
     white-space: nowrap;
     text-decoration: none;
 }
@@ -14,4 +14,27 @@
 .badge--touring {
     background-color: #01B0B3;
     color: #FFFFFF;
+}
+
+
+
+@media (1850px <= width) {
+
+    .badge {
+        /*display: block;*/
+        /*width: fit-content;*/
+        padding: 4px 16px;
+        border-radius: 14px;
+        /*font-family: svar(--font-heading);*/
+        /*font-style: italic;*/
+        font-size: 16px;
+        line-height: 19px;
+        /*white-space: nowrap;*/
+        /*text-decoration: none;*/
+    }
+
+    .badge--touring {
+        /*background-color: #01B0B3;*/
+        /*color: #FFFFFF;*/
+    }
 }

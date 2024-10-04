@@ -3,7 +3,7 @@
 }
     .show__preview {
         display: block;
-        border-radius: 8px;
+        border-radius: 6px;
         overflow: hidden;
         transition: filter var(--transition-hover);
     }
@@ -19,20 +19,20 @@
         }
 
     .show__tags {
-        margin-top: 16px;
+        margin-top: 12px;
     }
 
     .show__head {
-        margin-top: 10px;
+        margin-top: 8px;
         display: flex;
-        gap: 8px;
+        gap: 5px;
     }
         .show__time {
             flex-shrink: 0;
             font-family: var(--font-heading);
             font-weight: 500;
-            font-size: 17px;
-            line-height: 19px;
+            font-size: 13px;
+            line-height: 18px;
             color: #E4BB6B;
         }
 
@@ -43,8 +43,8 @@
             font-family: var(--font-heading);
             font-style: italic;
             font-weight: 500;
-            font-size: 16px;
-            line-height: 19px;
+            font-size: 14px;
+            line-height: 18px;
             color: #FFFFFF;
             text-transform: uppercase;
 
@@ -58,13 +58,15 @@
 
     .show__location {
         margin-top: 10px;
-        font-size: 17px;
-        line-height: 23px;
+        font-size: 14px;
+        line-height: 18px;
     }
         .show__pin {
             vertical-align: top;
-            margin-right: 2px;
-            margin-top: 3px;
+            margin-right: 1px;
+            margin-top: 2px;
+            width: 11px;
+            height: 14px;
             fill: #FFFFFF;
         }
 
@@ -75,3 +77,81 @@
         .show__tickets .button {
             width: 100%;
         }
+
+
+
+@media (1850px <= width) {
+
+    .show {
+
+    }
+        .show__preview {
+            /*display: block;*/
+            border-radius: 8px;
+            /*overflow: hidden;*/
+            /*transition: filter var(--transition-hover);*/
+        }
+
+        .show__preview:hover {
+            /*filter: brightness(110%) contrast(110%);*/
+        }
+            .show__image {
+                /*vertical-align: top;*/
+                /*background-color: var(--black-image-fallback);*/
+                /*width: 100%;*/
+                /*height: auto;*/
+            }
+
+        .show__tags {
+            margin-top: 16px;
+        }
+
+        .show__head {
+            margin-top: 10px;
+            display: flex;
+            gap: 8px;
+        }
+            .show__time {
+                /*flex-shrink: 0;*/
+                /*font-family: var(--font-heading);*/
+                /*font-weight: 500;*/
+                font-size: 17px;
+                line-height: 19px;
+                /*color: #E4BB6B;*/
+            }
+
+            .show__heading {
+                /*margin-top: 0;*/
+                /*margin-bottom: 0;*/
+                height: 57px; /* 3 строки */
+                /*font-family: var(--font-heading);*/
+                /*font-style: italic;*/
+                /*font-weight: 500;*/
+                font-size: 16px;
+                line-height: 19px;
+                /*color: #FFFFFF;*/
+                /*text-transform: uppercase;*/
+            }
+
+        .show__location {
+            margin-top: 10px;
+            font-size: 17px;
+            line-height: 23px;
+        }
+            .show__pin {
+                /*vertical-align: top;*/
+                /*margin-right: 2px;*/
+                /*margin-top: 3px;*/
+                width: 13px;
+                height: 17px;
+                /*fill: #FFFFFF;*/
+            }
+
+        .show__tickets {
+            /*margin-top: 16px;*/
+        }
+            .show__tickets.button,
+            .show__tickets .button {
+                /*width: 100%;*/
+            }
+}

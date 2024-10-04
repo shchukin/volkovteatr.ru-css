@@ -1,14 +1,14 @@
 .week {
     /* Ширины:
-         7*156 (дни календаря)
-       + 6*2 (разделители)
-       + 12*8 (отступы слева и справа от разделителей)
-       = 1200
+         7*155 (дни календаря)
+       + 6*1 (разделители)
+       + 12*9 (отступы слева и справа от разделителей)
+       = 1199
     */
     display: grid;
-    grid-template-columns: repeat(7, 156px);
-    gap: 18px;
-    background-image: linear-gradient(to right, transparent, transparent 172px, #223152 172px, #223152 174px);
+    grid-template-columns: repeat(7, 155px);
+    gap: 19px;
+    background-image: linear-gradient(to right, transparent, transparent 173px, #223152 173px, #223152 174px);
     background-size: 174px 1px;
     background-repeat: repeat;
     background-position: -8px top;
