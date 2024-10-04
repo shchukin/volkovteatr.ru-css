@@ -1,4 +1,4 @@
-.calendar {
+.week {
     /* Ширины:
          7*227 (дни календаря)
        + 6*2 (разделители)
@@ -15,11 +15,11 @@
     background-repeat: repeat;
     background-position: -13px top;
 }
-    .calendar__day {
+    .week__day {
         padding-top: 4px;
         padding-bottom: 16px;
     }
-        .calendar__number {
+        .week__number {
             font-family: var(--font-heading);
             font-style: italic;
             font-size: 48px;
@@ -27,11 +27,11 @@
             text-align: right;
         }
 
-        .calendar__number--weekend {
+        .week__number--weekend {
             color: #E4BB6B;
         }
 
-        .calendar__today-shows {
+        .week__today-shows {
             margin-top: 21px;
             display: flex;
             flex-direction: column;
