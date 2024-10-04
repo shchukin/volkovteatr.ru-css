@@ -1,16 +1,23 @@
 .calendar {
-    margin-left: 1px;
-    margin-right: 1px;
+    /* Ширины:
+         7*227 (дни календаря)
+       + 6*2 (разделители)
+       + 12*13 (отступы слева и справа от разделителей)
+       + 3 (три лишних пикселя осталось)
+       = 1760
+    */
+    margin-right: 3px;
     display: grid;
-    grid-template-columns: repeat(7, 230px);
-    gap: 25px;
-    background-image: linear-gradient(to right, transparent, transparent 254px, red 254px, red 255px);
+    grid-template-columns: repeat(7, 227px);
+    gap: 28px;
+    background-image: linear-gradient(to right, transparent, transparent 253px, #223152 253px, #223152 255px);
     background-size: 255px 1px;
     background-repeat: repeat;
-    background-position: -12px top;
+    background-position: -13px top;
 }
     .calendar__day {
-
+        padding-top: 4px;
+        padding-bottom: 16px;
     }
         .calendar__number {
             font-family: var(--font-heading);
