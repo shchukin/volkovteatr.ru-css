@@ -24,14 +24,13 @@
 
     .show__head {
         margin-top: 8px;
-        display: flex;
-        gap: 5px;
+        display: block;
     }
         .show__time {
             flex-shrink: 0;
             font-family: var(--font-heading);
             font-weight: 500;
-            font-size: 13px;
+            font-size: 15px;
             line-height: 18px;
             color: #E4BB6B;
         }
@@ -39,11 +38,11 @@
         .show__heading {
             margin-top: 0;
             margin-bottom: 0;
-            height: 57px; /* 3 строки */
+            height: 54px; /* 3 строки */
             font-family: var(--font-heading);
             font-style: italic;
             font-weight: 500;
-            font-size: 14px;
+            font-size: 15px;
             line-height: 18px;
             color: #FFFFFF;
             text-transform: uppercase;
