@@ -1,0 +1,14 @@
+.badge {
+    display: block;
+    width: fit-content;
+    padding: 4px 16px;
+    font-size: 16px;
+    line-height: 19px;
+    border-radius: 14px;
+    text-decoration: none;
+}
+
+.badge--touring {
+    background-color: #01B0B3;
+    color: #FFFFFF;
+}
