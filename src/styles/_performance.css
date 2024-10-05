@@ -1,0 +1,47 @@
+.performance {
+    display: block;
+    background-color: #FFFFFF;
+    color: #303F64;
+}
+    .performance__heading {
+        margin-top: 0;
+        margin-bottom: 0;
+        font-family: var(--font-heading);
+        font-weight: 600;
+        font-style: italic;
+        font-size: 52px;
+        line-height: 56px;
+        text-transform: uppercase;
+    }
+        .performance__link {
+            color: inherit;
+            text-decoration: 3px underline transparent;
+            text-underline-offset: 5px;
+            transition: text-decoration-color var(--transition-hover);
+        }
+
+        .performance__link:hover {
+            text-decoration-color: currentColor;
+        }
+
+    .performance__note {
+
+    }
+
+    .performance__date {
+
+    }
+
+    .performance__schedule {
+
+    }
+        .performance__time {
+
+        }
+
+    .performance__preview {
+
+    }
+        .performance__image {
+            vertical-align: top;
+        }
