@@ -1,11 +1,11 @@
-.week {
+.calendar {
 
 }
-    .week__inner {
+    .calendar__inner {
         display: grid;
         gap: 40px;
     }
-        .week__row {
+        .calendar__row {
             /* Ширины:
                  7*155 (дни календаря)
                + 6*1 (разделители)
@@ -20,18 +20,18 @@
             background-repeat: repeat;
             background-position: -8px top;
         }
-            .week__day {
+            .calendar__day {
                 padding-top: 3px;
                 padding-bottom: 12px;
             }
 
-            .week__day--empty {
+            .calendar__day--empty {
                 font-size: 16px;
                 line-height: 24px;
                 color: #B9B9B9;
                 text-align: center;
             }
-                .week__number {
+                .calendar__number {
                     font-family: var(--font-heading);
                     font-style: italic;
                     font-size: 36px;
@@ -40,42 +40,42 @@
                     color: #FFFFFF;
                 }
 
-                .week__day--weekend .week__number {
+                .calendar__day--weekend .calendar__number {
                     color: #E4BB6B;
                 }
 
-                .week__today-shows {
+                .calendar__today-shows {
                     margin-top: 21px;
                     display: flex;
                     flex-direction: column;
                     gap: 24px;
                 }
-                    .week__item {
+                    .calendar__item {
 
                     }
-                        .week__mobile-number {
+                        .calendar__mobile-number {
                             display: none;
                         }
 
-                        .week__mobile-day-title {
+                        .calendar__mobile-day-title {
                             display: none;
                         }
 
-                        .week__show {
+                        .calendar__show {
 
                         }
 
 
 @media (1850px <= width) {
 
-    .week {
+    .calendar {
 
     }
-        .week__inner {
+        .calendar__inner {
             display: grid;
             gap: 60px;
         }
-            .week__row {
+            .calendar__row {
                 /* Ширины:
                      7*227 (дни календаря)
                    + 6*2 (разделители)
@@ -94,16 +94,16 @@
                 /*background-repeat: repeat;*/
                 background-position: -13px top;
             }
-                .week__day {
+                .calendar__day {
                     padding-top: 4px;
                     padding-bottom: 16px;
                 }
 
-                .week__day--empty {
+                .calendar__day--empty {
                     font-size: 18px;
                     line-height: 25px;
                 }
-                    .week__number {
+                    .calendar__number {
                         font-family: var(--font-heading);
                         /*font-style: italic;*/
                         font-size: 48px;
@@ -111,28 +111,28 @@
                         /*text-align: right;*/
                     }
 
-                    .week__number--weekend {
-                        /*color: #E4BB6B;*/
+                    .calendar__day--weekend .calendar__number {
+                        color: #E4BB6B;
                     }
 
-                    .week__today-shows {
+                    .calendar__today-shows {
                         margin-top: 15px;
                         /*display: flex;*/
                         /*flex-direction: column;*/
                         gap: 18px;
                     }
-                        .week__item {
+                        .calendar__item {
 
                         }
-                            .week__mobile-number {
+                            .calendar__mobile-number {
                                 /*display: none;*/
                             }
 
-                            .week__mobile-day-title {
+                            .calendar__mobile-day-title {
                                 /*display: none;*/
                             }
 
-                            .week__show {
+                            .calendar__show {
 
                             }
 }
@@ -141,42 +141,42 @@
 
 @media (width < 740px) {
 
-    .week {
+    .calendar {
         --padding: 12px;
     }
 
-    .week {
+    .calendar {
         overflow: hidden;
     }
-        .week__inner {
+        .calendar__inner {
             display: block;
         }
-            .week__row {
+            .calendar__row {
                 display: block;
                 background-image: none;
                 margin-left: calc(-1 * var(--padding));
                 margin-right: calc(-1 * var(--padding));
             }
-                .week__day {
+                .calendar__day {
                     padding: 0;
                 }
 
-                .week__day--empty {
+                .calendar__day--empty {
                     display: none;
                 }
 
                 /* clearfix */
-                .week__row::before,
-                .week__row::after {
+                .calendar__row::before,
+                .calendar__row::after {
                     content: " ";
                     display: table;
                 }
 
-                .week__row::after {
+                .calendar__row::after {
                     clear: both;
                 }
 
-                    .week__number {
+                    .calendar__number {
                         display: none;
                         /*font-family: var(--font-heading);*/
                         /*font-style: italic;*/
@@ -185,17 +185,17 @@
                         /*text-align: right;*/
                     }
 
-                    .week__number--weekend {
-                        /*color: #E4BB6B;*/
+                    .calendar__day--weekend .calendar__number {
+
                     }
 
-                    .week__today-shows {
+                    .calendar__today-shows {
                         margin-top: 0;
                         display: block;
                         flex-direction: column;
                         gap: calc(2 * var(--padding));
                     }
-                        .week__item {
+                        .calendar__item {
                             float: left;
                             width: 50%;
                             margin-top: 24px;
@@ -204,7 +204,7 @@
                             border-left: 1px solid #223152;
                             border-right: 1px solid #223152;
                         }
-                            .week__mobile-number {
+                            .calendar__mobile-number {
                                 display: block;
                                 font-family: var(--font-heading);
                                 font-style: italic;
@@ -214,11 +214,11 @@
                                 text-align: right;
                             }
 
-                            .week__day--weekend .week__mobile-number {
+                            .calendar__day--weekend .calendar__mobile-number {
                                 color: #E4BB6B;
                             }
 
-                            .week__mobile-day-title {
+                            .calendar__mobile-day-title {
                                 display: block;
                                 margin-bottom: 24px;
                                 text-align: right;
@@ -230,11 +230,11 @@
                                 text-transform: lowercase;
                             }
 
-                            .week__day--weekend .week__mobile-day-title {
+                            .calendar__day--weekend .calendar__mobile-day-title {
                                 color: #EBD7B2;
                             }
 
-                            .week__show {
+                            .calendar__show {
 
                             }
 
