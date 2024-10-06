@@ -6,6 +6,7 @@
     display: grid;
     grid-template-columns: 532px 668px;
     background-color: #FFFFFF;
+    color-scheme: light;
     border-radius: calc(var(--radius) + 1px); /* радиус всей карточки на единичку больше (1) */
     color: #303F64;
 }
@@ -77,6 +78,7 @@
 
     .performance__preview {
         position: relative;
+        height: 100%;
         overflow: hidden;
         border-top-right-radius: var(--radius); /* у фоток радиус на единичку меньше, чтобы перекрыть белые артефакты фона по контуру */
         border-bottom-right-radius: var(--radius); /* у фоток радиус на единичку меньше, чтобы перекрыть белые артефакты фона по контуру */
@@ -90,20 +92,24 @@
         .performance__cut {
             margin-top: -32px;
             padding-top: 32px;
+            height: calc(100% + 32px);
             border-top-left-radius: 500px;
             overflow: hidden;
         }
             .performance__image {
                 vertical-align: top;
-                width: 813px;
-                height: 280px;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
             }
 
         .performance__badge {
             position: absolute;
-            right: 20px;
-            top: 20px;
+            right: 15px;
+            top: 15px;
             border-radius: 50%;
+            width: 82px;
+            height: 82px;
         }
 
 
@@ -213,8 +219,126 @@
 
             .performance__badge {
                 /*position: absolute;*/
-                /*right: 20px;*/
-                /*top: 20px;*/
+                right: 20px;
+                top: 20px;
                 /*border-radius: 50%;*/
+                width: 110px;
+                height: 110px;
+            }
+}
+
+
+
+@media (width < 740px) {
+
+    .performance {
+        --radius: 19px;
+    }
+
+    .performance {
+        display: block;
+        /*grid-template-columns: 532px 668px;*/
+        /*background-color: #FFFFFF;*/
+        /*border-radius: calc(var(--radius) + 1px); !* радиус всей карточки на единичку больше (1) *!*/
+        /*color: #303F64;*/
+    }
+        .performance__data {
+            padding: 24px 16px;
+        }
+            .performance__heading {
+                /*margin-top: 0;*/
+                /*margin-bottom: 0;*/
+                /*font-family: var(--font-heading);*/
+                /*font-weight: 600;*/
+                /*font-style: italic;*/
+                font-size: 24px;
+                line-height: 28px;
+                /*text-transform: uppercase;*/
+            }
+                .performance__link {
+                    /*color: inherit;*/
+                    /*text-decoration: 2.5px underline transparent;*/
+                    /*text-underline-offset: 4px;*/
+                    /*transition: text-decoration-color var(--transition-hover);*/
+                }
+
+                .performance__link:hover {
+                    /*text-decoration-color: currentColor;*/
+                }
+
+        .performance__note {
+            display: block;
+            overflow: visible;
+            margin-top: 8px;
+            height: auto;
+            font-size: 16px;
+            line-height: 22px;
+            /*color: #6073A2;*/
+        }
+
+        .performance__date {
+            margin-top: 40px;
+            /*font-family: var(--font-heading);*/
+            /*font-weight: 600;*/
+            /*font-style: italic;*/
+            font-size: 24px;
+            line-height: 28px;
+            /*color: #303F64;*/
+            /*text-transform: uppercase;*/
+        }
+
+        .performance__schedule {
+            margin-top: 6px;
+            /*font-family: var(--font-heading);*/
+            /*font-weight: 600;*/
+            /*font-style: italic;*/
+            font-size: 20px;
+            line-height: 23px;
+            /*color: #303F64;*/
+            /*text-transform: uppercase;*/
+            /*display: flex;*/
+            /*align-items: baseline;*/
+            gap: 15px;
+        }
+            .performance__time {
+
+            }
+
+        .performance__preview {
+            /*position: relative;*/
+            /*height: 100%;*/
+            /*overflow: hidden;*/
+            /*border-top-right-radius: var(--radius); !* у фоток радиус на единичку меньше, чтобы перекрыть белые артефакты фона по контуру *!*/
+            /*border-bottom-right-radius: var(--radius); !* у фоток радиус на единичку меньше, чтобы перекрыть белые артефакты фона по контуру *!*/
+            /*transition: filter var(--transition-hover);*/
+        }
+
+        .performance__preview:hover {
+            /*filter: brightness(110%) contrast(110%);*/
+        }
+
+            .performance__cut {
+                margin-top: 0;
+                padding-top: 0;
+                height: 211px;
+                /*border-top-left-radius: 500px;*/
+                /*overflow: hidden;*/
+            }
+                .performance__image {
+                    /*vertical-align: top;*/
+                    /*width: 100%;*/
+                    /*height: 100%;*/
+                    /*object-fit: cover;*/
+                    border-bottom-left-radius: var(--radius);
+                    border-bottom-right-radius: var(--radius);
+                }
+
+            .performance__badge {
+                /*position: absolute;*/
+                right: 14px;
+                top: 8px;
+                /*border-radius: 50%;*/
+                width: 50px;
+                height: 50px;
             }
 }
