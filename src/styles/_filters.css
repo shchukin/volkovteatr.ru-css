@@ -8,7 +8,7 @@
         display: none;
     }
 
-    .filters__body {
+    .filters__dropdown {
         display: flex;
         align-items: center;
         gap: 30px;
@@ -67,7 +67,7 @@
             /*display: none;*/
         }
 
-        .filters__body {
+        .filters__dropdown {
             /*display: flex;*/
             /*align-items: center;*/
             gap: 40px;
@@ -115,3 +115,98 @@
 
         }
 }
+
+
+
+@media (width < 740px) {
+
+    .filters {
+        /*position: relative;*/
+        display: block;
+        /*align-items: center;*/
+        /*gap: 30px;*/
+    }
+        .filters__handler {
+            position: relative;
+            display: block;
+            width: 100%;
+            border: none;
+            padding: 14px 60px 14px 16px;
+            background-color: transparent;
+            box-shadow: inset 0 0 0 1px #F8F0E5;
+            border-radius: 25px;
+            font-size: 16px;
+            line-height: 22px;
+            text-align: left;
+            cursor: pointer;
+        }
+            .filters__chevron {
+                position: absolute;
+                right: 13px;
+                top: 50%;
+                margin-top: -12px;
+                vertical-align: top;
+                width: 24px;
+                height: 24px;
+                fill: currentColor;
+            }
+
+        .filters__dropdown {
+            display: block;
+            box-shadow: inset 0 0 0 1px #F8F0E5;
+            border-radius: 25px;
+            margin-top: -50px;
+            padding-top: 60px;
+            padding-bottom: 10px;
+            /*align-items: center;*/
+            /*gap: 30px;*/
+        }
+            .filters__item {
+
+            }
+                .filters__item .choice {
+                    border-left: 16px solid transparent;
+                    border-top: 2px solid transparent;
+                    border-bottom: 2px solid transparent;
+                }
+
+            .filters__reset {
+                position: static;
+                /*right: 0;*/
+                /*top: 0;*/
+                display: flex;
+                width: fit-content;
+                margin-left: auto;
+                /*align-items: flex-start;*/
+                /*vertical-align: top;*/
+                gap: 10px;
+                /*background-color: transparent;*/
+                /*padding: 12px 0;*/
+                padding-right: 24px;
+                /*border: none;*/
+                /*font-family: var(--font-heading);*/
+                /*font-style: italic;*/
+                /*font-size: 16px;*/
+                /*line-height: 20px;*/
+                /*color: #F8F0E5;*/
+                /*text-transform: lowercase;*/
+                /*cursor: pointer;*/
+            }
+
+            .filters__reset:hover {
+                /*color: #E4BB6B;*/
+            }
+                .filters__funnel {
+                    /*vertical-align: top;*/
+                    /*position: relative;*/
+                    top: 3px;
+                    width: 16px;
+                    height: 16px;
+                    /*fill: currentColor;*/
+                }
+
+        .filters__tickets {
+            margin-top: 14px;
+        }
+}
+
