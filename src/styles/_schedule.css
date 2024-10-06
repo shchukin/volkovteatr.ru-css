@@ -21,6 +21,8 @@
 
     .schedule__filters {
         margin-top: 43px;
+        position: relative;
+        z-index: 225;
     }
 
     .schedule__table-head-wrap {
