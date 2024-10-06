@@ -32,6 +32,7 @@
     transition: none;
 }
     .button__icon {
+        flex-shrink: 0;
         width: 16px;
         height: 16px;
         fill: currentColor;
@@ -71,8 +72,11 @@
 }
 
 .button--secondary:hover {
-    background-color: rgb(255 255 255 / 10%);
+    background-color: var(--action-color-hover);
+    box-shadow: inset 0 0 0 1px transparent;
+    color: #0B1E3A;
 }
+
 
 
 /*.button:disabled,*/

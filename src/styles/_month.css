@@ -1,0 +1,392 @@
+.month {
+    position: relative;
+}
+    .month__head {
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+        .month__heading {
+            margin-top: 0;
+            margin-bottom: 0;
+            font-family: var(--font-heading);
+            font-weight: normal;
+            font-style: italic;
+            font-size: 36px;
+            line-height: 42px;
+            text-transform: uppercase;
+        }
+
+        .month__handler {
+            display: inline-flex;
+            vertical-align: top;
+            align-items: center;
+            gap: 8px;
+            background-color: transparent;
+            border: none;
+            border-radius: 20px;
+            padding: 9px 16px 11px;
+            font-family: inherit;
+            font-size: 16px;
+            line-height: 20px;
+            color: #F8F0E5;
+            text-transform: lowercase;
+            cursor: pointer;
+            transition: background-color var(--transition-hover),
+                        color var(--transition-hover);
+        }
+
+        .month__download {
+            margin-left: auto;
+            margin-right: 0;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding-top: 6px;
+            padding-bottom: 6px;
+            font-size: 16px;
+            line-height: 22px;
+            color: #E4BB6B;
+            text-decoration: none;
+            text-transform: lowercase;
+            transition: color var(--transition-hover);
+        }
+
+        .month__download:hover {
+            color: #FFFFFF;
+        }
+            .month__arrow {
+                vertical-align: top;
+                width: 16px;
+                height: 16px;
+                fill: currentColor;
+            }
+
+    .month__handler:hover {
+        background-color: var(--action-color-hover);
+        color: #0B1E3A;
+    }
+        .month__close-label {
+            display: none;
+        }
+
+        .month__open-label {
+
+        }
+
+        .month__angle {
+            vertical-align: top;
+            fill: currentColor;
+            width: 16px;
+            height: 12px;
+        }
+
+
+    .month__dropdown {
+        display: none;
+        margin-top: 40px;
+        animation: var(--slide-bottom);
+    }
+
+
+.month--expanded {
+
+}
+    .month--expanded .month__heading {
+
+    }
+
+    .month--expanded .month__download {
+
+    }
+
+    .month--expanded .month__handler {
+
+    }
+        .month--expanded .month__close-label {
+            display: none;
+        }
+
+        .month__open-label {
+            display: inline;
+        }
+
+        .month--expanded .month__angle {
+            transform: scaleY(-1);
+        }
+
+    .month--expanded .month__dropdown {
+        display: block;
+    }
+
+
+
+@media (1850px <= width) {
+
+    .month {
+        /*position: relative;*/
+    }
+        .month__head {
+            /*display: flex;*/
+            /*align-items: center;*/
+            /*gap: 5px;*/
+        }
+            .month__heading {
+                /*margin-top: 0;*/
+                /*margin-bottom: 0;*/
+                /*font-family: var(--font-heading);*/
+                /*font-weight: normal;*/
+                /*font-style: italic;*/
+                font-size: 48px;
+                line-height: 56px;
+                /*text-transform: uppercase;*/
+            }
+
+            .month__handler {
+                /*display: inline-flex;*/
+                /*vertical-align: top;*/
+                /*align-items: center;*/
+                gap: 11px;
+                /*background-color: transparent;*/
+                /*border: none;*/
+                border-radius: 26px;
+                padding: 13px 20px 15px;
+                /*font-family: inherit;*/
+                font-size: 20px;
+                line-height: 24px;
+                /*color: #F8F0E5;*/
+                /*text-transform: lowercase;*/
+                /*cursor: pointer;*/
+                /*transition: background-color var(--transition-hover),*/
+                /*            color var(--transition-hover);*/
+            }
+
+
+
+        .month__download {
+            /*margin-left: auto;*/
+            /*margin-right: 0;*/
+            /*display: flex;*/
+            /*align-items: center;*/
+            gap: 8px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            font-size: 20px;
+            line-height: 24px;
+            /*color: #E4BB6B;*/
+            /*text-decoration: none;*/
+            /*text-transform: lowercase;*/
+            /*transition: color var(--transition-hover);*/
+        }
+
+        .month__download:hover {
+            /*color: #FFFFFF;*/
+        }
+            .month__arrow {
+                /*vertical-align: top;*/
+                width: 24px;
+                height: 24px;
+                /*fill: currentColor;*/
+            }
+
+        .month__handler:hover {
+            /*background-color: var(--action-color-hover);*/
+            /*color: #0B1E3A;*/
+        }
+            .month__close-label {
+                /*display: none;*/
+            }
+
+            .month__open-label {
+
+            }
+
+            .month__angle {
+                /*vertical-align: top;*/
+                /*fill: currentColor;*/
+                width: 20px;
+                height: 15px;
+            }
+
+
+        .month__dropdown {
+            /*display: none;*/
+            margin-top: 60px;
+            /*animation: var(--slide-bottom);*/
+        }
+
+
+    .month--expanded {
+
+    }
+        .month--expanded .month__heading {
+
+        }
+
+        .month--expanded .month__download {
+
+        }
+
+        .month--expanded .month__handler {
+
+        }
+            .month--expanded .month__close-label {
+                display: none;
+            }
+
+            .month__open-label {
+                /*display: inline;*/
+            }
+
+            .month--expanded .month__angle {
+                /*transform: scaleY(-1);*/
+            }
+
+        .month--expanded .month__dropdown {
+            /*display: block;*/
+        }
+}
+
+
+
+@media (width < 740px) {
+
+    .month {
+
+    }
+        .month__head {
+            /*display: flex;*/
+            /*align-items: center;*/
+            /*gap: 5px;*/
+            padding-bottom: 65px;
+        }
+            .month__heading {
+                /*margin-top: 0;*/
+                /*margin-bottom: 0;*/
+                /*font-family: var(--font-heading);*/
+                /*font-weight: normal;*/
+                /*font-style: italic;*/
+                font-size: 28px;
+                line-height: 33px;
+                /*text-transform: uppercase;*/
+            }
+
+            .month__handler {
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                border: 1px solid #FFFFFF;
+                /*display: inline-flex;*/
+                /*vertical-align: top;*/
+                /*align-items: center;*/
+                justify-content: center;
+                /*gap: 8px;*/
+                /*background-color: transparent;*/
+                /*border: none;*/
+                /*border-radius: 20px;*/
+                /*padding: 9px 16px 11px;*/
+                /*font-family: inherit;*/
+                /*font-size: 16px;*/
+                /*line-height: 20px;*/
+                /*color: #F8F0E5;*/
+                /*text-transform: lowercase;*/
+                /*cursor: pointer;*/
+                /*transition: background-color var(--transition-hover),*/
+                /*            color var(--transition-hover);*/
+            }
+
+            .month__download {
+
+            }
+                .month__arrow {
+
+                }
+
+        .month__handler:hover {
+            /*background-color: var(--action-color-hover);*/
+            /*color: #0B1E3A;*/
+        }
+            .month__close-label {
+                /*display: none;*/
+            }
+
+            .month__open-label {
+
+            }
+
+            .month__angle {
+                /*vertical-align: top;*/
+                /*fill: currentColor;*/
+                /*width: 16px;*/
+                /*height: 12px;*/
+            }
+
+
+        .month__dropdown {
+            /*display: none;*/
+            /*margin-top: 40px;*/
+            /*animation: var(--slide-bottom);*/
+        }
+
+
+    .month--expanded {
+
+    }
+        .month--expanded .month__heading {
+
+        }
+
+        .month--expanded .month__download {
+
+        }
+
+        .month--expanded .month__handler {
+
+        }
+            .month--expanded .month__close-label {
+                /*display: none;*/
+            }
+
+            .month__open-label {
+                /*display: inline;*/
+            }
+
+            .month--expanded .month__angle {
+                /*transform: scaleY(-1);*/
+            }
+
+        .month--expanded .month__dropdown {
+            /*display: block;*/
+        }
+}
+
+
+@media (width < 370px) {
+
+    .month__heading {
+        font-size: 26px;
+        line-height: 30px;
+    }
+
+    .month__download {
+        font-size: 15px;
+        line-height: 20px;
+    }
+}
+
+
+
+@media (width < 350px) {
+
+    .month__heading {
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+    .month__download {
+        font-size: 14px;
+        line-height: 18px;
+    }
+}

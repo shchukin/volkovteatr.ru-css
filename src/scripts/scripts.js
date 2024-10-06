@@ -551,5 +551,15 @@
 
 
 
+
+    /* month */
+
+    $('.month__handler').on('click', function (event) {
+        $(this).parents('.month').toggleClass('month--expanded');
+    });
+
+
+
+
 })(jQuery);
 
