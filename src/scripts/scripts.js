@@ -563,7 +563,9 @@
     /* picker */
 
     $('.picker__handler').on('click', function () {
-        $(this).parents('.picker').toggleClass('picker--expanded');
+        const $picker = $(this).parents('.picker');
+        $('.picker').not($picker).removeClass('picker--expanded');
+        $picker.toggleClass('picker--expanded');
     });
 
 
@@ -573,6 +575,20 @@
         }
     });
 
+
+    $(document).on('keyup', function (event) {
+        if (event.keyCode === 27) {
+            $('.picker').removeClass('picker--expanded');
+        }
+    });
+
+
+
+    /* filters */
+
+    $('.filters__handler').on('click', function () {
+        $(this).parents('.filters').toggleClass('filters--expanded');
+    });
 
     $(document).on('keyup', function (event) {
         if (event.keyCode === 27) {

@@ -314,7 +314,6 @@
 
             .picker--expanded .picker__dropdown {
                 display: block;
-                animation: var(--slide-bottom);
             }
                 .picker__dropdown .choice {
                     /*width: 100%;*/
