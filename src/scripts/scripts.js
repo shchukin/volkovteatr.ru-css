@@ -204,7 +204,7 @@
 
 
     $(document).on('keyup', function (event) {
-        if (event.keyCode == 27) {
+        if (event.keyCode === 27) {
             $html.removeClass('burger-expanded');
         }
     });
@@ -558,6 +558,27 @@
         $(this).parents('.month').toggleClass('month--expanded');
     });
 
+
+
+    /* picker */
+
+    $('.picker__handler').on('click', function () {
+        $(this).parents('.picker').toggleClass('picker--expanded');
+    });
+
+
+    $(document).on('click', function (event) {
+        if (!$(event.target).closest('.picker').length) {
+            $('.picker').removeClass('picker--expanded');
+        }
+    });
+
+
+    $(document).on('keyup', function (event) {
+        if (event.keyCode === 27) {
+            $('.picker').removeClass('picker--expanded');
+        }
+    });
 
 
 

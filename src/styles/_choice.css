@@ -3,6 +3,7 @@
     display: block;
     width: fit-content;
     min-height: 30px;
+    cursor: pointer;
 }
 
 .choice--inverted {
@@ -24,7 +25,6 @@
         font-size: 16px;
         line-height: 20px;
         color: #FFFFFF;
-        cursor: pointer;
         user-select: none;
         transition: color var(--transition-hover);
     }
@@ -70,21 +70,21 @@
 
 /* Hovered */
 /* не :disabled, и не чекнутая радиокнопка */
-.choice__widget:not(:disabled):not([type="radio"]:checked) ~ .choice__label:hover {
+.choice:hover .choice__widget:not(:disabled):not([type="radio"]:checked) ~ .choice__label {
     color: var(--action-color);
 }
 
-.choice--inverted .choice__widget:not(:disabled):not([type="radio"]:checked) ~ .choice__label:hover {
+.choice--inverted:hover .choice__widget:not(:disabled):not([type="radio"]:checked) ~ .choice__label {
     color: #0B1E3A;
 }
 
 
 
-.choice__widget:not(:disabled):not([type="radio"]:checked) ~ .choice__label:hover ~ .choice__icon {
+.choice:hover .choice__widget:not(:disabled):not([type="radio"]:checked) ~ .choice__icon {
     box-shadow: inset 0 0 0 1px var(--action-color);
 }
 
-.choice--inverted .choice__widget:not(:disabled):not([type="radio"]:checked) ~ .choice__label:hover ~ .choice__icon {
+.choice:hover .choice--inverted .choice__widget:not(:disabled):not([type="radio"]:checked) ~ .choice__icon {
     box-shadow: inset 0 0 0 1px #0B1E3A;
 }
 
@@ -116,7 +116,7 @@
 
 /* Checked & Hovered */
 
-.choice__widget[type="checkbox"]:checked ~ .choice__label:hover ~ .choice__icon {
+.choice:hover .choice__widget[type="checkbox"]:checked ~ .choice__icon {
     background-color: var(--action-color);
     box-shadow: inset 0 0 0 1px var(--action-color);
 }
@@ -141,25 +141,25 @@
 }
 
 .choice__widget[type="checkbox"]:disabled ~ .choice__icon,
-.choice__widget[type="checkbox"]:disabled ~ .choice__label:hover ~ .choice__icon {
+.choice:hover .choice__widget[type="checkbox"]:disabled ~ .choice__icon {
     background-color: transparent;
     box-shadow: inset 0 0 0 1px var(--disabled-color);
 }
 
 .choice__widget[type="checkbox"]:disabled:checked ~ .choice__icon,
-.choice__widget[type="checkbox"]:disabled:checked ~ .choice__label:hover ~ .choice__icon {
+.choice:hover .choice__widget[type="checkbox"]:disabled:checked ~ .choice__icon {
     background-color: var(--disabled-color);
 }
 
 
 
 .choice__widget[type="radio"]:disabled ~ .choice__icon,
-.choice__widget[type="radio"]:disabled ~ .choice__label:hover ~ .choice__icon {
+.choice:hover .choice__widget[type="radio"]:disabled ~ .choice__icon {
     box-shadow: inset 0 0 0 1px var(--disabled-color);
 }
 
 .choice__widget[type="radio"]:disabled:checked ~ .choice__icon,
-.choice__widget[type="radio"]:disabled:checked ~ .choice__label:hover ~ .choice__icon {
+.choice:hover .choice__widget[type="radio"]:disabled:checked ~ .choice__icon {
     background-image: url("../vectors/choice-radio-disabled.svg");
 }
 
