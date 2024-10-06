@@ -1,0 +1,117 @@
+.filters {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+    .filters__handler {
+        display: none;
+    }
+
+    .filters__body {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+    }
+        .filters__item {
+
+        }
+
+        .filters__reset {
+            position: absolute;
+            right: 0;
+            top: 0;
+            display: inline-flex;
+            align-items: flex-start;
+            vertical-align: top;
+            gap: 12px;
+            background-color: transparent;
+            padding: 12px 0;
+            border: none;
+            font-family: var(--font-heading);
+            font-style: italic;
+            font-size: 16px;
+            line-height: 20px;
+            color: #F8F0E5;
+            text-transform: lowercase;
+            cursor: pointer;
+        }
+
+        .filters__reset:hover {
+            color: #E4BB6B;
+        }
+            .filters__funnel {
+                vertical-align: top;
+                position: relative;
+                top: 2px;
+                width: 18px;
+                height: 18px;
+                fill: currentColor;
+            }
+
+    .filters__tickets {
+
+    }
+
+
+
+@media (1850px <= width) {
+
+    .filters {
+        /*position: relative;*/
+        /*display: flex;*/
+        /*align-items: center;*/
+        gap: 40px;
+    }
+        .filters__handler {
+            /*display: none;*/
+        }
+
+        .filters__body {
+            /*display: flex;*/
+            /*align-items: center;*/
+            gap: 40px;
+        }
+            .filters__item {
+
+            }
+
+            .filters__reset {
+                /*position: absolute;*/
+                /*right: 0;*/
+                top: 0;
+                /*display: inline-flex;*/
+                /*align-items: flex-start;*/
+                /*vertical-align: top;*/
+                gap: 16px;
+                /*background-color: transparent;*/
+                /*padding: 0;*/
+                padding-top: 16px;
+                padding-bottom: 16px;
+                /*border: none;*/
+                /*font-family: var(--font-heading);*/
+                /*font-style: italic;*/
+                font-size: 20px;
+                line-height: 24px;
+                /*color: #F8F0E5;*/
+                /*text-transform: lowercase;*/
+                /*cursor: pointer;*/
+            }
+
+            .filters__reset:hover {
+                /*color: #E4BB6B;*/
+            }
+
+                .filters__funnel {
+                    /*vertical-align: top;*/
+                    /*position: relative;*/
+                    /*top: 1px;*/
+                    width: 24px;
+                    height: 24px;
+                    /*fill: currentColor;*/
+                }
+
+        .filters__tickets {
+
+        }
+}
