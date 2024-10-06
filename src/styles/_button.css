@@ -295,3 +295,18 @@
             }
 }
 
+
+@media (width < 740px) {
+
+    .button--largest {
+        padding: 8px 20px;
+        border-radius: 19px;
+        font-size: 16px;
+        line-height: 22px;
+        /*gap: 12px;*/
+    }
+        .button--largest .button__icon {
+            /*width: 22px;*/
+            /*height: 22px;*/
+        }
+}
