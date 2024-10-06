@@ -4,6 +4,7 @@
     display: flex;
     align-items: flex-start;
     width: fit-content;
+    font-family: var(--font); /* Встречается внутри заголовков */
 }
     .switch__item {
         position: relative;

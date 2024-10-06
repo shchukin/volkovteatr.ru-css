@@ -105,11 +105,11 @@
 
     }
         .month--expanded .month__close-label {
-            display: none;
+            display: inline;
         }
 
-        .month__open-label {
-            display: inline;
+        .month--expanded .month__open-label {
+            display: none;
         }
 
         .month--expanded .month__angle {
@@ -232,10 +232,10 @@
 
         }
             .month--expanded .month__close-label {
-                display: none;
+
             }
 
-            .month__open-label {
+            .month--expanded .month__open-label {
                 /*display: inline;*/
             }
 
@@ -326,7 +326,7 @@
 
         .month__dropdown {
             /*display: none;*/
-            /*margin-top: 40px;*/
+            margin-top: 20px;
             /*animation: var(--slide-bottom);*/
         }
 

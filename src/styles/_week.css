@@ -88,8 +88,8 @@
                    = 1760
                 */
                 width: 1757px; /* на 3px меньше контейнера */
-                margin-left: auto;
-                margin-right: auto;
+                margin-left: 1.5px;
+                margin-right: 1.5px;
                 /*display: grid;*/
                 grid-template-columns: repeat(7, 227px);
                 gap: 28px;
