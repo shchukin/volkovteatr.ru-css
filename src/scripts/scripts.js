@@ -109,7 +109,6 @@
             new Swiper($carousel.querySelector('.swiper'), {
                 slidesPerView: 1,
                 slidesPerGroup: 1,
-                spaceBetween: responsiveSpacing,
 
                 autoplay: {
                     delay: 10000,
