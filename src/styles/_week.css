@@ -9,7 +9,7 @@
 
         }
 
-        .calendar__grid {
+        .calendar__row {
             /* Ширины:
                  7*155 (дни календаря)
                + 6*1 (разделители)
@@ -79,7 +79,7 @@
             display: grid;
             gap: 60px;
         }
-            .calendar__grid {
+            .calendar__row {
                 /* Ширины:
                      7*227 (дни календаря)
                    + 6*2 (разделители)
@@ -159,7 +159,7 @@
                 margin-top: 24px;
             }
 
-            .calendar__grid {
+            .calendar__row {
                 display: block;
                 background-image: none;
                 margin-left: calc(-1 * var(--padding));
@@ -174,13 +174,13 @@
                 }
 
                 /* clearfix */
-                .calendar__grid::before,
-                .calendar__grid::after {
+                .calendar__row::before,
+                .calendar__row::after {
                     content: " ";
                     display: table;
                 }
 
-                .calendar__grid::after {
+                .calendar__row::after {
                     clear: both;
                 }
 

@@ -64,6 +64,16 @@
 }
 
 
+.button--secondary {
+    background-color: transparent;
+    box-shadow: inset 0 0 0 1px #E4BB6B;
+    color: #E4BB6B;
+}
+
+.button--secondary:hover {
+    background-color: rgb(255 255 255 / 10%);
+}
+
 
 /*.button:disabled,*/
 /*.button:disabled:hover,*/
