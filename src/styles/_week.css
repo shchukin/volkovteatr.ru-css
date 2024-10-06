@@ -155,6 +155,10 @@
         .calendar__inner {
             display: block;
         }
+            .calendar__full-width-item {
+                margin-top: 24px;
+            }
+
             .calendar__grid {
                 display: block;
                 background-image: none;
