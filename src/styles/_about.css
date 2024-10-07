@@ -5,7 +5,7 @@
     align-items: flex-start;
 }
     .about__content {
-
+        margin-top: 10px;
     }
 
     .about__sidebar {
@@ -92,7 +92,7 @@
         /*align-items: flex-start;*/
     }
         .about__content {
-
+            margin-top: 13px;
         }
 
         .about__sidebar {
@@ -178,7 +178,7 @@
         gap: 40px;
     }
         .about__content {
-
+            margin-top: 0;
         }
 
         .about__sidebar {
