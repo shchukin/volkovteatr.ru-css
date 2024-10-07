@@ -1,0 +1,24 @@
+.mini-calendar {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: 30px 18px;
+}
+
+
+@media (1850px <= width) {
+
+    .mini-calendar {
+        gap: 40px 24px;
+    }
+}
+
+
+
+@media (width < 740px) {
+
+    .mini-calendar {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px 16px;
+    }
+}
+
