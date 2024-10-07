@@ -6,11 +6,11 @@
 }
 
 @media (1850px <= width) {
+
     .wysiwyg {
         max-width: 1244px;
     }
 }
-
 
 .wysiwyg p,
 .wysiwyg ul,
@@ -18,6 +18,16 @@
 .wysiwyg hr,
 .wysiwyg figure,
 .wysiwyg blockquote {
+    margin-top: var(--body-line-height);
+    margin-bottom: var(--body-line-height);
+}
+
+.wysiwyg--larger p,
+.wysiwyg--larger ul,
+.wysiwyg--larger ol,
+.wysiwyg--larger hr,
+.wysiwyg--larger figure,
+.wysiwyg--larger blockquote {
     margin-top: var(--body-line-height);
     margin-bottom: var(--body-line-height);
 }
@@ -89,3 +99,132 @@
 
 
 
+.wysiwyg blockquote {
+    position: relative;
+    margin: 32px auto;
+    padding-left: 36px;
+    background-image: url("../vectors/blockquote.svg");
+    background-size: 20px 15px;
+    background-repeat: no-repeat;
+    background-position: left center;
+    font-weight: 600;
+    font-style: italic;
+    font-size: 18px;
+    line-height: 26px;
+    color: #E4BB6B;
+    text-transform: uppercase;
+}
+
+.wysiwyg blockquote:first-child {
+    margin-top: 0;
+}
+
+.wysiwyg blockquote:last-child {
+    margin-bottom: 0;
+}
+    .wysiwyg blockquote::before,
+    .wysiwyg blockquote::after {
+        content: "";
+        position: absolute;
+        left: 10px;
+        display: block;
+        width: 1px;
+        background-color: currentColor;
+        border-radius: 2px;
+    }
+
+    .wysiwyg blockquote::before {
+        top: 0;
+        bottom: 50%;
+        margin-bottom: 15px;
+    }
+
+    .wysiwyg blockquote::after {
+        bottom: 0;
+        top: 50%;
+        margin-top: 15px;
+    }
+
+    .wysiwyg blockquote cite {
+        display: block;
+        margin-top: 12px;
+        font-weight: 600;
+        font-style: italic;
+        font-size: 18px;
+        line-height: 24px;
+        color: #B9B9B9;
+        text-transform: none;
+        text-align: right;
+    }
+
+
+@media (1850px <= width) {
+
+    .wysiwyg blockquote {
+        /*position: relative;*/
+        margin-top: 40px;
+        margin-bottom: 40px;
+        padding-left: 48px;
+        /*background-image: url("../vectors/blockquote.svg");*/
+        /*background-size: 26px 20px;*/
+        /*background-repeat: no-repeat;*/
+        /*background-position: left center;*/
+        /*font-weight: 600;*/
+        /*font-style: italic;*/
+        font-size: 22px;
+        line-height: 31px;
+        /*color: #E4BB6B;*/
+        /*text-transform: uppercase;*/
+    }
+        .wysiwyg blockquote::before,
+        .wysiwyg blockquote::after {
+            /*content: "";*/
+            /*position: absolute;*/
+            /*left: 10px;*/
+            /*display: block;*/
+            width: 2px;
+            /*background-color: currentColor;*/
+            /*border-radius: 2px;*/
+        }
+
+        .wysiwyg blockquote::before {
+            /*top: 0;*/
+            /*bottom: 50%;*/
+            margin-bottom: 19px;
+        }
+
+        .wysiwyg blockquote::after {
+            /*bottom: 0;*/
+            /*top: 50%;*/
+            margin-top: 19px;
+        }
+
+        .wysiwyg blockquote cite {
+            /*display: block;*/
+            margin-top: 15px;
+            /*font-weight: 600;*/
+            /*font-style: italic;*/
+            font-size: 22px;
+            line-height: 30px;
+            /*color: #B9B9B9;*/
+            /*text-transform: none;*/
+            /*text-align: right;*/
+        }
+}
+
+
+
+
+
+.wysiwyg--larger {
+    font-size: 18px;
+    line-height: 24px;
+}
+
+@media (1850px <= width) {
+
+    .wysiwyg--larger {
+        font-size: 22px;
+        line-height: 30px;
+    }
+}
