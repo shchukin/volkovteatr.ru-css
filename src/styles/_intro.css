@@ -1,0 +1,206 @@
+.intro {
+    --intro-height: 567px;
+}
+
+.intro {
+    margin-top: calc(-1 * var(--header-height));
+    background-color: #303F64;
+}
+    .intro__limitation {
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 1920px;
+        overflow: hidden; /* обрезаем after */
+    }
+        .intro__widget {
+
+        }
+
+        .intro__limitation::before {
+            /*content: "";*/
+            /*position: absolute;*/
+            /*z-index: 50;*/
+            /*left: 50%;*/
+            /*top: 0;*/
+            /*margin-left: -925px;*/
+            /*width: 1850px;*/
+            /*height: var(--intro-height);*/
+            /*background-color: rgba(48 63 100 / 30%);*/
+            /*clip-path: path("M1217.25 567H1850L1849.5 0H614.5C945.299 0 1213.86 253.305 1217.25 567Z");*/
+            /*background-position: right center;*/
+            /*background-size: cover;*/
+            /*background-repeat: no-repeat;*/
+            /*backdrop-filter: blur(8px);*/
+            /*transform: translate3d(0, 0, 0); !* форсируем 3d acceleration *!*/
+            /*backface-visibility: hidden; !* улучшаем производительность *!*/
+            /*pointer-events: none;*/
+        }
+
+        .intro__content {
+            position: absolute;
+            z-index: 75;
+            inset: 0;
+            pointer-events: none;
+            display: flex;
+            flex-direction: column;
+        }
+            .intro__sidebar {
+                margin-top: auto;
+                pointer-events: auto;
+                width: fit-content;
+                padding: 20px 46px 49px 0;
+                color: #F8F0E5;
+            }
+                .intro__director {
+                    font-size: 22px;
+                    line-height: 30px;
+                }
+
+                .intro__heading {
+                    margin-top: 7px;
+                    margin-bottom: 0;
+                    font-family: var(--font-heading);
+                    font-weight: 600;
+                    font-style: italic;
+                    font-size: 48px;
+                    line-height: 56px;
+                    text-transform: uppercase;
+                }
+
+                .intro__summary {
+                    margin-top: 7px;
+                    font-size: 20px;
+                    line-height: 27px;
+                }
+
+
+@media (1850px <= width) {
+
+    .intro {
+        --intro-height: 800px;
+    }
+
+    .intro {
+        /*margin-top: calc(-1 * var(--header-height));*/
+        /*background-color: #303F64;*/
+    }
+        .intro__limitation {
+            /*position: relative;*/
+            /*margin-left: auto;*/
+            /*margin-right: auto;*/
+            /*max-width: 1920px;*/
+            /*overflow: hidden; !* обрезаем after *!*/
+        }
+            .intro__widget {
+
+            }
+
+            .intro__limitation::before {
+                margin-left: -960px;
+                width: 1920px;
+                /*background-color: rgba(48 63 100 / 30%);*/
+                clip-path: path("M1920 0H661C1101.72 0 1459 363.695 1459 800H1920V0Z");
+            }
+
+        .intro__content {
+            /*position: absolute;*/
+            /*z-index: 75;*/
+            /*inset: 0;*/
+            /*pointer-events: none;*/
+        }
+            .intro__sidebar {
+                /*pointer-events: auto;*/
+                /*width: fit-content;*/
+                /*height: var(--intro-height);*/
+                /*padding-bottom: 32px;*/
+                /*margin-left: auto;*/
+                /*display: flex;*/
+                /*flex-direction: column;*/
+                /*justify-content: flex-end;*/
+                /*gap: 24px;*/
+            }
+                .intro__tile {
+                    /*position: relative;*/
+                    /*display: flex;*/
+                    /*flex-direction: column;*/
+                    /*justify-content: flex-end;*/
+                    width: 363px;
+                    height: 148px;
+                    padding: 16px;
+                    /*text-decoration: none;*/
+                }
+                    .intro__tile-image {
+                        /*position: absolute;*/
+                        /*left: 0;*/
+                        /*top: 0;*/
+                        /*width: 100%;*/
+                        /*height: 100%;*/
+                        /*vertical-align: top;*/
+                        /*background-color: var(--black-image-fallback);*/
+                        /*border-radius: 10px;*/
+                        /*transition: filter var(--transition-hover);*/
+                    }
+
+                    .intro__tile:hover .intro__tile-image {
+                        /*filter: brightness(110%) contrast(110%);*/
+                    }
+
+                    .intro__tile::before {
+                        /*content: "";*/
+                        /*position: absolute;*/
+                        /*z-index: 10;*/
+                        /*left: 0;*/
+                        /*top: 0;*/
+                        /*right: 0;*/
+                        /*bottom: 0;*/
+                        /*background-image: linear-gradient(to bottom, rgb(11 30 58 / 0%), rgb(11 30 58 / 0%) 50%, rgb(11 30 58 / 85%) 100%);*/
+                        /*border-radius: 10px;*/
+                        /*display: block;*/
+                    }
+
+                    .intro__tile-heading {
+                        /*position: relative;*/
+                        /*z-index: 20;*/
+                        /*font-family: var(--font-heading);*/
+                        /*font-weight: 500;*/
+                        /*font-style: italic;*/
+                        font-size: 20px;
+                        line-height: 23px;
+                        /*color: rgb(255 255 255 / 80%);*/
+                        /*text-transform: uppercase;*/
+                    }
+
+}
+
+
+
+@media (width < 740px) {
+
+    .intro {
+        --intro-height: 494px;
+    }
+
+    .intro {
+        /*margin-top: calc(-1 * var(--header-height));*/
+        /*background-color: #303F64;*/
+    }
+        .intro__limitation {
+            /*position: relative;*/
+            /*margin-left: auto;*/
+            /*margin-right: auto;*/
+            /*max-width: 1920px;*/
+            /*overflow: hidden; !* обрезаем after *!*/
+        }
+            .intro__widget {
+
+            }
+
+            .intro__limitation::before {
+                display: none;
+            }
+
+            .intro__content {
+                display: none;
+            }
+}

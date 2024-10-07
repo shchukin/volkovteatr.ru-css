@@ -1,5 +1,5 @@
 .spectacle {
-
+    padding-top: 44px;
 }
     .spectacle__summary {
 
@@ -30,7 +30,7 @@
 @media (1850px <= width) {
 
     .spectacle {
-
+        padding-top: 66px;
     }
         .spectacle__summary {
 
@@ -57,7 +57,7 @@
 @media (width < 740px) {
 
     .spectacle {
-
+        padding-top: 40px;
     }
         .spectacle__summary {
 

@@ -1,0 +1,14 @@
+.dot {
+    display: inline-block;
+    vertical-align: middle;
+    width: 10px;
+    height: 10px;
+    margin-left: 12px;
+    margin-right: 12px;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    text-indent: 200%;
+    white-space: nowrap;
+    overflow: hidden;
+    fill: currentColor;
+}
