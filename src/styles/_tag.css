@@ -1,10 +1,36 @@
 .tag {
-    padding: 4px 8px;
+    display: block;
+    width: fit-content;
+    padding: 3px 8px;
     border-radius: 14px;
     font-family: var(--font);
     font-weight: bold;
     font-style: normal;
-    font-size: 14px;
-    line-height: 19px;
+    font-size: 13px;
+    line-height: 18px;
     text-transform: uppercase;
 }
+
+
+@media (1850px <= width) {
+
+    .tag {
+        padding: 4px 8px;
+        border-radius: 14px;
+        font-size: 14px;
+        line-height: 19px;
+    }
+}
+
+
+
+@media (width < 740px) {
+
+    .tag {
+        padding: 4px 8px;
+        border-radius: 14px;
+        font-size: 12px;
+        line-height: 16px;
+    }
+}
+
