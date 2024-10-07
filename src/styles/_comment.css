@@ -1,4 +1,7 @@
 .comment {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     padding: 18px;
     background-color: #F8F0E5;
     color-scheme: light;
@@ -6,13 +9,92 @@
     border-radius: 10px;
 }
     .comment__text {
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
 
+    .comment__details {
+        margin-top: 10px;
+        display: flex;
+        width: fit-content;
+        align-items: center;
+        gap: 10px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 22px;
+        color: #000000;
+        text-decoration: 1.5px underline transparent;
+        text-underline-offset: 2px;
+        transition: text-decoration-color var(--transition-hover);
+    }
+
+    .comment__details:hover {
+        text-decoration-color: currentColor;
     }
 
     .comment__author {
-        margin-top: 10px;
+        margin-top: auto;
+        padding-top: 10px;
         width: fit-content;
         margin-left: auto;
-        font-size: 17px;
+        font-size: 16px;
         line-height: 22px;
     }
+
+
+
+@media (1850px <= width) {
+
+    .comment {
+        /*display: flex;*/
+        /*flex-direction: column;*/
+        /*height: 100%;*/
+        /*padding: 18px;*/
+        /*background-color: #F8F0E5;*/
+        /*color-scheme: light;*/
+        /*color: #000000;*/
+        /*border-radius: 10px;*/
+    }
+        .comment__text {
+            /*display: -webkit-box;*/
+            /*-webkit-line-clamp: 4;*/
+            /*-webkit-box-orient: vertical;*/
+            /*overflow: hidden;*/
+            /*text-overflow: ellipsis;*/
+        }
+
+        .comment__details {
+            /*margin-top: 10px;*/
+            /*display: flex;*/
+            /*width: fit-content;*/
+            /*align-items: center;*/
+            /*gap: 10px;*/
+            /*padding-top: 10px;*/
+            /*padding-bottom: 10px;*/
+            /*font-weight: bold;*/
+            /*font-size: 18px;*/
+            /*line-height: 22px;*/
+            /*color: #000000;*/
+            /*text-decoration: 1.5px underline transparent;*/
+            /*text-underline-offset: 2px;*/
+            /*transition: text-decoration-color var(--transition-hover);*/
+        }
+
+        .comment__details:hover {
+            /*text-decoration-color: currentColor;*/
+        }
+
+        .comment__author {
+            /*margin-top: auto;*/
+            /*padding-top: 10px;*/
+            /*width: fit-content;*/
+            /*margin-left: auto;*/
+            font-size: 17px;
+            line-height: 22px;
+        }
+}
