@@ -637,5 +637,12 @@
 
 
 
+    /* Play */
+
+    $('.play__handler').on('click', function () {
+        $(this).parents('.play__schedule').toggleClass('play__schedule--expanded');
+    });
+
+
 })(jQuery);
 
