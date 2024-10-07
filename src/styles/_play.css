@@ -447,34 +447,48 @@
         height: auto;
     }
         .play__card {
-            display: flex;
+            position: relative;
+            display: block;
             flex-direction: column;
             padding-left: 0;
+            padding-bottom: 270px;
             /*height: 100%;*/
             /*background-color: #F8F0E5;*/
             /*color-scheme: light;*/
-            border-radius: var(--radius);
+            border-radius: var(--radius) var(--radius) calc(var(--radius) + 2px) calc(var(--radius) + 2px); /* (1) радиус всей карточки на двоечку больше из-за визуальных артфектов светлого фона под тёмными фотками */
             /*color: #000000;*/
+            overflow: hidden;
         }
             .play__preview {
-                position: static;
-                margin-bottom: -9px;
-                /*left: 0;*/
-                /*top: 0;*/
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                top: auto;
                 /*display: block;*/
-                /*width: 356px;*/
-                /*height: 100%;*/
+                width: 320px;
+                height: 270px;
             }
+
+            /*@media (width < 393px) {*/
+            /*    .play__preview {*/
+            /*        left: auto;*/
+            /*        right: 33px;*/
+            /*    }*/
+            /*}*/
+
                 .play__cut {
+                    position: static;
+                    width: 320px;
                     height: calc(270px + 9px);
+                    padding-bottom: 9px;
                     /*border-top-right-radius: 400px;*/
                     /*overflow: hidden;*/
                 }
                     .play__image {
                         /*vertical-align: top;*/
                         /*background-color: var(--black-image-fallback);*/
-                        /*border-top-left-radius: var(--radius);*/
-                        /*border-bottom-left-radius: var(--radius);*/
+                        border-top-left-radius: 0;
+                        border-bottom-left-radius: var(--radius);
                         /*transition: filter var(--transition-hover);*/
                         width: 320px;
                         height: 270px;
@@ -485,7 +499,6 @@
                     }
 
             .play__body {
-                order: -1;
                 padding: 60px 16px 27px;
             }
                 .play__director {
