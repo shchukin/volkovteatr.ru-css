@@ -1,0 +1,19 @@
+.net-link {
+    display: flex;
+    width: fit-content;
+    align-items: center;
+    gap: 10px;
+    font-size: 17px;
+    line-height: 22px;
+    color: #000000;
+    text-decoration: 1.25px underline transparent;
+    text-underline-offset: 3px;
+    transition: text-decoration-color var(--transition-hover);
+}
+
+.net-link:hover {
+    text-decoration-color: currentColor;
+}
+    .net-link__icon {
+        vertical-align: top;
+    }

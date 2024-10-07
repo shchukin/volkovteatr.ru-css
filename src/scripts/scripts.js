@@ -30,6 +30,7 @@
         /* Swiper для галерей */
 
         let gallerySwipers = [];
+
         if (!isDesktop) {
 
             document.querySelectorAll('.carousel--js-init-gallery').forEach(($carousel) => {
@@ -100,7 +101,45 @@
 
 
 
-        /* Swiper для слайдера */
+        /* Swiper для фидбека */
+
+        document.querySelectorAll('.carousel--js-init-feedback').forEach(($carousel) => {
+
+            new Swiper($carousel.querySelector('.swiper'), {
+                slidesPerView: 1,
+                slidesPerGroup: 1,
+                spaceBetween: responsiveSpacing,
+                autoHeight: true,
+
+                pagination: {
+                    el: $carousel.querySelector('.carousel__pagination'),
+                    type: "fraction",
+                },
+
+                navigation: {
+                    prevEl: $carousel.querySelector('.carousel__button--prev'),
+                    nextEl: $carousel.querySelector('.carousel__button--next'),
+                },
+
+                breakpoints: {
+                    740: {
+                        slidesPerView: 2,
+                        slidesPerGroup: 2,
+                        pagination: {
+                            el: $carousel.querySelector('.carousel__pagination'),
+                            type: "bullets",
+                            bulletClass: 'carousel__bullet',
+                            bulletActiveClass: 'carousel__bullet--current',
+                            clickable: true
+                        },
+                    },
+                },
+            });
+        });
+
+
+
+        /* Swiper для Intro */
 
         const progressCircle = document.querySelector(".carousel__progress");
 
