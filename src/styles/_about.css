@@ -65,6 +65,7 @@
         }
             .about__pushkin-card::before {
                 content: "";
+                flex-shrink: 0;
                 display: block;
                 width: 22px;
                 height: 22px;
@@ -166,3 +167,92 @@
                     }
                 }
 }
+
+
+
+@media (width < 740px) {
+
+    .about {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+        .about__content {
+
+        }
+
+        .about__sidebar {
+            order: -1;
+            /*padding: 24px;*/
+            /*background-color: #F8F0E5;*/
+            /*color-scheme: light;*/
+            /*border-radius: 8px;*/
+            /*color: #000000;*/
+        }
+            .about__param {
+                margin-top: 24px;
+            }
+
+            .about__param:first-child {
+                /*margin-top: 0;*/
+            }
+                .about__param-heading {
+                    /*display: block;*/
+                    /*font-weight: normal;*/
+                    font-size: 15px;
+                    line-height: 20px;
+                    /*color: #6073A2;*/
+                    /*text-transform: lowercase;*/
+                }
+
+                .about__param-value {
+                    /*margin-top: 8px;*/
+                    /*font-family: var(--font-heading);*/
+                    /*font-weight: 500;*/
+                    /*font-style: italic;*/
+                    font-size: 20px;
+                    line-height: 23px;
+                    /*text-transform: uppercase;*/
+                }
+                    .about__note {
+                        /*margin-left: 18px;*/
+                        /*font-family: var(--font);*/
+                        /*font-weight: normal;*/
+                        /*font-style: normal;*/
+                        font-size: 15px;
+                        line-height: 20px;
+                        /*color: #6073A2;*/
+                        /*text-transform: lowercase;*/
+                    }
+
+
+            .about__pushkin-card {
+                margin-top: 24px;
+                /*display: flex;*/
+                /*align-items: center;*/
+                /*gap: 10px;*/
+                /*font-family: var(--font-heading);*/
+                /*font-style: italic;*/
+                font-size: 18px;
+                line-height: 22px;
+                /*color: #303F64;*/
+            }
+                .about__pushkin-card::before {
+                    /*content: "";*/
+                    /*display: block;*/
+                    width: 28px;
+                    height: 28px;
+                    /*background-image: url("../images/about-pushkin-card/about-pushkin-card@1x.png");*/
+                    /*background-size: contain;*/
+                    /*background-repeat: no-repeat;*/
+                    /*background-position: center center;*/
+                }
+
+                @media (min-resolution: 1.5dppx) {
+                    .about__pushkin-card::before {
+                        /*background-image: url("../images/about-pushkin-card/about-pushkin-card@2x.png");*/
+                    }
+                }
+}
+
+
