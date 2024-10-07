@@ -7,7 +7,7 @@
     grid-template-columns: 532px 668px;
     background-color: #FFFFFF;
     color-scheme: light;
-    border-radius: calc(var(--radius) + 1px); /* радиус всей карточки на единичку больше (1) */
+    border-radius: calc(var(--radius) + 1px); /* (1) радиус всей карточки на единичку больше из-за визуальных артфектов светлого фона под тёмными фотками */
     color: #303F64;
 }
     .performance__data {
@@ -80,8 +80,8 @@
         position: relative;
         height: 100%;
         overflow: hidden;
-        border-top-right-radius: var(--radius); /* у фоток радиус на единичку меньше, чтобы перекрыть белые артефакты фона по контуру */
-        border-bottom-right-radius: var(--radius); /* у фоток радиус на единичку меньше, чтобы перекрыть белые артефакты фона по контуру */
+        border-top-right-radius: var(--radius); /* (1) у фоток радиус на единичку меньше, чтобы перекрыть белые артефакты фона по контуру */
+        border-bottom-right-radius: var(--radius); /* (1) у фоток радиус на единичку меньше, чтобы перекрыть белые артефакты фона по контуру */
         transition: filter var(--transition-hover);
     }
 

@@ -1,0 +1,10 @@
+.tag {
+    padding: 4px 8px;
+    border-radius: 14px;
+    font-family: var(--font);
+    font-weight: bold;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 19px;
+    text-transform: uppercase;
+}
