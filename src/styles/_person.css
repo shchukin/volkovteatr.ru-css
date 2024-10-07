@@ -126,9 +126,6 @@
 
         .person__press-list {
             margin-top: 30px;
-            display: grid;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-            gap: 18px;
         }
 
     .person__simpler-bio {
@@ -233,7 +230,6 @@
 
             .person__press-list {
                 margin-top: 40px;
-                gap: 24px;
             }
 
         .person__simpler-bio {
@@ -372,9 +368,6 @@
 
             .person__press-list {
                 margin-top: 24px;
-                display: grid;
-                grid-template-columns: auto;
-                gap: 24px;
             }
 
         .person__simpler-bio {

@@ -1,0 +1,25 @@
+.group {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 30px 18px;
+    justify-content: center;
+}
+
+
+@media (1850px <= width) {
+
+    .group {
+        grid-template-columns: repeat(6, 1fr);
+        gap: 40px 24px;
+    }
+}
+
+
+@media (width < 740px) {
+
+    .group {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px 16px;
+    }
+}
+

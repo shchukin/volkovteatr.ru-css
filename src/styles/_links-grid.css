@@ -1,0 +1,23 @@
+.links-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+
+
+@media (1850px <= width) {
+
+    .links-grid {
+        gap: 24px;
+    }
+}
+
+
+@media (width < 740px) {
+
+    .links-grid {
+        display: grid;
+        grid-template-columns: auto;
+        gap: 24px;
+    }
+}
