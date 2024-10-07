@@ -2,12 +2,14 @@
 
     /* Глобальные константы */
 
-    let isDesktop;
+    let isDesktop; /* т.е. не смартфон, а любой десктоп */
+    let isMonitor; /* т.е. монитор типа 1920 */
     let responsiveSpacing;
     let headerHeight;
 
     function initGlobalConstant() {
         isDesktop = window.matchMedia("(min-width: 740px)").matches;
+        isMonitor = window.matchMedia("(min-width: 1850px)").matches;
         responsiveSpacing = !isDesktop ? parseInt(getComputedStyle(document.documentElement).getPropertyValue('--container-padding')) : 40;
         headerHeight = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--header-height')) || 0;
     }
@@ -28,6 +30,7 @@
         /* Swiper для галерей */
 
         let gallerySwipers = [];
+
         if (!isDesktop) {
 
             document.querySelectorAll('.carousel--js-init-gallery').forEach(($carousel) => {
@@ -91,6 +94,83 @@
                             bulletActiveClass: 'carousel__bullet--current',
                             clickable: true
                         },
+                    },
+                },
+            });
+        });
+
+
+
+        /* Swiper для фидбека */
+
+        document.querySelectorAll('.carousel--js-init-feedback').forEach(($carousel) => {
+
+            new Swiper($carousel.querySelector('.swiper'), {
+                slidesPerView: 1,
+                slidesPerGroup: 1,
+                spaceBetween: responsiveSpacing,
+                autoHeight: true,
+
+                pagination: {
+                    el: $carousel.querySelector('.carousel__pagination'),
+                    type: "fraction",
+                },
+
+                navigation: {
+                    prevEl: $carousel.querySelector('.carousel__button--prev'),
+                    nextEl: $carousel.querySelector('.carousel__button--next'),
+                },
+
+                breakpoints: {
+                    740: {
+                        slidesPerView: 2,
+                        slidesPerGroup: 2,
+                        pagination: {
+                            el: $carousel.querySelector('.carousel__pagination'),
+                            type: "bullets",
+                            bulletClass: 'carousel__bullet',
+                            bulletActiveClass: 'carousel__bullet--current',
+                            clickable: true
+                        },
+                    },
+                },
+            });
+        });
+
+
+
+        /* Swiper для Intro */
+
+        const progressCircle = document.querySelector(".carousel__progress");
+
+        document.querySelectorAll('.carousel--js-init-intro').forEach(($carousel) => {
+
+            new Swiper($carousel.querySelector('.swiper'), {
+                slidesPerView: 1,
+                slidesPerGroup: 1,
+
+                autoplay: {
+                    delay: 10000,
+                    disableOnInteraction: true
+                },
+
+                on: {
+                    autoplayTimeLeft(s, time, progress) {
+                        progressCircle.style.setProperty("width", (1 - progress) * 100 + '%');
+                    }
+                },
+
+                pagination: {
+                    el: $carousel.querySelector('.carousel__pagination'),
+                    type: "bullets",
+                    bulletClass: 'carousel__bullet',
+                    bulletActiveClass: 'carousel__bullet--current',
+                    clickable: true
+                },
+
+                breakpoints: {
+                    740: {
+                        pagination: false
                     },
                 },
             });
@@ -202,7 +282,7 @@
 
 
     $(document).on('keyup', function (event) {
-        if (event.keyCode == 27) {
+        if (event.keyCode === 27) {
             $html.removeClass('burger-expanded');
         }
     });
@@ -449,6 +529,157 @@
                 selectField.style.display = this.hasAttribute('data-js-application-performances') ? 'block' : 'none';
             });
         });
+    });
+
+
+
+    /* Clipped */
+
+    function resize($clipped) {
+        if ( ! $clipped.hasClass('clipped--open') ) {
+            $clipped.find('.clipped__viewport').css('height', $clipped.attr('data-canonical-height') );
+        } else {
+            $clipped.find('.clipped__viewport').css('height', $clipped.attr('data-actual-height') );
+        }
+    }
+
+
+    function init() {
+        $('.clipped').each(function () {
+
+            var $clipped = $(this);
+            var height = 0;
+            var canonicalHeight = 0;
+
+            /* Reset heights to their defaults before measuring */
+            $clipped.addClass('clipped--measurement');
+
+            /* Measure */
+            height = $clipped.find('.clipped__content').outerHeight();
+            canonicalHeight = parseInt( $clipped.attr('data-canonical-height') );
+
+            /* if Monitor */
+            if(isMonitor) {
+                canonicalHeight = canonicalHeight * 1.2;
+                $clipped.attr('data-canonical-height', canonicalHeight)
+            }
+
+            $clipped.attr('data-actual-height', height);
+
+            /* Back to what it was before measurement */
+            $clipped.removeClass('clipped--measurement');
+
+            /* Do we need to run the whole thing? */
+            if( height > canonicalHeight ) {
+                $clipped.addClass('clipped--expandable');
+
+                /* Set heights */
+                resize($clipped);
+
+            } else {
+                $clipped.removeClass('clipped--expandable');
+                $clipped.find('.clipped__viewport').css('height', '' );
+            }
+        });
+    }
+
+
+    $(window).on('resize', init);
+    $(window).on('load', init);
+
+    $('.clipped__handler').on('click', function () {
+        var $clipped = $(this).parents('.clipped');
+        $clipped.toggleClass('clipped--open');
+        resize($clipped);
+    });
+
+
+
+    /* Tabs */
+
+    $('.tabs__tag').on('click', function (event) {
+        event.preventDefault();
+        const $tabs = $(this).parents('.tabs');
+        const index = $(this).index();
+
+        const $handler = $tabs.find('.tabs__handler');
+        const label = $(this).text();
+
+        /* tag */
+        $tabs.find('.tabs__tag--current').removeClass('tabs__tag--current');
+        $(this).addClass('tabs__tag--current');
+
+        /* body */
+        $tabs.find('.tabs__item--current').removeClass('tabs__item--current');
+        $tabs.find('.tabs__item:eq('+index+')').addClass('tabs__item--current');
+
+        /* handler */
+        $handler.text(label);
+    });
+
+    $('.tabs__handler').on('click', function () {
+        $(this).parents('.tabs').toggleClass('tabs--expanded');
+    })
+
+    $(document).on('click', function (event) {
+        if (!$(event.target).closest('.tabs__handler, .tabs__nav').length) {
+            $('.tabs').removeClass('tabs--expanded');
+        }
+    });
+
+
+
+
+    /* month */
+
+    $('.month__handler').on('click', function (event) {
+        $(this).parents('.month').toggleClass('month--expanded');
+    });
+
+
+
+    /* picker */
+
+    $('.picker__handler').on('click', function () {
+        const $picker = $(this).parents('.picker');
+        $('.picker').not($picker).removeClass('picker--expanded');
+        $picker.toggleClass('picker--expanded');
+    });
+
+
+    $(document).on('click', function (event) {
+        if (!$(event.target).closest('.picker').length) {
+            $('.picker').removeClass('picker--expanded');
+        }
+    });
+
+
+    $(document).on('keyup', function (event) {
+        if (event.keyCode === 27) {
+            $('.picker').removeClass('picker--expanded');
+        }
+    });
+
+
+
+    /* filters */
+
+    $('.filters__handler').on('click', function () {
+        $(this).parents('.filters').toggleClass('filters--expanded');
+    });
+
+    $(document).on('keyup', function (event) {
+        if (event.keyCode === 27) {
+            $('.picker').removeClass('picker--expanded');
+        }
+    });
+
+
+
+    /* Play */
+
+    $('.play__handler').on('click', function () {
+        $(this).parents('.play__schedule').toggleClass('play__schedule--expanded');
     });
 
 
