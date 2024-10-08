@@ -17,71 +17,55 @@
 
         }
 
-        .intro__limitation::before {
-            /*content: "";*/
-            /*position: absolute;*/
-            /*z-index: 50;*/
-            /*left: 50%;*/
-            /*top: 0;*/
-            /*margin-left: -925px;*/
-            /*width: 1850px;*/
-            /*height: var(--intro-height);*/
-            /*background-color: rgba(48 63 100 / 30%);*/
-            /*clip-path: path("M1217.25 567H1850L1849.5 0H614.5C945.299 0 1213.86 253.305 1217.25 567Z");*/
-            /*background-position: right center;*/
-            /*background-size: cover;*/
-            /*background-repeat: no-repeat;*/
-            /*backdrop-filter: blur(8px);*/
-            /*transform: translate3d(0, 0, 0); !* форсируем 3d acceleration *!*/
-            /*backface-visibility: hidden; !* улучшаем производительность *!*/
-            /*pointer-events: none;*/
-        }
-
         .intro__content {
             position: absolute;
             z-index: 75;
-            inset: 0 0 10px;
+            inset: 0 0 6px;
             pointer-events: none;
             display: flex;
             flex-direction: column;
         }
+            /* обрезаем -6px маргина ниже */
             .intro__cut {
                 margin-top: auto;
                 pointer-events: auto;
                 width: fit-content;
-                margin-left: -80px;
+                margin-left: -380px;
                 overflow: hidden;
             }
+                /* вытаскиваем немного вниз, чтобы повторить скругление из фигмы */
                 .intro__bar {
-                    margin-bottom: -10px;
-                    width: 975px;
-                    padding: 20px 230px 49px 80px;
+                    margin-bottom: -6px;
+                    width: 1100px;
+                    padding: 20px 200px 38px 380px;
                     background-color: rgb(48 63 100 / 60%);
                     border-top-right-radius: 300px;
                     backdrop-filter: blur(8px);
                     color: #F8F0E5;
                 }
                     .intro__director {
-                        font-size: 22px;
-                        line-height: 30px;
+                        font-size: 18px;
+                        line-height: 26px;
                     }
 
                     .intro__heading {
-                        margin-top: 7px;
+                        margin-top: 5px;
                         margin-bottom: 0;
                         font-family: var(--font-heading);
                         font-weight: 600;
                         font-style: italic;
-                        font-size: 48px;
-                        line-height: 56px;
+                        font-size: 38px;
+                        line-height: 42px;
                         text-transform: uppercase;
                     }
 
                     .intro__summary {
                         margin-top: 7px;
-                        font-size: 20px;
-                        line-height: 27px;
+                        font-size: 16px;
+                        line-height: 22px;
                     }
+
+
 
 
 @media (1850px <= width) {
@@ -89,7 +73,71 @@
     .intro {
         --intro-height: 800px;
     }
+
+    .intro {
+        /*margin-top: calc(-1 * var(--header-height));*/
+        /*background-color: #303F64;*/
+    }
+        .intro__limitation {
+            /*position: relative;*/
+            /*margin-left: auto;*/
+            /*margin-right: auto;*/
+            /*max-width: 1920px;*/
+            /*overflow: hidden; !* обрезаем after *!*/
+        }
+            .intro__widget {
+
+            }
+
+            .intro__content {
+                /*position: absolute;*/
+                /*z-index: 75;*/
+                bottom: 10px;
+                /*pointer-events: none;*/
+                /*display: flex;*/
+                /*flex-direction: column;*/
+            }
+                /* обрезаем -6px маргина ниже */
+                .intro__cut {
+                    /*margin-top: auto;*/
+                    /*pointer-events: auto;*/
+                    /*width: fit-content;*/
+                    /*margin-left: -380px;*/
+                    /*overflow: hidden;*/
+                }
+                    /* вытаскиваем немного вниз, чтобы повторить скругление из фигмы */
+                    .intro__bar {
+                        /*margin-bottom: -6px;*/
+                        width: 1275px;
+                        padding: 20px 230px 49px 380px;
+                        /*background-color: rgb(48 63 100 / 60%);*/
+                        /*border-top-right-radius: 300px;*/
+                        /*backdrop-filter: blur(8px);*/
+                        /*color: #F8F0E5;*/
+                    }
+                        .intro__director {
+                            font-size: 22px;
+                            line-height: 30px;
+                        }
+
+                        .intro__heading {
+                            margin-top: 7px;
+                            /*margin-bottom: 0;*/
+                            /*font-family: var(--font-heading);*/
+                            /*font-weight: 600;*/
+                            /*font-style: italic;*/
+                            font-size: 48px;
+                            line-height: 56px;
+                            /*text-transform: uppercase;*/
+                        }
+
+                        .intro__summary {
+                            margin-top: 7px;
+                            font-size: 20px;
+                            line-height: 27px;
+                        }
 }
+
 
 
 
