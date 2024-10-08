@@ -22,6 +22,9 @@
             font-size: 39px;
             line-height: 44px;
             text-transform: uppercase;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
             .performance__link {
                 color: inherit;
@@ -253,6 +256,7 @@
                 /*font-style: italic;*/
                 font-size: 24px;
                 line-height: 28px;
+                white-space: normal;
                 /*text-transform: uppercase;*/
             }
                 .performance__link {
@@ -342,3 +346,105 @@
                 height: 50px;
             }
 }
+
+
+
+.performance--excursions {
+
+}
+    .performance--excursions .performance__data {
+        display: flex;
+        flex-direction: column;
+        padding-right: 0;
+    }
+        .performance__prefix {
+            font-size: 17px;
+            line-height: 22px;
+            color: #6073A2;
+        }
+
+        .performance--excursions .performance__heading {
+            margin-top: 7px;
+            font-size: 36px;
+            line-height: 40px;
+            overflow: visible;
+        }
+
+        .performance--excursions .performance__note {
+            margin-top: auto;
+            max-width: 410px;
+        }
+
+
+
+@media (1850px <= width) {
+
+    .performance--excursions {
+
+    }
+        .performance--excursions .performance__data {
+            /*display: flex;*/
+            /*flex-direction: column;*/
+            /*padding-right: 0;*/
+        }
+            .performance__prefix {
+                font-size: 20px;
+                line-height: 27px;
+            }
+
+            .performance--excursions .performance__heading {
+                margin-top: 11px;
+                font-size: 52px;
+                line-height: 61px;
+            }
+
+            .performance--excursions .performance__note {
+                margin-top: auto;
+                max-width: 410px;
+            }
+}
+
+
+@media (width < 740px) {
+
+    .performance--excursions {
+
+    }
+        .performance--excursions .performance__data {
+            /*display: flex;*/
+            /*flex-direction: column;*/
+            /*padding-right: 0;*/
+        }
+            .performance__prefix {
+                font-size: 16px;
+                line-height: 22px;
+            }
+
+            .performance--excursions .performance__heading {
+                margin-top: 8px;
+                max-width: 230px;
+                font-size: 24px;
+                line-height: 28px;
+            }
+
+            .performance--excursions .performance__note {
+                margin-top: 40px;
+            }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
