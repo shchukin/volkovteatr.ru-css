@@ -64,6 +64,13 @@
                         font-size: 16px;
                         line-height: 22px;
                     }
+                        .intro__genre-hidden-on-smartphone {
+
+                        }
+
+                    .intro__buy-ticket-on-smartphone {
+
+                    }
 
 
 
@@ -136,8 +143,14 @@
                             font-size: 20px;
                             line-height: 27px;
                         }
-}
+                            .intro__genre-hidden-on-smartphone {
 
+                            }
+
+                        .intro__buy-ticket-on-smartphone {
+
+                        }
+}
 
 
 
@@ -156,17 +169,73 @@
             /*margin-left: auto;*/
             /*margin-right: auto;*/
             /*max-width: 1920px;*/
-            /*overflow: hidden; !* обрезаем after *!*/
+            overflow: visible; /* обрезаем after */
         }
             .intro__widget {
 
             }
-
-            .intro__limitation::before {
-                display: none;
-            }
+                .intro__widget .carousel__pagination {
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    bottom: -38px;
+                }
 
             .intro__content {
-                display: none;
+                /*position: absolute;*/
+                /*z-index: 75;*/
+                /*inset: 0 0 6px;*/
+                bottom: 4px;
+                /*pointer-events: none;*/
+                /*display: flex;*/
+                /*flex-direction: column;*/
             }
+                .intro__cut {
+                    /*margin-top: auto;*/
+                    /*pointer-events: auto;*/
+                    /*width: fit-content;*/
+                    margin-left: 0;
+                    overflow: visible; /* на смартфонах ничего не обрезается, угол обычный */
+                }
+                    /* вытаскиваем немного вниз, чтобы повторить скругление из фигмы */
+                    .intro__bar {
+                        margin-bottom: 0;
+                        width: auto;
+                        padding: 16px 40px 19px 300px;
+                        margin-left: -300px;
+                        /*background-color: rgb(48 63 100 / 60%);*/
+                        border-top-right-radius: 100px;  /* на смартфонах ничего не обрезается, угол обычный */
+                        /*backdrop-filter: blur(8px);*/
+                        /*color: #F8F0E5;*/
+                    }
+                        .intro__director {
+                            font-size: 16px;
+                            line-height: 22px;
+                        }
+
+                        .intro__heading {
+                            /*margin-top: 5px;*/
+                            /*margin-bottom: 0;*/
+                            /*font-family: var(--font-heading);*/
+                            /*font-weight: 600;*/
+                            /*font-style: italic;*/
+                            font-size: 24px;
+                            line-height: 29px;
+                            /*text-transform: uppercase;*/
+                        }
+
+                        .intro__summary {
+                            margin-top: 3px;
+                            font-size: 16px;
+                            line-height: 22px;
+                        }
+                            .intro__genre-hidden-on-smartphone {
+                                display: none;
+                            }
+
+                        .intro__buy-ticket-on-smartphone {
+                            display: block;
+                            margin-top: 18px;
+                        }
 }
+
