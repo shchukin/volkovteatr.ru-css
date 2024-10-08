@@ -1,0 +1,85 @@
+.excursions {
+    padding-top: 44px;
+}
+    .excursions__video {
+        margin-top: 60px;
+    }
+
+    .excursions__section {
+        margin-top: 80px;
+        position: relative;
+    }
+
+    .excursions__section:first-child {
+        margin-top: 0;
+    }
+        .excursions__section-heading {
+            margin-top: 0;
+            margin-bottom: 0;
+            color: #E4BB6B;
+        }
+
+        .excursions__section-action {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+
+        .excursions__widget {
+            margin-top: 30px;
+        }
+
+
+
+@media (1850px <= width) {
+
+    .excursions {
+        padding-top: 66px;
+    }
+        .excursions__video {
+            margin-top: 80px;
+        }
+
+        .excursions__section {
+            margin-top: 100px;
+        }
+            .excursions__section-heading {
+
+            }
+
+            .excursions__section-action {
+
+            }
+
+            .excursions__widget {
+                margin-top: 40px;
+            }
+}
+
+
+
+@media (width < 740px) {
+
+    .excursions {
+        padding-top: 60px;
+    }
+        .excursions__video {
+            margin-top: 60px;
+        }
+
+        .excursions__section {
+            margin-top: 60px;
+        }
+            .excursions__section-heading {
+
+            }
+
+            .excursions__section-action {
+                margin-top: -6px;
+            }
+
+            .excursions__widget {
+                margin-top: 28px;
+            }
+}
+

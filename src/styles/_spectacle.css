@@ -1,10 +1,6 @@
 .spectacle {
     padding-top: 44px;
 }
-    .spectacle__summary {
-
-    }
-
     .spectacle__section {
         margin-top: 80px;
         position: relative;
@@ -32,10 +28,6 @@
     .spectacle {
         padding-top: 66px;
     }
-        .spectacle__summary {
-
-        }
-
         .spectacle__section {
             margin-top: 100px;
         }

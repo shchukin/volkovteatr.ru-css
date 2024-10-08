@@ -63,15 +63,71 @@
 
 
 .wysiwyg h2 {
-
+    margin-top: 30px;
+    margin-bottom: 18px;
+    font-family: var(--font-heading);
+    font-weight: 500;
+    font-style: italic;
+    font-size: 22px;
+    line-height: 26px;
+    text-transform: uppercase;
 }
+
+@media (1850px <= width) {
+
+    .wysiwyg h2 {
+        margin-top: 40px;
+        margin-bottom: 24px;
+        font-size: 26px;
+        line-height: 30px;
+    }
+}
+
+@media (width < 740px) {
+
+    .wysiwyg h2 {
+
+    }
+}
+
+
 
 .wysiwyg h3 {
 
 }
 
+@media (1850px <= width) {
+
+    .wysiwyg h3 {
+
+    }
+}
+
+@media (width < 740px) {
+
+    .wysiwyg h3 {
+
+    }
+}
+
+
+
 .wysiwyg h4 {
 
+}
+
+@media (width < 740px) {
+
+    .wysiwyg h4 {
+
+    }
+}
+
+@media (width < 740px) {
+
+    .wysiwyg h4 {
+
+    }
 }
 
 .wysiwyg h2:first-child,
@@ -230,6 +286,21 @@
         }
 }
 
+
+
+
+.wysiwyg ul,
+.wysiwyg ol {
+
+}
+
+@media (width < 740px) {
+
+    .wysiwyg ul,
+    .wysiwyg ol {
+        padding-left: 20px;
+    }
+}
 
 
 
