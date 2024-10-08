@@ -526,7 +526,8 @@
                         background-color: rgb(255 255 255 / 10%);
                     }
 
-                    .carousel--css-skin-feedback .carousel__bullet--current::after {
+                    .carousel--css-skin-feedback .carousel__bullet--current::after,
+                    .carousel--css-skin-feedback .carousel__bullet--current:hover::after {
                         background-color: #E4BB6B;
                     }
 

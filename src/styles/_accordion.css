@@ -281,7 +281,7 @@
                 display: none;
             }
 
-        .accordion__dropdown {
+        .accordion--inverted .accordion__dropdown {
             position: relative;
             margin-top: 0;
             top: -4px;
@@ -325,7 +325,7 @@
                     /*display: none;*/
                 }
 
-            .accordion__dropdown {
+            .accordion--inverted .accordion__dropdown {
                 /*position: relative;*/
                 /*margin-top: 0;*/
                 top: -6px;
@@ -370,7 +370,7 @@
                     /*display: none;*/
                 }
 
-            .accordion__dropdown {
+            .accordion--inverted .accordion__dropdown {
                 /*position: relative;*/
                 /*margin-top: 0;*/
                 top: -2px;

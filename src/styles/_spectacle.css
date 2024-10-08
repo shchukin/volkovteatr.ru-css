@@ -5,17 +5,17 @@
 
     }
 
-    .spectacle__attachment-section {
+    .spectacle__section {
         margin-top: 80px;
         position: relative;
     }
-        .spectacle__attachment-heading {
+        .spectacle__section-heading {
             margin-top: 0;
             margin-bottom: 0;
             color: #E4BB6B;
         }
 
-        .spectacle__additional-action {
+        .spectacle__section-action {
             position: absolute;
             right: 0;
             top: 0;
@@ -36,14 +36,14 @@
 
         }
 
-        .spectacle__attachment-section {
+        .spectacle__section {
             margin-top: 100px;
         }
-            .spectacle__attachment-heading {
+            .spectacle__section-heading {
 
             }
 
-            .spectacle__additional-action {
+            .spectacle__section-action {
 
             }
 
@@ -63,14 +63,14 @@
 
         }
 
-        .spectacle__attachment-section {
+        .spectacle__section {
             margin-top: 60px;
         }
-            .spectacle__attachment-heading {
+            .spectacle__section-heading {
 
             }
 
-            .spectacle__additional-action {
+            .spectacle__section-action {
                 margin-top: -6px;
             }
 
