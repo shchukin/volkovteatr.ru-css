@@ -2,13 +2,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 16px;
+    gap: 12px;
     border: 1px solid #E4BB6B;
-    border-radius: 10px;
-    padding: 22px;
+    border-radius: 7px;
+    padding: 16px;
     font-weight: 600;
-    font-size: 24px;
-    line-height: 32px;
+    font-size: 18px;
+    line-height: 24px;
     color: #E4BB6B;
     text-transform: lowercase;
     text-decoration: none;
@@ -19,7 +19,38 @@
     background-color: rgb(255 255 255 / 10%);
 }
     .join-net__icon {
-        width: 40px;
-        height: 40px;
+        width: 30px;
+        height: 30px;
         fill: currentColor;
     }
+
+
+
+@media (1850px <= width) {
+
+    .join-net {
+        /*display: flex;*/
+        /*align-items: center;*/
+        /*justify-content: center;*/
+        /*gap: 16px;*/
+        /*border: 1px solid #E4BB6B;*/
+        border-radius: 10px;
+        padding: 22px;
+        /*font-weight: 600;*/
+        font-size: 24px;
+        line-height: 32px;
+        /*color: #E4BB6B;*/
+        /*text-transform: lowercase;*/
+        /*text-decoration: none;*/
+        /*transition: background-color var(--transition-hover);*/
+    }
+
+    .join-net:hover {
+        /*background-color: rgb(255 255 255 / 10%);*/
+    }
+        .join-net__icon {
+            width: 40px;
+            height: 40px;
+            /*fill: currentColor;*/
+        }
+}

@@ -7,55 +7,122 @@
     }
 
     .center__gallery {
-        margin-top: 60px;
+        margin-top: 40px;
     }
 
     .center__content {
-        margin-top: 51px;
+        margin-top: 38px;
     }
 
     .center__sub-heading {
-        margin-top: 100px;
+        margin-top: 75px;
         margin-bottom: 0;
         font-family: var(--font-heading);
         font-weight: normal;
         font-style: italic;
-        font-size: 26px;
-        line-height: 30px;
+        font-size: 22px;
+        line-height: 24px;
         color: #E4BB6B;
         text-transform: uppercase;
     }
 
     .center__connect {
-        margin-top: 40px;
+        margin-top: 30px;
         display: grid;
-        grid-template-columns: 422px auto;
-        gap: 24px;
+        grid-template-columns: 308px auto;
+        gap: 18px;
     }
         .center__social {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            gap: 16px;
+            gap: 12px;
         }
 
         .center__email {
-            padding: 46px 40px;
+            padding: 34px 30px;
             display: grid;
-            grid-template-columns: 534px auto;
+            grid-template-columns: 340px auto;
             align-items: center;
-            gap: 133px;
+            gap: 32px;
             background-color: #F8F0E5;
             font-weight: bold;
             color-scheme: light;
             border-radius: 10px;
         }
             .center__email-heading {
-                font-size: 24px;
-                line-height: 29px;
+                font-size: 18px;
+                line-height: 24px;
                 color: #0B1E3A;
             }
 
             .center__form {
                 margin-bottom: -8px; /* из-за области кликабельности чекбокса */
             }
+
+
+
+@media (1850px <= width) {
+
+    .center {
+
+    }
+        .center__heading {
+            /*margin-top: 0;*/
+            /*margin-bottom: 0;*/
+        }
+
+        .center__gallery {
+            margin-top: 60px;
+        }
+
+        .center__content {
+            margin-top: 51px;
+        }
+
+        .center__sub-heading {
+            margin-top: 100px;
+            /*margin-bottom: 0;*/
+            /*font-family: var(--font-heading);*/
+            /*font-weight: normal;*/
+            /*font-style: italic;*/
+            font-size: 26px;
+            line-height: 30px;
+            /*color: #E4BB6B;*/
+            /*text-transform: uppercase;*/
+        }
+
+        .center__connect {
+            margin-top: 40px;
+            /*display: grid;*/
+            grid-template-columns: 422px auto;
+            gap: 24px;
+        }
+            .center__social {
+                /*display: flex;*/
+                /*flex-direction: column;*/
+                /*justify-content: space-between;*/
+                gap: 16px;
+            }
+
+            .center__email {
+                padding: 46px 40px;
+                /*display: grid;*/
+                grid-template-columns: 534px auto;
+                /*align-items: center;*/
+                gap: 133px;
+                /*background-color: #F8F0E5;*/
+                /*font-weight: bold;*/
+                /*color-scheme: light;*/
+                /*border-radius: 10px;*/
+            }
+                .center__email-heading {
+                    font-size: 24px;
+                    line-height: 29px;
+                    /*color: #0B1E3A;*/
+                }
+
+                .center__form {
+                    /*margin-bottom: -8px; !* из-за области кликабельности чекбокса *!*/
+                }
+}
