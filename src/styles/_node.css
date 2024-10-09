@@ -1069,4 +1069,147 @@
         .node__link--tours .node__image {
             background-position: center -1082px;
         }
+
+
+
+
+
+    /* Страница "Визит в театр" */
+
+    .node__body--visit {
+
+    }
+        .node__body--visit .node__image {
+            background-image: url("../images/node-visit/node-visit-smartphone@1x.jpg");
+            background-size: 430px 1579px;
+        }
+
+        @media (min-resolution: 1.5dppx) {
+            .node__body--visit .node__image {
+                background-image: url("../images/node-visit/node-visit-smartphone@2x.jpg");
+            }
+        }
+
+
+    .node__link--excursions {
+        height: 237px;
+        border-radius: 50% 50% var(--node-radius) var(--node-radius) / 160px 160px var(--node-radius) var(--node-radius);
+    }
+        .node__link--excursions .node__label {
+            align-items: center;
+        }
+
+        .node__link--excursions .node__image {
+            background-position: center 0;
+        }
+
+    .node__link--rules {
+        height: 124px;
+    }
+        .node__link--rules .node__label {
+            justify-content: flex-start;
+        }
+
+        .node__link--rules .node__image {
+            background-position: center -249px;
+        }
+
+    .node__link--group {
+        height: 124px;
+    }
+        .node__link--group .node__label {
+            justify-content: flex-start;
+        }
+
+        .node__link--group .node__image {
+            background-position: center -385px;
+        }
+
+    .node__link--plan {
+        height: 124px;
+    }
+        .node__link--plan .node__label {
+            justify-content: flex-start;
+        }
+
+        .node__link--plan .node__image {
+            background-position: center -521px;
+        }
+
+    .node__link--3d-tour {
+        height: 124px;
+    }
+        .node__link--3d-tour .node__label {
+            justify-content: flex-start;
+        }
+
+        .node__link--3d-tour .node__image {
+            background-position: center -657px;
+        }
+
+    .node__link--pushkin-card {
+        height: 124px;
+    }
+        .node__link--pushkin-card .node__label {
+            justify-content: flex-start;
+        }
+
+        .node__link--pushkin-card .node__image {
+            background-position: center -793px;
+        }
+
+    .node__link--svo {
+        height: 124px;
+    }
+        .node__link--svo .node__label {
+            justify-content: flex-start;
+        }
+
+        .node__link--svo .node__image {
+            background-position: center -929px;
+        }
+
+    .node__link--refunds {
+        height: 124px;
+    }
+        .node__link--refunds .node__label {
+            justify-content: flex-start;
+        }
+
+        .node__link--refunds .node__image {
+            background-position: center -1065px;
+        }
+
+    .node__link--souvenir {
+        height: 124px;
+    }
+        .node__link--souvenir .node__label {
+            justify-content: flex-start;
+        }
+
+        .node__link--souvenir .node__image {
+            background-position: center -1201px;
+        }
+
+    .node__link--photo {
+        height: 124px;
+    }
+        .node__link--photo .node__label {
+            justify-content: flex-start;
+        }
+
+        .node__link--photo .node__image {
+            background-position: center -1337px;
+        }
+
+    .node__link--canteen {
+        height: 124px;
+    }
+        .node__link--canteen .node__label {
+            justify-content: flex-start;
+        }
+
+        .node__link--canteen .node__image {
+            background-position: center -1473px;
+        }
 }
