@@ -158,7 +158,7 @@
         clip-path: inset(0 round var(--node-radius) 382px var(--node-radius) var(--node-radius));
     }
         .node__link--documents .node__image {
-            background-position: -808px 0;
+            background-position: -810px 0;
         }
 
 
@@ -581,7 +581,7 @@
             clip-path: inset(0 round var(--node-radius) 571px var(--node-radius) var(--node-radius)); /* Лучше чем border-radius, потому что обрезает область кликабельности */
         }
             .node__link--documents .node__image {
-                background-position: -571px 0;
+                background-position: -1189px 0;
             }
 
 
