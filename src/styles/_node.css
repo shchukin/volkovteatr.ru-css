@@ -944,7 +944,7 @@
                 background-position: center 0;
             }
                 .node__link--first-russian .node__label {
-                    justify-content: center;
+                    align-items: center;
                 }
 
         .node__link--people {
