@@ -370,7 +370,7 @@
         height: 148px;
     }
         .node__link--plan .node__label {
-
+            justify-content: flex-start;
         }
 
         .node__link--plan .node__image {
@@ -398,7 +398,7 @@
         height: 123px;
     }
         .node__link--pushkin-card .node__label {
-
+            justify-content: flex-start;
         }
 
         .node__link--pushkin-card .node__image {
@@ -454,7 +454,7 @@
         height: 207px;
     }
         .node__link--photo .node__label {
-            justify-content: flex-start;
+
         }
 
         .node__link--photo .node__image {
@@ -468,7 +468,7 @@
         height: 123px;
     }
         .node__link--canteen .node__label {
-            justify-content: flex-start;
+
         }
 
         .node__link--canteen .node__image {
