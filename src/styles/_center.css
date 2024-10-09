@@ -48,7 +48,7 @@
             background-color: #F8F0E5;
             font-weight: bold;
             color-scheme: light;
-            border-radius: 10px;
+            border-radius: 7px;
         }
             .center__email-heading {
                 font-size: 18px;
@@ -126,3 +126,74 @@
                     /*margin-bottom: -8px; !* из-за области кликабельности чекбокса *!*/
                 }
 }
+
+
+
+@media (width < 740px) {
+
+    .center {
+
+    }
+        .center__heading {
+            /*margin-top: 0;*/
+            /*margin-bottom: 0;*/
+        }
+
+        .center__gallery {
+            /*margin-top: 40px;*/
+        }
+
+        .center__content {
+            /*margin-top: 38px;*/
+        }
+
+        .center__sub-heading {
+            margin-top: 60px;
+            /*margin-bottom: 0;*/
+            /*font-family: var(--font-heading);*/
+            /*font-weight: normal;*/
+            /*font-style: italic;*/
+            font-size: 22px;
+            line-height: 27px;
+            /*color: #E4BB6B;*/
+            /*text-transform: uppercase;*/
+        }
+
+        .center__connect {
+            margin-top: 24px;
+            display: flex;
+            flex-direction: column;
+            /*grid-template-columns: 308px auto;*/
+            gap: 24px;
+        }
+            .center__social {
+                /*display: flex;*/
+                /*flex-direction: column;*/
+                /*justify-content: space-between;*/
+                gap: 24px;
+            }
+
+            .center__email {
+                order: -1;
+                padding: 24px 16px;
+                display: flex;
+                flex-direction: column;
+                /*grid-template-columns: 340px auto;*/
+                /*align-items: center;*/
+                gap: 10px;
+                /*background-color: #F8F0E5;*/
+                /*font-weight: bold;*/
+                /*color-scheme: light;*/
+                border-radius: 10px;
+            }
+                .center__email-heading {
+                    font-size: 20px;
+                    line-height: 24px;
+                    /*color: #0B1E3A;*/
+                }
+
+                .center__form {
+                    margin-bottom: 0; /* из-за области кликабельности чекбокса */
+                }
+}
+

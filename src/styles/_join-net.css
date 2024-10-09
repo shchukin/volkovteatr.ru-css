@@ -54,3 +54,36 @@
             /*fill: currentColor;*/
         }
 }
+
+
+
+@media (width < 740px) {
+
+    .join-net {
+        /*display: flex;*/
+        /*align-items: center;*/
+        /*justify-content: center;*/
+        gap: 16px;
+        /*border: 1px solid #E4BB6B;*/
+        border-radius: 10px;
+        padding: 19px;
+        /*font-weight: 600;*/
+        /*font-size: 18px;*/
+        /*line-height: 24px;*/
+        /*color: #E4BB6B;*/
+        /*text-transform: lowercase;*/
+        /*text-decoration: none;*/
+        /*transition: background-color var(--transition-hover);*/
+    }
+
+    .join-net:hover {
+        /*background-color: rgb(255 255 255 / 10%);*/
+    }
+        .join-net__icon {
+            width: 32px;
+            height: 32px;
+            /*fill: currentColor;*/
+        }
+}
+
+
