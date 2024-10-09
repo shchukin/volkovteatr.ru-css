@@ -7,9 +7,6 @@
 }
     .jumbotron__limitation {
         position: relative;
-        margin-left: auto;
-        margin-right: auto;
-        max-width: 1920px;
         overflow: hidden; /* обрезаем after */
     }
         .jumbotron__widget {
@@ -117,9 +114,9 @@
     }
         .jumbotron__limitation {
             /*position: relative;*/
-            /*margin-left: auto;*/
-            /*margin-right: auto;*/
-            /*max-width: 1920px;*/
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 2560px;
             /*overflow: hidden; !* обрезаем after *!*/
         }
             .jumbotron__widget {
@@ -127,10 +124,10 @@
             }
 
             .jumbotron__limitation::before {
-                margin-left: -960px;
-                width: 1920px;
+                margin-left: -1280px;
+                width: 2560px;
                 /*background-color: rgba(48 63 100 / 30%);*/
-                clip-path: path("M1920 0H661C1101.72 0 1459 363.695 1459 800H1920V0Z");
+                clip-path: path("M2560 0H981C1421.72 0 1779 363.695 1779 800H2560V0Z");
             }
 
         .jumbotron__content {
