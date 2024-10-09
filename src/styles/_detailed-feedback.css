@@ -1,0 +1,22 @@
+.detailed-feedback {
+    width: 800px;
+    padding: 40px 40px 50px;
+    color-scheme: light;
+}
+
+@media (1850px <= width) {
+
+    .detailed-feedback {
+        width: 1100px;
+        padding: 54px 54px 70px;
+    }
+}
+
+@media (width < 740px) {
+
+    .detailed-feedback {
+        width: 100%;
+        padding: 30px var(--container-padding) 40px;
+        max-width: calc(382px + 2 * var(--container-padding));
+    }
+}
