@@ -534,6 +534,26 @@
 
 
 
+    /* Переключатель на главной */
+
+
+    $('[data-js-schedule-switch]').on('click', function () {
+
+        const $tabs = $(this).parents('.schedule');
+        const index = $(this).index();
+
+        /* tag */
+        $tabs.find('.switch__item--current').removeClass('switch__item--current');
+        $(this).addClass('switch__item--current');
+
+        /* body */
+        $tabs.find('.schedule__tab--current').removeClass('schedule__tab--current');
+        $tabs.find('.schedule__tab:eq('+index+')').addClass('schedule__tab--current');
+
+    });
+
+
+
     /* Clipped */
 
     function resize($clipped) {
