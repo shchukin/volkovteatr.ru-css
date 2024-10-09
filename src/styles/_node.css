@@ -92,6 +92,8 @@
                 color: #303F64;
             }
                 .node__highlight {
+                    font-size: 1.25em;
+                    padding-bottom: 0.15em;
                     font-weight: 600;
                 }
 
@@ -187,6 +189,10 @@
         /* Лучше чем border-radius, потому что обрезает область кликабельности (320px -- это высота левого-верхнего айтема 326px, минус 6px угол снизу): */
         clip-path: inset(0 round var(--node-radius) 320px var(--node-radius) var(--node-radius)); /* Лучше чем border-radius, потому что обрезает область кликабельности */
     }
+        .node__link--275-anniversary .node__label {
+
+        }
+
         .node__link--275-anniversary .node__image {
             background-position: -810px 0;
         }
@@ -197,6 +203,10 @@
         width: 1200px;
         height: 181px;
     }
+        .node__link--volkov-festival .node__label {
+            justify-content: flex-start;
+        }
+
         .node__link--volkov-festival .node__image {
             background-position: 0 -506px;
         }
@@ -207,6 +217,10 @@
         width: 388px;
         height: 224px;
     }
+        .node__link--dmitrievsky-center .node__label {
+
+        }
+
         .node__link--dmitrievsky-center .node__image {
             background-position: -406px -266px;
         }
@@ -217,6 +231,10 @@
         width: 390px;
         height: 148px;
     }
+        .node__link--challenges .node__label {
+            justify-content: flex-start;
+        }
+
         .node__link--challenges .node__image {
             background-position: 0 -342px;
         }
@@ -227,6 +245,10 @@
         width: 388px;
         height: 250px;
     }
+        .node__link--directors-lab .node__label {
+
+        }
+
         .node__link--directors-lab .node__image {
             background-position: -406px 0;
         }
@@ -239,6 +261,10 @@
         /* Лучше чем border-radius, потому что обрезает область кликабельности (320px -- это высота левого-верхнего айтема 326px, минус 6px угол снизу): */
         clip-path: inset(0 round 320px var(--node-radius) var(--node-radius) var(--node-radius)); /* Лучше чем border-radius, потому что обрезает область кликабельности */
     }
+        .node__link--future .node__label {
+
+        }
+
         .node__link--future .node__image {
             background-position: 0 0;
         }
@@ -249,6 +275,10 @@
         width: 592px;
         height: 148px;
     }
+        .node__link--exhibitions .node__label {
+
+        }
+
         .node__link--exhibitions .node__image {
             background-position: 0 -703px;
         }
@@ -259,6 +289,10 @@
         width: 592px;
         height: 148px;
     }
+        .node__link--tours .node__label {
+            justify-content: flex-start;
+        }
+
         .node__link--tours .node__image {
             background-position: -608px -703px;
         }
@@ -542,6 +576,8 @@
 
 
 
+    /* Страница "О театре" */
+
     .node__body--about {
 
     }
@@ -587,4 +623,106 @@
             .node__link--documents .node__image {
                 background-position: center -466px;
             }
+
+
+
+    /* Страница "Проекты и события" */
+
+    .node__body--projects {
+
+    }
+        .node__body--projects .node__image {
+            background-image: url("../images/node-projects/node-projects-smartphone@1x.jpg");
+            background-size: 430px 1212px;
+        }
+
+        @media (min-resolution: 1.5dppx) {
+            .node__body--projects .node__image {
+                background-image: url("../images/node-projects/node-projects-smartphone@2x.jpg");
+            }
+        }
+
+
+    .node__link--275-anniversary {
+        height: 246px;
+        border-radius: 50% 50% var(--node-radius) var(--node-radius) / 160px 160px var(--node-radius) var(--node-radius);
+    }
+        .node__link--275-anniversary .node__label {
+            align-items: center;
+            padding-bottom: 24px;
+        }
+            .node__link--275-anniversary .node__highlight {
+
+            }
+
+        .node__link--275-anniversary .node__image {
+            background-position: center 0;
+        }
+
+    .node__link--volkov-festival {
+        height: 122px;
+    }
+        .node__link--volkov-festival .node__label {
+            max-width: 230px;
+            justify-content: flex-start;
+        }
+
+        .node__link--volkov-festival .node__image {
+            background-position: center -256px;
+        }
+
+    .node__link--dmitrievsky-center {
+        height: 119px;
+    }
+        .node__link--dmitrievsky-center .node__image {
+            background-position: center -388px;
+        }
+
+    .node__link--challenges {
+        height: 113px;
+    }
+        .node__link--challenges .node__label {
+            justify-content: flex-start;
+        }
+
+        .node__link--challenges .node__image {
+            background-position: center -517px;
+        }
+
+    .node__link--directors-lab {
+        height: 168px;
+    }
+        .node__link--directors-lab .node__image {
+            background-position: center -640px;
+        }
+
+    .node__link--future {
+        height: 145px;
+    }
+        .node__link--future .node__label {
+            justify-content: flex-start;
+            max-width: 240px;
+        }
+
+        .node__link--future .node__image {
+            background-position: center -818px;
+        }
+
+    .node__link--exhibitions {
+        height: 99px;
+    }
+        .node__link--exhibitions .node__label {
+            justify-content: flex-start;
+        }
+
+        .node__link--exhibitions .node__image {
+            background-position: center -973px;
+        }
+
+    .node__link--tours {
+        height: 130px;
+    }
+        .node__link--tours .node__image {
+            background-position: center -1082px;
+        }
 }
