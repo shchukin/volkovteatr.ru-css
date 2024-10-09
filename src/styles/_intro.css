@@ -4,7 +4,6 @@
 
 .intro {
     margin-top: calc(-1 * var(--header-height));
-    background-color: #303F64;
 }
     .intro__limitation {
         position: relative;

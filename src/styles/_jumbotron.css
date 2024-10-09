@@ -4,7 +4,6 @@
 
 .jumbotron {
     margin-top: calc(-1 * var(--header-height));
-    background-color: #303F64;
 }
     .jumbotron__limitation {
         position: relative;
