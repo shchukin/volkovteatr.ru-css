@@ -13,6 +13,7 @@
 
     .application__form {
         margin-top: 40px;
+        min-height: 451px;
     }
 
 
@@ -28,6 +29,7 @@
 
         .application__form {
             margin-top: 60px;
+            min-height: 540px;
         }
 }
 
@@ -47,6 +49,7 @@
 
         .application__form {
             margin-top: 32px;
+            min-height: 0;
         }
 }
 
