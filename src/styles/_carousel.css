@@ -543,7 +543,7 @@
                     border-bottom-right-radius: 5px;
                 }
 
-            .carousel__button {
+            .carousel--css-skin-feedback .carousel__button {
                 width: 49px;
                 height: 49px;
                 background-color: transparent;
@@ -557,22 +557,22 @@
                 cursor: pointer;
             }
 
-            .carousel__button:hover {
+            .carousel--css-skin-feedback .carousel__button:hover {
 
             }
 
-            .carousel__button.swiper-button-disabled,
-            .carousel__button.swiper-button-disabled:hover {
+            .carousel--css-skin-feedback .carousel__button.swiper-button-disabled,
+            .carousel--css-skin-feedback .carousel__button.swiper-button-disabled:hover {
                 opacity: 50%;
                 cursor: default;
                 user-select: none;
             }
 
-            .carousel__button--prev {
+            .carousel--css-skin-feedback .carousel__button--prev {
                 background-image: url("../vectors/swiper-slide-mobile-left.svg");
             }
 
-            .carousel__button--next {
+            .carousel--css-skin-feedback .carousel__button--next {
                 background-image: url("../vectors/swiper-slide-mobile-right.svg");
             }
 
