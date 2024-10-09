@@ -12,8 +12,8 @@
         position: relative;
         inset: 0;
         margin: 10px;
-        width: 64px;
-        height: 64px;
+        width: 60px;
+        height: 60px;
         text-indent: 200%;
         white-space: nowrap;
         overflow: hidden !important;
@@ -33,3 +33,16 @@
             background-position: center center;
         }
 
+@media (1850px <= width) {
+
+    .window {
+
+    }
+        .window__close {
+            width: 80px;
+            height: 80px;
+        }
+            .window__close::after {
+                background-size: 28px 28px;
+            }
+}
