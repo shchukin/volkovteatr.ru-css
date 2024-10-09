@@ -299,6 +299,184 @@
 
 
 
+/* Страница "Визит в театр" */
+
+.node__body--visit {
+    width: 1200px;
+    height: 743px;
+}
+    .node__body--visit .node__image {
+        background-image: url("../images/node-visit/node-visit-laptop@1x.jpg");
+        background-size: 1200px 743px;
+    }
+
+    @media (min-resolution: 1.5dppx) {
+        .node__body--visit .node__image {
+            background-image: url("../images/node-visit/node-visit-laptop@2x.jpg");
+        }
+    }
+
+
+    .node__link--excursions {
+        left: 0;
+        top: 0;
+        width: 390px;
+        height: 356px;
+        /* Лучше чем border-radius, потому что обрезает область кликабельности (320px -- это высота правого-верхнего айтема 326px, минус 6px угол снизу): */
+        clip-path: inset(0 round 320px var(--node-radius) var(--node-radius) var(--node-radius)); /* Лучше чем border-radius, потому что обрезает область кликабельности */
+    }
+        .node__link--excursions .node__label {
+
+        }
+
+        .node__link--excursions .node__image {
+            background-position: 0 0;
+        }
+
+    .node__link--rules {
+        left: 406px;
+        top: 0;
+        width: 390px;
+        height: 154px;
+    }
+        .node__link--rules .node__label {
+
+        }
+
+        .node__link--rules .node__image {
+            background-position: -406px 0;
+        }
+
+    .node__link--group {
+        left: 810px;
+        top: 0;
+        width: 390px;
+        height: 326px;
+        /* Лучше чем border-radius, потому что обрезает область кликабельности (320px -- это высота левого-верхнего айтема 326px, минус 6px угол снизу): */
+        clip-path: inset(0 round var(--node-radius) 320px var(--node-radius) var(--node-radius)); /* Лучше чем border-radius, потому что обрезает область кликабельности */
+    }
+        .node__link--group .node__label {
+
+        }
+
+        .node__link--group .node__image {
+            background-position: -810px 0;
+        }
+
+    .node__link--plan {
+        left: 0;
+        top: 372px;
+        width: 390px;
+        height: 148px;
+    }
+        .node__link--plan .node__label {
+
+        }
+
+        .node__link--plan .node__image {
+            background-position: 0 -372px;
+        }
+
+    .node__link--3d-tour {
+        left: 406px;
+        top: 170px;
+        width: 388px;
+        height: 231px;
+    }
+        .node__link--3d-tour .node__label {
+
+        }
+
+        .node__link--3d-tour .node__image {
+            background-position: -406px -170px;
+        }
+
+    .node__link--pushkin-card {
+        left: 810px;
+        top: 342px;
+        width: 390px;
+        height: 123px;
+    }
+        .node__link--pushkin-card .node__label {
+
+        }
+
+        .node__link--pushkin-card .node__image {
+            background-position: -810px -342px;
+        }
+
+    .node__link--svo {
+        left: 406px;
+        top: 417px;
+        width: 388px;
+        height: 156px;
+    }
+        .node__link--svo .node__label {
+            justify-content: flex-start;
+        }
+
+        .node__link--svo .node__image {
+            background-position: -406px -417px;
+        }
+
+    .node__link--refunds {
+        left: 810px;
+        top: 481px;
+        width: 390px;
+        height: 123px;
+    }
+        .node__link--refunds .node__label {
+
+        }
+
+        .node__link--refunds .node__image {
+            background-position: -810px -481px;
+        }
+
+    .node__link--souvenir {
+        left: 406px;
+        top: 589px;
+        width: 388px;
+        height: 154px;
+    }
+        .node__link--souvenir .node__label {
+
+        }
+
+        .node__link--souvenir .node__image {
+            background-position: -406px -589px;
+        }
+
+    .node__link--photo {
+        left: 0;
+        top: 536px;
+        width: 390px;
+        height: 207px;
+    }
+        .node__link--photo .node__label {
+            justify-content: flex-start;
+        }
+
+        .node__link--photo .node__image {
+            background-position: 0 -536px;
+        }
+
+    .node__link--canteen {
+        left: 810px;
+        top: 620px;
+        width: 390px;
+        height: 123px;
+    }
+        .node__link--canteen .node__label {
+            justify-content: flex-start;
+        }
+
+        .node__link--canteen .node__image {
+            background-position: -810px -620px;
+        }
+
+
+
 
 @media (1850px <= width) {
 
