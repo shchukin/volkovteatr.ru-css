@@ -426,7 +426,7 @@
         height: 123px;
     }
         .node__link--refunds .node__label {
-
+            justify-content: flex-start;
         }
 
         .node__link--refunds .node__image {
@@ -688,6 +688,172 @@
     }
         .node__link--tours .node__image {
             background-position: -892px -1022px;
+        }
+
+
+
+    /* Страница "Визит в театр" */
+
+    .node__body--visit {
+        width: 1760px;
+        height: 1099px;
+    }
+        .node__body--visit .node__image {
+            background-image: url("../images/node-visit/node-visit-monitor@1x.jpg");
+            background-size: 1760px 1091px;
+        }
+
+        @media (min-resolution: 1.5dppx) {
+            .node__body--visit .node__image {
+                background-image: url("../images/node-visit/node-visit-monitor@2x.jpg");
+            }
+        }
+
+
+    .node__link--excursions {
+        left: 0;
+        top: 0;
+        width: 571px;
+        height: 516px;
+        /* Лучше чем border-radius, потому что обрезает область кликабельности (478px -- это высота правого-верхнего айтема 486px, минус 8px угол снизу): */
+        clip-path: inset(0 round 478px var(--node-radius) var(--node-radius) var(--node-radius)); /* Лучше чем border-radius, потому что обрезает область кликабельности */
+    }
+        .node__link--excursions .node__label {
+
+        }
+
+        .node__link--excursions .node__image {
+            background-position: 0 0;
+        }
+
+    .node__link--rules {
+        left: 595px;
+        top: 0;
+        width: 570px;
+        height: 258px;
+    }
+        .node__link--rules .node__image {
+            background-position: -406px 0;
+        }
+
+    .node__link--group {
+        left: 1189px;
+        top: 0;
+        width: 571px;
+        height: 486px;
+        /* Лучше чем border-radius, потому что обрезает область кликабельности (478px -- это высота левого-верхнего айтема 486px, минус 6px угол снизу): */
+        clip-path: inset(0 round var(--node-radius) 478px var(--node-radius) var(--node-radius)); /* Лучше чем border-radius, потому что обрезает область кликабельности */
+    }
+        .node__link--group .node__image {
+            background-position: -1189px 0;
+        }
+
+    .node__link--plan {
+        left: 0;
+        top: 540px;
+        width: 571px;
+        height: 212px;
+    }
+        .node__link--plan .node__image {
+            background-position: 0 -540px;
+        }
+
+    .node__link--3d-tour {
+        left: 595px;
+        top: 282px;
+        width: 570px;
+        height: 416px;
+    }
+        .node__link--3d-tour .node__label {
+
+        }
+
+        .node__link--3d-tour .node__image {
+            background-position: -595px -282px;
+        }
+
+    .node__link--pushkin-card {
+        left: 1189px;
+        top: 510px;
+        width: 571px;
+        height: 188px;
+    }
+        .node__link--pushkin-card .node__label {
+
+        }
+
+        .node__link--pushkin-card .node__image {
+            background-position: -1189px -342px;
+        }
+
+    .node__link--svo {
+        left: 595px;
+        top: 722px;
+        width: 570px;
+        height: 192px;
+    }
+        .node__link--svo .node__label {
+            justify-content: flex-start;
+        }
+
+        .node__link--svo .node__image {
+            background-position: -406px -417px;
+        }
+
+    .node__link--refunds {
+        left: 1189px;
+        top: 722px;
+        width: 571px;
+        height: 154px;
+    }
+        .node__link--refunds .node__label {
+            max-width: 420px;
+        }
+
+        .node__link--refunds .node__image {
+            background-position: -1189px -481px;
+        }
+
+    .node__link--souvenir {
+        left: 595px;
+        top: 938px;
+        width: 570px;
+        height: 161px;
+    }
+        .node__link--souvenir .node__label {
+
+        }
+
+        .node__link--souvenir .node__image {
+            background-position: -406px -589px;
+        }
+
+    .node__link--photo {
+        left: 0;
+        top: 776px;
+        width: 571px;
+        height: 323px;
+    }
+        .node__link--photo .node__label {
+            justify-content: flex-start;
+        }
+
+        .node__link--photo .node__image {
+            background-position: 0 -536px;
+        }
+
+    .node__link--canteen {
+        left: 1189px;
+        top: 900px;
+        width: 571px;
+        height: 199px;
+    }
+        .node__link--canteen .node__label {
+            justify-content: flex-start;
+        }
+
+        .node__link--canteen .node__image {
+            background-position: -1189px -620px;
         }
 }
 
