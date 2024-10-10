@@ -484,12 +484,12 @@
 
     }
         .carousel--css-skin-stories .swiper {
-            padding-top: 40px;
-            padding-bottom: 40px;
+            padding-top: 23px;
+            padding-bottom: 23px;
             overflow: visible;
         }
             .carousel--css-skin-stories .swiper-slide {
-                width: 400px;
+                width: 300px;
                 opacity: 40%;
                 transition: opacity var(--transition-hover);
             }
@@ -505,60 +505,56 @@
                     transform: scale(110%);
                 }
 
-    /*.carousel--css-skin-stories .carousel__controls {*/
-    /*    margin: 0;*/
-    /*}*/
-    /*    .carousel--css-skin-stories .carousel__pagination {*/
-    /*        position: absolute;*/
-    /*        z-index: 2; !* выше чем .swiper *!*/
-    /*        bottom: 0;*/
-    /*        left: 0;*/
-    /*        right: 0;*/
-    /*        width: fit-content;*/
-    /*        margin-left: auto;*/
-    /*        margin-right: auto;*/
-    /*        display: flex;*/
-    /*        align-items: center;*/
-    /*        justify-content: center;*/
-    /*        gap: 0;*/
-    /*    }*/
-    /*        .carousel--css-skin-stories .carousel__bullet {*/
-    /*            display: flex;*/
-    /*            align-items: center;*/
-    /*            width: 56px;*/
-    /*            height: 36px;*/
-    /*            padding-left: 8px;*/
-    /*            padding-right: 8px;*/
-    /*            margin: 0 !important; !* конфликт со стилями swiper *!*/
-    /*            background-color: transparent; !* конфликт со стилями swiper *!*/
-    /*            border-radius: 4px;*/
-    /*            opacity: 100%;*/
-    /*            cursor: pointer;*/
-    /*        }*/
-    /*            .carousel--css-skin-stories .carousel__bullet::after {*/
-    /*                content: "";*/
-    /*                display: block;*/
-    /*                width: 100%;*/
-    /*                height: 4px;*/
-    /*                border-radius: 2px;*/
-    /*                background-color: #303F64;*/
-    /*            }*/
-
-    /*            .carousel--css-skin-stories .carousel__bullet--current::after {*/
-    /*                background-color: #E4BB6B;*/
-    /*            }*/
-
-        .carousel--css-skin-stories .carousel__bar {
-            width: 100%; /* на мобилках конфликт с флексом */
-            background-color: #303F64;
+    .carousel--css-skin-stories .carousel__button {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        bottom: 0;
+        width: calc(50% - 165px);
+        border: none;
+        padding: 0;
+        background-color: transparent;
+        cursor: pointer;
+        text-indent: 200%;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+        .carousel--css-skin-stories .carousel__button::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            margin-top: -30px;
+            width: 60px;
+            height: 60px;
+            background-size: 44px 44px;
+            background-repeat: no-repeat;
+            background-position: center center;
+            border-radius: 50%;
+            transition: background-color var(--transition-hover);
         }
-            .carousel--css-skin-stories .carousel__progress {
-                width: 1px;
-                height: 6px;
-                background-color: #E4BB6B;
-                border-top-right-radius: 5px;
-                border-bottom-right-radius: 5px;
+
+        .carousel--css-skin-stories .carousel__button:hover::after {
+            background-color: #E4BB6B;
+        }
+
+        .carousel--css-skin-stories .carousel__button--prev {
+            left: 0;
+        }
+
+        .carousel--css-skin-stories .carousel__button--next {
+            right: 0;
+        }
+            .carousel--css-skin-stories .carousel__button--prev::after {
+                left: 10%;
+                background-image: url("../vectors/stories-prev.svg");
             }
+
+            .carousel--css-skin-stories .carousel__button--next::after {
+                right: 10%;
+                background-image: url("../vectors/stories-next.svg");
+            }
+
+
 
 @media (1850px <= width) {
 

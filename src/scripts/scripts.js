@@ -201,6 +201,11 @@
                 //     }
                 // },
 
+                navigation: {
+                    prevEl: $carousel.querySelector('.carousel__button--prev'),
+                    nextEl: $carousel.querySelector('.carousel__button--next'),
+                },
+
                 pagination: {
                     el: $carousel.querySelector('.carousel__pagination'),
                     type: "bullets",
