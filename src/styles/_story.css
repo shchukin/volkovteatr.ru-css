@@ -1,0 +1,51 @@
+.story {
+    position: relative;
+}
+    .story__preview {
+        position: relative;
+    }
+        .story__image {
+            vertical-align: top;
+            width: 100%;
+            height: auto;
+        }
+
+        .story__preview::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-image: linear-gradient(
+                rgb(48 63 100 / 100%),
+                rgb(48 63 100 / 0) 18%,
+                rgb(48 63 100 / 0) 70%,
+                rgb(48 63 100 / 100%)
+            );
+        }
+
+    .story__body {
+        position: absolute;
+        inset: 24px 16px;
+    }
+        .story__head {
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+        }
+
+        .story__title {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            font-family: var(--font-heading);
+            font-weight: 500;
+            font-style: italic;
+            font-size: 26px;
+            line-height: 30px;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }

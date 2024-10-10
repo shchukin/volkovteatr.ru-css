@@ -175,6 +175,50 @@
                 },
             });
         });
+
+
+
+        /* Swiper для Stories */
+
+        // const progressCircle = document.querySelector(".carousel__progress");
+
+        document.querySelectorAll('.carousel--js-init-stories').forEach(($carousel) => {
+
+            new Swiper($carousel.querySelector('.swiper'), {
+                slidesPerView: 5,
+                slidesPerGroup: 1,
+                spaceBetween: responsiveSpacing,
+
+                centeredSlides: true, // Центрирование нужно, чтобы активным подсвечивался центральный айтем
+                loop: true, // а чтобы слева, до первого айтема не было дыры приходится зацикливаться
+
+                autoplay: {
+                    delay: 10000,
+                    disableOnInteraction: true
+                },
+
+                //
+                // on: {
+                //     autoplayTimeLeft(s, time, progress) {
+                //         progressCircle.style.setProperty("width", (1 - progress) * 100 + '%');
+                //     }
+                // },
+
+                pagination: {
+                    el: $carousel.querySelector('.carousel__pagination'),
+                    type: "bullets",
+                    bulletClass: 'carousel__bullet',
+                    bulletActiveClass: 'carousel__bullet--current',
+                    clickable: true
+                },
+
+                breakpoints: {
+                    740: {
+                        pagination: false
+                    },
+                },
+            });
+        });
     }
 
 
