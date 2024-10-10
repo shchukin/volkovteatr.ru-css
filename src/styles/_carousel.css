@@ -505,6 +505,19 @@
                     transform: scale(110%);
                 }
 
+
+    .carousel--css-skin-stories .carousel__bar {
+        width: 100%; /* на мобилках конфликт с флексом */
+        background-color: #303F64;
+    }
+        .carousel--css-skin-stories .carousel__progress {
+            width: 1px;
+            height: 6px;
+            background-color: #E4BB6B;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+
     .carousel--css-skin-stories .carousel__button {
         position: absolute;
         z-index: 10;

@@ -141,9 +141,9 @@
 
         /* Swiper для Intro */
 
-        const progressCircle = document.querySelector(".carousel__progress");
-
         document.querySelectorAll('.carousel--js-init-intro').forEach(($carousel) => {
+
+            const progressCircle = $carousel.querySelector(".carousel__progress");
 
             new Swiper($carousel.querySelector('.swiper'), {
                 slidesPerView: 1,
@@ -180,9 +180,9 @@
 
         /* Swiper для Stories */
 
-        // const progressCircle = document.querySelector(".carousel__progress");
-
         document.querySelectorAll('.carousel--js-init-stories').forEach(($carousel) => {
+
+            const progressCircle = $carousel.querySelector(".carousel__progress");
 
             new Swiper($carousel.querySelector('.swiper'), {
                 slidesPerView: 1,
@@ -194,12 +194,12 @@
                     disableOnInteraction: true
                 },
 
-                //
-                // on: {
-                //     autoplayTimeLeft(s, time, progress) {
-                //         progressCircle.style.setProperty("width", (1 - progress) * 100 + '%');
-                //     }
-                // },
+
+                on: {
+                    autoplayTimeLeft(s, time, progress) {
+                        progressCircle.style.setProperty("width", (1 - progress) * 100 + '%');
+                    }
+                },
 
                 navigation: {
                     prevEl: $carousel.querySelector('.carousel__button--prev'),
