@@ -664,9 +664,6 @@
 }
 
 
-
-
-
 @media (width < 740px) {
 
     .carousel--css-skin-stories {
@@ -682,9 +679,6 @@
         .carousel--css-skin-stories .carousel__bar {
 
         }
-            .carousel--css-skin-stories .carousel__progress {
-                height: 4px;
-            }
 }
 
 

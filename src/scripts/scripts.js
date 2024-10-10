@@ -188,11 +188,12 @@
                 slidesPerView: 1,
                 slidesPerGroup: 1,
                 spaceBetween: responsiveSpacing,
+                centeredSlides: true, // Центрирование нужно, чтобы активным подсвечивался центральный айтем
+                loop: true, // а чтобы слева, до первого айтема не было дыры приходится зацикливаться
 
                 autoplay: {
                     delay: 5000
                 },
-
 
                 on: {
                     autoplayTimeLeft(s, time, progress) {
@@ -209,18 +210,13 @@
 
                 pagination: {
                     el: $carousel.querySelector('.carousel__pagination'),
-                    type: "bullets",
-                    bulletClass: 'carousel__bullet',
-                    bulletActiveClass: 'carousel__bullet--current',
-                    clickable: true
+                    type: "fraction",
                 },
 
                 breakpoints: {
                     740: {
                         slidesPerView: 'auto',
                         slidesPerGroup: 1,
-                        centeredSlides: true, // Центрирование нужно, чтобы активным подсвечивался центральный айтем
-                        loop: true, // а чтобы слева, до первого айтема не было дыры приходится зацикливаться
                         speed: 800,
                         spaceBetween: 30,
                         pagination: false,
