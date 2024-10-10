@@ -19,6 +19,7 @@
     --error: #FF0033;
     --page-top-padding: 24px;
     --header-height: 113px;
+    --footer-margin: 140px;
     --blue-hover: #223046;
     --slider-rounding: 32px;
 }
@@ -27,6 +28,7 @@
 
     :root {
         --header-height: 156px;
+        --footer-margin: 200px;
         --page-top-padding: 34px;
         --body-font-size: 20px;
         --body-line-height: 27px;
@@ -37,7 +39,8 @@
 @media (width < 740px) {
 
     :root {
-        --header-height: 90px;
+        --header-height: 80px;
+        --footer-margin: 200px;
         --page-top-padding: 20px;
         --body-font-size: 16px;
         --body-line-height: 24px;
