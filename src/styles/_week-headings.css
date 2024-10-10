@@ -1,0 +1,104 @@
+.week-headings {
+    position: sticky;
+    z-index: 200;
+    top: var(--header-height);
+    background-color: rgb(11 30 58 / 70%);
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+    .week-headings__inner {
+        padding-top: 14px;
+        padding-bottom: 16px;
+        border: 1px solid #F8F0E5;
+        border-radius: 8px;
+        display: grid;
+        grid-template-columns: repeat(7, 155px);
+        gap: 19px;
+    }
+        .week-headings__item {
+            font-size: 16px;
+            line-height: 24px;
+            color: #F8F0E5;
+            text-align: center;
+            text-transform: lowercase;
+        }
+
+        .week-headings__item--weekend {
+            color: #E4BB6B;
+        }
+
+        .week-headings__item:first-child {
+
+        }
+
+        .week-headings__item:last-child {
+
+        }
+
+
+@media (1850px <= width) {
+
+    .week-headings {
+        border-bottom-left-radius: 12px;
+        border-bottom-right-radius: 12px;
+    }
+        .week-headings__inner {
+            grid-template-columns: repeat(7, 227px);
+            gap: 28px;
+            padding-top: 17px;
+            padding-bottom: 20px;
+            /*border: 1px solid #F8F0E5;*/
+            border-radius: 12px;
+            /*display: grid;*/
+            /*grid-template-columns: repeat(7, 155px);*/
+            /*gap: 19px;*/
+        }
+            .week-headings__item {
+                font-size: 22px;
+                line-height: 30px;
+                /*color: #F8F0E5;*/
+                /*text-align: center;*/
+                /*text-transform: lowercase;*/
+            }
+
+            .week-headings__item--weekend {
+                /*color: #E4BB6B;*/
+            }
+
+            .week-headings__item:first-child {
+
+            }
+
+            .week-headings__item:last-child {
+
+            }
+}
+
+
+
+@media (width < 740px) {
+
+    .week-headings {
+
+    }
+        .week-headings__item {
+            /*font-size: 16px;*/
+            /*line-height: 24px;*/
+            /*color: #F8F0E5;*/
+            /*text-align: center;*/
+            /*text-transform: lowercase;*/
+        }
+
+        .week-headings__item--weekend {
+            /*color: #E4BB6B;*/
+        }
+
+        .week-headings__item:first-child {
+
+        }
+
+        .week-headings__item:last-child {
+
+        }
+}
+
