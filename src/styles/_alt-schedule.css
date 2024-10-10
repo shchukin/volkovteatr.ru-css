@@ -1,7 +1,7 @@
-.future {
+.alt-schedule {
     padding-top: 40px;
 }
-    .future__heading {
+    .alt-schedule__heading {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -18,33 +18,33 @@
         gap: 24px;
     }
 
-    .future__table-headings {
+    .alt-schedule__table-headings {
         margin-top: 38px;
     }
 
-    .future__filter {
+    .alt-schedule__filter {
         display: none;
     }
 
-    .future__body {
+    .alt-schedule__body {
         margin-top: 45px;
     }
-        .future__item {
+        .alt-schedule__item {
             margin-top: 45px;
         }
 
-        .future__item:first-child {
+        .alt-schedule__item:first-child {
             margin-top: 0;
         }
-            .future__location {
+            .alt-schedule__location {
 
             }
 
-            .future__data {
+            .alt-schedule__data {
                 margin-top: 30px;
             }
 
-    .future__download {
+    .alt-schedule__download {
         margin-top: 45px;
         margin-left: auto;
         margin-right: auto;
@@ -56,10 +56,10 @@
 
 @media (1850px <= width) {
 
-    .future {
+    .alt-schedule {
         padding-top: 60px;
     }
-        .future__heading {
+        .alt-schedule__heading {
             /*display: flex;*/
             /*align-items: center;*/
             /*justify-content: center;*/
@@ -71,29 +71,29 @@
             line-height: 94px;
         }
 
-        .future__table-headings {
+        .alt-schedule__table-headings {
             margin-top: 57px;
         }
 
-        .future__body {
+        .alt-schedule__body {
             margin-top: 60px;
         }
-            .future__item {
+            .alt-schedule__item {
                 margin-top: 60px;
             }
 
-            .future__item:first-child {
+            .alt-schedule__item:first-child {
                 /*margin-top: 0;*/
             }
-                .future__location {
+                .alt-schedule__location {
 
                 }
 
-                .future__data {
+                .alt-schedule__data {
                     margin-top: 40px;
                 }
 
-        .future__download {
+        .alt-schedule__download {
             margin-top: 60px;
         }
 }
@@ -102,10 +102,10 @@
 
 @media (width < 740px) {
 
-    .future {
+    .alt-schedule {
         padding-top: 40px;
     }
-        .future__heading {
+        .alt-schedule__heading {
             /*display: flex;*/
             /*align-items: center;*/
             /*justify-content: center;*/
@@ -127,34 +127,34 @@
             gap: 16px;
         }
 
-        .future__table-headings {
+        .alt-schedule__table-headings {
             display: none;
         }
 
-        .future__filter {
+        .alt-schedule__filter {
             display: block;
             margin-top: 24px;
         }
 
-        .future__body {
+        .alt-schedule__body {
             margin-top: 40px;
         }
-            .future__item {
+            .alt-schedule__item {
                 margin-top: 40px;
             }
 
-            .future__item:first-child {
+            .alt-schedule__item:first-child {
                 margin-top: 0;
             }
-                .future__location {
+                .alt-schedule__location {
 
                 }
 
-                .future__data {
+                .alt-schedule__data {
                     margin-top: 24px;
                 }
 
-        .future__download {
+        .alt-schedule__download {
             margin-top: 24px;
         }
 }
