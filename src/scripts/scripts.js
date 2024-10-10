@@ -190,7 +190,7 @@
                 spaceBetween: responsiveSpacing,
 
                 autoplay: {
-                    delay: 10000,
+                    delay: 2000,
                     disableOnInteraction: true
                 },
 
@@ -211,11 +211,15 @@
 
                 breakpoints: {
                     740: {
-                        slidesPerView: 5,
+                        slidesPerView: 'auto',
                         slidesPerGroup: 1,
                         centeredSlides: true, // Центрирование нужно, чтобы активным подсвечивался центральный айтем
                         loop: true, // а чтобы слева, до первого айтема не было дыры приходится зацикливаться
-                        pagination: false
+                        speed: 800,
+                        spaceBetween: 40,
+                        pagination: false,
+                        simulateTouch: false,  // Prevent touch gestures from initiating slide changes
+                        allowTouchMove: false, // Disable all touch and mouse drag interactions
                     },
                 },
             });

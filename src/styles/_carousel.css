@@ -483,14 +483,26 @@
     .carousel--css-skin-stories .carousel__widget {
 
     }
-        .carousel--css-skin-stories .swiper-slide {
-            opacity: 40%;
-            transition: opacity var(--transition-hover);
+        .carousel--css-skin-stories .swiper {
+            padding-top: 40px;
+            padding-bottom: 40px;
         }
+            .carousel--css-skin-stories .swiper-slide {
+                width: 400px;
+                opacity: 40%;
+                transition: opacity var(--transition-hover);
+            }
 
-        .carousel--css-skin-stories .swiper-slide-active {
-            opacity: 100%;
-        }
+            .carousel--css-skin-stories .swiper-slide-active {
+                opacity: 100%;
+            }
+                .carousel--css-skin-stories .story__scale {
+                    transition: transform 1200ms var(--ease-out-quint);
+                }
+
+                .carousel--css-skin-stories .swiper-slide-active .story__scale {
+                    transform: scale(110%);
+                }
 
     /*.carousel--css-skin-stories .carousel__controls {*/
     /*    margin: 0;*/

@@ -1,5 +1,8 @@
 .story {
     position: relative;
+    display: block;
+    text-decoration: none;
+    color: inherit;
 }
     .story__preview {
         position: relative;
