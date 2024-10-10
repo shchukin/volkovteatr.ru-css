@@ -1,5 +1,5 @@
 .footer {
-    margin-top: 153px;
+    margin-top: var(--footer-margin);
     background-color: #EBD7B2;
     color: #303F64;
     color-scheme: light;
@@ -41,7 +41,6 @@
 @media (1850px <= width) {
 
     .footer {
-        margin-top: 236px;
         /*background-color: #EBD7B2;*/
         /*color: #303F64;*/
         /*color-scheme: light;*/
@@ -88,7 +87,6 @@
 @media (width < 740px) {
 
     .footer {
-        margin-top: 80px;
         /*background-color: #EBD7B2;*/
         /*color: #303F64;*/
         /*color-scheme: light;*/
