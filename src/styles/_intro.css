@@ -65,8 +65,17 @@
                         }
 
                     .intro__buy-ticket-on-smartphone {
-
+                        display: none;
                     }
+
+
+        .intro__content--future {
+
+        }
+            .intro__content--future .intro__bar {
+                width: 1140px;
+                padding: 24px 60px 38px 400px;
+            }
 
 
 
@@ -146,6 +155,15 @@
                         .intro__buy-ticket-on-smartphone {
 
                         }
+
+
+    .intro__content--future {
+
+    }
+        .intro__content--future .intro__bar {
+            width: 1370px;
+            padding: 36px 80px 44px 400px;
+        }
 }
 
 
@@ -233,5 +251,14 @@
                             display: block;
                             margin-top: 18px;
                         }
+
+    .intro__content--future {
+
+    }
+        .intro__content--future .intro__bar {
+            width: auto;
+            padding: 21px 40px 19px 300px;
+            margin-left: -300px;
+        }
 }
 

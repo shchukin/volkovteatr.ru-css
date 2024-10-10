@@ -1,0 +1,47 @@
+.btr-archive {
+    padding-top: 54px;
+    padding-bottom: 30px;
+}
+    .btr-archive__content {
+
+    }
+
+    .btr-archive__action {
+        margin-top: 30px;
+    }
+
+
+
+@media (1850px <= width) {
+
+    .btr-archive {
+        padding-top: 72px;
+        padding-bottom: 40px;
+    }
+        .btr-archive__content {
+
+        }
+
+        .btr-archive__action {
+            margin-top: 40px;
+        }
+}
+
+
+
+@media (width < 740px) {
+
+    .btr-archive {
+        padding-top: 40px;
+        padding-bottom: 20px;
+    }
+        .btr-archive__content {
+
+        }
+
+        .btr-archive__action {
+            margin-top: 24px;
+        }
+}
+
+
