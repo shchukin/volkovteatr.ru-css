@@ -185,12 +185,9 @@
         document.querySelectorAll('.carousel--js-init-stories').forEach(($carousel) => {
 
             new Swiper($carousel.querySelector('.swiper'), {
-                slidesPerView: 5,
+                slidesPerView: 1,
                 slidesPerGroup: 1,
                 spaceBetween: responsiveSpacing,
-
-                centeredSlides: true, // Центрирование нужно, чтобы активным подсвечивался центральный айтем
-                loop: true, // а чтобы слева, до первого айтема не было дыры приходится зацикливаться
 
                 autoplay: {
                     delay: 10000,
@@ -214,6 +211,10 @@
 
                 breakpoints: {
                     740: {
+                        slidesPerView: 5,
+                        slidesPerGroup: 1,
+                        centeredSlides: true, // Центрирование нужно, чтобы активным подсвечивался центральный айтем
+                        loop: true, // а чтобы слева, до первого айтема не было дыры приходится зацикливаться
                         pagination: false
                     },
                 },

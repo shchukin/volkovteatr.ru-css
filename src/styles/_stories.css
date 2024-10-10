@@ -1,14 +1,17 @@
-.stories {
+@media (740px <= width) {
 
-}
-    .stories__heading {
+    .stories {
 
     }
+        .stories__heading {
 
-    .stories__cut {
-        overflow: hidden;
-    }
-        .stories__stretch {
-            margin-left: -180px;
-            margin-right: -180px;
         }
+
+        .stories__cut {
+            overflow: hidden;
+        }
+            .stories__stretch {
+                margin-left: -180px;
+                margin-right: -180px;
+            }
+}
