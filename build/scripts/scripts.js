@@ -141,9 +141,9 @@
 
         /* Swiper для Intro */
 
-        const progressCircle = document.querySelector(".carousel__progress");
-
         document.querySelectorAll('.carousel--js-init-intro').forEach(($carousel) => {
+
+            const progressCircle = $carousel.querySelector(".carousel__progress");
 
             new Swiper($carousel.querySelector('.swiper'), {
                 slidesPerView: 1,
@@ -172,6 +172,66 @@
                     740: {
                         pagination: false
                     },
+                },
+            });
+        });
+
+
+
+        /* Swiper для Stories */
+
+        document.querySelectorAll('.carousel--js-init-stories').forEach(($carousel) => {
+
+            const progressCircle = $carousel.querySelectorAll(".story__progress");
+
+            new Swiper($carousel.querySelector('.swiper'), {
+                slidesPerView: 1,
+                slidesPerGroup: 1,
+                spaceBetween: responsiveSpacing,
+                centeredSlides: true, // Центрирование нужно, чтобы активным подсвечивался центральный айтем
+                loop: true, // а чтобы слева, до первого айтема не было дыры приходится зацикливаться
+
+                autoplay: {
+                    delay: 5000
+                },
+
+                on: {
+                    autoplayTimeLeft(s, time, progress) {
+                        progressCircle.forEach(circle => {
+                            circle.style.setProperty("width", (1 - progress) * 100 + '%');
+                        });
+                    }
+                },
+
+                navigation: {
+                    prevEl: $carousel.querySelector('.carousel__button--prev'),
+                    nextEl: $carousel.querySelector('.carousel__button--next'),
+                },
+
+                pagination: {
+                    el: $carousel.querySelector('.carousel__pagination'),
+                    type: "fraction",
+                },
+
+                breakpoints: {
+                    740: {
+                        slidesPerView: 'auto',
+                        slidesPerGroup: 1,
+                        speed: 800,
+                        spaceBetween: 30,
+                        pagination: false,
+                        simulateTouch: false,  // Prevent touch gestures from initiating slide changes
+                        allowTouchMove: false, // Disable all touch and mouse drag interactions
+                    },
+                    740: {
+                        slidesPerView: 'auto',
+                        slidesPerGroup: 1,
+                        speed: 800,
+                        spaceBetween: 40,
+                        pagination: false,
+                        simulateTouch: false,  // Prevent touch gestures from initiating slide changes
+                        allowTouchMove: false, // Disable all touch and mouse drag interactions
+                    }
                 },
             });
         });
