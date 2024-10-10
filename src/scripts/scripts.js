@@ -190,8 +190,7 @@
                 spaceBetween: responsiveSpacing,
 
                 autoplay: {
-                    delay: 2000,
-                    disableOnInteraction: true
+                    delay: 5000
                 },
 
 
@@ -223,10 +222,13 @@
                         centeredSlides: true, // Центрирование нужно, чтобы активным подсвечивался центральный айтем
                         loop: true, // а чтобы слева, до первого айтема не было дыры приходится зацикливаться
                         speed: 800,
-                        spaceBetween: 40,
+                        spaceBetween: 30,
                         pagination: false,
                         simulateTouch: false,  // Prevent touch gestures from initiating slide changes
                         allowTouchMove: false, // Disable all touch and mouse drag interactions
+                    },
+                    1850: {
+                        spaceBetween: 40,
                     },
                 },
             });

@@ -11,23 +11,35 @@
             vertical-align: top;
             width: 100%;
             height: auto;
-            border-radius: 20px;
+            border-radius: 15px;
         }
 
-        .story__preview::after {
+        /* Синий -- дефолт */
+        .story__preview::before {
             content: "";
             position: absolute;
+            z-index: 10;
             inset: 0;
+            border-radius: 14px;
+            transition: opacity 500ms ease;
+
             background-image: linear-gradient(
                 rgb(48 63 100 / 100%),
                 rgb(48 63 100 / 0) 18%,
                 rgb(48 63 100 / 0) 70%,
                 rgb(48 63 100 / 100%)
             );
-            border-radius: 19px;
         }
 
-        .swiper-slide-active .story__preview::after {
+        /* Чёрный -- активный сториз */
+        .story__preview::after {
+            content: "";
+            position: absolute;
+            z-index: 10;
+            inset: 0;
+            border-radius: 14px;
+            transition: opacity 500ms ease;
+            opacity: 0;
             background-image: linear-gradient(
                     rgb(0 0 0 / 100%),
                     rgb(0 0 0 / 0) 18%,
@@ -36,9 +48,18 @@
             );
         }
 
+        .swiper-slide-active .story__preview::before {
+            /*opacity: 0;*/
+        }
+
+        .swiper-slide-active .story__preview::after {
+            opacity: 100%;
+        }
+
     .story__body {
         position: absolute;
-        inset: 24px 16px;
+        z-index: 20;
+        inset: 18px 12px;
     }
         .story__head {
             position: absolute;
@@ -56,8 +77,8 @@
             font-family: var(--font-heading);
             font-weight: 500;
             font-style: italic;
-            font-size: 26px;
-            line-height: 30px;
+            font-size: 18px;
+            line-height: 22px;
             text-transform: uppercase;
             display: -webkit-box;
             -webkit-line-clamp: 3;
@@ -68,13 +89,15 @@
 
     .story__bar {
         position: absolute;
-        left: 16px;
-        bottom: 16px;
-        right: 16px;
+        z-index: 30;
+        left: 12px;
+        bottom: 12px;
+        right: 12px;
         height: 4px;
         background-color: #303F64;
         border-radius: 2px;
         display: none;
+        animation: var(--fade-in);
     }
 
         .swiper-slide-active .story__bar {
@@ -87,3 +110,121 @@
             border-radius: 2px;
             width: 0;
         }
+
+
+@media (1850px <= width) {
+
+    .story {
+        /*position: relative;*/
+        /*display: block;*/
+        /*text-decoration: none;*/
+        /*color: inherit;*/
+    }
+        .story__preview {
+            /*position: relative;*/
+        }
+            .story__image {
+                /*vertical-align: top;*/
+                /*width: 100%;*/
+                /*height: auto;*/
+                /*border-radius: 20px;*/
+            }
+
+            /* Синий -- дефолт */
+            .story__preview::before {
+                /*content: "";*/
+                /*position: absolute;*/
+                /*z-index: 10;*/
+                /*inset: 0;*/
+                border-radius: 19px;
+                /*transition: opacity 500ms ease;*/
+                /**/
+                /*background-image: linear-gradient(*/
+                /*    rgb(48 63 100 / 100%),*/
+                /*    rgb(48 63 100 / 0) 18%,*/
+                /*    rgb(48 63 100 / 0) 70%,*/
+                /*    rgb(48 63 100 / 100%)*/
+                /*);*/
+            }
+
+            /* Чёрный -- активный сториз */
+            .story__preview::after {
+                /*content: "";*/
+                /*position: absolute;*/
+                /*z-index: 10;*/
+                /*inset: 0;*/
+                border-radius: 19px;
+                /*transition: opacity 500ms ease;*/
+                /**/
+                /*opacity: 0;*/
+                /**/
+                /**/
+                /*background-image: linear-gradient(*/
+                /*        rgb(0 0 0 / 100%),*/
+                /*        rgb(0 0 0 / 0) 18%,*/
+                /*        rgb(0 0 0 / 0) 70%,*/
+                /*        rgb(0 0 0 / 100%)*/
+                /*);*/
+            }
+
+            .swiper-slide-active .story__preview::before {
+                /*opacity: 0;*/
+            }
+
+            .swiper-slide-active .story__preview::after {
+                /*opacity: 100%;*/
+            }
+
+        .story__body {
+            /*position: absolute;*/
+            /*z-index: 20;*/
+            inset: 24px 16px;
+        }
+            .story__head {
+                /*position: absolute;*/
+                /*left: 0;*/
+                /*top: 0;*/
+                /*right: 0;*/
+            }
+
+            .story__title {
+                /*position: absolute;*/
+                /*z-index: 10;*/
+                /*left: 0;*/
+                bottom: 10px;
+                /*right: 0;*/
+                /*font-family: var(--font-heading);*/
+                /*font-weight: 500;*/
+                /*font-style: italic;*/
+                font-size: 26px;
+                line-height: 30px;
+                /*text-transform: uppercase;*/
+                /*display: -webkit-box;*/
+                /*-webkit-line-clamp: 3;*/
+                /*-webkit-box-orient: vertical;*/
+                /*overflow: hidden;*/
+                /*text-overflow: ellipsis;*/
+            }
+
+        .story__bar {
+            /*position: absolute;*/
+            left: 16px;
+            bottom: 16px;
+            right: 16px;
+            /*height: 4px;*/
+            /*background-color: #303F64;*/
+            /*border-radius: 2px;*/
+            /*display: none;*/
+        }
+
+            .swiper-slide-active .story__bar {
+                /*display: block;*/
+            }
+
+            .story__progress {
+                /*height: 100%;*/
+                /*background-color: #FFFFFF;*/
+                /*border-radius: 2px;*/
+                /*width: 0;*/
+            }
+}

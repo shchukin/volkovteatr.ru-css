@@ -477,187 +477,190 @@
 
 /* Skin Stories */
 
-.carousel--css-skin-stories {
-    position: relative;
-}
-    .carousel--css-skin-stories .carousel__widget {
-
-    }
-        .carousel--css-skin-stories .swiper {
-            padding-top: 23px;
-            padding-bottom: 23px;
-            overflow: visible;
-        }
-            .carousel--css-skin-stories .swiper-slide {
-                width: 300px;
-                opacity: 40%;
-                transition: opacity var(--transition-hover);
-            }
-
-            .carousel--css-skin-stories .swiper-slide-active {
-                opacity: 100%;
-            }
-                .carousel--css-skin-stories .story__scale {
-                    transition: transform 1200ms var(--ease-out-quint);
-                }
-
-                .carousel--css-skin-stories .swiper-slide-active .story__scale {
-                    transform: scale(110%);
-                }
-
-
-    .carousel--css-skin-stories .carousel__bar {
-        width: 100%; /* на мобилках конфликт с флексом */
-        background-color: #303F64;
-    }
-        .carousel--css-skin-stories .carousel__progress {
-            width: 1px;
-            height: 6px;
-            background-color: #E4BB6B;
-            border-top-right-radius: 5px;
-            border-bottom-right-radius: 5px;
-        }
-
-    .carousel--css-skin-stories .carousel__button {
-        position: absolute;
-        z-index: 10;
-        top: 0;
-        bottom: 0;
-        width: calc(50% - 165px);
-        border: none;
-        padding: 0;
-        background-color: transparent;
-        cursor: pointer;
-        text-indent: 200%;
-        white-space: nowrap;
-        overflow: hidden;
-    }
-        .carousel--css-skin-stories .carousel__button::after {
-            content: "";
-            position: absolute;
-            top: 50%;
-            margin-top: -30px;
-            width: 60px;
-            height: 60px;
-            background-size: 44px 44px;
-            background-repeat: no-repeat;
-            background-position: center center;
-            border-radius: 50%;
-            transition: background-color var(--transition-hover);
-        }
-
-        .carousel--css-skin-stories .carousel__button:hover::after {
-            background-color: #E4BB6B;
-        }
-
-        .carousel--css-skin-stories .carousel__button--prev {
-            left: 0;
-        }
-
-        .carousel--css-skin-stories .carousel__button--next {
-            right: 0;
-        }
-            .carousel--css-skin-stories .carousel__button--prev::after {
-                left: 10%;
-                background-image: url("../vectors/stories-prev.svg");
-            }
-
-            .carousel--css-skin-stories .carousel__button--next::after {
-                right: 10%;
-                background-image: url("../vectors/stories-next.svg");
-            }
-
-
-@media (1850px <= width) {
+@media (740px <= width) {
 
     .carousel--css-skin-stories {
-        /*position: relative;*/
+        position: relative;
     }
         .carousel--css-skin-stories .carousel__widget {
 
         }
             .carousel--css-skin-stories .swiper {
-                padding-top: 30px;
-                padding-bottom: 30px;
-                /*overflow: visible;*/
+                padding-top: 23px;
+                padding-bottom: 23px;
+                overflow: visible;
             }
                 .carousel--css-skin-stories .swiper-slide {
-                    width: 400px;
-                    /*opacity: 40%;*/
-                    /*transition: opacity var(--transition-hover);*/
+                    width: 300px;
+                    opacity: 40%;
+                    transition: opacity var(--transition-hover);
                 }
 
                 .carousel--css-skin-stories .swiper-slide-active {
-                    /*opacity: 100%;*/
+                    opacity: 100%;
                 }
                     .carousel--css-skin-stories .story__scale {
-                        /*transition: transform 1200ms var(--ease-out-quint);*/
+                        transition: transform 1200ms var(--ease-out-quint);
                     }
 
                     .carousel--css-skin-stories .swiper-slide-active .story__scale {
-                        /*transform: scale(110%);*/
+                        transform: scale(110%);
                     }
 
 
         .carousel--css-skin-stories .carousel__bar {
-            /*width: 100%; !* на мобилках конфликт с флексом *!*/
-            /*background-color: #303F64;*/
+            width: 100%; /* на мобилках конфликт с флексом */
+            background-color: #303F64;
         }
             .carousel--css-skin-stories .carousel__progress {
-                /*width: 1px;*/
-                /*height: 6px;*/
-                /*background-color: #E4BB6B;*/
-                /*border-top-right-radius: 5px;*/
-                /*border-bottom-right-radius: 5px;*/
+                width: 1px;
+                height: 6px;
+                background-color: #E4BB6B;
+                border-top-right-radius: 5px;
+                border-bottom-right-radius: 5px;
             }
 
         .carousel--css-skin-stories .carousel__button {
-            /*position: absolute;*/
-            /*z-index: 10;*/
-            /*top: 0;*/
-            /*bottom: 0;*/
-            width: calc(50% - 220px);
-            /*border: none;*/
-            /*padding: 0;*/
-            /*cursor: pointer;*/
-            /*text-indent: 200%;*/
-            /*white-space: nowrap;*/
-            /*overflow: hidden;*/
+            position: absolute;
+            z-index: 10;
+            top: 0;
+            bottom: 0;
+            width: calc(50% - 165px);
+            border: none;
+            padding: 0;
+            background-color: transparent;
+            cursor: pointer;
+            text-indent: 200%;
+            white-space: nowrap;
+            overflow: hidden;
         }
             .carousel--css-skin-stories .carousel__button::after {
-                /*content: "";*/
-                /*position: absolute;*/
-                /*top: 50%;*/
-                margin-top: -40px;
-                width: 80px;
-                height: 80px;
-                background-size: 60px 60px;
-                /*background-repeat: no-repeat;*/
-                /*background-position: center center;*/
-                /*border-radius: 50%;*/
-                /*transition: background-color var(--transition-hover);*/
+                content: "";
+                position: absolute;
+                top: 50%;
+                margin-top: -30px;
+                width: 60px;
+                height: 60px;
+                background-size: 44px 44px;
+                background-repeat: no-repeat;
+                background-position: center center;
+                border-radius: 50%;
+                transition: background-color var(--transition-hover);
             }
 
             .carousel--css-skin-stories .carousel__button:hover::after {
-                /*background-color: #E4BB6B;*/
+                background-color: #E4BB6B;
             }
 
             .carousel--css-skin-stories .carousel__button--prev {
-                /*left: 0;*/
+                left: 0;
             }
 
             .carousel--css-skin-stories .carousel__button--next {
-                /*right: 0;*/
+                right: 0;
             }
                 .carousel--css-skin-stories .carousel__button--prev::after {
-                    /*left: 10%;*/
-                    /*background-image: url("../vectors/stories-prev.svg");*/
+                    left: 10%;
+                    background-image: url("../vectors/stories-prev.svg");
                 }
 
                 .carousel--css-skin-stories .carousel__button--next::after {
-                    /*right: 10%;*/
-                    /*background-image: url("../vectors/stories-next.svg");*/
+                    right: 10%;
+                    background-image: url("../vectors/stories-next.svg");
                 }
+
+
+    @media (1850px <= width) {
+
+        .carousel--css-skin-stories {
+            /*position: relative;*/
+        }
+            .carousel--css-skin-stories .carousel__widget {
+
+            }
+                .carousel--css-skin-stories .swiper {
+                    padding-top: 30px;
+                    padding-bottom: 30px;
+                    /*overflow: visible;*/
+                }
+                    .carousel--css-skin-stories .swiper-slide {
+                        width: 400px;
+                        /*opacity: 40%;*/
+                        /*transition: opacity var(--transition-hover);*/
+                    }
+
+                    .carousel--css-skin-stories .swiper-slide-active {
+                        /*opacity: 100%;*/
+                    }
+                        .carousel--css-skin-stories .story__scale {
+                            /*transition: transform 1200ms var(--ease-out-quint);*/
+                        }
+
+                        .carousel--css-skin-stories .swiper-slide-active .story__scale {
+                            /*transform: scale(110%);*/
+                        }
+
+
+            .carousel--css-skin-stories .carousel__bar {
+                /*width: 100%; !* на мобилках конфликт с флексом *!*/
+                /*background-color: #303F64;*/
+            }
+                .carousel--css-skin-stories .carousel__progress {
+                    /*width: 1px;*/
+                    /*height: 6px;*/
+                    /*background-color: #E4BB6B;*/
+                    /*border-top-right-radius: 5px;*/
+                    /*border-bottom-right-radius: 5px;*/
+                }
+
+            .carousel--css-skin-stories .carousel__button {
+                /*position: absolute;*/
+                /*z-index: 10;*/
+                /*top: 0;*/
+                /*bottom: 0;*/
+                width: calc(50% - 220px);
+                /*border: none;*/
+                /*padding: 0;*/
+                /*cursor: pointer;*/
+                /*text-indent: 200%;*/
+                /*white-space: nowrap;*/
+                /*overflow: hidden;*/
+            }
+                .carousel--css-skin-stories .carousel__button::after {
+                    /*content: "";*/
+                    /*position: absolute;*/
+                    /*top: 50%;*/
+                    margin-top: -40px;
+                    width: 80px;
+                    height: 80px;
+                    background-size: 60px 60px;
+                    /*background-repeat: no-repeat;*/
+                    /*background-position: center center;*/
+                    /*border-radius: 50%;*/
+                    /*transition: background-color var(--transition-hover);*/
+                }
+
+                .carousel--css-skin-stories .carousel__button:hover::after {
+                    /*background-color: #E4BB6B;*/
+                }
+
+                .carousel--css-skin-stories .carousel__button--prev {
+                    /*left: 0;*/
+                }
+
+                .carousel--css-skin-stories .carousel__button--next {
+                    /*right: 0;*/
+                }
+                    .carousel--css-skin-stories .carousel__button--prev::after {
+                        /*left: 10%;*/
+                        /*background-image: url("../vectors/stories-prev.svg");*/
+                    }
+
+                    .carousel--css-skin-stories .carousel__button--next::after {
+                        /*right: 10%;*/
+                        /*background-image: url("../vectors/stories-next.svg");*/
+                    }
+    }
 }
 
 

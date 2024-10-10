@@ -1,0 +1,8 @@
+@keyframes fade-in {
+    from { opacity: 30%; }
+    to { opacity: 100%; }
+}
+
+:root {
+    --fade-in: fade-in 1200ms var(--ease-out-quint);
+}
