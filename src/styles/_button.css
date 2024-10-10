@@ -91,6 +91,16 @@
 }
 
 
+.button--white {
+    background-color: #F8F0E5;
+    transition: background-color var(--transition-hover);
+}
+
+.button--white:hover {
+    background-color: #FFFFFF;
+}
+
+
 
 /*.button:disabled,*/
 /*.button:disabled:hover,*/
