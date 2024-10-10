@@ -6,7 +6,6 @@
 }
     .story__preview {
         position: relative;
-
     }
         .story__image {
             vertical-align: top;
@@ -26,6 +25,15 @@
                 rgb(48 63 100 / 100%)
             );
             border-radius: 19px;
+        }
+
+        .swiper-slide-active .story__preview::after {
+            background-image: linear-gradient(
+                    rgb(0 0 0 / 100%),
+                    rgb(0 0 0 / 0) 18%,
+                    rgb(0 0 0 / 0) 70%,
+                    rgb(0 0 0 / 100%)
+            );
         }
 
     .story__body {
