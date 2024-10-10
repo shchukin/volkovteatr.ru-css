@@ -182,7 +182,7 @@
 
         document.querySelectorAll('.carousel--js-init-stories').forEach(($carousel) => {
 
-            const progressCircle = $carousel.querySelector(".carousel__progress");
+            const progressCircle = $carousel.querySelectorAll(".story__progress");
 
             new Swiper($carousel.querySelector('.swiper'), {
                 slidesPerView: 1,
@@ -197,7 +197,9 @@
 
                 on: {
                     autoplayTimeLeft(s, time, progress) {
-                        progressCircle.style.setProperty("width", (1 - progress) * 100 + '%');
+                        progressCircle.forEach(circle => {
+                            circle.style.setProperty("width", (1 - progress) * 100 + '%');
+                        });
                     }
                 },
 

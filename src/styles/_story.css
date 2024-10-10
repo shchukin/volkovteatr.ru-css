@@ -41,8 +41,9 @@
 
         .story__title {
             position: absolute;
+            z-index: 10;
             left: 0;
-            bottom: 0;
+            bottom: 10px;
             right: 0;
             font-family: var(--font-heading);
             font-weight: 500;
@@ -55,4 +56,26 @@
             -webkit-box-orient: vertical;
             overflow: hidden;
             text-overflow: ellipsis;
+        }
+
+    .story__bar {
+        position: absolute;
+        left: 16px;
+        bottom: 16px;
+        right: 16px;
+        height: 4px;
+        background-color: #303F64;
+        border-radius: 2px;
+        display: none;
+    }
+
+        .swiper-slide-active .story__bar {
+            display: block;
+        }
+
+        .story__progress {
+            height: 100%;
+            background-color: #FFFFFF;
+            border-radius: 2px;
+            width: 0;
         }
