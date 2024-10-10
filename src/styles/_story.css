@@ -3,11 +3,13 @@
 }
     .story__preview {
         position: relative;
+
     }
         .story__image {
             vertical-align: top;
             width: 100%;
             height: auto;
+            border-radius: 20px;
         }
 
         .story__preview::after {
@@ -20,6 +22,7 @@
                 rgb(48 63 100 / 0) 70%,
                 rgb(48 63 100 / 100%)
             );
+            border-radius: 19px;
         }
 
     .story__body {
@@ -43,6 +46,7 @@
             font-style: italic;
             font-size: 26px;
             line-height: 30px;
+            text-transform: uppercase;
             display: -webkit-box;
             -webkit-line-clamp: 3;
             -webkit-box-orient: vertical;
