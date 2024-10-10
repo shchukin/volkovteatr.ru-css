@@ -1,5 +1,5 @@
 .alt-schedule {
-    padding-top: 40px;
+
 }
     .alt-schedule__heading {
         display: flex;
@@ -57,7 +57,7 @@
 @media (1850px <= width) {
 
     .alt-schedule {
-        padding-top: 60px;
+
     }
         .alt-schedule__heading {
             /*display: flex;*/
@@ -103,7 +103,7 @@
 @media (width < 740px) {
 
     .alt-schedule {
-        padding-top: 40px;
+
     }
         .alt-schedule__heading {
             /*display: flex;*/
