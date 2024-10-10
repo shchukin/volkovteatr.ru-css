@@ -12,3 +12,18 @@
         display: none;
     }
 }
+
+
+
+.page:has(.jumbotron),
+.page:has(.intro) {
+    margin-top: calc(-1 * var(--header-height));
+}
+
+
+
+/* Обрезаем карусели */
+
+.page:not(:has(.week-headings)) {
+    overflow: hidden;
+}

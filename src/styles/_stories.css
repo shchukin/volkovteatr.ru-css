@@ -1,6 +1,7 @@
 .stories {
     position: relative;
     padding-top: 75px;
+    overflow: hidden; /* Обрезаем карусель */
 }
     .stories__heading {
         margin-top: 0;

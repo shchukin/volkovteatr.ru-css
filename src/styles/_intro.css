@@ -3,7 +3,7 @@
 }
 
 .intro {
-    margin-top: calc(-1 * var(--header-height));
+    overflow: hidden; /* Обрезаем карусель */
 }
     .intro__limitation {
         position: relative;

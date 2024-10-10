@@ -3,7 +3,7 @@
 }
 
 .jumbotron {
-    margin-top: calc(-1 * var(--header-height));
+
 }
     .jumbotron__limitation {
         position: relative;
