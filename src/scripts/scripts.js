@@ -223,9 +223,15 @@
                         simulateTouch: false,  // Prevent touch gestures from initiating slide changes
                         allowTouchMove: false, // Disable all touch and mouse drag interactions
                     },
-                    1850: {
+                    740: {
+                        slidesPerView: 'auto',
+                        slidesPerGroup: 1,
+                        speed: 800,
                         spaceBetween: 40,
-                    },
+                        pagination: false,
+                        simulateTouch: false,  // Prevent touch gestures from initiating slide changes
+                        allowTouchMove: false, // Disable all touch and mouse drag interactions
+                    }
                 },
             });
         });

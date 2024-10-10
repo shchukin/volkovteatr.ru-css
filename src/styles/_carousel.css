@@ -147,6 +147,16 @@
                 background-image: url("../vectors/swiper-slide-mobile-right.svg");
             }
 
+
+            .stories--landing .carousel__button--prev {
+                background-image: url("../vectors/swiper-slide-mobile-left-stories.svg");
+            }
+
+            .stories--landing .carousel__button--next {
+                background-image: url("../vectors/swiper-slide-mobile-right-stories.svg");
+            }
+
+
             .carousel__pagination {
                 width: auto !important; /* Конфликт со стилями слайдера */
                 font-size: 15px;
