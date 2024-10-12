@@ -52,6 +52,7 @@
         .search-filter__magnifier {
             vertical-align: top;
             fill: #F8F0E5;
+            margin-top: 4px;
             width: 24px;
             height: 24px;
         }
