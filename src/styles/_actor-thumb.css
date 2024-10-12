@@ -10,11 +10,12 @@
             height: auto;
             background-color: var(--black-image-fallback);
             border-radius: 7px;
+            filter: grayscale(100%);
             transition: filter var(--transition-hover);
         }
 
         .actor-thumb__preview:hover .actor-thumb__image {
-            filter: brightness(110%);
+            filter: grayscale(0);
         }
 
     .actor-thumb__heading {
