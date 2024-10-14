@@ -74,7 +74,7 @@
             }
 
             .page-scrolled .header__first-line {
-                top: -34px;
+                top: -44px;
             }
 
                 .header__action {
@@ -347,7 +347,7 @@
                 }
 
                 .page-scrolled .header__first-line {
-                    top: -42px;
+                    top: -52px;
                 }
                     .header__action {
                         /*display: block;*/
