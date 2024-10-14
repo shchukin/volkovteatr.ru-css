@@ -18,7 +18,7 @@
     }
 
     .page-scrolled .header__detachable-part {
-        height: 85px;
+        height: var(--header-collapsed-height);
         background-color: rgb(11 30 58 / 70%);
         backdrop-filter: blur(4px);
     }
@@ -215,7 +215,7 @@
 
     .header__dropdown {
         position: fixed;
-        z-index: 100;
+        z-index: 300; /* выше .week-headings */
         left: 0;
         right: 0;
         top: var(--header-height);
@@ -298,11 +298,10 @@
             /*top: 0;*/
             /*right: 0;*/
             /*height: var(--header-height);*/
-
         }
 
         .page-scrolled .header__detachable-part {
-            height: 105px;
+
         }
             .header__wrap {
                 /*position: relative;*/
@@ -476,18 +475,16 @@
         /*height: var(--header-height);*/
     }
         .header__detachable-part {
-            /*position: fixed;*/
-            /*z-index: 100;*/
-            /*left: 0;*/
-            /*top: 0;*/
-            /*right: 0;*/
-            /*height: var(--header-height);*/
             padding-top: 0;
-            /*transition: background-color var(--transition-hover);*/
         }
 
         .page-scrolled .header__detachable-part {
-            height: 58px;
+
+        }
+
+        .burger-expanded .header__detachable-part {
+            background-color: #FFFFFF;
+            color-scheme: light;
         }
 
         .page-scrolled.burger-expanded .header__detachable-part {

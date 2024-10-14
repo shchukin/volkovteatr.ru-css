@@ -1,7 +1,7 @@
 .week-headings {
     position: sticky;
     z-index: 200;
-    top: var(--header-height);
+    top: var(--header-collapsed-height);
     background-color: rgb(11 30 58 / 70%);
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;

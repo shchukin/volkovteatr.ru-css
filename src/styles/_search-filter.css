@@ -67,73 +67,6 @@
 
 
 
-.search-filter--header {
-    /*position: relative;*/
-    /*padding: 1px; !* борюр инпута будет делаться внешней тенью, без внутренней. Внутренняя плохо рендерится, между ней и внешней проступает синий фон *!*/
-}
-    .search-filter--header .search-filter__widget {
-        /*vertical-align: top;*/
-        /*width: 100%;*/
-        height: 42px;
-        padding: 10px 54px 10px 24px;
-        box-shadow: 0 0 0 1px #0B1E3A;
-        /*border: none;*/
-        /*background-color: transparent; !* reset grey background in some cases, such as <select> *!*/
-        /*background-clip: padding-box;*/
-        /*outline: none;*/
-        border-radius: 21px;
-        /*font-family: inherit;*/
-        font-size: 16px;
-        line-height: 22px;
-        color: #0B1E3A;
-        /*opacity: 1; !* reset select:disabled default fade on iOS *!*/
-        /*-webkit-tap-highlight-color: transparent;*/
-        /*transition: box-shadow var(--transition-hover);*/
-    }
-
-    .search-filter--header .search-filter__widget::placeholder {
-        /*opacity: 1; !* reset opacity drop Firefox *!*/
-        color: #0B1E3A;
-    }
-
-    .search-filter--header .search-filter__widget:hover {
-        box-shadow: 0 0 0 1px var(--input-border-focus);
-    }
-
-    .search-filter--header .search-filter__widget:focus-visible {
-        box-shadow: 0 0 0 2px var(--input-border-focus);
-        /*transition: none;*/
-    }
-
-
-    .search-filter--header .search-filter__submit {
-        /*position: absolute;*/
-        /*right: 0;*/
-        /*top: 0;*/
-        /*background-color: transparent;*/
-        /*padding: 0;*/
-        /*border: none;*/
-        /*border-radius: 50%;*/
-        /*cursor: pointer;*/
-    }
-        .search-filter--header .search-filter__magnifier {
-            /*vertical-align: top;*/
-            fill: #0B1E3A;
-            /*margin-top: 4px;*/
-            /*width: 24px;*/
-            /*height: 24px;*/
-        }
-
-        .search-filter--header .search-filter__submit:hover .search-filter__magnifier {
-            /*fill: var(--input-border-focus);*/
-        }
-
-        .search-filter--header .search-filter__submit:active {
-            /*translate: 0 1px;*/
-        }
-
-
-
 @media (1850px <= width) {
 
     .search-filter {
@@ -180,5 +113,79 @@
             .search-filter__magnifier {
                 width: 30px;
                 height: 30px;
+            }
+}
+
+
+
+
+.search-filter--header {
+
+}
+    .search-filter--header .search-filter__widget {
+        height: 42px;
+        padding: 10px 54px 10px 24px;
+        border-radius: 21px;
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    .search-filter--header .search-filter__widget::placeholder {
+
+    }
+
+    .search-filter--header .search-filter__widget:hover {
+        box-shadow: 0 0 0 1px var(--input-border-focus);
+    }
+
+    .search-filter--header .search-filter__widget:focus-visible {
+        box-shadow: 0 0 0 2px var(--input-border-focus);
+    }
+
+
+    .search-filter--header .search-filter__submit {
+
+    }
+        .search-filter--header .search-filter__magnifier {
+
+        }
+
+        .search-filter--header .search-filter__submit:hover .search-filter__magnifier {
+
+        }
+
+        .search-filter--header .search-filter__submit:active {
+
+        }
+
+
+
+@media (width < 740px) {
+
+    .burger-expanded .search-filter--header {
+
+    }
+        .burger-expanded .search-filter--header .search-filter__widget {
+            box-shadow: 0 0 0 1px #0B1E3A;
+            color: #0B1E3A;
+        }
+
+        .burger-expanded .search-filter--header .search-filter__widget::placeholder {
+            color: #0B1E3A;
+        }
+
+        .burger-expanded .search-filter--header .search-filter__submit {
+
+        }
+            .burger-expanded .search-filter--header .search-filter__magnifier {
+                fill: #0B1E3A;
+            }
+
+            .burger-expanded .search-filter--header .search-filter__submit:hover .search-filter__magnifier {
+
+            }
+
+            .burger-expanded .search-filter--header .search-filter__submit:active {
+
             }
 }
