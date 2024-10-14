@@ -37,6 +37,8 @@
                     background-color: rgb(48 63 100 / 60%);
                     border-top-right-radius: 300px;
                     backdrop-filter: blur(8px);
+                    transform: translate3d(0, 0, 0); /* форсируем 3d acceleration */
+                    backface-visibility: hidden; /* улучшаем производительность */
                     color: #F8F0E5;
                 }
                     .intro__director {

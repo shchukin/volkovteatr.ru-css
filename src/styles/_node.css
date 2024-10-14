@@ -29,6 +29,8 @@
                 bottom: 0;
                 display: block;
                 filter: blur(4px);
+                transform: translate3d(0, 0, 0); /* форсируем 3d acceleration */
+                backface-visibility: hidden; /* улучшаем производительность */
                 background-repeat: no-repeat;
                 transition: filter var(--transition-hover);
             }
