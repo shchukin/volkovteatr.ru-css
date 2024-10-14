@@ -185,6 +185,7 @@
 
                 if (video) {
                     swiper.autoplay.stop();
+                    video.currentTime = 0;
                     video.play();
                     videoDuration = video.duration * 1000;
                     swiper.params.autoplay.delay = videoDuration;
