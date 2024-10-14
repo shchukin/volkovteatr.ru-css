@@ -785,5 +785,19 @@
         }
     });
 
+
+
+    /* Навигация на смартфонах */
+
+    $('.nav__link').on('click', function (event) {
+        if(!isDesktop) {
+            const $navItem = $(this).parents('.nav__item');
+            if ( $navItem.find('.nav__sub-nav').length ) {
+                event.preventDefault();
+                $navItem.toggleClass('nav__item--expanded');
+            }
+        }
+    });
+
 })(jQuery);
 
