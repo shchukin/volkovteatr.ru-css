@@ -141,16 +141,19 @@
 
         /* Swiper для Intro */
 
+        let videoDuration;
+        const introDuration = 4000;
+
         document.querySelectorAll('.carousel--js-init-intro').forEach(($carousel) => {
 
             const progressCircle = $carousel.querySelector(".carousel__progress");
 
-            new Swiper($carousel.querySelector('.swiper'), {
+            const swiper = new Swiper($carousel.querySelector('.swiper'), {
                 slidesPerView: 1,
                 slidesPerGroup: 1,
 
                 autoplay: {
-                    delay: 10000,
+                    delay: introDuration,
                     disableOnInteraction: true
                 },
 
@@ -173,6 +176,22 @@
                         pagination: false
                     },
                 },
+            });
+
+
+            swiper.on('slideChange', function () {
+                const currentSlide = swiper.slides[swiper.activeIndex];
+                const video = currentSlide.querySelector('video');
+
+                if (video) {
+                    swiper.autoplay.stop();
+                    video.play();
+                    videoDuration = video.duration * 1000;
+                    swiper.params.autoplay.delay = videoDuration;
+                    swiper.autoplay.start();
+                } else {
+                    swiper.params.autoplay.delay = introDuration;
+                }
             });
         });
 
