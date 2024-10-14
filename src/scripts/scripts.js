@@ -141,8 +141,7 @@
 
         /* Swiper для Intro */
 
-        let videoDuration;
-        const introDuration = 4000;
+        const introDuration = 10000;
 
         document.querySelectorAll('.carousel--js-init-intro').forEach(($carousel) => {
 
@@ -187,8 +186,7 @@
                     swiper.autoplay.stop();
                     video.currentTime = 0;
                     video.play();
-                    videoDuration = video.duration * 1000;
-                    swiper.params.autoplay.delay = videoDuration - 2 * swiper.params.speed;
+                    swiper.params.autoplay.delay = video.duration * 1000 - 2 * swiper.params.speed; /* swiper.params.speed -- время между слайдами */
                     swiper.autoplay.start();
                 } else {
                     swiper.params.autoplay.delay = introDuration;
@@ -243,7 +241,7 @@
                         simulateTouch: false,  // Prevent touch gestures from initiating slide changes
                         allowTouchMove: false, // Disable all touch and mouse drag interactions
                     },
-                    740: {
+                    1850: {
                         slidesPerView: 'auto',
                         slidesPerGroup: 1,
                         speed: 800,
