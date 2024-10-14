@@ -188,7 +188,7 @@
                     video.currentTime = 0;
                     video.play();
                     videoDuration = video.duration * 1000;
-                    swiper.params.autoplay.delay = videoDuration;
+                    swiper.params.autoplay.delay = videoDuration - 2 * swiper.params.speed;
                     swiper.autoplay.start();
                 } else {
                     swiper.params.autoplay.delay = introDuration;
