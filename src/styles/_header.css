@@ -35,9 +35,9 @@
                 width: 240px;
                 height: 75px;
                 background-image: url("../images/header-logo/header-logo@1x.png");
-                background-size: contain;
+                background-size: 240px 75px;
                 background-repeat: no-repeat;
-                background-position: center center;
+                background-position: left top;
                 text-indent: 200%;
                 white-space: nowrap;
                 overflow: hidden;
@@ -316,6 +316,7 @@
                     width: 310px;
                     height: 97px;
                     background-image: url("../images/header-logo/header-logo-monitor@1x.png");
+                    background-size: 310px 97px;
                 }
 
 
