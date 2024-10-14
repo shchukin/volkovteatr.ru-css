@@ -335,7 +335,7 @@
 
 
     $(document).on('click', function (event) {
-        if (!$(event.target).closest('.header__dropdown, .header__toggle-menu').length) {
+        if (!$(event.target).closest('.header__dropdown, .header__toggle-menu, .header__detachable-part').length) {
             $html.removeClass('burger-expanded');
         }
     });
@@ -763,6 +763,27 @@
         $(this).parents('.play__schedule').toggleClass('play__schedule--expanded');
     });
 
+
+
+    /* Расхлопывание поиска */
+
+    const $searchField = document.querySelector('.search-filter__widget');
+
+    $('.header__action--search').on('click', function () {
+        $html.addClass('search-expanded');
+        $searchField.focus();
+    });
+
+
+    $('.header__close-search').on('click', function () {
+        $html.removeClass('search-expanded');
+    });
+
+    $(document).on('keyup', function (event) {
+        if (event.keyCode === 27) {
+            $html.removeClass('search-expanded');
+        }
+    });
 
 })(jQuery);
 
