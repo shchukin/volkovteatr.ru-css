@@ -141,8 +141,7 @@
 
         /* Swiper для Intro */
 
-        let videoDuration;
-        const introDuration = 4000;
+        const introSlideAutoplayDuration = 10000;
 
         document.querySelectorAll('.carousel--js-init-intro').forEach(($carousel) => {
 
@@ -153,7 +152,7 @@
                 slidesPerGroup: 1,
 
                 autoplay: {
-                    delay: introDuration,
+                    delay: introSlideAutoplayDuration,
                     disableOnInteraction: true
                 },
 
@@ -184,14 +183,21 @@
                 const video = currentSlide.querySelector('video');
 
                 if (video) {
+
+                    // для слайдов с видосами нужно будет пересчитать время для autoplay, сразу вырубаем его
                     swiper.autoplay.stop();
+
+                    // Каждое видео каждый раз запускаем с начала
                     video.currentTime = 0;
                     video.play();
-                    videoDuration = video.duration * 1000;
-                    swiper.params.autoplay.delay = videoDuration - 2 * swiper.params.speed;
+
+                    // новое время для текущего слайда
+                    swiper.params.autoplay.delay = video.duration * 1000 - 2 * swiper.params.speed; /* swiper.params.speed -- время между слайдами */
+
+                    // запускаем autoplay после установки нового времени
                     swiper.autoplay.start();
                 } else {
-                    swiper.params.autoplay.delay = introDuration;
+                    swiper.params.autoplay.delay = introSlideAutoplayDuration;
                 }
             });
         });
@@ -243,7 +249,7 @@
                         simulateTouch: false,  // Prevent touch gestures from initiating slide changes
                         allowTouchMove: false, // Disable all touch and mouse drag interactions
                     },
-                    740: {
+                    1850: {
                         slidesPerView: 'auto',
                         slidesPerGroup: 1,
                         speed: 800,
@@ -807,7 +813,7 @@
 
 
 
-    /* Навигация на смартфонах */
+    /* Расхлопывание подменю на смартфонах */
 
     $('.nav__link').on('click', function (event) {
         if(!isDesktop) {
