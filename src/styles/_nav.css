@@ -280,9 +280,27 @@
                 .nav__link:hover {
                     /*text-decoration-color: currentColor;*/
                 }
+                    .nav__item:has(.nav__sub-nav) .nav__link::after {
+                        content: "";
+                        margin-left: 30px;
+                        border-top: 5px solid currentColor;
+                        border-left: 5px solid transparent;
+                        border-right: 5px solid transparent;
+                        transition: transform 300ms ease;
+                    }
+
+                    .nav__item--expanded .nav__link::after {
+                        transform: scaleY(-1);
+                    }
 
                 .nav__sub-nav {
                     display: none;
+                    padding-bottom: 10px;
+                    animation: var(--slide-bottom);
+                }
+
+                .nav__item--expanded .nav__sub-nav {
+                    display: block;
                 }
                     .nav__sub-link {
                         /*display: block;*/
