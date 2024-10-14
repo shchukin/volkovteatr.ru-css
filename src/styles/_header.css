@@ -313,9 +313,25 @@
                     /*left: 0;*/
                     top: 36px;
                     /*display: block;*/
-                    width: 323px;
+                    width: 310px;
                     height: 97px;
+                    background-image: url("../images/header-logo/header-logo-monitor@1x.png");
                 }
+
+
+                @media (min-resolution: 1.5dppx) {
+                    .header__logo {
+                        background-image: url("../images/header-logo/header-logo-monitor@2x.png");
+                    }
+                }
+
+                @media (min-resolution: 2.5dppx) {
+                    .header__logo {
+                        background-image: url("../images/header-logo/header-logo-monitor@3x.png");
+                    }
+                }
+
+
 
                 .page-scrolled .header__logo {
                     top: 4px;
