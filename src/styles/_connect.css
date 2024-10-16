@@ -1,0 +1,186 @@
+.connect {
+    padding: 24px;
+    width: 900px;
+}
+    .connect__heading {
+        margin-top: 0;
+        margin-bottom: 0;
+        font-family: var(--font-heading);
+        font-weight: normal;
+        font-style: italic;
+        font-size: 32px;
+        line-height: 40px;
+        text-transform: uppercase;
+        color: #303F64;
+        text-align: center;
+    }
+
+    .connect__description {
+        margin-top: 10px;
+        max-width: 650px;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 16px;
+        line-height: 22px;
+        color: #6073A2;
+        text-align: center;
+    }
+
+    .connect__fieldset {
+        margin-top: 26px;
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 16px 22px;
+    }
+        .connect__field {
+            grid-column: span 2;
+        }
+
+        .connect__field--half-width {
+            grid-column: span 1;
+        }
+
+        .connect__field--full-width {
+            grid-column: span 4;
+        }
+
+    .connect__footer {
+        margin-top: 33px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 18px;
+    }
+        .connect__agreement {
+            max-width: 350px;
+            font-size: 15px;
+            line-height: 20px;
+            color: #6073A2;
+            text-align: right;
+        }
+
+        .connect__submit {
+
+        }
+
+
+
+@media (1850px <= width) {
+
+    .connect {
+        padding: 32px;
+        width: 1200px;
+    }
+        .connect__heading {
+            font-size: 42px;
+            line-height: 49px;
+        }
+
+        .connect__description {
+            margin-top: 14px;
+            max-width: 718px;
+            font-size: 18px;
+            line-height: 25px;
+        }
+
+        .connect__fieldset {
+            margin-top: 32px;
+            gap: 24px 30px;
+        }
+            .connect__field {
+
+            }
+
+            .connect__field--full-width {
+
+            }
+
+            .connect__footer {
+                margin-top: 44px;
+                gap: 24px;
+            }
+                .connect__agreement {
+                    max-width: 390px;
+                    font-size: 17px;
+                    line-height: 23px;
+                }
+
+                .connect__submit {
+
+                }
+}
+
+
+
+@media (width < 740px) {
+
+    .connect {
+        width: 100%;
+        padding: 32px 20px;
+    }
+        .connect__header {
+
+        }
+            .connect__heading {
+                /*margin-top: 0;*/
+                /*margin-bottom: 0;*/
+                /*font-family: var(--font-heading);*/
+                /*font-weight: normal;*/
+                /*font-style: italic;*/
+                font-size: 24px;
+                line-height: 28px;
+                /*text-transform: uppercase;*/
+                /*color: #E4BB6B;*/
+            }
+
+            .connect__description {
+                font-size: 14px;
+                line-height: 19px;
+            }
+
+        .connect__body {
+            margin-top: 24px;
+        }
+            .connect__fieldset {
+                display: flex;
+                flex-direction: column;
+                /*grid-template-columns: repeat(2, minmax(0, 1fr));*/
+                gap: 12px;
+            }
+                .connect__field {
+
+                }
+
+                .connect__field:first-child {
+                    margin-top: 0;
+                }
+
+                .connect__field--full-width {
+                    /*grid-column: span 2;*/
+                }
+
+            .connect__footer {
+                margin-top: 16px;
+                display: flex;
+                flex-direction: column;
+                align-items: stretch;
+                /*justify-content: flex-end;*/
+                gap: 10px;
+            }
+                .connect__agreement {
+                    max-width: none;
+                    font-size: 14px;
+                    line-height: 19px;
+                    text-align: left;
+                }
+
+                .connect__submit {
+                    order: -1;
+                }
+                    .connect__submit.button,
+                    .connect__submit .button {
+                        width: 100%;
+                    }
+}
+
+
