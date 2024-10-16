@@ -289,8 +289,9 @@
                 const instance = $.magnificPopup.instance;
                 const modalContent = instance.content[0];
                 const textareas = $(modalContent).find('.input--expandable .input__widget');
+
                 textareas.each(function () {
-                    expandTextarea(this);
+                    expandTextarea($(this));
                 });
 
                 /* Шапка фиксированная, ей тоже надо корректировать пропавшее пространство подскроллбаром */
@@ -433,6 +434,8 @@
             expandTextarea($(this));
         });
     });
+
+
     /* Error field */
     $('.input__widget').on('focus', function () {
         $(this).parents('.input').removeClass('input--error');
