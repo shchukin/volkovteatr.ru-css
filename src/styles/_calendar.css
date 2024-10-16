@@ -1,6 +1,10 @@
 .calendar {
 
 }
+
+.calendar--on-actor-page {
+    padding-top: 28px;
+}
     .calendar__inner {
         display: grid;
         gap: 40px;
@@ -24,6 +28,11 @@
             background-repeat: repeat;
             background-position: -8px top;
         }
+
+        .calendar--on-actor-page .calendar__row {
+            background-image: none;
+        }
+
             .calendar__day {
                 padding-top: 3px;
                 padding-bottom: 12px;
@@ -63,10 +72,27 @@
 
                         .calendar__mobile-day-title {
                             display: none;
+                            margin-bottom: 24px;
+                            text-align: right;
+                            font-family: var(--font-heading);
+                            font-style: italic;
+                            font-size: 16px;
+                            line-height: 19px;
+                            color: #B9B9B9;
+                            text-transform: lowercase;
                         }
 
-                        .calendar__show {
+                        .calendar__day--weekend .calendar__mobile-day-title {
+                            color: #EBD7B2;
+                        }
 
+                        @media (740px <= width) {
+
+                            .calendar--on-actor-page .calendar__mobile-day-title {
+                                display: block;
+                                margin-top: -16px;
+                                margin-bottom: 16px;
+                            }
                         }
 
 
@@ -74,6 +100,10 @@
 
     .calendar {
 
+    }
+
+    .calendar--on-actor-page {
+        padding-top: 38px;
     }
         .calendar__inner {
             display: grid;
@@ -152,6 +182,11 @@
     .calendar {
         overflow: hidden;
     }
+
+    .calendar--on-actor-page {
+        padding-top: 12px;
+    }
+
         .calendar__inner {
             display: block;
         }
@@ -228,18 +263,6 @@
 
                             .calendar__mobile-day-title {
                                 display: block;
-                                margin-bottom: 24px;
-                                text-align: right;
-                                font-family: var(--font-heading);
-                                font-style: italic;
-                                font-size: 16px;
-                                line-height: 19px;
-                                color: #B9B9B9;
-                                text-transform: lowercase;
-                            }
-
-                            .calendar__day--weekend .calendar__mobile-day-title {
-                                color: #EBD7B2;
                             }
 
                             .calendar__show {
