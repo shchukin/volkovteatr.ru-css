@@ -46,7 +46,6 @@
             line-height: 18px;
             color: #FFFFFF;
             text-transform: uppercase;
-
             display: -webkit-box;
             -webkit-line-clamp: 3;
             -webkit-box-orient: vertical;
@@ -206,7 +205,6 @@
                 line-height: 21px;
                 /*color: #FFFFFF;*/
                 /*text-transform: uppercase;*/
-                /**/
                 /*display: -webkit-box;*/
                 /*-webkit-line-clamp: 3;*/
                 /*-webkit-box-orient: vertical;*/

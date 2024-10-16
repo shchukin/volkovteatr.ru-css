@@ -22,13 +22,14 @@
             inset: 0;
             border-radius: 14px;
             transition: opacity 500ms ease;
-
+            /* stylelint-disable */
             background-image: linear-gradient(
                 rgb(48 63 100 / 100%),
                 rgb(48 63 100 / 0) 18%,
                 rgb(48 63 100 / 0) 70%,
                 rgb(48 63 100 / 100%)
             );
+            /* stylelint-enable */
         }
 
         /* Чёрный -- активный сториз */
@@ -40,12 +41,14 @@
             border-radius: 14px;
             transition: opacity 500ms ease;
             opacity: 0;
+            /* stylelint-disable */
             background-image: linear-gradient(
                     rgb(0 0 0 / 100%),
                     rgb(0 0 0 / 0) 18%,
                     rgb(0 0 0 / 0) 70%,
                     rgb(0 0 0 / 100%)
             );
+            /* stylelint-enable */
         }
 
         .swiper-slide-active .story__preview::before {
@@ -138,13 +141,6 @@
                 /*inset: 0;*/
                 border-radius: 19px;
                 /*transition: opacity 500ms ease;*/
-                /**/
-                /*background-image: linear-gradient(*/
-                /*    rgb(48 63 100 / 100%),*/
-                /*    rgb(48 63 100 / 0) 18%,*/
-                /*    rgb(48 63 100 / 0) 70%,*/
-                /*    rgb(48 63 100 / 100%)*/
-                /*);*/
             }
 
             /* Чёрный -- активный сториз */
@@ -154,17 +150,6 @@
                 /*z-index: 10;*/
                 /*inset: 0;*/
                 border-radius: 19px;
-                /*transition: opacity 500ms ease;*/
-                /**/
-                /*opacity: 0;*/
-                /**/
-                /**/
-                /*background-image: linear-gradient(*/
-                /*        rgb(0 0 0 / 100%),*/
-                /*        rgb(0 0 0 / 0) 18%,*/
-                /*        rgb(0 0 0 / 0) 70%,*/
-                /*        rgb(0 0 0 / 100%)*/
-                /*);*/
             }
 
             .swiper-slide-active .story__preview::before {
