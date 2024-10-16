@@ -5,15 +5,15 @@
     text-align: left;
     background-color: #F8F0E5;
     color: #000000;
-    border-radius: 8px;
+    border-radius: 15px;
 }
     .window__close {
-        float: right;
-        position: relative;
-        inset: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
         margin: 10px;
-        width: 60px;
-        height: 60px;
+        width: 50px;
+        height: 50px;
         text-indent: 200%;
         white-space: nowrap;
         overflow: hidden !important;
@@ -36,11 +36,11 @@
 @media (1850px <= width) {
 
     .window {
-
+        border-radius: 20px;
     }
         .window__close {
-            width: 80px;
-            height: 80px;
+            width: 70px;
+            height: 70px;
         }
             .window__close::after {
                 background-size: 28px 28px;
