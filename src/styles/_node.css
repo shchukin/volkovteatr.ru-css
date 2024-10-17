@@ -23,10 +23,7 @@
         }
             .node__image {
                 position: absolute;
-                left: 0;
-                top: 0;
-                right: 0;
-                bottom: 0;
+                inset: 0;
                 display: block;
                 filter: blur(4px);
                 transform: translate3d(0, 0, 0); /* форсируем 3d acceleration */
@@ -42,10 +39,7 @@
 
             .node__overlay {
                 position: absolute;
-                left: 0;
-                top: 0;
-                right: 0;
-                bottom: 0;
+                inset: 0;
                 display: block;
                 background-color: rgb(11 30 58 / 70%);
                 transition: opacity var(--transition-hover);
@@ -58,10 +52,7 @@
 
             .node__hover {
                 position: absolute;
-                left: 0;
-                top: 0;
-                right: 0;
-                bottom: 0;
+                inset: 0;
                 display: block;
                 background-color: rgb(228 187 107 / 50%);
                 opacity: 0;
