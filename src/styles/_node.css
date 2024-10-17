@@ -735,7 +735,7 @@
         height: 258px;
     }
         .node__link--rules .node__image {
-            background-position: -406px 0;
+            background-position: -595px 0;
         }
 
     .node__link--group {
@@ -785,7 +785,7 @@
         }
 
         .node__link--pushkin-card .node__image {
-            background-position: -1189px -342px;
+            background-position: -1189px -510px;
         }
 
     .node__link--svo {
@@ -799,7 +799,7 @@
         }
 
         .node__link--svo .node__image {
-            background-position: -406px -417px;
+            background-position: -595px -722px;
         }
 
     .node__link--refunds {
@@ -813,7 +813,7 @@
         }
 
         .node__link--refunds .node__image {
-            background-position: -1189px -481px;
+            background-position: -1189px -722px;
         }
 
     .node__link--souvenir {
@@ -827,7 +827,7 @@
         }
 
         .node__link--souvenir .node__image {
-            background-position: -406px -589px;
+            background-position: -595px -938px;
         }
 
     .node__link--photo {
@@ -855,7 +855,7 @@
         }
 
         .node__link--canteen .node__image {
-            background-position: -1189px -620px;
+            background-position: -1189px -900px;
         }
 }
 
