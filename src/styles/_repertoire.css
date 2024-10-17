@@ -1,23 +1,54 @@
 .repertoire {
-
+    padding-top: var(--page-top-padding);
 }
     .repertoire__heading {
-
+        margin-top: 0;
+        margin-bottom: 0;
+        text-align: center;
     }
 
     .repertoire__filters {
-        margin-top: 60px;
+        margin-top: 30px;
     }
 
     .repertoire__body {
-        margin-top: 60px;
+        margin-top: 45px;
     }
         .repertoire__item {
-            margin-top: 40px;
+            margin-top: 30px;
         }
 
 
     .repertoire__navigation {
-        margin-top: 40px;
+        margin-top: 30px;
     }
+
+
+
+@media (1850px <= width) {
+
+    .repertoire {
+
+    }
+        .repertoire__heading {
+            /*margin-top: 0;*/
+            /*margin-bottom: 0;*/
+        }
+
+        .repertoire__filters {
+            margin-top: 40px;
+        }
+
+        .repertoire__body {
+            margin-top: 60px;
+        }
+            .repertoire__item {
+                margin-top: 40px;
+            }
+
+
+        .repertoire__navigation {
+            margin-top: 40px;
+        }
+}
 

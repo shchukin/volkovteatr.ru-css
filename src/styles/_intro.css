@@ -13,6 +13,14 @@
 
         }
 
+        .intro__breadcrumbs {
+            position: absolute;
+            z-index: 75;
+            left: 0;
+            top: var(--header-height);
+            right: 0;
+        }
+
         .intro__content {
             position: absolute;
             z-index: 75;
