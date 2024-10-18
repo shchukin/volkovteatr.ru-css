@@ -39,7 +39,7 @@
 
             .node__overlay {
                 position: absolute;
-                inset: 0;
+                inset: -20px; /* обрезаем визаульные баги на винде */
                 display: block;
                 background-color: rgb(11 30 58 / 70%);
                 transition: opacity var(--transition-hover);
