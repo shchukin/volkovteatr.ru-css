@@ -5,12 +5,11 @@
 .events {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: 250px 212px 58px 131px 67px 43px 193px;
     gap: 18px;
 }
     .events__item {
-        display: block;
         position: relative;
-        height: 291px;
         background-color: #EBD7B2;
         overflow: hidden;
         border-radius: 8px;
@@ -21,8 +20,73 @@
         background-color: #FFFFFF;
     }
 
+    .events__item--01 {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
+
+    .events__item--02 {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 3;
+        grid-row-end: 5;
+    }
+
+    .events__item--03 {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 5;
+        grid-row-end: 8;
+    }
+
+
+    .events__item--04 {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+
+    .events__item--05 {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 6;
+    }
+
+    .events__item--06 {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 6;
+        grid-row-end: 8;
+    }
+
+    .events__item--07 {
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 4;
+    }
+
+    .events__item--08 {
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 4;
+        grid-row-end: 7;
+    }
+
+    .events__item--09 {
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 7;
+        grid-row-end: 8;
+    }
         .events__preview {
             display: block;
+            width: 100%;
+            height: 100%;
         }
             .events__image {
                 vertical-align: top;
@@ -78,7 +142,7 @@
             /*position: relative;*/
             /*background-color: #EBD7B2;*/
             /*overflow: hidden;*/
-            height: 428px;
+            /*height: 428px;*/
             border-radius: 10px;
             /*transition: background-color var(--transition-hover);*/
         }
