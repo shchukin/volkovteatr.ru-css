@@ -1,5 +1,5 @@
 .alt-schedule {
-
+    position: relative;
 }
     .alt-schedule__heading {
         display: flex;
@@ -45,9 +45,9 @@
             }
 
     .alt-schedule__download {
-        margin-top: 45px;
-        margin-left: auto;
-        margin-right: auto;
+        position: absolute;
+        right: 0;
+        top: 10px;
         display: block;
         width: fit-content;
     }
@@ -94,7 +94,7 @@
                 }
 
         .alt-schedule__download {
-            margin-top: 60px;
+            top: 18px;
         }
 }
 
@@ -155,7 +155,11 @@
                 }
 
         .alt-schedule__download {
+            position: static;
             margin-top: 24px;
+            margin-left: auto;
+            margin-right: auto;
+            width: fit-content;
         }
 }
 
