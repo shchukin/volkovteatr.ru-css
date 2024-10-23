@@ -5,7 +5,7 @@
 .events {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    grid-template-rows: 250px 212px 58px 131px 67px 43px 193px;
+    grid-template-rows: 188px 159px 44px 98px 50px 32px 145px;
     gap: 18px;
 }
     .events__item {
@@ -136,6 +136,7 @@
     .events {
         /*display: grid;*/
         /*grid-template-columns: repeat(3, minmax(0, 1fr));*/
+        grid-template-rows: 250px 212px 58px 131px 67px 43px 193px;
         gap: 25px;
     }
         .events__item {
