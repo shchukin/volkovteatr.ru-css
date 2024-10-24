@@ -156,7 +156,8 @@
                 }
 
                 .schedule__table-headings {
-                    display: none;
+                    position: static; /* Почему-то не срабатывает display: none на айфонах, убираем всё подозрительное */
+                    display: none !important; /* Почему-то не срабатывает, пробуем с important */
                 }
 
                 .schedule__content {
