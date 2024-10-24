@@ -828,5 +828,363 @@
         }
     });
 
+
+
+    /* Checkout */
+
+    var initCheckoutMap = function () {
+        var activePlaces = [];
+        var prices = [];
+        var items = $('.checkout__map-place');
+        items.each(function (index, item) {
+            $(item).attr('data-id', index);
+
+            if (!$(item).hasClass('checkout__map-place--disabled') && !$(item).hasClass('checkout__map-place-fake')) {
+
+                activePlaces.push(index);
+                var currentPrice = Number($(item).attr('data-price'));
+                if (!isNaN(currentPrice) && currentPrice !== 0 && prices.indexOf(currentPrice) < 0) {
+                    prices.push(currentPrice);
+                }
+            }
+        });
+
+        prices.sort(function (a, b) {
+            if (a > b) {
+                return 1;
+            }
+
+            if (a < b) {
+                return -1;
+            }
+
+            return 0;
+        });
+
+        //$('.checkout__map-places--active').text(activePlaces.length);
+        $('.checkout__map-places--minprice').text(prices[0]);
+        $('.checkout__map-places--maxprice').text(prices[prices.length - 1]);
+    }
+
+    var setPointPositionOnMiniMap = function (coords) {
+        var fullMapWidth = $(".checkout__map-places-inner").width();
+        var fullMapHeight = $(".checkout__map-places-inner").height();
+        var coordX = coords[0];
+        var coordY = coords[1];
+
+        var leftPartOfMapCoords = Math.floor(fullMapWidth / 3);
+        var middleXPartOfMapCoords = leftPartOfMapCoords * 2;
+
+        var topPartOfMapCoords = Math.floor(fullMapHeight / 3);
+        var middleYPartOfMapCoords = topPartOfMapCoords * 2;
+
+
+        if (coordX <= leftPartOfMapCoords) {
+
+            if (coordY <= topPartOfMapCoords) {
+                $('.checkout__map-nav-point').css({
+                    'top': '11px',
+                    'left': '11px'
+                })
+            } else if (coordY > topPartOfMapCoords && coordY <= middleYPartOfMapCoords) {
+                $('.checkout__map-nav-point').css({
+                    'top': '25px',
+                    'left': '11px'
+                })
+            } else if (coordY > middleYPartOfMapCoords) {
+                $('.checkout__map-nav-point').css({
+                    'top': 'unset',
+                    'bottom': '11px',
+                    'left': '11px'
+                })
+            }
+
+        } else if (coordX > leftPartOfMapCoords && coordX <= middleXPartOfMapCoords) {
+
+            if (coordY <= topPartOfMapCoords) {
+                $('.checkout__map-nav-point').css({
+                    'top': '11px',
+                    'left': '25px'
+                })
+            } else if (coordY > topPartOfMapCoords && coordY <= middleYPartOfMapCoords) {
+                $('.checkout__map-nav-point').css({
+                    'top': '25px',
+                    'left': '25px'
+                })
+            } else if (coordY > middleYPartOfMapCoords) {
+                $('.checkout__map-nav-point').css({
+                    'top': 'unset',
+                    'bottom': '11px',
+                    'left': '25px'
+                })
+            }
+
+        } else if (coordX > middleXPartOfMapCoords) {
+
+            if (coordY <= topPartOfMapCoords) {
+                $('.checkout__map-nav-point').css({
+                    'top': '11px',
+                    'left': 'unset',
+                    'right': '11px'
+                })
+            } else if (coordY > topPartOfMapCoords && coordY <= middleYPartOfMapCoords) {
+                $('.checkout__map-nav-point').css({
+                    'top': '25px',
+                    'left': 'unset',
+                    'right': '11px'
+                })
+            } else if (coordY > middleYPartOfMapCoords) {
+                $('.checkout__map-nav-point').css({
+                    'top': 'unset',
+                    'bottom': '11px',
+                    'left': 'unset',
+                    'right': '11px'
+                })
+            }
+
+        }
+    }
+
+
+
+    $(document).ready(function () {
+
+        var clientWidth = $(window).width();
+        initCheckoutMap();
+        $('.checkout__map-place').on('click', function () {
+            $(this).toggleClass('checkout__map-place--active');
+            var stage = $(this).attr('data-name-floor');
+            var row = $(this).attr('data-name-row');
+            var place = $(this).attr('data-place');
+            var price = $(this).attr('data-price');
+            var id = $(this).attr('data-id');
+
+
+
+            if (!$(this).hasClass('checkout__map-place--active')) {
+                $(this).removeClass('checkout__map-place--active')
+                $('.checkout__summary-item[data-id="' + id + '"]').remove();
+            }
+
+            if ($('.checkout__map-place--active').length > 0) {
+                $('.checkout-modal').attr('data-state', 'selected');
+            } else {
+                $('.checkout-modal').attr('data-state', 'select');
+            }
+
+
+        })
+
+        $('.modal-close, .modal__overlay').on('click', function () {
+            $('.checkout-modal').attr('data-state', 'select');
+            $(this).closest('.modal').fadeOut("fast");
+            $(this).closest('.checkout').fadeOut("fast");
+            $('body').css('overflow', 'unset');
+        });
+
+        if (clientWidth < 1100) {
+            var mapWidth = $(".checkout__map-places-scale").width();
+            var mapNoscaleOffset = $(".checkout__map-places-scale").offset().top;
+            var mapScaleOffset;
+            var windowWidth = clientWidth - 10;
+            var scaleValue = (windowWidth / mapWidth).toFixed(2);
+            var zoomValue = (mapWidth / windowWidth).toFixed(2);
+            // значение смещения карты
+            var translateOnScaleX = (windowWidth - mapWidth + 10) / 2;
+            // значение смещения сцены
+            var translateOnScaleY;
+
+            $('.checkout__summary-title').before($('.warning-pk'));
+            $('.warning-pk').css('padding','16px 16px');
+
+            $(".checkout__map-places-scale").css({
+                transform: " scale( " + scaleValue + " )",
+            });
+
+            $(".checkout__map-scene").css({
+                transform: "scale( " + scaleValue + " )",
+            });
+
+
+            mapScaleOffset = $(".checkout__map-places-scale").offset().top;
+            translateOnScaleY =
+                mapScaleOffset -
+                mapNoscaleOffset +
+                $(".checkout__map-scene").height() * scaleValue;
+            $(".checkout__map-places-scale").css({
+                transform:
+                    "translate(" +
+                    translateOnScaleX +
+                    "px, " +
+                    -translateOnScaleY +
+                    "px) scale( " +
+                    scaleValue +
+                    " )",
+            });
+            $(".checkout__map-places").on("scroll", function (e) {
+                // координаты скролла
+                var offset = $(this).offset();
+                var relativeX = $(this).scrollLeft();
+                var relativeY = $(this).scrollTop();
+                var coords = [relativeX, relativeY];
+                setPointPositionOnMiniMap(coords);
+            });
+
+            $(".checkout__map-nav").on("click", function () {
+                $(".checkout__map-places").removeClass("zoomed");
+                $(".checkout__map-nav-wrapper").css({
+                    opacity: 0,
+                    "pointer-events": "none",
+                });
+
+                $(".checkout__map-info").fadeIn("fast");
+                $(".checkout__map-places-scale").css({
+                    transform:
+                        "translate(" +
+                        translateOnScaleX +
+                        "px, " +
+                        -translateOnScaleY +
+                        "px) scale( " +
+                        scaleValue +
+                        " )",
+                });
+
+                $(".checkout__map-scene").css({
+                    transform: "scale( " + scaleValue + " )",
+                });
+                $(".checkout__map-places").scrollTo({top: 0, left: 0}, 250);
+            });
+        }
+
+        //добавление фотографий с мест (не для мобилок и не для камерной сцены)
+        if ($(`[data-id=632]`).length != 0) {
+            const arPlace = [0, 4, 8, 245, 249, 376, 391, 427, 451, 471, 537, 596, 632, 656, 667, 359, 363, 236, 240, 244, 718, 697, 768, 294, 314, 329, 80, 101];
+            arPlace.forEach((el) => {
+                $(`[data-id=${el}]`).addClass('checkout__map-place--photo');
+
+                if ($(`[data-id=${el}]`).hasClass('checkout__map-place--disabled')) {
+                    $(`[data-id=${el}]`).wrapAll(`<div class='pic-mod' data-id-mod=${el}>`);
+                } else {
+                    $(`[data-id=${el}]`).append(`<div class='pic-mod' data-id-mod=${el}>`);
+                }
+            });
+            let timers = [];
+
+            const clear = (arr) => {
+                arr.forEach(el => {
+                    clearTimeout(el);
+                });
+            }
+
+            $('[data-id-mod]').on('mouseenter', function (e) {
+
+                if (arPlace.indexOf($(e.target).data('id-mod')) != -1) {
+                    $('.modal-pic').attr('href', '/img/plan/' + $(e.target).data('id-mod') + '.jpg');
+                    $('.modal-pic--picture').attr('src', '/img/plan/' + $(e.target).data('id-mod') + '.jpg');
+                    $('.modal-pic').show();
+                    $('.modal-pic').css({
+                        'top': e.pageY - 210,
+                        'left': e.clientX - 150,
+                    });
+                    if (clientWidth < 1334){
+
+                        $('.modal-pic').css({
+                            'height': 100,
+                            'width': 150,
+                            'top': e.pageY - 110,
+                            'left': e.clientX - 80,
+
+                        });
+                        if ($(e.target).data('id-mod') == 240){
+                            $('.modal-pic').css({
+
+
+                                'left': e.clientX - 150
+
+                            });
+                        }
+                        if ($(e.target).data('id-mod') == 244){
+                            $('.modal-pic').css({
+
+
+                                'left': e.clientX - 150
+
+                            });
+                        }
+                        if ($(e.target).data('id-mod') == 236){
+                            $('.modal-pic').css({
+
+
+                                'left': e.clientX - 150
+
+                            });
+                        }
+                        if ($(e.target).data('id-mod') == 0){
+                            $('.modal-pic').css({
+
+
+                                'left': e.clientX
+
+                            });
+                        }
+                        if ($(e.target).data('id-mod') == 4){
+                            $('.modal-pic').css({
+
+
+                                'left': e.clientX
+
+                            });
+                        }
+                        if ($(e.target).data('id-mod') == 8){
+                            $('.modal-pic').css({
+
+
+                                'left': e.clientX
+
+                            });
+                        }
+
+
+
+
+                    }
+
+
+                    clear(timers);
+                    timers = [];
+                }
+            });
+
+            $('[data-id-mod]').on('mouseleave', function (e) {
+
+                if (arPlace.indexOf($(e.target).data('id-mod')) != -1) {
+
+                    const _ = setTimeout(() => {
+                        $('.modal-pic').hide();
+                        $('.modal-pic').attr('href', '');
+                        $('.modal-pic--picture').attr('src', '');
+                    }, 100);
+                    timers.push(_);
+                }
+            });
+
+            $('.modal-pic').on('mouseenter', function () {
+                clear(timers);
+                timers = [];
+            });
+
+            $('.modal-pic').on('mouseleave', function () {
+
+                const _ = setTimeout(() => {
+                    $('.modal-pic').hide();
+                    $('.modal-pic').attr('href', '');
+                    $('.modal-pic--picture').attr('src', '');
+                }, 100);
+                timers.push(_);
+            });
+        }
+
+    });
+
 })(jQuery);
 
