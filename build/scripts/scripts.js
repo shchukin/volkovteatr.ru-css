@@ -304,6 +304,32 @@
     });
 
 
+    $('.mfp-image').magnificPopup({
+        type: 'image',
+        removalDelay: 200,
+        showCloseBtn: false,
+        callbacks: {
+            open: function () {
+
+                // Перезапускаем обсчёт expanding textareas для инстансов внутри откртой модалки
+                const instance = $.magnificPopup.instance;
+                const modalContent = instance.content[0];
+                const textareas = $(modalContent).find('.input--expandable .input__widget');
+
+                textareas.each(function () {
+                    expandTextarea($(this));
+                });
+
+                /* Шапка фиксированная, ей тоже надо корректировать пропавшее пространство подскроллбаром */
+                $fixedHeader.css({'margin-right': scrollWidth});
+            },
+            close: function () {
+                $fixedHeader.css({'margin-right': '0'});
+            }
+        }
+    });
+
+
     /* Маска для телефона -- используем старую версию input.mask
      * Для неё есть плагин для номеров телефонов, который понимает
      * русские города. Например, при ввооде +74852 скобочка увеличивается
@@ -830,12 +856,16 @@
 
 
 
+
+
+
+
     /* Checkout */
 
     var initCheckoutMap = function () {
         var activePlaces = [];
         var prices = [];
-        var items = $('.checkout__map-place');
+        var items = $('.plans__main-scheme .checkout__map-place'); // в контектсе .plans__main-scheme только для главной сцены
         items.each(function (index, item) {
             $(item).attr('data-id', index);
 
@@ -982,83 +1012,83 @@
             $('body').css('overflow', 'unset');
         });
 
-        if (clientWidth < 1100) {
-            var mapWidth = $(".checkout__map-places-scale").width();
-            var mapNoscaleOffset = $(".checkout__map-places-scale").offset().top;
-            var mapScaleOffset;
-            var windowWidth = clientWidth - 10;
-            var scaleValue = (windowWidth / mapWidth).toFixed(2);
-            var zoomValue = (mapWidth / windowWidth).toFixed(2);
-            // значение смещения карты
-            var translateOnScaleX = (windowWidth - mapWidth + 10) / 2;
-            // значение смещения сцены
-            var translateOnScaleY;
-
-            $('.checkout__summary-title').before($('.warning-pk'));
-            $('.warning-pk').css('padding','16px 16px');
-
-            $(".checkout__map-places-scale").css({
-                transform: " scale( " + scaleValue + " )",
-            });
-
-            $(".checkout__map-scene").css({
-                transform: "scale( " + scaleValue + " )",
-            });
-
-
-            mapScaleOffset = $(".checkout__map-places-scale").offset().top;
-            translateOnScaleY =
-                mapScaleOffset -
-                mapNoscaleOffset +
-                $(".checkout__map-scene").height() * scaleValue;
-            $(".checkout__map-places-scale").css({
-                transform:
-                    "translate(" +
-                    translateOnScaleX +
-                    "px, " +
-                    -translateOnScaleY +
-                    "px) scale( " +
-                    scaleValue +
-                    " )",
-            });
-            $(".checkout__map-places").on("scroll", function (e) {
-                // координаты скролла
-                var offset = $(this).offset();
-                var relativeX = $(this).scrollLeft();
-                var relativeY = $(this).scrollTop();
-                var coords = [relativeX, relativeY];
-                setPointPositionOnMiniMap(coords);
-            });
-
-            $(".checkout__map-nav").on("click", function () {
-                $(".checkout__map-places").removeClass("zoomed");
-                $(".checkout__map-nav-wrapper").css({
-                    opacity: 0,
-                    "pointer-events": "none",
-                });
-
-                $(".checkout__map-info").fadeIn("fast");
-                $(".checkout__map-places-scale").css({
-                    transform:
-                        "translate(" +
-                        translateOnScaleX +
-                        "px, " +
-                        -translateOnScaleY +
-                        "px) scale( " +
-                        scaleValue +
-                        " )",
-                });
-
-                $(".checkout__map-scene").css({
-                    transform: "scale( " + scaleValue + " )",
-                });
-                $(".checkout__map-places").scrollTo({top: 0, left: 0}, 250);
-            });
-        }
+        // if (clientWidth < 1100) {
+        //     var mapWidth = $(".checkout__map-places-scale").width();
+        //     var mapNoscaleOffset = $(".checkout__map-places-scale").offset().top;
+        //     var mapScaleOffset;
+        //     var windowWidth = clientWidth - 10;
+        //     var scaleValue = (windowWidth / mapWidth).toFixed(2);
+        //     var zoomValue = (mapWidth / windowWidth).toFixed(2);
+        //     // значение смещения карты
+        //     var translateOnScaleX = (windowWidth - mapWidth + 10) / 2;
+        //     // значение смещения сцены
+        //     var translateOnScaleY;
+        //
+        //     $('.checkout__summary-title').before($('.warning-pk'));
+        //     $('.warning-pk').css('padding','16px 16px');
+        //
+        //     $(".checkout__map-places-scale").css({
+        //         transform: " scale( " + scaleValue + " )",
+        //     });
+        //
+        //     $(".checkout__map-scene").css({
+        //         transform: "scale( " + scaleValue + " )",
+        //     });
+        //
+        //
+        //     mapScaleOffset = $(".checkout__map-places-scale").offset().top;
+        //     translateOnScaleY =
+        //         mapScaleOffset -
+        //         mapNoscaleOffset +
+        //         $(".checkout__map-scene").height() * scaleValue;
+        //     $(".checkout__map-places-scale").css({
+        //         transform:
+        //             "translate(" +
+        //             translateOnScaleX +
+        //             "px, " +
+        //             -translateOnScaleY +
+        //             "px) scale( " +
+        //             scaleValue +
+        //             " )",
+        //     });
+        //     $(".checkout__map-places").on("scroll", function (e) {
+        //         // координаты скролла
+        //         var offset = $(this).offset();
+        //         var relativeX = $(this).scrollLeft();
+        //         var relativeY = $(this).scrollTop();
+        //         var coords = [relativeX, relativeY];
+        //         setPointPositionOnMiniMap(coords);
+        //     });
+        //
+        //     $(".checkout__map-nav").on("click", function () {
+        //         $(".checkout__map-places").removeClass("zoomed");
+        //         $(".checkout__map-nav-wrapper").css({
+        //             opacity: 0,
+        //             "pointer-events": "none",
+        //         });
+        //
+        //         $(".checkout__map-info").fadeIn("fast");
+        //         $(".checkout__map-places-scale").css({
+        //             transform:
+        //                 "translate(" +
+        //                 translateOnScaleX +
+        //                 "px, " +
+        //                 -translateOnScaleY +
+        //                 "px) scale( " +
+        //                 scaleValue +
+        //                 " )",
+        //         });
+        //
+        //         $(".checkout__map-scene").css({
+        //             transform: "scale( " + scaleValue + " )",
+        //         });
+        //         $(".checkout__map-places").scrollTo({top: 0, left: 0}, 250);
+        //     });
+        // }
 
         //добавление фотографий с мест (не для мобилок и не для камерной сцены)
         if ($(`[data-id=632]`).length != 0) {
-            const arPlace = [0, 4, 8, 245, 249, 376, 391, 427, 451, 471, 537, 596, 632, 656, 667, 359, 363, 236, 240, 244, 718, 697, 768, 294, 314, 329, 80, 101];
+                const arPlace = [0, 4, 8, 245, 249, 376, 391, 427, 451, 471, 537, 596, 632, 656, 667, 359, 363, 236, 240, 244, 718, 697, 768, 294, 314, 329, 80, 101];
             arPlace.forEach((el) => {
                 $(`[data-id=${el}]`).addClass('checkout__map-place--photo');
 
@@ -1079,86 +1109,58 @@
             $('[data-id-mod]').on('mouseenter', function (e) {
 
                 if (arPlace.indexOf($(e.target).data('id-mod')) != -1) {
-                    $('.modal-pic').attr('href', '/img/plan/' + $(e.target).data('id-mod') + '.jpg');
-                    $('.modal-pic--picture').attr('src', '/img/plan/' + $(e.target).data('id-mod') + '.jpg');
+                    $('.modal-pic').attr('href', '../content/scene-photo/' + $(e.target).data('id-mod') + '.jpg');
+                    $('.modal-pic--picture').attr('src', '../content/scene-photo/' + $(e.target).data('id-mod') + '.jpg');
                     $('.modal-pic').show();
                     $('.modal-pic').css({
                         'top': e.pageY - 210,
                         'left': e.clientX - 150,
                     });
                     if (clientWidth < 1334){
-
                         $('.modal-pic').css({
                             'height': 100,
                             'width': 150,
                             'top': e.pageY - 110,
                             'left': e.clientX - 80,
-
                         });
                         if ($(e.target).data('id-mod') == 240){
                             $('.modal-pic').css({
-
-
                                 'left': e.clientX - 150
-
                             });
                         }
                         if ($(e.target).data('id-mod') == 244){
                             $('.modal-pic').css({
-
-
                                 'left': e.clientX - 150
-
                             });
                         }
                         if ($(e.target).data('id-mod') == 236){
                             $('.modal-pic').css({
-
-
                                 'left': e.clientX - 150
-
                             });
                         }
                         if ($(e.target).data('id-mod') == 0){
                             $('.modal-pic').css({
-
-
                                 'left': e.clientX
-
                             });
                         }
                         if ($(e.target).data('id-mod') == 4){
                             $('.modal-pic').css({
-
-
                                 'left': e.clientX
-
                             });
                         }
                         if ($(e.target).data('id-mod') == 8){
                             $('.modal-pic').css({
-
-
                                 'left': e.clientX
-
                             });
                         }
-
-
-
-
                     }
-
-
                     clear(timers);
                     timers = [];
                 }
             });
 
             $('[data-id-mod]').on('mouseleave', function (e) {
-
                 if (arPlace.indexOf($(e.target).data('id-mod')) != -1) {
-
                     const _ = setTimeout(() => {
                         $('.modal-pic').hide();
                         $('.modal-pic').attr('href', '');
@@ -1174,13 +1176,29 @@
             });
 
             $('.modal-pic').on('mouseleave', function () {
-
                 const _ = setTimeout(() => {
                     $('.modal-pic').hide();
                     $('.modal-pic').attr('href', '');
                     $('.modal-pic--picture').attr('src', '');
                 }, 100);
                 timers.push(_);
+            });
+
+            $('.modal-pic').on('click', function (event) {
+                event.preventDefault();
+
+                const path = $(this).attr('href')
+
+                $(this).hide();
+                $(this).attr('href', '');
+                $(this).find('.modal-pic--picture').attr('src', '');
+
+                $.magnificPopup.open({
+                    items: {
+                        src: path,
+                    },
+                    type: 'image',
+                });
             });
         }
 

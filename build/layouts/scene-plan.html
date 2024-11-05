@@ -18,7 +18,7 @@
 
         <!-- assets -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="../styles/styles.css?1729774499">
+        <link rel="stylesheet" href="../styles/styles.css?1730794130">
 
     </head>
     <body>
@@ -192,40 +192,19 @@
                         </div>
                     </div>
                 </nav>
-
-                <main>
-                    <!--стили для плана основной сцены-->
-                    <style>
-                        .plan-zala {
-                            cursor: pointer;
-                            /*max-width: 100px;*/
-                            width: 100%;
-                            background: unset !important;
-                            padding-left: unset!important;
-                            /*right: unset!important;*/
-                            left: 2px;
-                            max-height: 5px!important;
-                            color: blue;
-                            /*margin-top: 100px;*/
-                            display: flex!important;
-                            flex-direction: column-reverse;
-                            margin-top: 125px;
-                        }
-                    </style>
-                    <!---->
-                    <div class="checkout__map">
-
-
-                        <div class="container">
-                            <h2 class="checkout_map_title">План основной сцены</h2>
-                            <h4 class="checkout_map_title_discription">Чтобы посмотреть вид сцены с места нажмите на иконку <img src="/img/cam.png" alt="" width="18px" height="17px"></h4>
+                <div class="plans">
+                    <div class="plans__main section">
+                        <h1 class="plans__heading title title--main">
+                            План основной сцены
+                        </h1>
+                        <div class="plans__hint">
+                            Чтобы посмотреть вид сцены с места нажмите на иконку фотокамеры
                         </div>
-                        <div class="checkout__map-places">
-                            <div class="checkout__map-places-inner">
-
-                                <div class="checkout__map-scene">
-                                    <span class="checkout__map-scene-title">сцена</span>
-                                </div>
+                        <div class="plans__scene-heading scene">
+                            Сцена
+                        </div>
+                        <div class="plans__main-scheme hide-scrollbar">
+                            <div class="plans__main-scheme-exact-wrap">
                                 <div class="checkout__map-places-scale checkout__map-third">
                                     <div class="checkout__map-row-name checkout__map-left checkout__map-third-l">
                                         <span class="checkout__map-subtitle checkout__map-subtitle--tar">Ложи<br>балкона</span>
@@ -2910,49 +2889,229 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="plans__changes">
+                            * Театр оставляет за собой право не ранее чем за 2 дня до проведения мероприятия, перевести места 4, 5, 17, 18 в 12 ряду партера из льготной категории в общее поле продаж.
+                        </div>
+                        <div class="plans__capacity">
+                            ОБЩАЯ ВМЕСТИТЕЛЬНОСТЬ - 676 МЕСТ: партер 268 мест, амфитеатр 72 места, ложи бенуара 32 места, бельэтаж 98 мест, ложи бельэтажа 16 мест, балкон 178 места, ложи балкона 12 мест
+                        </div>
+                        <div class="plans__preview">
+                            <a class="plans__preview-heading mfp-image" href="../content/scene-plan/main-scene.jpg">
+                                План расположения мест в зале основной сцены
+                            </a>
+                            <a class="plans__preview-photo mfp-image" href="../content/scene-plan/main-scene.jpg">
+                                <img class="plans__preview-image"
+                                     srcset="../content/scene-plan/main-scene-preview@2x.jpg 2x"
+                                     src="../content/scene-plan/main-scene-preview@1x.jpg"
+                                     width="88"
+                                     height="100"
+                                     alt=""
+                                >
+                            </a>
+                        </div>
                     </div>
-                    <a class="modal-pic" href="" data-fancybox="pic" data-caption="" data-animation-effect="false">
-                        <img class="modal-pic--picture" src="" alt="">
-                    </a>
-            </div>
-            <div class="special-img">
-                <a href="/local/templates/volkovnew/images/special-scene.jpg" target="_blank"><img class="special-scene" src="/local/templates/volkovnew/images/special-scene.jpg" /></a>
-            </div>
-            <div class="discription-hall container">
-                <div class="title-under-hall">
-                    <span>* Театр оставляет за собой право не ранее чем за 2 дня до проведения мероприятия, перевести места </span>
-                    <img class="invalid" src="/img/invalid.png" alt="">
-                    <span>4, 5, 17, 18 в 12 ряду партера из льготной категории в общее поле продаж.</span>
+                    <section class="plans__chamber">
+                        <h2 class="plans__chamber-heading title title--larger">
+                            План камерной сцены
+                        </h2>
+                        <div class="plans__chamber-scene-heading scene">
+                            Сцена
+                        </div>
+                        <div class="plans__chamber-scheme hide-scrollbar">
+                            <div class="plans__chamber-scheme-exact-wrap">
+                                <div class="checkout__map-first-top-c-box-middle checkout__map-first-top-c-box">
+                                    <div class="checkout__map-row checkout__map-first-top-c-row">
+                                        <span class="checkout__map-number checkout__map-number--mr">
+                                            1
+                                        </span>
+                                        <div class="checkout__map-places-box">
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number">1</div>
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number">2</div>
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number">3</div>
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number">4</div>
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number checkout__map-place-fake"></div>
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number checkout__map-place-fake"></div>
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number">5</div>
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number">6</div>
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number">7</div>
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number">8</div>
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number">9</div>
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number">10</div>
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number">11</div>
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number">12</div>
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number checkout__map-place-fake"></div>
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number checkout__map-place-fake"></div>
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number">13</div>
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number">14</div>
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number">15</div>
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number">16</div>
+                                        </div>
+                                        <span class="checkout__map-number checkout__map-number--ml">
+                                            1
+                                        </span>
+                                    </div>
+                                    <div class="checkout__map-row checkout__map-first-top-c-row">
+                                        <span class="checkout__map-number checkout__map-number--mr">
+                                            2
+                                        </span>
+                                        <div class="checkout__map-places-box">
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number">1</div>
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number">2</div>
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number">3</div>
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number">4</div>
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number checkout__map-place-fake"></div>
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number checkout__map-place-fake"></div>
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number">5</div>
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number">6</div>
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number">7</div>
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number">8</div>
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number">9</div>
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number">10</div>
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number">11</div>
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number">12</div>
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number checkout__map-place-fake"></div>
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number checkout__map-place-fake"></div>
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number">13</div>
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number">14</div>
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number">15</div>
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number">16</div>
+                                        </div>
+                                        <span class="checkout__map-number checkout__map-number--ml">
+                                            2
+                                        </span>
+                                    </div>
+                                    <div class="checkout__map-row checkout__map-first-top-c-row">
+                                        <span class="checkout__map-number checkout__map-number--mr">
+                                            3
+                                        </span>
+                                        <div class="checkout__map-places-box">
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number">1</div>
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number">2</div>
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number">3</div>
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number">4</div>
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number checkout__map-place-fake"></div>
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number checkout__map-place-fake"></div>
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number">5</div>
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number">6</div>
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number">7</div>
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number">8</div>
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number">9</div>
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number">10</div>
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number">11</div>
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number">12</div>
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number checkout__map-place-fake"></div>
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number checkout__map-place-fake"></div>
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number">13</div>
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number">14</div>
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number">15</div>
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number">16</div>
+                                        </div>
+                                        <span class="checkout__map-number checkout__map-number--ml">
+                                            3
+                                        </span>
+                                    </div>
+                                    <div class="checkout__map-row checkout__map-first-top-c-row">
+                                        <span class="checkout__map-number checkout__map-number--mr">
+                                            4
+                                        </span>
+                                        <div class="checkout__map-places-box">
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number">1</div>
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number">2</div>
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number">3</div>
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number">4</div>
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number checkout__map-place-fake"></div>
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number checkout__map-place-fake"></div>
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number">5</div>
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number">6</div>
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number">7</div>
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number">8</div>
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number">9</div>
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number">10</div>
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number">11</div>
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number">12</div>
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number checkout__map-place-fake"></div>
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number checkout__map-place-fake"></div>
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number">13</div>
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number">14</div>
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number">15</div>
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number">16</div>
+                                        </div>
+                                        <span class="checkout__map-number checkout__map-number--ml">
+                                            4
+                                        </span>
+                                    </div>
+                                    <div class="checkout__map-row checkout__map-first-top-c-row">
+                                        <span class="checkout__map-number checkout__map-number--mr">
+                                            5
+                                        </span>
+                                        <div class="checkout__map-places-box">
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number">1</div>
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number">2</div>
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number">3</div>
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number">4</div>
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number checkout__map-place-fake"></div>
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number checkout__map-place-fake"></div>
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number">5</div>
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number">6</div>
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number">7</div>
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number">8</div>
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number">9</div>
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number">10</div>
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number">11</div>
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number">12</div>
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number checkout__map-place-fake"></div>
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number checkout__map-place-fake"></div>
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number">13</div>
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number">14</div>
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number">15</div>
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number">16</div>
+                                        </div>
+                                        <span class="checkout__map-number checkout__map-number--ml">
+                                            5
+                                        </span>
+                                    </div>
+                                    <div class="checkout__map-row checkout__map-first-top-c-row">
+                                        <span class="checkout__map-number checkout__map-number--mr">
+                                            6
+                                        </span>
+                                        <div class="checkout__map-places-box">
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number">1</div>
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number">2</div>
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number">3</div>
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number">4</div>
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number">5</div>
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number">6</div>
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number">7</div>
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number">8</div>
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number">9</div>
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number">10</div>
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number">11</div>
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number">12</div>
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number">13</div>
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number">14</div>
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number">15</div>
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number">16</div>
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number">17</div>
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number">18</div>
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number">19</div>
+                                            <div class="checkout__map-place checkout__map-place--hover checkout__map-place--disabled checkout__map-place--has-sit-number">20</div>
+                                        </div>
+                                        <span class="checkout__map-number checkout__map-number--ml">
+                                            6
+                                        </span>
+                                    </div>
+                                    <span class="checkout__map-title">ПАРТЕР</span>
+                                    <span class="checkout__map-floor">1 этаж</span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
                 </div>
-                <div class="under-hall">
-                    <span>ОБЩАЯ ВМЕСТИТЕЛЬНОСТЬ - 676 МЕСТ: партер 268 мест, амфитеатр 72 места, ложи бенуара 32 места, бельэтаж 98 мест, ложи бельэтажа 16 мест, балкон 178 места, ложи балкона 12 мест</span>
-                </div>
+                <a class="modal-pic" href="" data-fancybox="pic" data-caption="" data-animation-effect="false">
+                    <img class="modal-pic--picture" src="" alt="">
+                </a>
             </div>
-            <!--План основной сцены-->
-            <div class="container cp" style="margin-bottom: 0px; text-align: center; display: flex; justify-content: center; max-height: 200px">
-                <div class="swiper-slide swiper-slide--row" style="text-align: center; height: 170px">
-                    <a href="../content/plan-zala1.jpg" data-fancybox="gallery" data-caption="" data-animation-effect="false"
-                       class="plan-zala">
-                        <img src="../content/plan-zala1.jpg" alt="" style="width: 1000px; height: 1000px">
-                        План расположения мест в зале основной сцены</a>
-                </div>
 
-            </div>
-            <!---->
-
-            <div class="container cp" style="margin-bottom: 0px">
-                <h2 class="checkout_map_title">План камерной сцены</h2>
-                <div class="checkout__map-scene" style="margin: 0; padding-bottom: 30px;">
-                    <span class="checkout__map-scene-title">сцена</span>
-                </div>
-<!--                <img alt="Камерная сцена" src="../content/plan-zala2.jpg" title="Камерная сцена" style="margin: 0">-->
-            </div>
-            <!-- Другой футер для лендинга       -->
-            </main>
-
-
-
-            </div>
             <footer class="footer">
                 <div class="footer__wrap container">
                     <div class="footer__primary-section">
@@ -3099,7 +3258,7 @@
         <script src="../vendors/photoswipe/photoswipe-lightbox.umd.min.js"></script>
 
         <!-- Scripts -->
-        <script src="../scripts/scripts.js?1729774499"></script>
+        <script src="../scripts/scripts.js?1730794130"></script>
 
     </body>
 </html>
