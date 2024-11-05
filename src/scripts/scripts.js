@@ -304,6 +304,32 @@
     });
 
 
+    $('.mfp-image').magnificPopup({
+        type: 'image',
+        removalDelay: 200,
+        showCloseBtn: false,
+        callbacks: {
+            open: function () {
+
+                // Перезапускаем обсчёт expanding textareas для инстансов внутри откртой модалки
+                const instance = $.magnificPopup.instance;
+                const modalContent = instance.content[0];
+                const textareas = $(modalContent).find('.input--expandable .input__widget');
+
+                textareas.each(function () {
+                    expandTextarea($(this));
+                });
+
+                /* Шапка фиксированная, ей тоже надо корректировать пропавшее пространство подскроллбаром */
+                $fixedHeader.css({'margin-right': scrollWidth});
+            },
+            close: function () {
+                $fixedHeader.css({'margin-right': '0'});
+            }
+        }
+    });
+
+
     /* Маска для телефона -- используем старую версию input.mask
      * Для неё есть плагин для номеров телефонов, который понимает
      * русские города. Например, при ввооде +74852 скобочка увеличивается

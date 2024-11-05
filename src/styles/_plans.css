@@ -1,0 +1,111 @@
+.plans {
+
+}
+    .plans__main {
+
+    }
+        .plans__heading {
+            margin-top: 0;
+            margin-bottom: 0;
+            text-align: center;
+        }
+
+        .plans__hint {
+            margin-top: 12px;
+            font-size: 18px;
+            line-height: 24px;
+            text-align: center;
+        }
+
+        .plans__scene-heading {
+            margin-top: 32px;
+        }
+
+        .plans__main-scheme {
+            margin-top: 32px;
+        }
+
+        .plans__changes {
+            margin-top: 32px;
+            padding: 12px 20px 14px;
+            max-width: 820px;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 16px;
+            line-height: 22px;
+            text-align: center;
+            background-color: #E3BB6B;
+            border-radius: 4px;
+        }
+
+        .plans__capacity {
+            margin-top: 32px;
+            max-width: 820px;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 16px;
+            line-height: 22px;
+            text-align: center;
+        }
+
+        .plans__preview {
+            margin-top: 32px;
+        }
+            .plans__preview-heading {
+                display: block;
+                max-width: 200px;
+                margin-left: auto;
+                margin-right: auto;
+                font-size: 16px;
+                line-height: 22px;
+                text-align: center;
+                color: gray;
+                text-decoration: none;
+                transition: color var(--transition-hover);
+            }
+
+            .plans__preview-heading:hover {
+                color: #FFFFFF;
+            }
+
+            .plans__preview-photo {
+                display: block;
+                margin-top: 4px;
+                margin-left: auto;
+                margin-right: auto;
+                width: 88px;
+                height: 100px;
+                overflow: hidden; /* наведение */
+            }
+                .plans__preview-image {
+                    vertical-align: top;
+                    transition: transform 400ms var(--ease-out-quint);
+                }
+
+                .plans__preview-photo:hover .plans__preview-image {
+                    transform: scale(1.1);
+                }
+
+
+    .plans__chamber {
+        margin-top: 80px;
+    }
+        .plans__chamber-heading {
+            margin-top: 0;
+            margin-bottom: 0;
+            text-align: center;
+        }
+
+        .plans__chamber-scene-heading {
+            margin-top: 32px;
+        }
+
+        .plans__chamber-image {
+            margin-top: 20px;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+            vertical-align: top;
+            max-width: 100%;
+            height: auto;
+        }

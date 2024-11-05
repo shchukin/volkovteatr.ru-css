@@ -95,3 +95,54 @@ button.mfp-close:focus-visible {
         margin-bottom: calc(var(--container-padding) / 2);     /* vertical spacing */
     }
 }
+
+
+
+/* image type */
+
+.mfp-image-holder {
+    cursor: default !important;
+}
+    .mfp-image-holder .mfp-content {
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+    }
+        .mfp-image-holder .mfp-figure {
+
+        }
+            .mfp-image-holder .mfp-close {
+                position: absolute;
+                right: auto;
+                top: auto;
+                left: 100%;
+                bottom: 100%;
+                width: 40px;
+                height: 40px;
+                background-image: url("../vectors/cross-white.svg");
+                background-size: 24px 24px;
+                background-repeat: no-repeat;
+                background-position: center center;
+                opacity: 100% !important;
+                cursor: pointer !important;
+                transition: opacity var(--transition-hover);
+            }
+
+            .mfp-image-holder .mfp-close:hover {
+                opacity: 70% !important;
+            }
+
+            @media (width < 740px) {
+                .mfp-image-holder .mfp-close {
+                    left: auto !important;
+                    right: 0 !important;
+                    background-position: right center;
+                }
+            }
+
+        .mfp-img {
+            padding-top: 0 !important;
+            padding-bottom: 0 !important;
+            max-height: 84vh !important;
+        }
+
+
