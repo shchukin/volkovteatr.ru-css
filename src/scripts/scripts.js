@@ -856,6 +856,10 @@
 
 
 
+
+
+
+
     /* Checkout */
 
     var initCheckoutMap = function () {
@@ -1084,7 +1088,7 @@
 
         //добавление фотографий с мест (не для мобилок и не для камерной сцены)
         if ($(`[data-id=632]`).length != 0) {
-            const arPlace = [0, 4, 8, 245, 249, 376, 391, 427, 451, 471, 537, 596, 632, 656, 667, 359, 363, 236, 240, 244, 718, 697, 768, 294, 314, 329, 80, 101];
+                const arPlace = [0, 4, 8, 245, 249, 376, 391, 427, 451, 471, 537, 596, 632, 656, 667, 359, 363, 236, 240, 244, 718, 697, 768, 294, 314, 329, 80, 101];
             arPlace.forEach((el) => {
                 $(`[data-id=${el}]`).addClass('checkout__map-place--photo');
 
@@ -1105,86 +1109,58 @@
             $('[data-id-mod]').on('mouseenter', function (e) {
 
                 if (arPlace.indexOf($(e.target).data('id-mod')) != -1) {
-                    $('.modal-pic').attr('href', '/img/plan/' + $(e.target).data('id-mod') + '.jpg');
-                    $('.modal-pic--picture').attr('src', '/img/plan/' + $(e.target).data('id-mod') + '.jpg');
+                    $('.modal-pic').attr('href', '../content/scene-photo/' + $(e.target).data('id-mod') + '.jpg');
+                    $('.modal-pic--picture').attr('src', '../content/scene-photo/' + $(e.target).data('id-mod') + '.jpg');
                     $('.modal-pic').show();
                     $('.modal-pic').css({
                         'top': e.pageY - 210,
                         'left': e.clientX - 150,
                     });
                     if (clientWidth < 1334){
-
                         $('.modal-pic').css({
                             'height': 100,
                             'width': 150,
                             'top': e.pageY - 110,
                             'left': e.clientX - 80,
-
                         });
                         if ($(e.target).data('id-mod') == 240){
                             $('.modal-pic').css({
-
-
                                 'left': e.clientX - 150
-
                             });
                         }
                         if ($(e.target).data('id-mod') == 244){
                             $('.modal-pic').css({
-
-
                                 'left': e.clientX - 150
-
                             });
                         }
                         if ($(e.target).data('id-mod') == 236){
                             $('.modal-pic').css({
-
-
                                 'left': e.clientX - 150
-
                             });
                         }
                         if ($(e.target).data('id-mod') == 0){
                             $('.modal-pic').css({
-
-
                                 'left': e.clientX
-
                             });
                         }
                         if ($(e.target).data('id-mod') == 4){
                             $('.modal-pic').css({
-
-
                                 'left': e.clientX
-
                             });
                         }
                         if ($(e.target).data('id-mod') == 8){
                             $('.modal-pic').css({
-
-
                                 'left': e.clientX
-
                             });
                         }
-
-
-
-
                     }
-
-
                     clear(timers);
                     timers = [];
                 }
             });
 
             $('[data-id-mod]').on('mouseleave', function (e) {
-
                 if (arPlace.indexOf($(e.target).data('id-mod')) != -1) {
-
                     const _ = setTimeout(() => {
                         $('.modal-pic').hide();
                         $('.modal-pic').attr('href', '');
@@ -1200,13 +1176,29 @@
             });
 
             $('.modal-pic').on('mouseleave', function () {
-
                 const _ = setTimeout(() => {
                     $('.modal-pic').hide();
                     $('.modal-pic').attr('href', '');
                     $('.modal-pic--picture').attr('src', '');
                 }, 100);
                 timers.push(_);
+            });
+
+            $('.modal-pic').on('click', function (event) {
+                event.preventDefault();
+
+                const path = $(this).attr('href')
+
+                $(this).hide();
+                $(this).attr('href', '');
+                $(this).find('.modal-pic--picture').attr('src', '');
+
+                $.magnificPopup.open({
+                    items: {
+                        src: path,
+                    },
+                    type: 'image',
+                });
             });
         }
 

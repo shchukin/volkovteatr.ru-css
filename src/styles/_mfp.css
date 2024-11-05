@@ -124,6 +124,9 @@ button.mfp-close:focus-visible {
                 background-position: center center;
                 opacity: 100% !important;
                 cursor: pointer !important;
+                text-indent: 200%;
+                white-space: nowrap;
+                overflow: hidden;
                 transition: opacity var(--transition-hover);
             }
 
