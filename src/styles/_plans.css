@@ -23,7 +23,17 @@
 
         .plans__main-scheme {
             margin-top: 32px;
+            overflow-x: auto;
+            margin-left: calc(-1 * var(--container-padding));
+            margin-right: calc(-1 * var(--container-padding));
+            padding-left: var(--container-padding);
+            padding-right: var(--container-padding);
         }
+            .plans__main-scheme-exact-wrap {
+                width: 1080px;
+                margin-left: auto;
+                margin-right: auto;
+            }
 
         .plans__changes {
             margin-top: 32px;
@@ -108,4 +118,29 @@
             vertical-align: top;
             max-width: 100%;
             height: auto;
+        }
+
+        .plans__chamber-scheme {
+            margin-top: 32px;
+            overflow-x: auto;
+        }
+            .plans__chamber-scheme {
+                margin-top: 32px;
+                overflow-x: auto;
+                margin-left: calc(-1 * var(--container-padding));
+                margin-right: calc(-1 * var(--container-padding));
+                padding-left: var(--container-padding);
+                padding-right: var(--container-padding);
+            }
+                .plans__chamber-scheme-exact-wrap {
+                    width: 404px;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+
+        @media (740px <= width) {
+
+            .plans__chamber-scheme {
+                transform: scale(1.2);
+            }
         }

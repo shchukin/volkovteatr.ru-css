@@ -497,7 +497,7 @@
 }
 
 .checkout__map-first-top-c-box-middle {
-    margin: 0 16px;
+
 }
 
 .checkout__inner {
@@ -1386,10 +1386,6 @@
 .events__item-description,
 .events__item-info-item {
   width: 100%;
-}
-h1 {
-  font-size: 48px !important;
-  line-height: 59px !important;
 }
 .events__item-info-item:last-child {
   margin-right: 0 !important;
