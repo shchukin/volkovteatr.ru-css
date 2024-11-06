@@ -110,6 +110,23 @@
 
     }
 
+    @media (width < 740px) {
+        .input__widget[type="date"],
+        .input__widget[type="datetime-local"],
+        .input__widget[type="week"],
+        .input__widget[type="month"],
+        .input__widget[type="time"] {
+            -webkit-appearance: none;
+                    appearance: none;
+            width: 100%;
+            padding-right: 46px;
+            background-image: url("../vectors/dropdown.svg");
+            background-size: 15px 10px;
+            background-repeat: no-repeat;
+            background-position: right 14px center;
+        }
+    }
+
 
 /* Disabled */
 .input__widget:disabled {
