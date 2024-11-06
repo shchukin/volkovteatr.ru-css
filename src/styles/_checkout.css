@@ -1,3 +1,6 @@
+/* Копипаста со старого сайта, с некоторыми правками */
+
+/* stylelint-disable */
 .modal-pic {
     display: none;
     z-index: 100;
@@ -1749,3 +1752,4 @@ header .header__inner {
     font-size: 12px;
   }
 }
+/* stylelint-enable */
