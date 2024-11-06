@@ -205,7 +205,18 @@
                 introTiles.forEach(element => element.classList.remove('jumbotron__tile--current'));
                 introTiles[swiper.activeIndex].classList.add('jumbotron__tile--current')
             });
+
+
+            introTiles.forEach((tile, index) => {
+                tile.addEventListener('click', () => {
+                    swiper.slideTo(index)
+                });
+            });
+
+
         });
+
+
 
 
 
