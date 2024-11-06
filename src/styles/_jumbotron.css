@@ -59,6 +59,13 @@
                     height: 103px;
                     padding: 6px 11px;
                     text-decoration: none;
+                    box-shadow: 0 0 0 3px transparent;
+                    border-radius: 10px;
+                    transition: box-shadow 300ms ease;
+                }
+
+                .jumbotron__tile--current {
+                    box-shadow: 0 0 0 3px #E3BB6B;
                 }
                     .jumbotron__tile-image {
                         position: absolute;
