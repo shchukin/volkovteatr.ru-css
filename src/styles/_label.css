@@ -1,0 +1,10 @@
+.label {
+    display: block; /* In case it is being followed by button or smaller input. We want it to be on a new line. */
+    width: fit-content; /* Specify clickable area */
+    padding-top: 4px;
+    padding-bottom: 8px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    color: #0B1E3A;
+}

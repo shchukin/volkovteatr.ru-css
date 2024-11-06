@@ -17,6 +17,7 @@
 @import url("_link.css");
 @import url("_button.css");
 @import url("_input.css");
+@import url("_label.css");
 @import url("_choice.css");
 @import url("_wysiwyg.css");
 @import url("_helper.css");
@@ -117,6 +118,7 @@
 @import url("_results.css");
 @import url("_connect.css");
 @import url("_desktop-only.css");
+@import url("_smartphone-only.css");
 @import url("_checkout.css");
 @import url("_checkout-override.css");
 @import url("_plans.css");
