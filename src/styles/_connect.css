@@ -143,12 +143,12 @@
         }
             .connect__fieldset {
                 display: flex;
-                flex-direction: column;
+                flex-wrap: wrap;
                 /*grid-template-columns: repeat(2, minmax(0, 1fr));*/
                 gap: 12px;
             }
                 .connect__field {
-
+                    width: 100%;
                 }
 
                 .connect__field:first-child {
@@ -158,6 +158,11 @@
                 .connect__field--full-width {
                     /*grid-column: span 2;*/
                 }
+
+                .connect__field--half-width {
+                    width: calc(50% - 6px);
+                }
+
 
             .connect__footer {
                 margin-top: 16px;
