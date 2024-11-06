@@ -874,10 +874,7 @@
 
 
 
-
-
-
-    /* Checkout */
+    /* Копипаста со старого сайта, с некоторыми правками */
 
     var initCheckoutMap = function () {
         var activePlaces = [];
@@ -1029,79 +1026,6 @@
             $('body').css('overflow', 'unset');
         });
 
-        // if (clientWidth < 1100) {
-        //     var mapWidth = $(".checkout__map-places-scale").width();
-        //     var mapNoscaleOffset = $(".checkout__map-places-scale").offset().top;
-        //     var mapScaleOffset;
-        //     var windowWidth = clientWidth - 10;
-        //     var scaleValue = (windowWidth / mapWidth).toFixed(2);
-        //     var zoomValue = (mapWidth / windowWidth).toFixed(2);
-        //     // значение смещения карты
-        //     var translateOnScaleX = (windowWidth - mapWidth + 10) / 2;
-        //     // значение смещения сцены
-        //     var translateOnScaleY;
-        //
-        //     $('.checkout__summary-title').before($('.warning-pk'));
-        //     $('.warning-pk').css('padding','16px 16px');
-        //
-        //     $(".checkout__map-places-scale").css({
-        //         transform: " scale( " + scaleValue + " )",
-        //     });
-        //
-        //     $(".checkout__map-scene").css({
-        //         transform: "scale( " + scaleValue + " )",
-        //     });
-        //
-        //
-        //     mapScaleOffset = $(".checkout__map-places-scale").offset().top;
-        //     translateOnScaleY =
-        //         mapScaleOffset -
-        //         mapNoscaleOffset +
-        //         $(".checkout__map-scene").height() * scaleValue;
-        //     $(".checkout__map-places-scale").css({
-        //         transform:
-        //             "translate(" +
-        //             translateOnScaleX +
-        //             "px, " +
-        //             -translateOnScaleY +
-        //             "px) scale( " +
-        //             scaleValue +
-        //             " )",
-        //     });
-        //     $(".checkout__map-places").on("scroll", function (e) {
-        //         // координаты скролла
-        //         var offset = $(this).offset();
-        //         var relativeX = $(this).scrollLeft();
-        //         var relativeY = $(this).scrollTop();
-        //         var coords = [relativeX, relativeY];
-        //         setPointPositionOnMiniMap(coords);
-        //     });
-        //
-        //     $(".checkout__map-nav").on("click", function () {
-        //         $(".checkout__map-places").removeClass("zoomed");
-        //         $(".checkout__map-nav-wrapper").css({
-        //             opacity: 0,
-        //             "pointer-events": "none",
-        //         });
-        //
-        //         $(".checkout__map-info").fadeIn("fast");
-        //         $(".checkout__map-places-scale").css({
-        //             transform:
-        //                 "translate(" +
-        //                 translateOnScaleX +
-        //                 "px, " +
-        //                 -translateOnScaleY +
-        //                 "px) scale( " +
-        //                 scaleValue +
-        //                 " )",
-        //         });
-        //
-        //         $(".checkout__map-scene").css({
-        //             transform: "scale( " + scaleValue + " )",
-        //         });
-        //         $(".checkout__map-places").scrollTo({top: 0, left: 0}, 250);
-        //     });
-        // }
 
         //добавление фотографий с мест (не для мобилок и не для камерной сцены)
         if ($(`[data-id=632]`).length != 0) {
