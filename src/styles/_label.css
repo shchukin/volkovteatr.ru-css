@@ -8,3 +8,15 @@
     line-height: 20px;
     color: #0B1E3A;
 }
+
+
+
+@media (1850px <= width) {
+
+    .label {
+        padding-top: 6px;
+        padding-bottom: 10px;
+        font-size: 18px;
+        line-height: 22px;
+    }
+}
