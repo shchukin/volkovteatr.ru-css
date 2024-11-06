@@ -18,7 +18,7 @@
 
         <!-- assets -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="../styles/styles.css?1730886808">
+        <link rel="stylesheet" href="../styles/styles.css?1730889862">
 
     </head>
     <body>
@@ -251,8 +251,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="intro__breadcrumbs">
-                        <nav class="breadcrumbs container">
+                    <div class="intro__breadcrumbs container">
+                        <nav class="breadcrumbs">
                             <div class="breadcrumbs__scroll hide-scrollbar">
                                 <div class="breadcrumbs__ribbon">
                                     <div class="breadcrumbs__item">
@@ -1543,8 +1543,11 @@
                 </div>
                 <div class="connect__fieldset">
                     <div class="connect__field">
+                        <label class="label smartphone-only" for="spectacle">
+                            Выбор спектакля
+                        </label>
                         <div class="input input--inverted">
-                            <select class="input__widget">
+                            <select class="input__widget" id="spectacle">
                                 <option value="placeholder">Выбор спектакля</option>
                                 <option>Lorem ipsum dolor sit amet</option>
                                 <option>Consectetur adipisicing elit</option>
@@ -1554,28 +1557,43 @@
                         </div>
                     </div>
                     <div class="connect__field connect__field--half-width">
+                        <label class="label smartphone-only" for="date">
+                            Дата
+                        </label>
                         <div class="input input--inverted">
-                            <input class="input__widget" type="date" placeholder="Дата">
+                            <input class="input__widget" type="date" placeholder="Дата" id="date">
                         </div>
                     </div>
                     <div class="connect__field connect__field--half-width">
+                        <label class="label smartphone-only" for="time">
+                            Время
+                        </label>
                         <div class="input input--inverted">
-                            <input class="input__widget" type="time" placeholder="Время">
+                            <input class="input__widget" type="time" placeholder="Время" id="time">
                         </div>
                     </div>
                     <div class="connect__field connect__field--full-width">
+                        <label class="label smartphone-only" for="name">
+                            ФИО
+                        </label>
                         <div class="input input--inverted">
-                            <input class="input__widget" type="text" placeholder="ФИО" required>
+                            <input class="input__widget" type="text" placeholder="ФИО" required id="name">
                         </div>
                     </div>
                     <div class="connect__field">
+                        <label class="label smartphone-only" for="email">
+                            E-mail
+                        </label>
                         <div class="input input--inverted">
-                            <input class="input__widget" type="email" placeholder="E-mail" required>
+                            <input class="input__widget" type="email" placeholder="E-mail" required id="email">
                         </div>
                     </div>
                     <div class="connect__field">
+                        <label class="label smartphone-only" for="phone">
+                            Телефон
+                        </label>
                         <div class="input input--inverted">
-                            <input class="input__widget" type="tel" placeholder="Телефон" required>
+                            <input class="input__widget" type="tel" placeholder="Телефон" required id="phone">
                         </div>
                     </div>
                 </div>
@@ -1626,7 +1644,7 @@
         <script src="../vendors/photoswipe/photoswipe-lightbox.umd.min.js"></script>
 
         <!-- Scripts -->
-        <script src="../scripts/scripts.js?1730886808"></script>
+        <script src="../scripts/scripts.js?1730889862"></script>
 
     </body>
 </html>
