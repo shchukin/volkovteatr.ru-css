@@ -141,6 +141,7 @@
 
         /* Swiper для Intro */
 
+        const introTiles = document.querySelectorAll('.jumbotron__tile');
         const introSlideAutoplayDuration = 10000;
 
         document.querySelectorAll('.carousel--js-init-intro').forEach(($carousel) => {
@@ -199,8 +200,24 @@
                 } else {
                     swiper.params.autoplay.delay = introSlideAutoplayDuration;
                 }
+
+                if(introTiles.length) {
+                    introTiles.forEach(element => element.classList.remove('jumbotron__tile--current'));
+                    introTiles[swiper.activeIndex].classList.add('jumbotron__tile--current')
+                }
             });
+
+
+            introTiles.forEach((tile, index) => {
+                tile.addEventListener('click', () => {
+                    swiper.slideTo(index)
+                });
+            });
+
+
         });
+
+
 
 
 

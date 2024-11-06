@@ -201,9 +201,10 @@
                     swiper.params.autoplay.delay = introSlideAutoplayDuration;
                 }
 
-                console.log(swiper.activeIndex)
-                introTiles.forEach(element => element.classList.remove('jumbotron__tile--current'));
-                introTiles[swiper.activeIndex].classList.add('jumbotron__tile--current')
+                if(introTiles.length) {
+                    introTiles.forEach(element => element.classList.remove('jumbotron__tile--current'));
+                    introTiles[swiper.activeIndex].classList.add('jumbotron__tile--current')
+                }
             });
 
 
