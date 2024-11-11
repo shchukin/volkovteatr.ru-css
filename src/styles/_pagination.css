@@ -22,6 +22,7 @@
             font-size: 15px;
             line-height: 19px;
             color: #F8F0E5;
+            transition: background-color var(--transition-hover);
         }
 
         .pagination__link:hover {
