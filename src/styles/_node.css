@@ -818,7 +818,7 @@
         }
 
         .node__link--souvenir .node__image {
-            background-position: -595px -938px;
+            background-position: -595px -930px;
         }
 
     .node__link--photo {
@@ -832,7 +832,7 @@
         }
 
         .node__link--photo .node__image {
-            background-position: 0 -776px;
+            background-position: 0 -768px;
         }
 
     .node__link--canteen {
@@ -846,7 +846,7 @@
         }
 
         .node__link--canteen .node__image {
-            background-position: -1189px -900px;
+            background-position: -1189px -892px;
         }
 }
 
