@@ -154,7 +154,7 @@
 
                 autoplay: {
                     delay: introSlideAutoplayDuration,
-                    disableOnInteraction: true
+                    disableOnInteraction: false
                 },
 
                 on: {
