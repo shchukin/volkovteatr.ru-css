@@ -16,6 +16,7 @@
         .performance__heading {
             margin-top: 0;
             margin-bottom: 0;
+            margin-right: -100px;
             font-family: var(--font-heading);
             font-weight: 600;
             font-style: italic;
@@ -138,6 +139,7 @@
                 /*font-family: var(--font-heading);*/
                 /*font-weight: 600;*/
                 /*font-style: italic;*/
+                margin-right: -150px;
                 font-size: 52px;
                 line-height: 56px;
                 /*text-transform: uppercase;*/
@@ -253,6 +255,7 @@
                 /*font-family: var(--font-heading);*/
                 /*font-weight: 600;*/
                 /*font-style: italic;*/
+                margin-right: 0;
                 font-size: 24px;
                 line-height: 28px;
                 white-space: normal;
