@@ -398,20 +398,6 @@
             background-position: -810px -342px;
         }
 
-    .node__link--svo {
-        left: 406px;
-        top: 417px;
-        width: 388px;
-        height: 156px;
-    }
-        .node__link--svo .node__label {
-            justify-content: flex-start;
-        }
-
-        .node__link--svo .node__image {
-            background-position: -406px -417px;
-        }
-
     .node__link--refunds {
         left: 810px;
         top: 481px;
@@ -428,16 +414,16 @@
 
     .node__link--souvenir {
         left: 406px;
-        top: 589px;
+        top: 417px;
         width: 388px;
-        height: 154px;
+        height: 326px;
     }
         .node__link--souvenir .node__label {
 
         }
 
         .node__link--souvenir .node__image {
-            background-position: -406px -589px;
+            background-position: -406px -417px;
         }
 
     .node__link--photo {
@@ -779,20 +765,6 @@
             background-position: -1189px -510px;
         }
 
-    .node__link--svo {
-        left: 595px;
-        top: 722px;
-        width: 570px;
-        height: 192px;
-    }
-        .node__link--svo .node__label {
-            justify-content: flex-start;
-        }
-
-        .node__link--svo .node__image {
-            background-position: -595px -722px;
-        }
-
     .node__link--refunds {
         left: 1189px;
         top: 722px;
@@ -809,16 +781,16 @@
 
     .node__link--souvenir {
         left: 595px;
-        top: 938px;
+        top: 722px;
         width: 570px;
-        height: 161px;
+        height: 377px;
     }
         .node__link--souvenir .node__label {
 
         }
 
         .node__link--souvenir .node__image {
-            background-position: -595px -930px;
+            background-position: -595px -715px;
         }
 
     .node__link--photo {
@@ -1149,17 +1121,6 @@
 
         .node__link--pushkin-card .node__image {
             background-position: center -793px;
-        }
-
-    .node__link--svo {
-        height: 124px;
-    }
-        .node__link--svo .node__label {
-            justify-content: flex-start;
-        }
-
-        .node__link--svo .node__image {
-            background-position: center -929px;
         }
 
     .node__link--refunds {
