@@ -1131,7 +1131,7 @@
         }
 
         .node__link--refunds .node__image {
-            background-position: center -1065px;
+            background-position: center -931px;
         }
 
     .node__link--souvenir {
@@ -1142,7 +1142,7 @@
         }
 
         .node__link--souvenir .node__image {
-            background-position: center -1201px;
+            background-position: center -1067px;
         }
 
     .node__link--photo {
@@ -1153,7 +1153,7 @@
         }
 
         .node__link--photo .node__image {
-            background-position: center -1337px;
+            background-position: center -1203px;
         }
 
     .node__link--canteen {
@@ -1164,6 +1164,6 @@
         }
 
         .node__link--canteen .node__image {
-            background-position: center -1473px;
+            background-position: center -1339px;
         }
 }
