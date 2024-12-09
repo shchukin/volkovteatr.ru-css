@@ -1029,7 +1029,32 @@
 
         //добавление фотографий с мест (не для мобилок и не для камерной сцены)
         if ($(`[data-id=632]`).length != 0) {
-                const arPlace = [0, 4, 8, 245, 249, 376, 391, 427, 451, 471, 537, 596, 632, 656, 667, 359, 363, 236, 240, 244, 718, 697, 768, 294, 314, 329, 80, 101];
+            const arPlace = [
+                0,
+                4,
+                8,
+                241,
+                244,
+                355,
+                372,
+                391,
+                427,
+                465,
+                542,
+                596,
+                632,
+                663,
+                359,
+                236,
+                718,
+                681,
+                768,
+                289,
+                277,
+                76,
+                98
+            ];
+
             arPlace.forEach((el) => {
                 $(`[data-id=${el}]`).addClass('checkout__map-place--photo');
 
@@ -1039,6 +1064,7 @@
                     $(`[data-id=${el}]`).append(`<div class='pic-mod' data-id-mod=${el}>`);
                 }
             });
+
             let timers = [];
 
             const clear = (arr) => {
@@ -1057,39 +1083,39 @@
                         'top': e.pageY - 210,
                         'left': e.clientX - 150,
                     });
-                    if (clientWidth < 1334){
+                    if (clientWidth < 1334) {
                         $('.modal-pic').css({
                             'height': 100,
                             'width': 150,
                             'top': e.pageY - 110,
                             'left': e.clientX - 80,
                         });
-                        if ($(e.target).data('id-mod') == 240){
+                        if ($(e.target).data('id-mod') == 236) {
                             $('.modal-pic').css({
                                 'left': e.clientX - 150
                             });
                         }
-                        if ($(e.target).data('id-mod') == 244){
+                        if ($(e.target).data('id-mod') == 241) {
                             $('.modal-pic').css({
                                 'left': e.clientX - 150
                             });
                         }
-                        if ($(e.target).data('id-mod') == 236){
+                        if ($(e.target).data('id-mod') == 244) {
                             $('.modal-pic').css({
                                 'left': e.clientX - 150
                             });
                         }
-                        if ($(e.target).data('id-mod') == 0){
+                        if ($(e.target).data('id-mod') == 0) {
                             $('.modal-pic').css({
                                 'left': e.clientX
                             });
                         }
-                        if ($(e.target).data('id-mod') == 4){
+                        if ($(e.target).data('id-mod') == 4) {
                             $('.modal-pic').css({
                                 'left': e.clientX
                             });
                         }
-                        if ($(e.target).data('id-mod') == 8){
+                        if ($(e.target).data('id-mod') == 8) {
                             $('.modal-pic').css({
                                 'left': e.clientX
                             });
