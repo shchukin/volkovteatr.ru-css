@@ -1033,6 +1033,7 @@
                 0,
                 4,
                 8,
+                241,
                 244,
                 376,
                 391,
@@ -1044,7 +1045,6 @@
                 656,
                 667,
                 359,
-                363,
                 236,
                 718,
                 697,
@@ -1091,6 +1091,11 @@
                             'left': e.clientX - 80,
                         });
                         if ($(e.target).data('id-mod') == 236) {
+                            $('.modal-pic').css({
+                                'left': e.clientX - 150
+                            });
+                        }
+                        if ($(e.target).data('id-mod') == 241) {
                             $('.modal-pic').css({
                                 'left': e.clientX - 150
                             });
