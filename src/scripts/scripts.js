@@ -1033,7 +1033,7 @@
                 0,
                 4,
                 8,
-                249,
+                244,
                 376,
                 391,
                 427,
@@ -1091,6 +1091,11 @@
                             'left': e.clientX - 80,
                         });
                         if ($(e.target).data('id-mod') == 236) {
+                            $('.modal-pic').css({
+                                'left': e.clientX - 150
+                            });
+                        }
+                        if ($(e.target).data('id-mod') == 244) {
                             $('.modal-pic').css({
                                 'left': e.clientX - 150
                             });
