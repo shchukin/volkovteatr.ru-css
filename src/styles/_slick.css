@@ -100,7 +100,7 @@
     .slick-slider--css-stories .slick-list {
         overflow: visible;
     }
-    
+
     .slick-slider--css-stories .slick-slide {
         padding: 0 calc(var(--container-padding) / 2); /* вертикальный, чтобы не обрезалась трансформация scale, горизонтальный -- паддинг между слайдами */
         opacity: 100%;
@@ -110,4 +110,7 @@
         transform: none;
     }
 
+    .slick-slider--css-stories .slick-arrow {
+        display: none !important;
+    }
 }
