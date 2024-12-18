@@ -30,17 +30,61 @@
 
     .slick-slider--css-stories .slick-arrow {
         position: absolute;
+        top: 0;
+        bottom: 0;
+        height: auto;
+        margin: 0;
+        transform: none;
         z-index: 10;
-        background-color: red;
         width: auto;
     }
 
     .slick-slider--css-stories .slick-prev {
         left: 0;
+        margin-right: calc((100vw - 5 * 30px - 2 * 60px) / 5 / 2 + 15px); /* (100vw - 5 * 30px - 2 * 60px) -- суммарная ширина всех карточек,
+                                                                             делим на 5 штук,
+                                                                             делим на 2, потому что нужно отнять только половину
+                                                                             15px -- коррекция на трансформацию scale внутри карточки
+                                                                           */
         right: 50%;
     }
 
     .slick-slider--css-stories .slick-next {
         right: 0;
+        margin-left: calc((100vw - 5 * 30px - 2 * 60px) / 5 / 2 + 15px); /* (100vw - 5 * 30px - 2 * 60px) -- суммарная ширина всех карточек,
+                                                                             делим на 5 штук,
+                                                                             делим на 2, потому что нужно отнять только половину
+                                                                             15px -- коррекция на трансформацию scale внутри карточки
+                                                                           */
         left: 50%;
     }
+        .slick-slider--css-stories .slick-arrow::before {
+            display: none; /* старая стрелочка */
+        }
+
+        .slick-slider--css-stories .slick-arrow::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            margin-top: -30px;
+            width: 60px;
+            height: 60px;
+            background-size: 44px 44px;
+            background-repeat: no-repeat;
+            background-position: center center;
+            border-radius: 50%;
+            transition: background-color var(--transition-hover);
+        }
+
+        .slick-slider--css-stories .slick-arrow:hover::after {
+            background-color: #E4BB6B;
+        }
+            .slick-slider--css-stories .slick-prev::after {
+                left: 10%;
+                background-image: url("../vectors/stories-prev.svg");
+            }
+
+            .slick-slider--css-stories .slick-next::after {
+                right: 10%;
+                background-image: url("../vectors/stories-next.svg");
+            }
