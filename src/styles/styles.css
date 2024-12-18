@@ -2,6 +2,8 @@
 @import url("../vendors/magnific-popup/magnific-popup.css");
 @import url("../vendors/swiper/swiper-bundle.min.css");
 @import url("../vendors/photoswipe/photoswipe.css");
+@import url("../vendors/slick/slick.css");
+@import url("../vendors/slick/slick-theme.css");
 @import url("_fonts.css");
 @import url("_box-sizing.css");
 @import url("_visuallyhidden.css");
@@ -123,5 +125,6 @@
 @import url("_checkout-override.css");
 @import url("_plans.css");
 @import url("_scene.css");
+@import url("_slick.css");
 
 
