@@ -1,31 +1,46 @@
 .slick-slider--css-stories {
 
 }
-    .slick-slider--css-stories .slick-slide {
-        padding-left: 15px;
-        padding-right: 15px;
-        padding-top: 23px;
-        padding-bottom: 23px;
-        opacity: 40%;
-        transition: opacity var(--transition-hover);
+    .slick-slider--css-stories .slick-list {
+
+    }
+        .slick-slider--css-stories .slick-track {
+
+        }
+            .slick-slider--css-stories .slick-slide {
+                padding-left: 15px;
+                padding-right: 15px;
+                padding-top: 23px;
+                padding-bottom: 23px;
+                opacity: 40%;
+                transition: opacity var(--transition-hover);
+            }
+
+            .slick-slider--css-stories .slick-center {
+                opacity: 100% !important;
+            }
+                .slick-slider--css-stories .story__scale {
+                    transition: transform 1200ms var(--ease-out-quint);
+                }
+
+                .slick-slider--css-stories .slick-center .story__scale {
+                    transform: scale(110%);
+                }
+
+
+    .slick-slider--css-stories .slick-arrow {
+        position: absolute;
+        z-index: 10;
+        background-color: red;
+        width: auto;
     }
 
-    .slick-slider--css-stories .slick-center {
-        opacity: 100% !important;
-    }
-        .slick-slider--css-stories .story__scale {
-            transition: transform 1200ms var(--ease-out-quint);
-        }
-
-        .slick-slider--css-stories .slick-center .story__scale {
-            transform: scale(110%);
-        }
-
-
-.slick-slider--css-stories .slick-prev {
-
+    .slick-slider--css-stories .slick-prev {
+        left: 0;
+        right: 50%;
     }
 
     .slick-slider--css-stories .slick-next {
-
+        right: 0;
+        left: 50%;
     }

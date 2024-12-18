@@ -304,7 +304,6 @@
             pauseOnHover: false,
             infinite: true,
             slidesToShow: 5,
-            accessibility: false,
 
             draggable: false,
             // swipe: false,
