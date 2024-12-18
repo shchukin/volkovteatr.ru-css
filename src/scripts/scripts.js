@@ -291,108 +291,49 @@
 
     /* Slick */
 
-    const $slickStories = $('.slick-slider--init-stories');
-
-    let slickObject;
-
-
-    $slickStories.on("beforeChange", function() {
-        console.log(slickObject)
-    })
-
-    $slickStories.on("init", function() {
-        console.log(slickObject)
-    });
 
     $(document).ready(function() {
-        slickObject = $($slickStories).slick({
+        const autoplaySpeed = 3000; // Define autoplay speed (3 seconds)
+        const $slider = $('.slick-slider--init-stories');
+
+        $slider.slick({
             centerMode: true,
-            centerPadding: '60px', /* сколько показывать от первой и последней карточки (которые обрезаны краем экрана) */
+            centerPadding: '60px',
             autoplay: true,
-            slidesToShow: 5,
-            // responsive: [
-            //     {
-            //         breakpoint: 768,
-            //         settings: {
-            //             arrows: false,
-            //             centerMode: true,
-            //             centerPadding: '40px',
-            //             slidesToShow: 3
-            //         }
-            //     },
-            //     {
-            //         breakpoint: 480,
-            //         settings: {
-            //             arrows: false,
-            //             centerMode: true,
-            //             centerPadding: '40px',
-            //             slidesToShow: 1
-            //         }
-            //     }
-            // ]
-        })
-
-
-        $(".slick-slider--init-stories .slick-dots").append("<li class='animated-dot'><li>");
-
-        $(".slick-dots .animated-dot").click(function() {
-            $(this).toggleClass("play");
-            if ($(this).hasClass("play")) {
-                isPause = true;
-                $(this).css('background-image', 'url(https://img.icons8.com/plasticine/100/000000/pause.png)');
-                $('.slider').slick('slickPause');
-                $bar.css({
-                    width: 100 + "%"
-                });
-            } else {
-                isPause = false;
-                $(this).css('background-image', '');
-                $('.slider').slick('slickPlay');
-            }
-        }); 
-
-
-        var time = 2;
-        var $bar,
-            isPause,
-            tick,
-            percentTime;
-
-        $bar = $('.slider-progress .progress');
-
-        function startProgressbar() {
-            resetProgressbar();
-            percentTime = 0;
-            isPause = false;
-            tick = setInterval(interval, 10);
-        }
-
-        function interval() {
-            if ($(".slick-dots .animated-dot").hasClass("play")) {
-                isPause = true;
-            }
-            if (isPause === false) {
-                percentTime += 1 / (time + 0.1);
-                $bar.text(percentTime);
-                if (percentTime >= 100) {
-                    $(".slider").slick('slickNext');
-                    startProgressbar();
-                }
-            }
-        }
-
-        function resetProgressbar() {
-            $bar.text('0');
-            clearTimeout(tick);
-        }
-
-        startProgressbar();
-
-        $(".slick-slider--init-stories").on("beforeChange", function() {
-            resetProgressbar();
-            startProgressbar();
-            $bar.text('0');
+            autoplaySpeed: autoplaySpeed,
+            slidesToShow: 5
         });
+
+        // Initialize progress bars
+        const $progressBars = $('.story__progress');
+        $progressBars.css('width', '0'); // Reset progress bars
+
+        function resetProgressBars() {
+            $progressBars.css('width', '0'); // Reset all progress bars
+        }
+
+        function animateProgressBar(index) {
+            resetProgressBars(); // Reset all progress bars
+            const $currentProgressBar = $(`.slick-slide[data-slick-index="${index}"] .story__progress`);
+            $currentProgressBar.css({
+                width: '0',
+                transition: 'none'
+            });
+            setTimeout(() => {
+                $currentProgressBar.css({
+                    transition: `width ${autoplaySpeed}ms linear`,
+                    width: '100%'
+                });
+            }, 50); // Delay to ensure transition applies
+        }
+
+        // Handle progress bar animation on slide change
+        $slider.on('beforeChange', function(event, slick, currentSlide, nextSlide) {
+            animateProgressBar(nextSlide);
+        });
+
+        // Start progress bar animation for the first slide
+        animateProgressBar(0);
     });
 
 
