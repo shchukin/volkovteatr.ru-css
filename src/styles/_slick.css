@@ -8,7 +8,7 @@
 
         }
             .slick-slider--css-stories .slick-slide {
-                padding: 23px 15px;
+                padding: 30px 15px; /* вертикальный, чтобы не обрезалась трансформация scale, горизонтальный -- паддинг между слайдами */
                 opacity: 40%;
                 transition: opacity var(--transition-hover);
             }
@@ -88,14 +88,26 @@
 
 @media (1850px <= width) {
 
-    .slick-slider--css-stories .slick-slide {
-        padding-top: 30px;
-        padding-bottom: 30px;
+    .slick-slider--css-stories .slick-arrow::after {
+        margin-top: -40px;
+        width: 80px;
+        height: 80px;
+        background-size: 60px 60px;
     }
-        .slick-slider--css-stories .slick-arrow::after {
-            margin-top: -40px;
-            width: 80px;
-            height: 80px;
-            background-size: 60px 60px;
-        }
+}
+
+@media (width < 740px) {
+    .slick-slider--css-stories .slick-list {
+        overflow: visible;
+    }
+    
+    .slick-slider--css-stories .slick-slide {
+        padding: 0 calc(var(--container-padding) / 2); /* вертикальный, чтобы не обрезалась трансформация scale, горизонтальный -- паддинг между слайдами */
+        opacity: 100%;
+    }
+
+    .slick-slider--css-stories .slick-center .story__scale {
+        transform: none;
+    }
+
 }

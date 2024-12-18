@@ -308,9 +308,11 @@
             draggable: false,
             // swipe: false,
             // swipeToSlide: false,
+
+            /* Адаптив от большего к меньшему: */
             responsive: [
                 {
-                    breakpoint: 1024,
+                    breakpoint: 1280,
                     settings: {
                         slidesToShow: 3,
                     }
@@ -319,8 +321,8 @@
                     breakpoint: 740,
                     settings: {
                         slidesToShow: 1,
-                        draggable: true,
                         centerPadding: '0',
+                        draggable: true,
                     }
                 }
                 // You can unslick at a given breakpoint now by adding:
