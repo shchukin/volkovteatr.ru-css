@@ -301,6 +301,7 @@
             centerPadding: '60px',
             autoplay: true,
             autoplaySpeed: autoplaySpeed,
+            pauseOnHover: false,
             slidesToShow: 5
         });
 
