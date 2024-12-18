@@ -321,7 +321,7 @@
             });
             setTimeout(() => {
                 $currentProgressBar.css({
-                    transition: `width ${autoplaySpeed}ms linear`,
+                    transition: `width ${autoplaySpeed + 400}ms linear`, // 400ms -- time included in slide change
                     width: '100%'
                 });
             }, 50); // Delay to ensure transition applies
