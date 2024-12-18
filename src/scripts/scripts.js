@@ -302,7 +302,32 @@
             autoplay: true,
             autoplaySpeed: autoplaySpeed,
             pauseOnHover: false,
-            slidesToShow: 5
+            infinite: true,
+            slidesToShow: 5,
+            accessibility: false,
+
+            draggable: false,
+            // swipe: false,
+            // swipeToSlide: false,
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 3,
+                    }
+                },
+                {
+                    breakpoint: 740,
+                    settings: {
+                        slidesToShow: 1,
+                        draggable: true,
+                        centerPadding: '0',
+                    }
+                }
+                // You can unslick at a given breakpoint now by adding:
+                // settings: "unslick"
+                // instead of a settings object
+            ]
         });
 
         // Initialize progress bars
