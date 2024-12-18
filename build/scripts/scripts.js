@@ -235,7 +235,7 @@
                 loop: true, // а чтобы слева, до первого айтема не было дыры приходится зацикливаться
 
                 autoplay: {
-                    delay: 5000
+                    delay: 1000
                 },
 
                 on: {
@@ -286,6 +286,81 @@
 
     $(window).on('resize', function () {
         setTimeout(initCarousels, 1000)
+    });
+
+
+    /* Slick */
+
+
+    $(document).ready(function() {
+        const autoplaySpeed = 3000; // Define autoplay speed (3 seconds)
+        const $slider = $('.slick-slider--init-stories');
+
+        $slider.slick({
+            centerMode: true,
+            centerPadding: '60px',
+            autoplay: true,
+            autoplaySpeed: autoplaySpeed,
+            pauseOnHover: false,
+            infinite: true,
+            slidesToShow: 5,
+
+            draggable: false,
+            // swipe: false,
+            // swipeToSlide: false,
+
+            /* Адаптив от большего к меньшему: */
+            responsive: [
+                {
+                    breakpoint: 1280,
+                    settings: {
+                        slidesToShow: 3,
+                    }
+                },
+                {
+                    breakpoint: 740,
+                    settings: {
+                        slidesToShow: 1,
+                        centerPadding: '0',
+                        draggable: true,
+                    }
+                }
+                // You can unslick at a given breakpoint now by adding:
+                // settings: "unslick"
+                // instead of a settings object
+            ]
+        });
+
+        // Initialize progress bars
+        const $progressBars = $('.story__progress');
+        $progressBars.css('width', '0'); // Reset progress bars
+
+        function resetProgressBars() {
+            $progressBars.css('width', '0'); // Reset all progress bars
+        }
+
+        function animateProgressBar(index) {
+            resetProgressBars(); // Reset all progress bars
+            const $currentProgressBar = $(`.slick-slide[data-slick-index="${index}"] .story__progress`);
+            $currentProgressBar.css({
+                width: '0',
+                transition: 'none'
+            });
+            setTimeout(() => {
+                $currentProgressBar.css({
+                    transition: `width ${autoplaySpeed + 400}ms linear`, // 400ms -- time included in slide change
+                    width: '100%'
+                });
+            }, 50); // Delay to ensure transition applies
+        }
+
+        // Handle progress bar animation on slide change
+        $slider.on('beforeChange', function(event, slick, currentSlide, nextSlide) {
+            animateProgressBar(nextSlide);
+        });
+
+        // Start progress bar animation for the first slide
+        animateProgressBar(0);
     });
 
 
