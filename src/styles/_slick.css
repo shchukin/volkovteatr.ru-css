@@ -8,10 +8,7 @@
 
         }
             .slick-slider--css-stories .slick-slide {
-                padding-left: 15px;
-                padding-right: 15px;
-                padding-top: 23px;
-                padding-bottom: 23px;
+                padding: 23px 15px;
                 opacity: 40%;
                 transition: opacity var(--transition-hover);
             }
@@ -88,3 +85,17 @@
                 right: 10%;
                 background-image: url("../vectors/stories-next.svg");
             }
+
+@media (1850px <= width) {
+
+    .slick-slider--css-stories .slick-slide {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+        .slick-slider--css-stories .slick-arrow::after {
+            margin-top: -40px;
+            width: 80px;
+            height: 80px;
+            background-size: 60px 60px;
+        }
+}
