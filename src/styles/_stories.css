@@ -63,7 +63,7 @@
 
 
 .stories--landing {
-    margin-top: var(--footer-margin);
+    margin-top: 100px;
     margin-bottom: calc(-1 * var(--footer-margin));
     padding-top: 50px;
     padding-bottom: 80px;
