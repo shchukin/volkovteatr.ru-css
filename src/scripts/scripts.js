@@ -718,18 +718,26 @@
     });
 
 
+
     /* Переключатель в групповой заявке */
 
     document.addEventListener("DOMContentLoaded", function () {
 
-        const switchItems = document.querySelectorAll('[data-js-application-performances], [data-js-application-excursions]');
-        const selectField = document.querySelector('[data-js-application-select-show]');
+        const applicationSwitch = document.querySelectorAll('[data-js-application-performances], [data-js-application-excursions]');
+        const applicationSpectacleSelect = document.querySelector('[data-js-application-select-show]');
 
-        switchItems.forEach((item) => {
+        const applicationSpectacleHeader = document.querySelector('[data-js-application-spectacle-header]');
+        const applicationExcursionHeader = document.querySelector('[data-js-application-excursion-header]');
+
+        applicationSwitch.forEach((item) => {
             item.addEventListener('click', function () {
-                switchItems.forEach(btn => btn.classList.remove('switch__item--current'));
+                applicationSwitch.forEach(btn => btn.classList.remove('switch__item--current'));
                 this.classList.add('switch__item--current');
-                selectField.style.display = this.hasAttribute('data-js-application-performances') ? 'block' : 'none';
+
+                applicationSpectacleHeader.style.display = this.hasAttribute('data-js-application-performances') ? 'block' : 'none';
+                applicationExcursionHeader.style.display = this.hasAttribute('data-js-application-performances') ? 'none' : 'block';
+
+                applicationSpectacleSelect.style.display = this.hasAttribute('data-js-application-performances') ? 'block' : 'none';
             });
         });
     });
