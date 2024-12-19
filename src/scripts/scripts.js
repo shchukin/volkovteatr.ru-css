@@ -724,7 +724,6 @@
 
         const switchItems = document.querySelectorAll('[data-js-application-performances], [data-js-application-excursions]');
         const selectField = document.querySelector('[data-js-application-select-show]');
-        const form = document.querySelector('[data-js-application-form]');
 
         switchItems.forEach((item) => {
             item.addEventListener('click', function () {
