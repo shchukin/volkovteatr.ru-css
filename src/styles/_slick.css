@@ -96,6 +96,27 @@
     }
 }
 
+
+
+@media (740px <= width < 1280px) {
+
+    .slick-slider--css-stories .slick-prev {
+        margin-right: calc((100vw - 3 * 30px - 2 * 60px) / 3 / 2 + 15px); /* (100vw - 3 * 30px - 2 * 60px) -- суммарная ширина всех карточек,
+                                                                             делим на 3 штуки,
+                                                                             делим на 2, потому что нужно отнять только половину
+                                                                             15px -- коррекция на трансформацию scale внутри карточки
+                                                                           */
+    }
+
+    .slick-slider--css-stories .slick-next {
+        margin-left: calc((100vw - 3 * 30px - 2 * 60px) / 3 / 2 + 15px); /* (100vw - 3 * 30px - 2 * 60px) -- суммарная ширина всех карточек,
+                                                                             делим на 3 штук,
+                                                                             делим на 2, потому что нужно отнять только половину
+                                                                             15px -- коррекция на трансформацию scale внутри карточки
+                                                                           */
+    }
+}
+
 @media (width < 740px) {
     .slick-slider--css-stories .slick-list {
         overflow: visible;
