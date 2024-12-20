@@ -15,6 +15,10 @@
                 flex-grow: 1;
             }
 
+            .footer__subscription {
+                max-width: 410px;
+            }
+
         .footer__secondary-section {
             border-top: 1px solid #6073A2;
             padding-top: 26px;
@@ -59,6 +63,10 @@
                     /*flex-grow: 1;*/
                 }
 
+                .footer__subscription {
+                    max-width: 540px;
+                }
+
             .footer__secondary-section {
                 /*border-top: 1px solid #6073A2;*/
                 /*padding-top: 26px;*/
@@ -100,6 +108,10 @@
             }
                 .footer__navigation {
                     /*flex-grow: 1;*/
+                }
+
+                .footer__subscription {
+                    margin-top: 32px;
                 }
 
             .footer__secondary-section {

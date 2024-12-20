@@ -92,3 +92,39 @@
             }
 }
 
+
+
+.subscription--footer {
+    /*display: grid;*/
+    /*grid-template-columns: 1fr auto;*/
+    /*grid-template-rows: auto auto;*/
+    /*gap: 1px 20px;*/
+}
+    .subscription--footer .subscription__field {
+
+    }
+
+    .subscription--footer .subscription__agreement {
+        /*grid-row-start: 2;*/
+        /*grid-row-end: 3;*/
+        /*grid-column-start: 1;*/
+        /*grid-column-end: 3;*/
+        /*max-width: 300px;*/
+    }
+
+    .subscription--footer .subscription__submit {
+
+    }
+        .subscription--footer .subscription__submit.button,
+        .subscription--footer .subscription__submit .button {
+            /*padding-left: 26px;*/
+            /*padding-right: 26px;*/
+        }
+
+        .subscription--footer .subscription__submit.button:hover,
+        .subscription--footer .subscription__submit .button:hover {
+            background-color: #0B1E3A;
+            color: #E4BB6B;
+        }
+
+

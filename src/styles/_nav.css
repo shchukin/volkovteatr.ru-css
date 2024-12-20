@@ -89,6 +89,10 @@
                     opacity: 90%;
                 }
 
+                .nav__item--encyclopedia .nav__link:active {
+                    translate: 0 1px;
+                }
+
         .nav__addition {
             margin-top: 21px;
         }
