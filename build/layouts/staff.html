@@ -18,7 +18,7 @@
 
         <!-- assets -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="../styles/styles.css?1734617831">
+        <link rel="stylesheet" href="../styles/styles.css?1734691914">
 
     </head>
     <body>
@@ -638,6 +638,32 @@
                                 </div>
                             </nav>
                         </div>
+                        <div class="footer__subscription">
+                            <div class="footer__subscription-heading">
+                                <label class="label" for="footer-subscription-email">
+                                    Подпишитесь на рассылку
+                                </label>
+                            </div>
+                            <form class="subscription subscription--footer" data-js-form>
+                                <div class="subscription__field">
+                                    <div class="input input--inverted">
+                                        <input class="input__widget" type="email" placeholder="E-mail" id="footer-subscription-email">
+                                    </div>
+                                </div>
+                                <div class="subscription__agreement">
+                                    <label class="choice choice--inverted">
+                                        <input class="choice__widget" type="checkbox">
+                                        <span class="choice__label">Нажимая «Отправить», вы выражаете согласие на&nbsp;обработку персональных данных</span>
+                                        <i class="choice__icon" role="presentation"></i>
+                                    </label>
+                                </div>
+                                <div class="subscription__submit">
+                                    <button class="button" type="submit" data-js-submit>
+                                        Отправить
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                     <div class="footer__secondary-section">
                         <div class="footer__legalities">
@@ -659,6 +685,27 @@
             </footer>
         </div>
 
+        <!-- Уведомления -->
+        <div class="notifications-center">
+            <div class="alert alert--success" data-js-alert-success style="display: none;">
+                <div class="alert__label">
+                    Ваша заявка получена. Спасибо за обращение!
+                </div>
+                <button class="alert__dismiss" type="button">
+                    Закрыть
+                </button>
+            </div>
+            <div class="alert alert--danger" data-js-alert-failure style="display: none;">
+                <div class="alert__label">
+                    Во время отправки данных произошла ошибка.<br class="desktop-only">
+                    Проверьте ваше соединение и попробуйте позже.
+                </div>
+                <button class="alert__dismiss" type="button">
+                    Закрыть
+                </button>
+            </div>
+        </div>
+
         <!-- jQuery dependant -->
         <script src="../vendors/jquery/jquery-3.7.1.min.js"></script>
         <script src="../vendors/magnific-popup/jquery.magnific-popup.min.js"></script>
@@ -673,7 +720,7 @@
         <script src="../vendors/photoswipe/photoswipe-lightbox.umd.min.js"></script>
 
         <!-- Scripts -->
-        <script src="../scripts/scripts.js?1734617831"></script>
+        <script src="../scripts/scripts.js?1734691914"></script>
 
     </body>
 </html>
