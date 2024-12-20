@@ -8,11 +8,11 @@
         width: 28px;
         height: 28px;
         fill: #0B1E3A;
-        transition: opacity var(--transition-hover);
+        transition: fill var(--transition-hover);
     }
 
     .net:hover .net__icon {
-        fill: var(--action-color-hover);
+        fill: #394352;
     }
 
     .net:active .net__icon {
@@ -61,6 +61,10 @@
 }
     .net--light .net__icon {
         fill: #E4BB6B;
+    }
+
+    .net--light:hover .net__icon {
+        fill: var(--action-color-hover);
     }
 
 

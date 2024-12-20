@@ -82,11 +82,11 @@
                     text-transform: uppercase;
                     text-decoration: none;
                     user-select: none;
-                    transition: opacity var(--transition-hover);
+                    transition: background-color var(--transition-hover);
                 }
 
                 .nav__item--encyclopedia .nav__link:hover {
-                    opacity: 90%;
+                    background-color: #394352;
                 }
 
                 .nav__item--encyclopedia .nav__link:active {
