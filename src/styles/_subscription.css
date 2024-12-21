@@ -16,6 +16,17 @@
         max-width: 300px;
     }
 
+    .subscription__text-agreement {
+        grid-row-start: 2;
+        grid-row-end: 3;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        margin-top: 4px;
+        font-size: 11px;
+        line-height: 16px;
+        color: #505050;
+    }
+
     .subscription__submit {
 
     }
@@ -45,6 +56,13 @@
             /*grid-column-start: 1;*/
             /*grid-column-end: 3;*/
             max-width: 370px;
+        }
+
+        .subscription__text-agreement {
+            /*margin-top: 4px;*/
+            font-size: 13px;
+            line-height: 20px;
+            /*color: #505050;*/
         }
 
         .subscription__submit {
@@ -79,6 +97,10 @@
             /*grid-column-start: 1;*/
             /*grid-column-end: 3;*/
             max-width: none;
+        }
+
+        .subscription__text-agreement {
+
         }
 
         .subscription__submit {

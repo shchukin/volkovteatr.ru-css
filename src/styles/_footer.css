@@ -16,23 +16,34 @@
             }
 
             .footer__subscription {
-                width: fit-content;
+                margin-top: 40px;
+                width: 835px;
+                display: flex;
+                gap: 50px;
+                border: 1px solid #303F64;
+                border-radius: 4px;
+                padding: 24px 28px;
             }
-                .footer__subscription-heading {
-                    display: block;
-                    font-weight: bold;
-                    font-size: 18px;
-                    line-height: 20px;
+                .footer__subscription-intro {
+                    flex-shrink: 0;
                 }
+                    .footer__subscription-heading {
+                        display: block;
+                        font-weight: bold;
+                        font-size: 18px;
+                        line-height: 20px;
+                        white-space: nowrap;
+                    }
 
-                .footer__subscription-note {
-                    margin-top: 4px;
-                    font-size: 14px;
-                    line-height: 18px;
-                }
+                    .footer__subscription-note {
+                        margin-top: 8px;
+                        font-size: 14px;
+                        line-height: 18px;
+                        white-space: nowrap;
+                    }
 
                 .footer__subscription-form {
-                    margin-top: 8px;
+                    flex-grow: 1;
                 }
 
         .footer__secondary-section {
@@ -79,25 +90,35 @@
                     /*flex-grow: 1;*/
                 }
 
-
                 .footer__subscription {
-                    /*width: fit-content;*/
+                    /*margin-top: 40px;*/
+                    width: 1170px;
+                    /*display: flex;*/
+                    gap: 70px;
+                    /*border: 1px solid #303F64;*/
+                    border-radius: 6px;
+                    padding: 32px 40px;
                 }
-                    .footer__subscription-heading {
-                        /*display: block;*/
-                        /*font-weight: bold;*/
-                        font-size: 22px;
-                        line-height: 26px;
+                    .footer__subscription-intro {
+                        /*flex-shrink: 0;*/
                     }
+                        .footer__subscription-heading {
+                            /*display: block;*/
+                            /*font-weight: bold;*/
+                            font-size: 22px;
+                            line-height: 26px;
+                            /*white-space: nowrap;*/
+                        }
 
-                    .footer__subscription-note {
-                        /*margin-top: 4px;*/
-                        font-size: 17px;
-                        line-height: 24px;
-                    }
+                        .footer__subscription-note {
+                            margin-top: 12px;
+                            font-size: 17px;
+                            line-height: 24px;
+                            /*white-space: nowrap;*/
+                        }
 
                     .footer__subscription-form {
-                        /*margin-top: 8px;*/
+                        /*flex-grow: 1;*/
                     }
 
             .footer__secondary-section {
@@ -144,8 +165,36 @@
                 }
 
                 .footer__subscription {
-                    margin-top: 32px;
+                    margin-top: 40px;
+                    width: auto;
+                    display: block;
+                    /*gap: 50px;*/
+                    /*border: 1px solid #303F64;*/
+                    /*border-radius: 4px;*/
+                    /*padding: 24px 28px;*/
                 }
+                    .footer__subscription-intro {
+                        /*flex-shrink: 0;*/
+                    }
+                        .footer__subscription-heading {
+                            /*display: block;*/
+                            /*font-weight: bold;*/
+                            /*font-size: 18px;*/
+                            /*line-height: 20px;*/
+                            white-space: normal;
+                        }
+
+                        .footer__subscription-note {
+                            /*margin-top: 8px;*/
+                            /*font-size: 14px;*/
+                            /*line-height: 18px;*/
+                            white-space: normal;
+                        }
+
+                    .footer__subscription-form {
+                        margin-top: 12px;
+                        /*flex-grow: 1;*/
+                    }
 
             .footer__secondary-section {
                 /*border-top: 1px solid #6073A2;*/
