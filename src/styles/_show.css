@@ -69,6 +69,7 @@
 
     .show__tickets {
         margin-top: 16px;
+        min-height: 68px; /* виджет платёжки */
     }
         .show__tickets.button,
         .show__tickets .button {
@@ -146,6 +147,7 @@
 
         .show__tickets {
             /*margin-top: 16px;*/
+            min-height: 78px; /* виджет платёжки */
         }
             .show__tickets.button,
             .show__tickets .button {
