@@ -24,7 +24,7 @@
         }
             .play__cut {
                 height: calc(100% + 24px);
-                border-top-right-radius: 400px;
+                border-top-right-radius: 174px;
                 overflow: hidden;
             }
                 .play__image {
@@ -251,7 +251,7 @@
             }
                 .play__cut {
                     height: calc(100% + 33px);
-                    /*border-top-right-radius: 400px;*/
+                    border-top-right-radius: 230px;
                     /*overflow: hidden;*/
                 }
                     .play__image {
@@ -486,7 +486,7 @@
                     width: 320px;
                     height: calc(270px + 9px);
                     padding-bottom: 9px;
-                    /*border-top-right-radius: 400px;*/
+                    border-top-right-radius: 154px;
                     /*overflow: hidden;*/
                 }
                     .play__image {
