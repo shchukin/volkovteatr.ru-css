@@ -53,7 +53,7 @@
             gap: 18px;
         }
             .engage__agreement {
-                max-width: 350px;
+                max-width: 440px;
                 font-size: 15px;
                 line-height: 20px;
                 text-align: right;
@@ -105,7 +105,7 @@
                 gap: 24px;
             }
                 .engage__agreement {
-                    max-width: 390px;
+                    max-width: 540px;
                     font-size: 17px;
                     line-height: 23px;
                 }

@@ -52,7 +52,7 @@
         gap: 18px;
     }
         .connect__agreement {
-            max-width: 350px;
+            max-width: 460px;
             font-size: 15px;
             line-height: 20px;
             color: #6073A2;
@@ -100,7 +100,7 @@
                 gap: 24px;
             }
                 .connect__agreement {
-                    max-width: 390px;
+                    max-width: 540px;
                     font-size: 17px;
                     line-height: 23px;
                 }
