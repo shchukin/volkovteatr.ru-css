@@ -363,7 +363,7 @@
 
     /* Модалка */
 
-    const $fixedHeader = $('.header__fixed-part');
+    const $fixedHeader = $('.header__detachable-part');
     const scrollWidth = $(window).outerWidth() - $(window).width();
 
     $('.mfp-handler').magnificPopup({
