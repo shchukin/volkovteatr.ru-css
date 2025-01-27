@@ -363,7 +363,7 @@
 
     /* Модалка */
 
-    const $fixedHeader = $('.header__fixed-part');
+    const $fixedHeader = $('.header__detachable-part');
     const scrollWidth = $(window).outerWidth() - $(window).width();
 
     $('.mfp-handler').magnificPopup({
@@ -373,7 +373,7 @@
         callbacks: {
             open: function () {
 
-                // Перезапускаем обсчёт expanding textareas для инстансов внутри откртой модалки
+                // Перезапускаем обсчёт expanding textareas для инстансов внутри открытой модалки
                 const instance = $.magnificPopup.instance;
                 const modalContent = instance.content[0];
                 const textareas = $(modalContent).find('.input--expandable .input__widget');
@@ -382,7 +382,7 @@
                     expandTextarea($(this));
                 });
 
-                /* Шапка фиксированная, ей тоже надо корректировать пропавшее пространство подскроллбаром */
+                /* Шапка фиксированная, ей тоже надо корректировать пропавшее пространство под скроллбаром */
                 $fixedHeader.css({'margin-right': scrollWidth});
             },
             close: function () {
