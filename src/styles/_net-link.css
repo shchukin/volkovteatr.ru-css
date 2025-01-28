@@ -6,16 +6,24 @@
     font-size: 16px;
     line-height: 22px;
     color: #000000;
-    text-decoration: 1.25px underline transparent;
+    text-decoration: 1px underline transparent;
     text-underline-offset: 3px;
     transition: text-decoration-color var(--transition-hover);
 }
 
 .net-link:hover {
-    /*text-decoration-color: currentColor;  больше этот компонент некликабелен */
+    text-decoration-color: currentColor;
 }
     .net-link__icon {
         vertical-align: top;
+    }
+
+
+.net-link--not-clickable {
+    text-decoration: none;
+}
+    .net-link--not-clickable .net-link__icon {
+
     }
 
 
