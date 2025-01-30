@@ -81,7 +81,6 @@
 
 .checkout__map-nav-label {
     padding: 8px 13px;
-    font-family: Roboto;
     font-style: normal;
     font-weight: 400;
     font-size: 11px;
@@ -140,8 +139,7 @@
     width: 100%;
     margin-bottom: 3px;
     text-align: center;
-    font-family: Verdana;
-    font-size: 10px;
+    font-size: 11px;
     line-height: 12px;
     text-transform: uppercase;
 }
@@ -155,7 +153,6 @@
     display: block;
     width: 100%;
     text-align: center;
-    font-family: Verdana;
     font-size: 9px;
     line-height: 11px;
     color: grey;
@@ -165,7 +162,6 @@
 .checkout__map-subtitle {
     display: block;
     margin-bottom: 9px;
-    font-family: Roboto;
     font-size: 12px;
     line-height: 15px;
     color: grey;
@@ -214,8 +210,7 @@
 }
 
 .checkout__map-number {
-    font-family: Verdana;
-    font-size: 7px;
+    font-size: 9px;
     line-height: 8px;
     letter-spacing: 1.2px;
     color: grey;
@@ -815,7 +810,6 @@
     padding: 4px 25px;
     background: #ffc700;
     border-radius: 52px;
-    font-family: Roboto;
     font-size: 18px;
     line-height: 35px;
 }
@@ -858,7 +852,6 @@
 .checkout__summary-price {
     width: 100%;
     margin: 20px 0 30px;
-    font-family: Roboto;
     font-weight: 500;
     font-size: 22px;
     line-height: 24px;
@@ -942,7 +935,6 @@
 
 .checkout__summary-item-place,
 .checkout__summary-item-row {
-    font-family: Roboto;
     font-size: 16px;
     line-height: 19px;
 }
@@ -967,7 +959,6 @@
 
 .checkout__summary-item-price {
     text-align: center;
-    font-family: Roboto;
     font-size: 16px;
     line-height: 19px;
     color: rgba(6, 23, 33, 0.6);
@@ -1049,7 +1040,6 @@
 
 .checkout__add-title {
     margin-bottom: 22px;
-    font-family: Roboto;
     font-size: 22px;
     line-height: 24px;
 }
@@ -1120,14 +1110,12 @@
 
 .checkout__add-item-price {
     text-align: center;
-    font-family: Roboto;
     font-size: 16px;
     line-height: 19px;
     opacity: 0.6;
 }
 
 .checkout__add-price {
-    font-family: Roboto;
     font-weight: 500;
     font-size: 22px;
     line-height: 24px;
@@ -1185,7 +1173,6 @@
 
 .checkout__confirm-field label {
     margin-bottom: 10px;
-    font-family: Roboto;
     font-size: 14px;
     line-height: 18px;
 }
@@ -1194,14 +1181,12 @@
     border: 1px solid rgba(173, 189, 199, 0.6);
     padding: 14px;
     min-width: 280px;
-    font-family: Roboto;
     font-size: 16px;
     line-height: 21px;
 }
 
 .checkout__confirm-price {
     margin-bottom: 20px;
-    font-family: Roboto;
     font-weight: 500;
     font-size: 26px;
     line-height: 24px;
@@ -1250,7 +1235,6 @@
 
 .checkout__confirm-buy-descr {
     max-width: 610px;
-    font-family: Roboto;
     font-size: 13px;
     line-height: 18px;
     color: #000;
