@@ -1105,26 +1105,26 @@
                 0,
                 4,
                 8,
-                239,
-                244,
-                355,
-                372,
-                391,
-                427,
-                465,
-                542,
-                596,
-                632,
-                663,
+                77,
+                99,
+                240,
+                243,
+                248,
+                293,
+                312,
                 359,
-                236,
-                718,
-                681,
-                768,
-                289,
-                308,
-                76,
-                98
+                363,
+                376,
+                395,
+                431,
+                469,
+                546,
+                600,
+                636,
+                667,
+                694,
+                705,
+                767
             ];
 
             arPlace.forEach((el) => {
@@ -1162,21 +1162,6 @@
                             'top': e.pageY - 110,
                             'left': e.clientX - 80,
                         });
-                        if ($(e.target).data('id-mod') == 236) {
-                            $('.modal-pic').css({
-                                'left': e.clientX - 150
-                            });
-                        }
-                        if ($(e.target).data('id-mod') == 241) {
-                            $('.modal-pic').css({
-                                'left': e.clientX - 150
-                            });
-                        }
-                        if ($(e.target).data('id-mod') == 244) {
-                            $('.modal-pic').css({
-                                'left': e.clientX - 150
-                            });
-                        }
                         if ($(e.target).data('id-mod') == 0) {
                             $('.modal-pic').css({
                                 'left': e.clientX
@@ -1187,9 +1172,9 @@
                                 'left': e.clientX
                             });
                         }
-                        if ($(e.target).data('id-mod') == 8) {
+                        if ($(e.target).data('id-mod') == 240) {
                             $('.modal-pic').css({
-                                'left': e.clientX
+                                'left': e.clientX - 150
                             });
                         }
                     }
