@@ -1615,6 +1615,7 @@ header .header__inner {
 
 
 .checkout__map-place--photo {
+    background-color: rgba(255, 255, 255, 0.4);
     background-image: url('../vectors/camera.svg');
     background-size: 11px 11px;
     background-repeat: no-repeat;
