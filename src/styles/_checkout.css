@@ -261,6 +261,11 @@
     margin-right: 1px;
     border: 1px solid #6d9ee1;
     border-radius: 5px;
+    font-weight: bold;
+    font-size: 10px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: -0.5px;
 }
 
 .checkout__map-place-fake {

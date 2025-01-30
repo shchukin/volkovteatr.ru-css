@@ -1075,13 +1075,7 @@
         initCheckoutMap();
         $('.checkout__map-place').on('click', function () {
             $(this).toggleClass('checkout__map-place--active');
-            var stage = $(this).attr('data-name-floor');
-            var row = $(this).attr('data-name-row');
-            var place = $(this).attr('data-place');
-            var price = $(this).attr('data-price');
             var id = $(this).attr('data-id');
-
-
 
             if (!$(this).hasClass('checkout__map-place--active')) {
                 $(this).removeClass('checkout__map-place--active')
@@ -1134,7 +1128,7 @@
             ];
 
             arPlace.forEach((el) => {
-                $(`[data-id=${el}]`).addClass('checkout__map-place--photo');
+                $(`[data-id=${el}]`).text('').addClass('checkout__map-place--photo');
 
                 if ($(`[data-id=${el}]`).hasClass('checkout__map-place--disabled')) {
                     $(`[data-id=${el}]`).wrapAll(`<div class='pic-mod' data-id-mod=${el}>`);
