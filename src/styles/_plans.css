@@ -58,45 +58,6 @@
             text-align: center;
         }
 
-        .plans__preview {
-            margin-top: 32px;
-        }
-            .plans__preview-heading {
-                display: block;
-                max-width: 200px;
-                margin-left: auto;
-                margin-right: auto;
-                font-size: 16px;
-                line-height: 22px;
-                text-align: center;
-                color: gray;
-                text-decoration: none;
-                transition: color var(--transition-hover);
-            }
-
-            .plans__preview-heading:hover {
-                color: #FFFFFF;
-            }
-
-            .plans__preview-photo {
-                display: block;
-                margin-top: 4px;
-                margin-left: auto;
-                margin-right: auto;
-                width: 88px;
-                height: 100px;
-                overflow: hidden; /* наведение */
-            }
-                .plans__preview-image {
-                    vertical-align: top;
-                    transition: transform 400ms var(--ease-out-quint);
-                }
-
-                .plans__preview-photo:hover .plans__preview-image {
-                    transform: scale(1.1);
-                }
-
-
     .plans__chamber {
         margin-top: 80px;
     }
