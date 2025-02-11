@@ -65,6 +65,15 @@
         }
 
 
+        @keyframes window-side {
+            from { transform: translateX(-200px); }
+            to { transform: translateX(0); }
+        }
+
+        .mfp-ready .window {
+            animation: window-side 1000ms var(--ease-out-quint);
+        }
+
 @media (width < 1200px) {
     .mfp-left-side .window {
         max-width: 90vw;
