@@ -384,6 +384,11 @@
 
                 /* Шапка фиксированная, ей тоже надо корректировать пропавшее пространство под скроллбаром */
                 $fixedHeader.css({'margin-right': scrollWidth});
+
+                /* Если проставлена опция mfp-handler-left-side (класс на хендлере), то её надо проставить на саму модалку: */
+                if($(instance.ev[0]).hasClass('mfp-handler-left-side')) {
+                    instance.wrap.addClass('mfp-left-side');
+                }
             },
             close: function () {
                 $fixedHeader.css({'margin-right': '0'});

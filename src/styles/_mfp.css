@@ -149,3 +149,24 @@ button.mfp-close:focus-visible {
         }
 
 
+
+
+.mfp-left-side {
+
+}
+    .mfp-left-side .mfp-container {
+
+    }
+        .mfp-left-side .mfp-container {
+            padding: 0;
+        }
+            .mfp-left-side .mfp-container::before {
+                display: none;
+            }
+                .mfp-left-side .mfp-content {
+                    margin-top: 0;
+                    margin-bottom: 0;
+                    height: 100%;
+                    text-align: left;
+                }
+

@@ -1,0 +1,18 @@
+.detailed-event {
+    padding: 40px 40px 50px;
+    color-scheme: light;
+}
+
+@media (1850px <= width) {
+    .detailed-event {
+        padding: 54px 54px 70px;
+    }
+}
+
+
+@media (width < 740px) {
+
+    .detailed-event {
+        padding: 30px var(--container-padding) 40px;
+    }
+}

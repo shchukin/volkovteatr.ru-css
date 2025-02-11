@@ -47,3 +47,26 @@
                 background-size: 28px 28px;
             }
 }
+
+
+
+
+.mfp-left-side {
+
+}
+    .mfp-left-side .window {
+        min-height: 100%;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+        .mfp-left-side .window__close {
+            position: relative;
+            float: right;
+        }
+
+
+@media (width < 1200px) {
+    .mfp-left-side .window {
+        max-width: 90vw;
+    }
+}
