@@ -23,7 +23,7 @@
             width: 1850px;
             height: var(--intro-height);
             background-color: rgba(48 63 100 / 30%);
-            clip-path: path("M1217.25 567H1850L1849.5 0H614.5C945.299 0 1213.86 253.305 1217.25 567Z");
+            clip-path: path("M1850 0H1011.5C1163.5 154 1193 288 1213.67 567H1850V0Z");
             background-position: right center;
             background-size: cover;
             background-repeat: no-repeat;
@@ -134,7 +134,7 @@
                 margin-left: -1280px;
                 width: 2560px;
                 /*background-color: rgba(48 63 100 / 30%);*/
-                clip-path: path("M2560 0H981C1421.72 0 1779 363.695 1779 800H2560V0Z");
+                clip-path: path("M2560 0H1577.5C1709 221.5 1749 528.5 1749 800H2560V0Z");
             }
 
         .jumbotron__content {
