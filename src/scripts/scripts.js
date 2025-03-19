@@ -408,25 +408,17 @@
         callbacks: {
             open: function () {
 
-                /* Шапка фиксированная, ей тоже надо корректировать пропавшее пространство под скроллбаром */
-                $fixedHeader.css({'margin-right': scrollWidth});
-
-                /* работа с содержимым */
-                const instance = this.wrap[0];
                 const handler = this.st.el[0];
-
-                console.log(instance)
-                console.log(handler)
+                const instance = this.wrap[0];
 
                 // Перезапускаем обсчёт expanding textareas для инстансов внутри открытой модалки
                 const $textareas = $(instance).find('.input--expandable .input__widget');
 
-                if( $textareas.length ) {
+                if ($textareas.length) {
                     $textareas.each(function () {
                         expandTextarea($(this));
                     });
                 }
-
 
                 // Автозапуск видео
                 const video = $(instance).find('video');
@@ -435,21 +427,16 @@
                     $(instance).find('video')[0].play();
                 }
 
-
-                /* Если проставлена опция mfp-handler-left-side (класс на хендлере), то её надо проставить на саму модалку: */
-                if($(handler).hasClass('mfp-handler-left-side')) {
+                // Если проставлена опция mfp-handler-left-side (класс на хендлере), то её надо проставить на саму модалку
+                // Пока что это единственная опция, которая нужно на уровне mfp. Остальные ищи в виде CSS-классов
+                // в html коде прям на "window", типа window--floating-close-button или window--white-close-button
+                if ($(handler).hasClass('mfp-handler-left-side')) {
                     $(instance).addClass('mfp-left-side');
                 }
 
-                /* Если проставлена опция mfp-handler-white-close-button (класс на хендлере), то её надо проставить на саму модалку: */
-                if($(handler).hasClass('mfp-handler-white-close-button')) {
-                    $(instance).addClass('mfp-white-close-button');
-                }
-
-                /* Если проставлена опция mfp-handler-floating-close-button (класс на хендлере), то её надо проставить на саму модалку: */
-                if($(handler).hasClass('mfp-handler-floating-close-button')) {
-                    $(instance).addClass('mfp-floating-close-button');
-                }
+                // Шапка фиксированная, ей тоже надо корректировать пропавшее пространство под скроллбаром
+                // как это делается на теге html при открытии
+                $fixedHeader.css({'margin-right': scrollWidth});
             },
             close: function () {
                 $fixedHeader.css({'margin-right': '0'});

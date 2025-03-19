@@ -90,22 +90,21 @@
 
 
 
-.mfp-white-close-button {
+.window--white-close-button {
 
 }
-    .mfp-white-close-button .window__close:hover {
+    .window--white-close-button .window__close:hover {
         background-color: rgb(248 240 229 / 7%);
     }
-        .mfp-white-close-button .window__close::after {
+        .window--white-close-button .window__close::after {
             background-image: url("../vectors/cross-white.svg");
         }
 
 
-.mfp-floating-close-button {
+.window--floating-close-button {
 
 }
-
-    .mfp-floating-close-button .window__close {
+    .window--floating-close-button .window__close {
         position: relative;
         inset: auto;
         float: right;
