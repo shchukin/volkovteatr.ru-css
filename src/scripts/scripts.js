@@ -412,13 +412,14 @@
                 $fixedHeader.css({'margin-right': scrollWidth});
 
                 /* работа с содержимым */
-                const instance = $.magnificPopup.instance;
-                const modalContent = instance.content[0];
+                const instance = this.wrap[0];
+                const handler = this.st.el[0];
 
                 console.log(instance)
+                console.log(handler)
 
                 // Перезапускаем обсчёт expanding textareas для инстансов внутри открытой модалки
-                const $textareas = $(modalContent).find('.input--expandable .input__widget');
+                const $textareas = $(instance).find('.input--expandable .input__widget');
 
                 if( $textareas.length ) {
                     $textareas.each(function () {
@@ -428,27 +429,26 @@
 
 
                 // Автозапуск видео
-                const video = $(modalContent).find('video');
+                const video = $(instance).find('video');
 
                 if (video.length) {
-                    $(modalContent).find('video')[0].play();
+                    $(instance).find('video')[0].play();
                 }
 
 
                 /* Если проставлена опция mfp-handler-left-side (класс на хендлере), то её надо проставить на саму модалку: */
-                if($(instance.ev[0]).hasClass('mfp-handler-left-side')) {
-                    instance.wrap.addClass('mfp-left-side');
+                if($(handler).hasClass('mfp-handler-left-side')) {
+                    $(instance).addClass('mfp-left-side');
                 }
 
                 /* Если проставлена опция mfp-handler-white-close-button (класс на хендлере), то её надо проставить на саму модалку: */
-                if($(instance.ev[0]).hasClass('mfp-handler-white-close-button')) {
-                    instance.wrap.addClass('mfp-white-close-button');
+                if($(handler).hasClass('mfp-handler-white-close-button')) {
+                    $(instance).addClass('mfp-white-close-button');
                 }
 
                 /* Если проставлена опция mfp-handler-floating-close-button (класс на хендлере), то её надо проставить на саму модалку: */
-                if($(instance.ev[0]).hasClass('mfp-handler-floating-close-button')) {
-                    alert()
-                    instance.wrap.addClass('mfp-floating-close-button');
+                if($(handler).hasClass('mfp-handler-floating-close-button')) {
+                    $(instance).addClass('mfp-floating-close-button');
                 }
             },
             close: function () {
