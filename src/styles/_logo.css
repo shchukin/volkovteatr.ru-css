@@ -1,0 +1,70 @@
+.logo {
+    display: block;
+    width: 240px;
+    height: 75px;
+    background-image: url("../images/header-logo/header-logo-laptop@1x.png");
+    background-size: 240px 75px;
+    background-repeat: no-repeat;
+    background-position: left top;
+    text-indent: 200%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+@media (min-resolution: 1.5dppx) {
+    .logo {
+        background-image: url("../images/header-logo/header-logo-laptop@2x.png");
+    }
+}
+
+@media (min-resolution: 2.5dppx) {
+    .logo {
+        background-image: url("../images/header-logo/header-logo-laptop@3x.png");
+    }
+}
+
+
+@media (1850px <= width) {
+
+    .logo {
+        width: 310px;
+        height: 97px;
+        background-image: url("../images/header-logo/header-logo-monitor@1x.png");
+        background-size: 310px 97px;
+    }
+
+    @media (min-resolution: 1.5dppx) {
+        .logo {
+            background-image: url("../images/header-logo/header-logo-monitor@2x.png");
+        }
+    }
+
+    @media (min-resolution: 2.5dppx) {
+        .logo {
+            background-image: url("../images/header-logo/header-logo-monitor@3x.png");
+        }
+    }
+}
+
+
+@media (width < 740px) {
+
+    .logo {
+        width: 144px;
+        height: 45px;
+        background-image: url("../images/header-logo/header-logo-smartphone@1x.png");
+        background-size: 144px 45px;
+    }
+
+    @media (min-resolution: 1.5dppx) {
+        .logo {
+            background-image: url("../images/header-logo/header-logo-smartphone@2x.png");
+        }
+    }
+
+    @media (min-resolution: 2.5dppx) {
+        .logo {
+            background-image: url("../images/header-logo/header-logo-smartphone@3x.png");
+        }
+    }
+}
