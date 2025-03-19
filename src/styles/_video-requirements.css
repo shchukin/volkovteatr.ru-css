@@ -1,0 +1,27 @@
+.video-requirements {
+    width: 100%;
+    max-width: 440px;
+    margin-top: 0;
+    margin-bottom: 0;
+    list-style: none;
+    padding: 20px;
+}
+    .video-requirements__item {
+        margin-top: 8px;
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    .video-requirements__item:first-child {
+        margin-top: 0;
+    }
+
+
+
+
+@media (width < 740px) {
+
+    .video-requirements {
+
+    }
+}

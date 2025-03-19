@@ -27,10 +27,6 @@
         background-color: rgb(11 30 58 / 7%);
     }
 
-    .mfp-white-close-button .window__close:hover {
-        background-color: rgb(248 240 229 / 7%);
-    }
-
         .window__close::after {
             content: "";
             position: absolute;
@@ -45,9 +41,6 @@
             background-position: center center;
         }
 
-            .mfp-white-close-button .window__close::after {
-                background-image: url("../vectors/cross-white.svg");
-            }
 
 @media (1850px <= width) {
 
@@ -94,3 +87,26 @@
         max-width: 90vw;
     }
 }
+
+
+
+.mfp-white-close-button {
+
+}
+    .mfp-white-close-button .window__close:hover {
+        background-color: rgb(248 240 229 / 7%);
+    }
+        .mfp-white-close-button .window__close::after {
+            background-image: url("../vectors/cross-white.svg");
+        }
+
+
+.mfp-floating-close-button {
+
+}
+
+    .mfp-floating-close-button .window__close {
+        position: relative;
+        inset: auto;
+        float: right;
+    }
