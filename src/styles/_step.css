@@ -1,0 +1,116 @@
+.step {
+    width: 305px;
+    height: 428px;
+    padding: 18px 20px 32px;
+    border: 1px solid #F8F0E5;
+    border-radius: 20px;
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+}
+    .step__index {
+        text-align: right;
+        margin-bottom: auto;
+    }
+
+    .step__heading {
+        font-size: 18px;
+        line-height: 25px;
+    }
+
+    .step__addition {
+        margin-top: 20px;
+        font-family: var(--font-heading);
+        font-style: italic;
+        font-size: 20px;
+        line-height: 23px;
+        color: #E4BB6B;
+    }
+
+    .step__tech-link {
+        margin-top: 12px;
+        margin-bottom: -10px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+        color: #E4BB6B;
+        text-decoration: 1px underline transparent;
+        text-underline-offset: 2px;
+        transition: ted-decoration-color var(--transition-hover);
+    }
+
+    .step__tech-link:hover {
+        text-decoration-color: currentColor;
+    }
+        .link__icon {
+            vertical-align: top;
+            flex-shrink: 0;
+            width: 18px;
+            height: 18px;
+        }
+
+
+
+@media (1850px <= width) {
+
+    .step {
+        width: 419px;
+        height: 512px;
+        padding: 32px 32px 40px;
+        /*border: 1px solid #F8F0E5;*/
+        /*border-radius: 20px;*/
+        /*display: flex;*/
+        /*align-items: stretch;*/
+        /*flex-direction: column;*/
+    }
+        .step__index {
+            /*text-align: right;*/
+            /*margin-bottom: auto;*/
+        }
+
+        .step__heading {
+            font-size: 22px;
+            line-height: 30px;
+        }
+
+        .step__addition {
+            margin-top: 24px;
+            /*font-family: var(--font-heading);*/
+            /*font-style: italic;*/
+            font-size: 24px;
+            line-height: 28px;
+            /*color: #E4BB6B;*/
+        }
+
+        .step__tech-link {
+            /*margin-top: 12px;*/
+            /*margin-bottom: -10px;*/
+            /*padding-top: 10px;*/
+            /*padding-bottom: 10px;*/
+            /*display: flex;*/
+            /*align-items: center;*/
+            /*gap: 4px;*/
+            /*font-weight: 500;*/
+            font-size: 20px;
+            line-height: 27px;
+            /*color: #E4BB6B;*/
+            /*text-decoration: 1px underline transparent;*/
+            /*text-underline-offset: 2px;*/
+            /*transition: ted-decoration-color var(--transition-hover);*/
+        }
+
+        .step__tech-link:hover {
+            /*text-decoration-color: currentColor;*/
+        }
+            .link__icon {
+                /*vertical-align: top;*/
+                /*flex-shrink: 0;*/
+                width: 24px;
+                height: 24px;
+            }
+}

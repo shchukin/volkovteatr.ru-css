@@ -1,6 +1,6 @@
 :root {
-    --font: "Nunito Sans";
-    --font-heading: "Brygada 1918";
+    --font: "Nunito Sans", sans-serif;
+    --font-heading: "Brygada 1918", cursive, serif;
     --body-font-size: 18px;
     --body-line-height: 25px;
     --ease-out-quint: cubic-bezier(0.22, 1, 0.36, 1);
