@@ -73,7 +73,7 @@
             <div class="stage">
                 <video class="stage__background" src="../temp/sample-videos/sample-16x9-video-a.mp4" playsinline muted loop></video>
                 <div class="stage__operations container">
-                    <a class="stage__action" href="#">Посмотреть поздравления</a>
+                    <a class="stage__action mfp-handler" href="#congratulations">Посмотреть поздравления</a>
                     <a class="stage__action" href="#">Поздравить театр</a>
                 </div>
             </div>
@@ -99,6 +99,16 @@
                 </div>
             </footer>
         </div>
+
+        <!-- .mfp -->
+        <div class="window mfp-hide" id="congratulations">
+            <button class="window__close mfp-close" type="button">
+                Закрыть
+            </button>
+            <video class="video video--inside-popup" src="../temp/sample-videos/sample-16x9-video-b.mp4" controls preload="auto"></video>
+        </div>
+
+
 
 
         <!-- jQuery dependant -->

@@ -5,3 +5,8 @@
     aspect-ratio: 16/9;
     background-color: #000000;
 }
+
+.video--inside-popup {
+    max-width: 90vw;
+    max-height: 90vh;
+}
