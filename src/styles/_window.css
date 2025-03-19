@@ -19,7 +19,18 @@
         white-space: nowrap;
         overflow: hidden !important;
         opacity: 1;
+        border-radius: 50%;
+        transition: background-color var(--transition-hover);
     }
+
+    .window__close:hover {
+        background-color: rgb(11 30 58 / 7%);
+    }
+
+    .mfp-white-close-button .window__close:hover {
+        background-color: rgb(248 240 229 / 7%);
+    }
+
         .window__close::after {
             content: "";
             position: absolute;
