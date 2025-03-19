@@ -20,7 +20,9 @@
     white-space: nowrap;
     cursor: pointer;
     user-select: none;
-    transition: background-color var(--transition-hover);
+    transition: background-color var(--transition-hover),
+                box-shadow var(--transition-hover),
+                color var(--transition-hover);
 }
 
 .button:hover {
