@@ -219,8 +219,6 @@
 
 
 
-
-
         /* Swiper для Stories */
 
         document.querySelectorAll('.carousel--js-init-stories').forEach(($carousel) => {
@@ -276,6 +274,43 @@
                         allowTouchMove: false, // Disable all touch and mouse drag interactions
                     }
                 },
+            });
+        });
+
+
+
+        /* Swiper для участия */
+
+        document.querySelectorAll('.carousel--js-init-participation').forEach(($carousel) => {
+
+            new Swiper($carousel.querySelector('.swiper'), {
+                slidesPerView: "auto",
+                slidesPerGroup: 3,
+                spaceBetween: 20,
+
+                pagination: {
+                    el: $carousel.querySelector('.carousel__pagination'),
+                    type: "fraction",
+                },
+
+                navigation: {
+                    prevEl: $carousel.querySelector('.carousel__button--prev'),
+                    nextEl: $carousel.querySelector('.carousel__button--next'),
+                },
+
+                // breakpoints: {
+                //     740: {
+                //         slidesPerView: 2,
+                //         slidesPerGroup: 2,
+                //         pagination: {
+                //             el: $carousel.querySelector('.carousel__pagination'),
+                //             type: "bullets",
+                //             bulletClass: 'carousel__bullet',
+                //             bulletActiveClass: 'carousel__bullet--current',
+                //             clickable: true
+                //         },
+                //     },
+                // },
             });
         });
     }

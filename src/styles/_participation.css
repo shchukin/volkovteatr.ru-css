@@ -10,9 +10,6 @@
 
     .participation__body {
         margin-top: 40px;
-        display: grid;
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-        gap: 20px;
     }
 
 
@@ -23,15 +20,10 @@
         padding-bottom: 110px;
     }
         .participation__heading {
-            /*margin-top: 0;*/
-            /*margin-bottom: 0;*/
-            /*color: #E4BB6B;*/
+
         }
 
         .participation__body {
             margin-top: 60px;
-            /*display: grid;*/
-            /*grid-template-columns: repeat(4, minmax(0, 1fr));*/
-            /*gap: 20px;*/
         }
 }

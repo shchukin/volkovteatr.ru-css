@@ -1,3 +1,38 @@
+/* Довольно запарно выключать слайдер на десктопах скриптом.
+   Проще перебить пару стилей:
+ */
+.carousel--css-disable-on-smartphone {
+
+}
+
+@media (width < 740px) {
+
+    .carousel--css-disable-on-smartphone {
+
+    }
+        .carousel--css-disable-on-smartphone .carousel__widget .swiper {
+            overflow: visible;
+        }
+            .carousel--css-disable-on-smartphone .carousel__widget .swiper-wrapper {
+                height: auto !important;
+                transform: none !important;
+            }
+                .carousel--css-disable-on-smartphone .swiper-slide {
+                    width: auto !important;
+                    margin: 0 !important;
+                }
+
+    .carousel--css-disable-on-smartphone .carousel__pagination {
+        display: none;
+    }
+
+    .carousel--css-disable-on-smartphone .carousel__button {
+        display: none !important;
+    }
+}
+
+
+
 .carousel--photo-gallery {
 
 }
@@ -835,6 +870,130 @@
             .carousel--css-skin-feedback .carousel__progress {
                 height: 4px;
             }
+}
+
+
+
+/* Skin Participation */
+
+@media (740px <= width) {
+
+    .carousel--css-skin-participation {
+
+    }
+        .carousel--css-skin-participation .carousel__widget {
+
+        }
+            .carousel--css-skin-participation .swiper {
+                overflow: visible;
+            }
+
+        .carousel--css-skin-participation .carousel__controls {
+            margin: 12px 0 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+            .carousel--css-skin-participation .carousel__pagination {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 0;
+                width: auto;
+            }
+                .carousel--css-skin-participation .carousel__bullet {
+                    display: flex;
+                    align-items: center;
+                    width: 30px;
+                    height: 30px;
+                    padding: 9px;
+                    margin: 0 !important; /* конфликт со стилями swiper */
+                    background-color: transparent; /* конфликт со стилями swiper */
+                    opacity: 100%;
+                    cursor: pointer;
+                }
+                    .carousel--css-skin-participation .carousel__bullet::after {
+                        content: "";
+                        display: block;
+                        width: 12px;
+                        height: 12px;
+                        border-radius: 50%;
+                        background-color: transparent;
+                        box-shadow: inset 0 0 0 1px #E4BB6B;
+                    }
+
+                    .carousel--css-skin-participation .carousel__bullet:hover::after {
+                        background-color: rgb(255 255 255 / 10%);
+                    }
+
+                    .carousel--css-skin-participation .carousel__bullet--current::after,
+                    .carousel--css-skin-participation .carousel__bullet--current:hover::after {
+                        background-color: #E4BB6B;
+                    }
+
+
+            .carousel--css-skin-participation .carousel__button {
+                width: 49px;
+                height: 49px;
+                background-color: transparent;
+                background-size: 27px 17px;
+                background-repeat: no-repeat;
+                background-position: center center;
+                border: none;
+                text-indent: 200%;
+                white-space: nowrap;
+                overflow: hidden;
+                cursor: pointer;
+            }
+
+            .carousel--css-skin-participation .carousel__button:hover {
+
+            }
+
+            .carousel--css-skin-participation .carousel__button.swiper-button-disabled,
+            .carousel--css-skin-participation .carousel__button.swiper-button-disabled:hover {
+                opacity: 50%;
+                cursor: default;
+                user-select: none;
+            }
+
+            .carousel--css-skin-participation .carousel__button--prev {
+                background-image: url("../vectors/swiper-slide-mobile-left.svg");
+            }
+
+            .carousel--css-skin-participation .carousel__button--next {
+                background-image: url("../vectors/swiper-slide-mobile-right.svg");
+            }
+
+
+    @media (1850px <= width) {
+
+        .carousel--css-skin-participation {
+
+        }
+            .carousel--css-skin-participation .carousel__widget {
+
+            }
+
+        .carousel--css-skin-participation .carousel__controls {
+            margin-top: 23px;
+        }
+    }
+}
+
+
+@media (width < 740px) {
+
+    .carousel--css-skin-participation {
+
+    }
+        .carousel--css-skin-participation .carousel__widget {
+
+        }
+
+    .carousel--css-skin-participation .carousel__controls {
+
+    }
 }
 
 
