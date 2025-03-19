@@ -6,7 +6,7 @@
     background-color: #F8F0E5;
     color-scheme: light;
     color: #000000;
-    border-radius: 15px;
+    border-radius: var(--window-border-radius);
 }
     .window__close {
         position: absolute;
@@ -34,10 +34,14 @@
             background-position: center center;
         }
 
+            .mfp-white-close-button .window__close::after {
+                background-image: url("../vectors/cross-white.svg");
+            }
+
 @media (1850px <= width) {
 
     .window {
-        border-radius: 20px;
+
     }
         .window__close {
             width: 70px;

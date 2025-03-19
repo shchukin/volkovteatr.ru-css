@@ -376,11 +376,12 @@
                 // Перезапускаем обсчёт expanding textareas для инстансов внутри открытой модалки
                 const instance = $.magnificPopup.instance;
                 const modalContent = instance.content[0];
-                const textareas = $(modalContent).find('.input--expandable .input__widget');
 
-                textareas.each(function () {
+                $(modalContent).find('.input--expandable .input__widget').each(function () {
                     expandTextarea($(this));
                 });
+
+                $(modalContent).find('video')[0].play();
 
                 /* Шапка фиксированная, ей тоже надо корректировать пропавшее пространство под скроллбаром */
                 $fixedHeader.css({'margin-right': scrollWidth});
@@ -388,6 +389,11 @@
                 /* Если проставлена опция mfp-handler-left-side (класс на хендлере), то её надо проставить на саму модалку: */
                 if($(instance.ev[0]).hasClass('mfp-handler-left-side')) {
                     instance.wrap.addClass('mfp-left-side');
+                }
+
+                /* Если проставлена опция mfp-handler-white-close-button (класс на хендлере), то её надо проставить на саму модалку: */
+                if($(instance.ev[0]).hasClass('mfp-handler-white-close-button')) {
+                    instance.wrap.addClass('mfp-white-close-button');
                 }
             },
             close: function () {
@@ -401,26 +407,8 @@
         type: 'image',
         removalDelay: 200,
         showCloseBtn: false,
-        callbacks: {
-            open: function () {
-
-                // Перезапускаем обсчёт expanding textareas для инстансов внутри откртой модалки
-                const instance = $.magnificPopup.instance;
-                const modalContent = instance.content[0];
-                const textareas = $(modalContent).find('.input--expandable .input__widget');
-
-                textareas.each(function () {
-                    expandTextarea($(this));
-                });
-
-                /* Шапка фиксированная, ей тоже надо корректировать пропавшее пространство подскроллбаром */
-                $fixedHeader.css({'margin-right': scrollWidth});
-            },
-            close: function () {
-                $fixedHeader.css({'margin-right': '0'});
-            }
-        }
     });
+
 
 
     /* Маска для телефона -- используем старую версию input.mask

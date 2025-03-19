@@ -9,4 +9,5 @@
 .video--inside-popup {
     max-width: 90vw;
     max-height: 90vh;
+    border-radius: var(--window-border-radius);
 }

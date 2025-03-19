@@ -23,6 +23,7 @@
     --footer-margin: 140px;
     --blue-hover: #223046;
     --slider-rounding: 32px;
+    --window-border-radius: 15px;
 }
 
 @media (1850px <= width) {
@@ -35,6 +36,7 @@
         --body-font-size: 20px;
         --body-line-height: 27px;
         --slider-rounding: 40px;
+        --window-border-radius: 20px;
     }
 }
 
