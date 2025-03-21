@@ -128,6 +128,9 @@
 @import url("_slick.css");
 @import url("_detailed-event.css");
 @import url("_logo.css");
+
+/* Компоненты появившиеся при вёрстке лендинга 275 лет */
+@import url("_header-275.css");
 @import url("_stage.css");
 @import url("_participation.css");
 @import url("_step.css");
