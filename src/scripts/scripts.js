@@ -485,7 +485,7 @@
 
     let rememberedPageScrollPosition = 0;
 
-    $('.header__toggle-menu').on('click', function () {
+    $('.header__toggle-menu, .header-275__show-menu').on('click', function () {
 
         if (!$html.hasClass('burger-expanded')) {
 
@@ -511,7 +511,7 @@
 
 
     $(document).on('click', function (event) {
-        if (!$(event.target).closest('.header__dropdown, .header__toggle-menu, .header__detachable-part').length) {
+        if (!$(event.target).closest('.header,  .header-275').length) {
             $html.removeClass('burger-expanded');
         }
     });

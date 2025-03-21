@@ -34,10 +34,6 @@
             align-items: center;
             justify-content: space-between; /* Навигация внутри будет по центру, всё остальное position: absolute по краям */
         }
-            .header-275__close-menu {
-                display: none;
-            }
-
             .header-275__desktop-logo {
 
             }
@@ -97,63 +93,172 @@
 @media (1850px <= width) {
 
     .header-275 {
-        /*--slide: 500ms ease;*/
-    }
-
-    .header-275 {
 
     }
         .header-275__mobile-panel {
-            /*display: none;*/
+
         }
 
         .header-275__desktop-variant-and-mobile-dropdown {
-            /*position: fixed;*/
-            /*z-index: 300; !* на основном сайте было выше .week-headings *!*/
-            /*left: 0;*/
-            /*right: 0;*/
-            /*top: 0;*/
-            /*height: var(--header-height);*/
-            /*transition: height var(--slide),*/
-            /*            background-color var(--slide),*/
-            /*            backdrop-filter var(--slide);*/
+
         }
 
         .page-scrolled .header-275__desktop-variant-and-mobile-dropdown {
-            /*height: var(--header-collapsed-height);*/
-            /*background-color: rgb(11 30 58 / 70%);*/
-            /*backdrop-filter: blur(4px);*/
-            /*transform: translate3d(0, 0, 0); !* форсируем 3d acceleration *!*/
-            /*backface-visibility: hidden; !* улучшаем производительность *!*/
+
         }
             .header-275__desktop-wrap {
-                /*height: 100%;*/
-                /*display: flex;*/
-                /*align-items: center;*/
-                /*justify-content: space-between; !* Навигация внутри будет по центру, всё остальное position: absolute по краям *!*/
-            }
-                .header-275__close-menu {
-                    /*display: none;*/
-                }
 
+            }
                 .header-275__desktop-logo {
 
                 }
 
                 .header-275__navigation {
-                    /*margin-top: 2px;*/
-                    /*display: flex;*/
-                    /*align-items: center;*/
-                    /*justify-content: center;*/
                     gap: 30px;
                 }
                     .header-275__link {
                         padding: 16px 15px 17px;
+                        font-size: 18px;
+                        line-height: 24px;
+                    }
+
+                    .header-275__link:hover {
+
+                    }
+
+                .header-275__main-site {
+                    gap: 7px;
+                    font-size: 18px;
+                    line-height: 24px;
+                }
+
+                .header-275__main-site:hover {
+
+                }
+                    .header-275__main-site-icon {
+
+                    }
+}
+
+
+
+
+@media (width < 740px) {
+
+    .header-275 {
+
+    }
+        .header-275__mobile-panel {
+            display: block;
+            position: fixed;
+            z-index: 300; /* на основном сайте было выше .week-headings */
+            left: 0;
+            right: 0;
+            top: 0;
+            height: var(--header-height);
+            transition: height var(--slide),
+                        background-color var(--slide),
+                        backdrop-filter var(--slide);
+        }
+
+        .page-scrolled .header-275__mobile-panel {
+            height: var(--header-collapsed-height);
+            background-color: rgb(11 30 58 / 70%);
+            backdrop-filter: blur(4px);
+            transform: translate3d(0, 0, 0); /* форсируем 3d acceleration */
+            backface-visibility: hidden; /* улучшаем производительность */
+        }
+
+            .header-275__mobile-wrap {
+                height: 100%;
+                display: flex;
+                align-items: flex-start;
+            }
+                .header-275__mobile-logo {
+                    margin-top: 18px;
+                    transition: margin-top var(--slide);
+                }
+
+                .page-scrolled .header-275__mobile-logo {
+                    margin-top: 6px;
+                }
+
+                .header-275__show-menu {
+                    margin-left: auto;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-right: calc(-1 * var(--container-padding) + 2px); /* Делаем так, чтобы иконка была по правому краю контейнера. 2px чтобы не породить горизонтальный скролл (иногда встречается баг на андроиде) */
+                    width: 100px;
+                    height: var(--header-height);
+                    border: none;
+                    padding: 0;
+                    background-color: transparent;
+                    cursor: pointer;
+                    transition: height var(--slide);
+                }
+
+                .header-275__show-menu:hover .header-275__burger {
+                    fill: #FFFFFF;
+                }
+
+                .page-scrolled:not(.burger-expanded) .header-275__show-menu {
+                    height: 58px;
+                }
+                    .header-275__burger {
+                        vertical-align: top;
+                        fill: #E4BB6B;
+                    }
+
+                    .burger-expanded .header-275__burger {
+                        display: none;
+                    }
+
+                    /* Крестик закрытия бургера: */
+                    .header-275__burger-cross {
+                        display: none;
+                    }
+
+                    .burger-expanded .header-275__burger-cross {
+                        display: block;
+                    }
+
+        .header-275__desktop-variant-and-mobile-dropdown {
+            position: static;
+            height: auto;
+            display: none;
+        }
+
+        .burger-expanded .header-275__desktop-variant-and-mobile-dropdown {
+            display: block;
+        }
+
+        .page-scrolled .header-275__desktop-variant-and-mobile-dropdown {
+            height: auto;
+            background-color: transparent;
+            backdrop-filter: none;
+            transform: none;
+            /*backface-visibility: hidden; !* улучшаем производительность *!*/
+        }
+            .header-275__desktop-wrap {
+                height: auto;
+                display: block;
+            }
+                .header-275__desktop-logo {
+
+                }
+
+                .header-275__navigation {
+                    margin-top: 2px;
+                    display: block;
+                }
+                    .header-275__link {
+                        /*padding: 12px 12px 13px;*/
                         /*font-family: var(--font-heading);*/
                         /*font-weight: 600;*/
                         /*font-style: italic;*/
-                        font-size: 18px;
-                        line-height: 24px;
+                        /*font-size: 16px;*/
+                        /*line-height: 22px;*/
                         /*color: #E4BB6B;*/
                         /*text-transform: uppercase;*/
                         /*text-decoration: 1px underline transparent;*/
@@ -169,20 +274,20 @@
                     /*display: flex;*/
                     /*align-items: center;*/
                     /*justify-content: center;*/
-                    gap: 7px;
+                    /*gap: 6px;*/
                     /*width: fit-content;*/
                     /*border-radius: 4px;*/
                     /*padding: 10px 12px;*/
                     /*font-weight: 500;*/
-                    font-size: 18px;
-                    line-height: 24px;
+                    /*font-size: 16px;*/
+                    /*line-height: 22px;*/
                     /*color: #E4BB6B;*/
                     /*text-decoration: none;*/
                     /*transition: background-color var(--transition-hover);*/
                 }
 
                 .header-275__main-site:hover {
-                    /*background-color: rgb(228 187 107 / 20%);*/
+                    /*background-color: rgb(228 187 107 / 15%);*/
                 }
                     .header-275__main-site-icon {
                         /*vertical-align: top;*/
@@ -194,292 +299,100 @@
 
 
 
-@media (width < 740px) {
-
-    .header-275 {
-        padding-top: var(--header-height);
-        /*height: var(--header-height);*/
-    }
-        .header-275__mobile-panel {
-            padding-top: 0;
-        }
-
-        .page-scrolled .header-275__mobile-panel {
-
-        }
-
-        .burger-expanded .header-275__mobile-panel {
-            background-color: #FFFFFF;
-            color-scheme: light;
-        }
-
-        .page-scrolled.burger-expanded .header-275__mobile-panel {
-            background-color: #FFFFFF;
-            backdrop-filter: none;
-            transition: none;
-        }
-            .header-275__mobile-wrap {
-                /*position: relative;*/
-                display: flex;
-                align-items: stretch;
-                justify-content: space-between;
-            }
-                .header-275__mobile-logo {
-                    top: 18px;
-                }
-
-                .page-scrolled .header-275__mobile-logo {
-                    top: 6px;
-                }
-
-                .burger-expanded .header-275__mobile-logo {
-                    display: none;
-                }
-
-                .header-275__first-line {
-                    left: 0;
-                    width: 100%;
-                    top: 20px;
-                    /*width: fit-content;*/
-                    /*margin-left: auto;*/
-                    /*display: flex;*/
-                    /*align-items: center;*/
-                    /*gap: 10px;*/
-                    display: none;
-                }
-
-                .page-scrolled .header-275__first-line {
-                    top: 20px;
-                }
-
-                .burger-expanded .header-275__first-line {
-                    display: flex;
-                    margin-left: 0;
-                }
-                    .header-275__action {
-                        /*display: block;*/
-                        /*padding: 5px;*/
-                    }
-
-                    .header-275__action:last-child {
-                        /*margin-right: -5px;*/
-                    }
-                        .header-275__icon {
-                            /*vertical-align: top;*/
-                            /*fill: #DAC0A3;*/
-                            /*transition: fill var(--transition-hover);*/
-                        }
-
-                        .burger-expanded .header-275__icon,
-                        .burger-expanded:hover .header-275__icon {
-                            fill: #6073A2;
-                        }
-
-                        .header-275__action:hover .header-275__icon {
-                            /*fill: #FFFFFF;*/
-                        }
 
 
 
-                .header-275__search {
-                    /*position: absolute;*/
-                    z-index: 10;
-                    /*right: 0;*/
-                    /*left: 0;*/
-                    /*top: 50%;*/
-                    /*margin-top: -22px;*/
-                    /*align-items: stretch;*/
-                    /*display: none;*/
-                    width: 100%;
-                    right: auto;
-                    background-color: #FFFFFF;
-                }
-
-                .search-expanded .header-275__search {
-                    /*display: flex;*/
-                    animation: none;
-                }
-                    .header-275__search-form {
-                        width: 100%;
-                    }
-
-                    .header-275__close-search {
-                        /*display: flex;*/
-                        /*align-items: center;*/
-                        /*justify-content: center;*/
-                        /*padding: 0;*/
-                        /*border: none;*/
-                        width: 54px;
-                        padding-right: 14px;
-                        margin-right: -14px;
-                        /*background-color: transparent;*/
-                        /*cursor: pointer;*/
-                    }
-                        .header-275__search-cross {
-                            fill: #303F64;
-                        }
-
-                        .header-275__close-search:hover .header-275__search-cross {
-                            fill: #303F64;
-                        }
 
 
-                .header-275__second-line {
-                    /*width: fit-content;*/
-                    /*margin-left: auto;*/
-                    /*display: flex;*/
-                    /*align-items: center;*/
-                    /*gap: 39px;*/
-                    top: 0;
-                }
+/*@media (width < 740px) {*/
 
-                .page-scrolled .header-275__second-line {
-                    top: 0;
-                }
-                    .header-275__shortcuts {
-                        display: none;
-                    }
-                        .header-275__link {
-                            /*padding: 12px 12px 13px;*/
-                            /*font-family: var(--font-heading);*/
-                            /*font-weight: bold;*/
-                            /*font-style: italic;*/
-                            /*font-size: 20px;*/
-                            /*line-height: 23px;*/
-                            /*color: #E4BB6B;*/
-                            /*text-transform: uppercase;*/
-                            /*text-decoration: 1.5px underline transparent;*/
-                            /*text-underline-offset: 6px;*/
-                            /*transition: text-decoration-color var(--transition-hover);*/
-                        }
+/*    .header-275 {*/
 
-                        .header-275__link:hover {
-                            /*text-decoration-color: currentColor;*/
-                        }
+/*    }*/
+/*        .burger-expanded .header-275__mobile-panel {*/
+/*            background-color: #FFFFFF;*/
+/*            color-scheme: light;*/
+/*        }*/
 
+/*        .page-scrolled.burger-expanded .header-275__mobile-panel {*/
+/*            background-color: #FFFFFF;*/
+/*            backdrop-filter: none;*/
+/*            transition: none;*/
+/*        }*/
+/*                .burger-expanded .header-275__mobile-logo {*/
+/*                    display: none;*/
+/*                }*/
 
-    /*.header-275__toggle-menu {*/
-    /*    position: absolute;*/
-    /*    right: 0;*/
-    /*    top: 0;*/
-    /*    width: 70px;*/
-    /*    height: 48px;*/
-    /*    border: none;*/
-    /*    padding: 0;*/
-    /*    background-color: transparent;*/
-    /*    cursor: pointer;*/
-    /*}*/
-    /*.header-275__burger {*/
-    /*    vertical-align: top;*/
-    /*    width: 40px;*/
-    /*    height: auto;*/
-    /*    fill: #E4BB6B;*/
-    /*    transition: fill var(--transition-hover);*/
-    /*}*/
+/*    !*.header-275__toggle-menu {*!*/
+/*    !*    position: absolute;*!*/
+/*    !*    right: 0;*!*/
+/*    !*    top: 0;*!*/
+/*    !*    width: 70px;*!*/
+/*    !*    height: 48px;*!*/
+/*    !*    border: none;*!*/
+/*    !*    padding: 0;*!*/
+/*    !*    background-color: transparent;*!*/
+/*    !*    cursor: pointer;*!*/
+/*    !*}*!*/
+/*    !*.header-275__burger {*!*/
+/*    !*    vertical-align: top;*!*/
+/*    !*    width: 40px;*!*/
+/*    !*    height: auto;*!*/
+/*    !*    fill: #E4BB6B;*!*/
+/*    !*    transition: fill var(--transition-hover);*!*/
+/*    !*}*!*/
 
-    /*.header-275__burger-cross {*/
-    /*    display: none;*/
-    /*}*/
+/*    !*.header-275__burger-cross {*!*/
+/*    !*    display: none;*!*/
+/*    !*}*!*/
 
-    /*.header-275__toggle-menu:hover .header-275__burger {*/
-    /*    fill: #FFFFFF;*/
-    /*}*/
-                    .header-275__toggle-menu {
-                        /*display: flex;*/
-                        /*align-items: center;*/
-                        /*justify-content: center;*/
-                        margin-right: calc(-1 * var(--container-padding)); /* Делаем так, чтобы иконка была по правому краю контейнера */
-                        width: 100px;
-                        height: var(--header-height);
-                        /*border: none;*/
-                        /*padding: 0;*/
-                        /*background-color: transparent;*/
-                        /*cursor: pointer;*/
-                        transition: height var(--slide);
-                    }
+/*    !*.header-275__toggle-menu:hover .header-275__burger {*!*/
+/*    !*    fill: #FFFFFF;*!*/
+/*    !*}*!*/
+/*                    .header-275__toggle-menu {*/
+/*                        !*display: flex;*!*/
+/*                        !*align-items: center;*!*/
+/*                        !*justify-content: center;*!*/
+/*                        margin-right: calc(-1 * var(--container-padding)); !* Делаем так, чтобы иконка была по правому краю контейнера *!*/
+/*                        width: 100px;*/
+/*                        height: var(--header-height);*/
+/*                        !*border: none;*!*/
+/*                        !*padding: 0;*!*/
+/*                        !*background-color: transparent;*!*/
+/*                        !*cursor: pointer;*!*/
+/*                        transition: height var(--slide);*/
+/*                    }*/
 
-                    .page-scrolled:not(.burger-expanded) .header-275__toggle-menu {
-                        height: 58px;
-                    }
+/*                    .page-scrolled:not(.burger-expanded) .header-275__toggle-menu {*/
+/*                        height: 58px;*/
+/*                    }*/
 
-                        .header-275__burger {
-                            /*vertical-align: top;*/
-                            width: 44px;
-                            /*height: auto;*/
-                            /*fill: #E4BB6B;*/
-                            /*transition: fill var(--transition-hover);*/
-                        }
+/*                        .header-275__burger {*/
+/*                            !*vertical-align: top;*!*/
+/*                            width: 44px;*/
+/*                            !*height: auto;*!*/
+/*                            !*fill: #E4BB6B;*!*/
+/*                            !*transition: fill var(--transition-hover);*!*/
+/*                        }*/
 
-                        .burger-expanded .header-275__burger {
-                            display: none;
-                        }
+/*                        .burger-expanded .header-275__burger {*/
+/*                            display: none;*/
+/*                        }*/
 
 
-                        /* Крестик закрытия бургера: */
-                        .header-275__burger-cross {
-                            margin-right: -24px;
-                            fill: #303F64;
-                        }
+/*                        !* Крестик закрытия бургера: *!*/
+/*                        .header-275__burger-cross {*/
+/*                            margin-right: -24px;*/
+/*                            fill: #303F64;*/
+/*                        }*/
 
-                        .burger-expanded .header-275__burger-cross {
-                            display: block;
-                        }
+/*                        .burger-expanded .header-275__burger-cross {*/
+/*                            display: block;*/
+/*                        }*/
 
+/*    .burger-expanded {*/
 
-
-        .header-275__desktop-variant-and-mobile-dropdown {
-            position: static;
-            /*z-index: 100;*/
-            /*left: 0;*/
-            /*right: 0;*/
-            /*top: var(--header-height);*/
-            margin-top: 0;
-            width: auto;
-            /*margin-left: auto;*/
-            /*margin-right: auto;*/
-            /*display: none;*/
-            animation: none;
-        }
-
-        .page-scrolled .header-275__desktop-variant-and-mobile-dropdown {
-            margin-top: 0;
-        }
-
-        .burger-expanded .header-275__desktop-variant-and-mobile-dropdown {
-            /*display: block;*/
-        }
-            .header-275__desktop-wrap {
-                padding-bottom: 55px;
-            }
-                .header-275__inner-wrap {
-                    margin: 0;
-                    padding: 0;
-                    /*background-color: #FFFFFF;*/
-                    /*color-scheme: light;*/
-                    /*color: #0B1E3A;*/
-                }
-                    .header-275__close-menu {
-                        display: none;
-                    }
-
-                .header-275__navigation {
-
-                }
-                    .header-275__profile-link {
-                        margin-top: 50px;
-                        padding: 13px 9px;
-                        font-size: 16px;
-                        line-height: 24px;
-                    }
-
-                    .header-275__profile-link:hover {
-                        /*background-color: rgb(11 30 58 / 10%);*/
-                    }
-
-
-    .burger-expanded {
-
-    }
-}
+/*    }*/
+/*}*/
 
 

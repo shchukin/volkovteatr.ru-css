@@ -610,7 +610,7 @@
                         /*display: flex;*/
                         /*align-items: center;*/
                         /*justify-content: center;*/
-                        margin-right: calc(-1 * var(--container-padding)); /* Делаем так, чтобы иконка была по правому краю контейнера */
+                        margin-right: calc(-1 * var(--container-padding) + 2px); /* Делаем так, чтобы иконка была по правому краю контейнера. 2px чтобы не породить горизонтальный скролл (иногда встречается баг на андроиде) */
                         width: 100px;
                         height: var(--header-height);
                         /*border: none;*/
