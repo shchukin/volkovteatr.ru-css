@@ -17,3 +17,19 @@ body {
         background-color: #FFFFFF;
     }
 }
+
+
+
+/* Лэндинг 275 лет */
+
+.body-275 {
+
+}
+
+
+@media (width < 740px) {
+
+    .burger-expanded .body-275 {
+        background-color: #0B1E3A;
+    }
+}

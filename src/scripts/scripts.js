@@ -525,7 +525,7 @@
 
     $('.header__close-menu').on('click', function () {
         $html.removeClass('burger-expanded');
-    })
+    });
 
 
     /* Аккордеон */
