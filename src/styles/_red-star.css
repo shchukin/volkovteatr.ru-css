@@ -57,3 +57,11 @@
             /*overflow: hidden;*/
         }
 }
+
+
+.red-star--inverted {
+    color: #D9D9D9;
+}
+    .red-star--inverted .red-star__logo {
+        background-image: url("../vectors/red-star-inverted.svg");
+    }
