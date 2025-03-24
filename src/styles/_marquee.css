@@ -10,6 +10,7 @@
     }
         /* это уже inline-flex и он становится по ширине содержимого, т.е. ~10000px и центрируется (края обрезаются) */
         .marquee__line {
+            position: relative;
             display: inline-flex;
             align-items: center;
             padding-top: 6px;
@@ -29,23 +30,44 @@
             position: relative;
             z-index: 3;
             top: 47px;
-            background-color: #E4BB6B;
         }
 
         .marquee__line--middle {
             position: relative;
             z-index: 1;
             top: 16px;
-            background-color: #EBD7B2;
         }
 
         .marquee__line--bottom {
             position: relative;
             z-index: 2;
             top: 216px;
-            background-color: #E4BB6B;
         }
+            .marquee__line::before {
+                content: "";
+                position: absolute;
+                inset: 0;
+            }
+
+            .safari .marquee__line::before {
+                filter: blur(0.5px);
+            }
+
+            .marquee__line--top::before {
+                background-color: #E4BB6B;
+            }
+
+            .marquee__line--middle::before {
+                background-color: #EBD7B2;
+            }
+
+            .marquee__line--bottom::before {
+                background-color: #E4BB6B;
+            }
+
+
             .marquee__sentence {
+                position: relative;
                 flex-shrink: 0;
             }
 
