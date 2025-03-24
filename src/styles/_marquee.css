@@ -22,14 +22,16 @@
         position: relative;
         z-index: 3;
         background-color: #E4BB6B;
+        transform-origin: 50% 50%;
     }
 
     .marquee__line--middle {
         position: relative;
         z-index: 1;
-        top: -88px;
+        top: -280px;
         margin-left: -100%; /* Поскольку движение вправо, то нужно чтобы слева уже был хвост от текста */
         background-color: #EBD7B2;
+        transform-origin: 50% 50%;
     }
 
     .marquee__line--bottom {
@@ -37,11 +39,64 @@
         z-index: 2;
         top: 337px;
         background-color: #E4BB6B;
+        transform-origin: center center;
     }
         .marquee__sentence {
             flex-shrink: 0;
         }
 
 
-/*font-size: 60px;*/
-/*line-height: 70px;*/
+
+
+@media (1850px <= width) {
+
+    .marquee {
+        /*pointer-events: none;*/
+        padding-top: 182px;
+    }
+        .marquee__line {
+            /*display: inline-flex;*/
+            /*align-items: center;*/
+            /*padding-top: 6px;*/
+            /*padding-bottom: 6px;*/
+            /*color-scheme: light;*/
+            /*font-family: var(--font-heading);*/
+            /*font-style: italic;*/
+            font-size: 60px;
+            line-height: 70px;
+            /*color: #0B1E3A;*/
+            /*text-transform: uppercase;*/
+            /*white-space: nowrap;*/
+            /*will-change: transform;*/
+        }
+
+        .marquee__line--top {
+            /*position: relative;*/
+            /*z-index: 3;*/
+            /*background-color: #E4BB6B;*/
+            /*transform-origin: 50% 50%;*/
+        }
+
+        .marquee__line--middle {
+            /*position: relative;*/
+            /*z-index: 1;*/
+            top: -554px;
+            /*margin-left: -100%; !* Поскольку движение вправо, то нужно чтобы слева уже был хвост от текста *!*/
+            /*background-color: #EBD7B2;*/
+            /*transform-origin: 50% 50%;*/
+        }
+
+        .marquee__line--bottom {
+            /*position: relative;*/
+            /*z-index: 2;*/
+            top: 517px;
+            /*background-color: #E4BB6B;*/
+            /*transform-origin: center center;*/
+        }
+            .marquee__sentence {
+                /*flex-shrink: 0;*/
+            }
+}
+
+
+
