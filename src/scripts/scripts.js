@@ -1272,8 +1272,8 @@
         const speed = 250;
 
         // Коррекция скорости: чтобы разные строки с разной скоростью двигались
-        const speedMultiplierTop = 1.0;    // Стандартная скорость
-        const speedMultiplierMiddle = 1.1; // Быстрее
+        const speedMultiplierTop = 1.0;     // Стандартная скорость
+        const speedMultiplierMiddle = 1.1;  // Быстрее
         const speedMultiplierBottom = 0.75; // Медленнее
 
         const lines = $('.marquee__line');
@@ -1317,41 +1317,53 @@
             });
         });
 
+        /* Переменная для логики работы: */
         let previousTime = null;
+
+        /* Переменные для троттла: */
+        let lastUpdateTime = 0;
+        const throttleInterval = 16; // ~60fps
 
         function animate(time) {
             if (previousTime !== null) {
                 const deltaTime = time - previousTime;
-                const movement = speed * deltaTime / 1000; // за кадр
 
-                states.forEach(function(state) {
+                // Троттл для производительности (запускаем следующую итерацию, не мгновенно, а через throttleInterval)
+                if (time - lastUpdateTime >= throttleInterval) {
 
-                    // Корректируем на множитель
-                    state.left += state.direction * movement * state.speedMultiplier;
+                    const movement = speed * deltaTime / 1000; // за кадр
 
-                    // справа налево
-                    if (state.direction === -1) {
-                        while (state.left <= -state.sentenceWidth) {
-                            const firstSentence = state.line.find('.marquee__sentence').first();
-                            const clone = firstSentence.clone();
-                            state.line.append(clone);
-                            firstSentence.remove();
-                            state.left += state.sentenceWidth;
+                    states.forEach(function (state) {
+
+                        // Корректируем на множитель
+                        state.left += state.direction * movement * state.speedMultiplier;
+
+                        // справа налево
+                        if (state.direction === -1) {
+                            while (state.left <= -state.sentenceWidth) {
+                                const firstSentence = state.line.find('.marquee__sentence').first();
+                                const clone = firstSentence.clone();
+                                state.line.append(clone);
+                                firstSentence.remove();
+                                state.left += state.sentenceWidth;
+                            }
                         }
-                    }
-                    // слева направо
-                    else {
-                        while (state.left >= state.sentenceWidth) {
-                            const lastSentence = state.line.find('.marquee__sentence').last();
-                            const clone = lastSentence.clone();
-                            state.line.prepend(clone);
-                            lastSentence.remove();
-                            state.left -= state.sentenceWidth;
+                        // слева направо
+                        else {
+                            while (state.left >= state.sentenceWidth) {
+                                const lastSentence = state.line.find('.marquee__sentence').last();
+                                const clone = lastSentence.clone();
+                                state.line.prepend(clone);
+                                lastSentence.remove();
+                                state.left -= state.sentenceWidth;
+                            }
                         }
-                    }
 
-                    state.line.css('transform', `rotate(${state.angle}deg) translateX(${state.left}px)`);
-                });
+                        state.line.css('transform', `rotate(${state.angle}deg) translateX(${state.left}px)`);
+                    });
+
+                    lastUpdateTime = time; // Update the last time we ran the logic
+                }
             }
             previousTime = time;
             requestAnimationFrame(animate);
