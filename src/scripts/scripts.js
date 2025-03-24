@@ -1267,7 +1267,7 @@
         // Select all marquee lines
         var lines = $('.marquee__line');
         var states = [];
-        var speed = 100; // Speed in pixels per second
+        var speed = 150; // Speed in pixels per second (increased from 50 to 100)
 
         // Initialize each marquee line
         lines.each(function() {
@@ -1277,11 +1277,14 @@
             // Get the width of the first sentence (all sentences in a line are identical)
             var sentence = line.find('.marquee__sentence').first();
             var sentenceWidth = sentence.outerWidth(true); // Includes margins if any
+            // Determine direction: -1 for right to left, 1 for left to right
+            var direction = line.hasClass('marquee__line--middle') ? 1 : -1;
             // Store state for this line
             states.push({
                 line: line,
                 left: 0, // Current position
-                sentenceWidth: sentenceWidth
+                sentenceWidth: sentenceWidth,
+                direction: direction
             });
         });
 
@@ -1297,30 +1300,34 @@
 
                 // Update each marquee line
                 states.forEach(function(state) {
-                    // Move the line left
-                    state.left -= movement;
+                    // Move the line based on direction
+                    state.left += state.direction * movement;
 
-                    // Check if the first sentence has moved completely out of view
-                    while (state.left <= -state.sentenceWidth) {
-                        // Get the first sentence
-                        var firstSentence = state.line.find('.marquee__sentence').first();
-                        // Clone it
-                        var clone = firstSentence.clone();
-                        // Append the clone to the end of the line
-                        state.line.append(clone);
-                        // Remove the original first sentence
-                        firstSentence.remove();
-                        // Adjust the position to maintain seamless movement
-                        state.left += state.sentenceWidth;
+                    if (state.direction === -1) {
+                        // Right to left movement (top and bottom lines)
+                        while (state.left <= -state.sentenceWidth) {
+                            var firstSentence = state.line.find('.marquee__sentence').first();
+                            var clone = firstSentence.clone();
+                            state.line.append(clone);
+                            firstSentence.remove();
+                            state.left += state.sentenceWidth;
+                        }
+                    } else {
+                        // Left to right movement (middle line)
+                        while (state.left >= state.sentenceWidth) {
+                            var lastSentence = state.line.find('.marquee__sentence').last();
+                            var clone = lastSentence.clone();
+                            state.line.prepend(clone);
+                            lastSentence.remove();
+                            state.left -= state.sentenceWidth;
+                        }
                     }
 
-                    // Apply the new position using transform for smooth animation
+                    // Apply the new position
                     state.line.css('transform', 'translateX(' + state.left + 'px)');
                 });
             }
-            // Update previous time for the next frame
             previousTime = time;
-            // Request the next animation frame
             requestAnimationFrame(animate);
         }
 

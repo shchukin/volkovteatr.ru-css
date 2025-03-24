@@ -24,6 +24,7 @@
     }
 
     .marquee__line--middle {
+        margin-left: -100%;
         margin-top: 100px;
         background-color: #EBD7B2;
     }
