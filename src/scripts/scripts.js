@@ -1263,5 +1263,71 @@
 
     });
 
+    $(function() {
+        // Select all marquee lines
+        var lines = $('.marquee__line');
+        var states = [];
+        var speed = 50; // Speed in pixels per second
+
+        // Initialize each marquee line
+        lines.each(function() {
+            var line = $(this);
+            // Set initial transform for smooth animation
+            line.css('transform', 'translateX(0)');
+            // Get the width of the first sentence (all sentences in a line are identical)
+            var sentence = line.find('.marquee__sentence').first();
+            var sentenceWidth = sentence.outerWidth(true); // Includes margins if any
+            // Store state for this line
+            states.push({
+                line: line,
+                left: 0, // Current position
+                sentenceWidth: sentenceWidth
+            });
+        });
+
+        var previousTime = null;
+
+        // Animation loop using requestAnimationFrame
+        function animate(time) {
+            if (previousTime !== null) {
+                // Calculate time elapsed since last frame (in milliseconds)
+                var deltaTime = time - previousTime;
+                // Calculate movement based on speed (pixels per second)
+                var movement = speed * deltaTime / 1000;
+
+                // Update each marquee line
+                states.forEach(function(state) {
+                    // Move the line left
+                    state.left -= movement;
+
+                    // Check if the first sentence has moved completely out of view
+                    while (state.left <= -state.sentenceWidth) {
+                        // Get the first sentence
+                        var firstSentence = state.line.find('.marquee__sentence').first();
+                        // Clone it
+                        var clone = firstSentence.clone();
+                        // Append the clone to the end of the line
+                        state.line.append(clone);
+                        // Remove the original first sentence
+                        firstSentence.remove();
+                        // Adjust the position to maintain seamless movement
+                        state.left += state.sentenceWidth;
+                    }
+
+                    // Apply the new position using transform for smooth animation
+                    state.line.css('transform', 'translateX(' + state.left + 'px)');
+                });
+            }
+            // Update previous time for the next frame
+            previousTime = time;
+            // Request the next animation frame
+            requestAnimationFrame(animate);
+        }
+
+        // Start the animation
+        requestAnimationFrame(animate);
+    });
+
+
 })(jQuery);
 
