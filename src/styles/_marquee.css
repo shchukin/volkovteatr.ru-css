@@ -3,7 +3,7 @@
 }
     .marquee__line {
         position: relative;
-        display: flex;
+        display: inline-flex;
         align-items: center;
         padding-top: 6px;
         padding-bottom: 6px;
