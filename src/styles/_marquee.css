@@ -1,46 +1,53 @@
 .marquee {
     pointer-events: none;
-    padding-top: 105px;
 }
-    .marquee__line {
-        display: inline-flex;
+    /* этот флекс идёт на 100% ширины экрана и центрирует всё, что внутри */
+    .marquee__centering {
+        display: flex;
         align-items: center;
-        padding-top: 6px;
-        padding-bottom: 6px;
-        color-scheme: light;
-        font-family: var(--font-heading);
-        font-style: italic;
-        font-size: 40px;
-        line-height: 47px;
-        color: #0B1E3A;
-        text-transform: uppercase;
-        white-space: nowrap;
-        will-change: transform;
+        justify-content: center;
     }
-
-    .marquee__line--top {
-        position: relative;
-        z-index: 3;
-        background-color: #E4BB6B;
-    }
-
-    .marquee__line--middle {
-        position: relative;
-        z-index: 1;
-        top: -280px;
-        margin-left: -2000px; /* Поскольку движение вправо, то нужно чтобы слева уже был хвост от текста */
-        background-color: #EBD7B2;
-    }
-
-    .marquee__line--bottom {
-        position: relative;
-        z-index: 2;
-        top: 337px;
-        background-color: #E4BB6B;
-    }
-        .marquee__sentence {
-            flex-shrink: 0;
+        /* это уже inline-flex и он становится по ширине содержимого, т.е. ~10000px и центрируется (края обрезаются) */
+        .marquee__line {
+            display: inline-flex;
+            align-items: center;
+            padding-top: 6px;
+            padding-bottom: 6px;
+            color-scheme: light;
+            font-family: var(--font-heading);
+            font-style: italic;
+            font-size: 40px;
+            line-height: 47px;
+            color: #0B1E3A;
+            text-transform: uppercase;
+            white-space: nowrap;
+            will-change: transform;
         }
+
+        .marquee__line--top {
+            position: relative;
+            z-index: 3;
+            top: -33px;
+            background-color: #E4BB6B;
+        }
+
+        .marquee__line--middle {
+            position: relative;
+            z-index: 1;
+            top: -64px;
+            background-color: #EBD7B2;
+        }
+
+        .marquee__line--bottom {
+            position: relative;
+            z-index: 2;
+            top: 136px;
+            background-color: #E4BB6B;
+        }
+            .marquee__sentence {
+                flex-shrink: 0;
+            }
+
 
 
 
@@ -48,52 +55,28 @@
 @media (1850px <= width) {
 
     .marquee {
-        /*pointer-events: none;*/
-        padding-top: 182px;
+
     }
-        .marquee__line {
-            /*display: inline-flex;*/
-            /*align-items: center;*/
-            /*padding-top: 6px;*/
-            /*padding-bottom: 6px;*/
-            /*color-scheme: light;*/
-            /*font-family: var(--font-heading);*/
-            /*font-style: italic;*/
-            font-size: 60px;
-            line-height: 70px;
-            /*color: #0B1E3A;*/
-            /*text-transform: uppercase;*/
-            /*white-space: nowrap;*/
-            /*will-change: transform;*/
-        }
+        .marquee__centering {
 
-        .marquee__line--top {
-            /*position: relative;*/
-            /*z-index: 3;*/
-            /*background-color: #E4BB6B;*/
-            /*transform-origin: 50% 50%;*/
         }
-
-        .marquee__line--middle {
-            /*position: relative;*/
-            /*z-index: 1;*/
-            top: -554px;
-            /*margin-left: -100%; !* Поскольку движение вправо, то нужно чтобы слева уже был хвост от текста *!*/
-            /*background-color: #EBD7B2;*/
-            /*transform-origin: 50% 50%;*/
-        }
-
-        .marquee__line--bottom {
-            /*position: relative;*/
-            /*z-index: 2;*/
-            top: 517px;
-            /*background-color: #E4BB6B;*/
-            /*transform-origin: center center;*/
-        }
-            .marquee__sentence {
-                /*flex-shrink: 0;*/
+            .marquee__line {
+                font-size: 60px;
+                line-height: 70px;
             }
+
+            .marquee__line--top {
+                top: -33px;
+            }
+
+            .marquee__line--middle {
+                top: -50px;
+            }
+
+            .marquee__line--bottom {
+                top: 220px;
+            }
+                .marquee__sentence {
+
+                }
 }
-
-
-
