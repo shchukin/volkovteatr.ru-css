@@ -21,17 +21,23 @@
     .marquee__line--top {
         margin-top: 100px;
         background-color: #E4BB6B;
+        transform: rotate(1.8deg);
+        transform-origin: 0 0;
     }
 
     .marquee__line--middle {
         margin-left: -100%;
         margin-top: 100px;
         background-color: #EBD7B2;
+        transform: rotate(-6.52deg);
+        transform-origin: 100% 0;
     }
 
     .marquee__line--bottom {
         margin-top: 100px;
         background-color: #E4BB6B;
+        transform: rotate(3.98deg);
+        transform-origin: 0 0;
     }
         .marquee__sentence {
             flex-shrink: 0;

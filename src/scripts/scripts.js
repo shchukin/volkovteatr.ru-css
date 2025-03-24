@@ -1267,24 +1267,35 @@
         // Select all marquee lines
         var lines = $('.marquee__line');
         var states = [];
-        var speed = 150; // Speed in pixels per second (increased from 50 to 100)
+        var speed = 150; // Speed in pixels per second
 
         // Initialize each marquee line
         lines.each(function() {
             var line = $(this);
-            // Set initial transform for smooth animation
-            line.css('transform', 'translateX(0)');
-            // Get the width of the first sentence (all sentences in a line are identical)
+            // Set initial transform with rotation and translateX(0)
+            var angle;
+            if (line.hasClass('marquee__line--top')) {
+                angle = 1.8;
+            } else if (line.hasClass('marquee__line--middle')) {
+                angle = -6.52;
+            } else if (line.hasClass('marquee__line--bottom')) {
+                angle = 3.98;
+            }
+            line.css('transform', 'rotate(' + angle + 'deg) translateX(0)');
+
+            // Get the width of the first sentence
             var sentence = line.find('.marquee__sentence').first();
-            var sentenceWidth = sentence.outerWidth(true); // Includes margins if any
+            var sentenceWidth = sentence.outerWidth(true);
             // Determine direction: -1 for right to left, 1 for left to right
             var direction = line.hasClass('marquee__line--middle') ? 1 : -1;
+
             // Store state for this line
             states.push({
                 line: line,
                 left: 0, // Current position
                 sentenceWidth: sentenceWidth,
-                direction: direction
+                direction: direction,
+                angle: angle // Store the rotation angle
             });
         });
 
@@ -1293,12 +1304,9 @@
         // Animation loop using requestAnimationFrame
         function animate(time) {
             if (previousTime !== null) {
-                // Calculate time elapsed since last frame (in milliseconds)
                 var deltaTime = time - previousTime;
-                // Calculate movement based on speed (pixels per second)
-                var movement = speed * deltaTime / 1000;
+                var movement = speed * deltaTime / 500;
 
-                // Update each marquee line
                 states.forEach(function(state) {
                     // Move the line based on direction
                     state.left += state.direction * movement;
@@ -1323,8 +1331,8 @@
                         }
                     }
 
-                    // Apply the new position
-                    state.line.css('transform', 'translateX(' + state.left + 'px)');
+                    // Apply rotation and new position
+                    state.line.css('transform', 'rotate(' + state.angle + 'deg) translateX(' + state.left + 'px)');
                 });
             }
             previousTime = time;
