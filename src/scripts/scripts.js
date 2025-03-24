@@ -6,12 +6,14 @@
     let isMonitor; /* т.е. монитор типа 1920 */
     let responsiveSpacing;
     let headerHeight;
+    let scrolledHeaderHeight;
 
     function initGlobalConstant() {
         isDesktop = window.matchMedia("(min-width: 740px)").matches;
         isMonitor = window.matchMedia("(min-width: 1850px)").matches;
         responsiveSpacing = !isDesktop ? parseInt(getComputedStyle(document.documentElement).getPropertyValue('--container-padding')) : 40;
         headerHeight = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--header-height')) || 0;
+        scrolledHeaderHeight = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--header-collapsed-height')) || 0;
     }
 
     /* При открытии страницы */
@@ -21,6 +23,15 @@
     window.addEventListener('resize', initGlobalConstant);
 
 
+    /* Определение Safari/iOS */
+    /* в Safari, а так же на iOS имеется баг с лесенками при поворотах в marquee. Там нужен костыльный вариант антиаляйзинга и нужно детектить эти бразуеры */
+
+    const isSafari = !!navigator.userAgent.match(/Version\/[\d\.]+.*Safari/);
+    const isIOS = ['iPad', 'iPhone', 'iPod', 'iPad Simulator', 'iPhone Simulator', 'iPod Simulator'].includes(navigator.platform) || (navigator.userAgent.includes("Mac") && "ontouchend" in document); // second part is iPad on iOS 13 detection
+
+    if(isSafari || isIOS) {
+        $html.addClass('safari');
+    }
 
 
 
@@ -298,19 +309,11 @@
                     nextEl: $carousel.querySelector('.carousel__button--next'),
                 },
 
-                // breakpoints: {
-                //     740: {
-                //         slidesPerView: 2,
-                //         slidesPerGroup: 2,
-                //         pagination: {
-                //             el: $carousel.querySelector('.carousel__pagination'),
-                //             type: "bullets",
-                //             bulletClass: 'carousel__bullet',
-                //             bulletActiveClass: 'carousel__bullet--current',
-                //             clickable: true
-                //         },
-                //     },
-                // },
+                breakpoints: {
+                    1850: {
+                        spaceBetween: 28,
+                    },
+                },
             });
         });
     }
@@ -1264,14 +1267,6 @@
     });
 
 
-    /* в Safari и на iOS баг с лесенками при трансформации, нужен костыльный вариант антиаляйзинга */
-    var isSafari = !!navigator.userAgent.match(/Version\/[\d\.]+.*Safari/);
-    var isIOS = ['iPad', 'iPhone', 'iPod', 'iPad Simulator', 'iPhone Simulator', 'iPod Simulator'].includes(navigator.platform) || (navigator.userAgent.includes("Mac") && "ontouchend" in document); // second part is iPad on iOS 13 detection
-
-    if(isSafari || isIOS) {
-        $html.addClass('safari');
-    }
-
     /* Анимация бегущих строк */
 
     $(function() {
@@ -1378,6 +1373,21 @@
         }
 
         requestAnimationFrame(animate);
+    });
+
+
+    /* Якоря */
+    $('.anchor').not('[href="#"]').click(function(event) {
+        var target = $(this.hash);
+
+        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+
+        if (target.length) {
+            $('html, body').animate({
+                scrollTop: target.offset().top - scrolledHeaderHeight + 1 // +1 из-за визуальных багов
+            }, 750);
+            return false;
+        }
     });
 
 
