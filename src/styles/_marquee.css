@@ -1,0 +1,37 @@
+.marquee {
+
+}
+    .marquee__line {
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding-top: 6px;
+        padding-bottom: 6px;
+        color-scheme: light;
+        font-family: var(--font-heading);
+        font-style: italic;
+        font-size: 60px;
+        line-height: 70px;
+        color: #0B1E3A;
+        text-transform: uppercase;
+        white-space: nowrap;
+        will-change: transform;
+    }
+
+    .marquee__line--top {
+        margin-top: 100px;
+        background-color: #E4BB6B;
+    }
+
+    .marquee__line--middle {
+        margin-top: 100px;
+        background-color: #EBD7B2;
+    }
+
+    .marquee__line--bottom {
+        margin-top: 100px;
+        background-color: #E4BB6B;
+    }
+        .marquee__sentence {
+            flex-shrink: 0;
+        }
