@@ -3,3 +3,14 @@
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 24px 20px;
 }
+
+
+
+@media (width < 740px) {
+
+    .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        gap: 24px 20px;
+    }
+}
