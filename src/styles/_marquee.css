@@ -1,9 +1,8 @@
 .marquee {
     pointer-events: none;
-    margin-top: -300px;
+    padding-top: 105px;
 }
     .marquee__line {
-        position: relative;
         display: inline-flex;
         align-items: center;
         padding-top: 6px;
@@ -11,8 +10,8 @@
         color-scheme: light;
         font-family: var(--font-heading);
         font-style: italic;
-        font-size: 60px;
-        line-height: 70px;
+        font-size: 40px;
+        line-height: 47px;
         color: #0B1E3A;
         text-transform: uppercase;
         white-space: nowrap;
@@ -20,26 +19,29 @@
     }
 
     .marquee__line--top {
-        margin-top: 100px;
+        position: relative;
+        z-index: 3;
         background-color: #E4BB6B;
-        transform: rotate(1.8deg);
-        transform-origin: 0 0;
     }
 
     .marquee__line--middle {
-        margin-left: -100%;
-        margin-top: 100px;
+        position: relative;
+        z-index: 1;
+        top: -88px;
+        margin-left: -100%; /* Поскольку движение вправо, то нужно чтобы слева уже был хвост от текста */
         background-color: #EBD7B2;
-        transform: rotate(-6.52deg);
-        transform-origin: 100% 0;
     }
 
     .marquee__line--bottom {
-        margin-top: 100px;
+        position: relative;
+        z-index: 2;
+        top: 337px;
         background-color: #E4BB6B;
-        transform: rotate(3.98deg);
-        transform-origin: 0 0;
     }
         .marquee__sentence {
             flex-shrink: 0;
         }
+
+
+/*font-size: 60px;*/
+/*line-height: 70px;*/
