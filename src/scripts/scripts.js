@@ -1264,7 +1264,7 @@
     });
 
 
-    /* в Sfari и на iOS баг с лесенками при трансформации, нужен костыльный вариант антиаляйзинга */
+    /* в Safari и на iOS баг с лесенками при трансформации, нужен костыльный вариант антиаляйзинга */
     var isSafari = !!navigator.userAgent.match(/Version\/[\d\.]+.*Safari/);
     var isIOS = ['iPad', 'iPhone', 'iPod', 'iPad Simulator', 'iPhone Simulator', 'iPod Simulator'].includes(navigator.platform) || (navigator.userAgent.includes("Mac") && "ontouchend" in document); // second part is iPad on iOS 13 detection
 
