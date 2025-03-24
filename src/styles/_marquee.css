@@ -1,4 +1,5 @@
 .marquee {
+    height: 547px;
     pointer-events: none;
 }
     /* этот флекс идёт на 100% ширины экрана и центрирует всё, что внутри */
@@ -27,21 +28,21 @@
         .marquee__line--top {
             position: relative;
             z-index: 3;
-            top: -33px;
+            top: 47px;
             background-color: #E4BB6B;
         }
 
         .marquee__line--middle {
             position: relative;
             z-index: 1;
-            top: -64px;
+            top: 16px;
             background-color: #EBD7B2;
         }
 
         .marquee__line--bottom {
             position: relative;
             z-index: 2;
-            top: 136px;
+            top: 216px;
             background-color: #E4BB6B;
         }
             .marquee__sentence {
@@ -55,7 +56,7 @@
 @media (1850px <= width) {
 
     .marquee {
-
+        height: 647px;
     }
         .marquee__centering {
 
@@ -80,3 +81,62 @@
 
                 }
 }
+
+
+
+@media (width < 740px) {
+
+    .marquee {
+        height: 388px;
+        /*pointer-events: none;*/
+    }
+        /* этот флекс идёт на 100% ширины экрана и центрирует всё, что внутри */
+        .marquee__centering {
+            /*display: flex;*/
+            /*align-items: center;*/
+            /*justify-content: center;*/
+        }
+            /* это уже inline-flex и он становится по ширине содержимого, т.е. ~10000px и центрируется (края обрезаются) */
+            .marquee__line {
+                /*display: inline-flex;*/
+                /*align-items: center;*/
+                /*padding-top: 6px;*/
+                /*padding-bottom: 6px;*/
+                /*color-scheme: light;*/
+                /*font-family: var(--font-heading);*/
+                /*font-style: italic;*/
+                font-size: 22px;
+                line-height: 26px;
+                /*color: #0B1E3A;*/
+                /*text-transform: uppercase;*/
+                /*white-space: nowrap;*/
+                /*will-change: transform;*/
+            }
+
+            .marquee__line--top {
+                /*position: relative;*/
+                /*z-index: 3;*/
+                top: 50px;
+                /*background-color: #E4BB6B;*/
+            }
+
+            .marquee__line--middle {
+                /*position: relative;*/
+                /*z-index: 1;*/
+                top: 50px;
+                /*background-color: #EBD7B2;*/
+            }
+
+            .marquee__line--bottom {
+                /*position: relative;*/
+                /*z-index: 2;*/
+                top: 140px;
+                /*background-color: #E4BB6B;*/
+            }
+                .marquee__sentence {
+                    /*flex-shrink: 0;*/
+                }
+}
+
+
+

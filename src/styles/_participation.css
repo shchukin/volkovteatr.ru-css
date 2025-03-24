@@ -1,6 +1,5 @@
 .participation {
     padding-top: 80px;
-    padding-bottom: 80px;
 }
     .participation__heading {
         margin-top: 0;
@@ -34,7 +33,6 @@
 
     .participation {
         padding-top: 60px;
-        padding-bottom: 60px;
     }
         .participation__heading {
             /*margin-top: 0;*/
