@@ -1,5 +1,7 @@
 .stage {
+    /* stylelint-disable */
     height: 100svh;
+    /* stylelint-enable */
 }
     .stage__background {
         vertical-align: top;

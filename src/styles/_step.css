@@ -136,7 +136,7 @@
             .step__index.title,
             .step__index .title {
                 font-size: 32px;
-                link: 37px;
+                line-height: 37px;
             }
 
         .step__heading {
