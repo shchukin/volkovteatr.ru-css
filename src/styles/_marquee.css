@@ -1,5 +1,6 @@
 .marquee {
-
+    pointer-events: none;
+    margin-top: -300px;
 }
     .marquee__line {
         position: relative;
