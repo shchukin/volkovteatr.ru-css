@@ -3,13 +3,15 @@
     padding-bottom: 114px;
 }
     .partners__section {
-        margin-top: 40px;
+        margin-top: 60px;
     }
 
     .partners__section:first-child {
         margin-top: 0;
     }
         .partners__heading {
+            margin-top: 0;
+            margin-bottom: 0;
             font-family: var(--font-heading);
             font-style: italic;
             font-weight: normal;
@@ -39,3 +41,65 @@
                 .partners__image {
                     vertical-align: top;
                 }
+
+                .partners__section--sponsors .partners__image {
+                    width: 314px;
+                    height: auto;
+                }
+
+                .partners__section--partners .partners__image {
+                    width: 180px;
+                    height: auto;
+                }
+
+
+@media (1850px <= width) {
+
+    .partners {
+        /*padding-top: 80px;*/
+        /*padding-bottom: 114px;*/
+    }
+        .partners__section {
+            margin-top: 60px;
+        }
+
+        .partners__section:first-child {
+            /*margin-top: 0;*/
+        }
+            .partners__heading {
+                /*font-family: var(--font-heading);*/
+                /*font-style: italic;*/
+                /*font-weight: normal;*/
+                font-size: 32px;
+                line-height: 37px;
+                /*color: #E4BB6B;*/
+                /*text-align: center;*/
+                /*text-transform: uppercase;*/
+            }
+
+            .partners__list {
+                margin-top: 24px;
+                padding: 24px 40px;
+                /*display: flex;*/
+                /*align-items: center;*/
+                /*gap: 40px;*/
+                /*background-color: #F8F0E5;*/
+                /*color-scheme: light;*/
+                /*border-radius: 8px;*/
+                /*width: fit-content;*/
+                /*margin-left: auto;*/
+                /*margin-right: auto;*/
+            }
+                .partners__item {
+                    /*flex-shrink: 0;*/
+                    height: auto;
+                }
+                    .partners__section--sponsors .partners__image {
+                        width: 486px;
+                    }
+
+                    .partners__section--partners .partners__image {
+                        width: 200px;
+                    }
+
+}
