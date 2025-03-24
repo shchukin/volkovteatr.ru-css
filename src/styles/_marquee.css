@@ -22,16 +22,14 @@
         position: relative;
         z-index: 3;
         background-color: #E4BB6B;
-        transform-origin: 50% 50%;
     }
 
     .marquee__line--middle {
         position: relative;
         z-index: 1;
         top: -280px;
-        margin-left: -100%; /* Поскольку движение вправо, то нужно чтобы слева уже был хвост от текста */
+        margin-left: -2000px; /* Поскольку движение вправо, то нужно чтобы слева уже был хвост от текста */
         background-color: #EBD7B2;
-        transform-origin: 50% 50%;
     }
 
     .marquee__line--bottom {
@@ -39,7 +37,6 @@
         z-index: 2;
         top: 337px;
         background-color: #E4BB6B;
-        transform-origin: center center;
     }
         .marquee__sentence {
             flex-shrink: 0;
