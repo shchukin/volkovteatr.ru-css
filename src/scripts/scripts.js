@@ -1267,7 +1267,7 @@
         // Select all marquee lines
         var lines = $('.marquee__line');
         var states = [];
-        var speed = 50; // Speed in pixels per second
+        var speed = 100; // Speed in pixels per second
 
         // Initialize each marquee line
         lines.each(function() {
