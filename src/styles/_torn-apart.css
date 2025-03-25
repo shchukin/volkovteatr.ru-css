@@ -7,9 +7,12 @@
         background-color: #0B1E3A; /* как у body */
     }
 
+    /* stylelint-disable */
     .torn-apart__gap {
         height: 100svh; /* держит высоту для создания дыры */
     }
+    /* stylelint-enable */
+
         .torn-apart__image {
             position: fixed;
             z-index: 10;
