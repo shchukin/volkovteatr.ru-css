@@ -1,12 +1,13 @@
 .step {
     width: 305px;
     height: 428px;
-    padding: 18px 20px 32px;
-    border: 1px solid #F8F0E5;
+    padding: 19px 21px 32px;
+    box-shadow: inset 0 0 0 1px #F8F0E5;
     border-radius: 20px;
     display: flex;
     align-items: stretch;
     flex-direction: column;
+    cursor: pointer;
 }
     .step__index {
         text-align: right;
@@ -53,6 +54,77 @@
             width: 18px;
             height: 18px;
         }
+
+    /* Наведение */
+    .step::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        border-radius: 20px;
+        opacity: 0;
+        transition: opacity 250ms ease;
+    }
+
+    .step:hover::after {
+        opacity: 100%;
+    }
+
+    .step:nth-child(1)::after {
+        background-image: url("../images/steps/step-01@1x.jpg");
+    }
+
+    @media (min-resolution: 1.5dppx) {
+        .step:nth-child(1)::after {
+            background-image: url("../images/steps/step-01@2x.jpg");
+        }
+    }
+
+
+    .step:nth-child(2)::after {
+        background-image: url("../images/steps/step-02@1x.jpg");
+    }
+
+    @media (min-resolution: 1.5dppx) {
+        .step:nth-child(2)::after {
+            background-image: url("../images/steps/step-02@2x.jpg");
+        }
+    }
+
+
+    .step:nth-child(3)::after {
+        background-image: url("../images/steps/step-03@1x.jpg");
+    }
+
+    @media (min-resolution: 1.5dppx) {
+        .step:nth-child(3)::after {
+            background-image: url("../images/steps/step-03@2x.jpg");
+        }
+    }
+
+
+    .step:nth-child(4)::after {
+        background-image: url("../images/steps/step-04@1x.jpg");
+    }
+
+    @media (min-resolution: 1.5dppx) {
+        .step:nth-child(4)::after {
+            background-image: url("../images/steps/step-04@2x.jpg");
+        }
+    }
+
+
+    .step:nth-child(5)::after {
+        background-image: url("../images/steps/step-05@1x.jpg");
+    }
+
+    @media (min-resolution: 1.5dppx) {
+        .step:nth-child(5)::after {
+            background-image: url("../images/steps/step-05@2x.jpg");
+        }
+    }
 
 
 
