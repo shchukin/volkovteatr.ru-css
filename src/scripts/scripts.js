@@ -1388,7 +1388,7 @@
             const maxScroll = sectionHeight - viewportHeight;
             progress = Math.max(0, Math.min(1, -sectionTop / maxScroll));
         } else {
-            const start = viewportHeight - sectionHeight - 100;
+            const start = (viewportHeight - sectionHeight) / 2;
             progress = Math.max(0, Math.min(1, (start - sectionTop) / sectionHeight));
         }
 
