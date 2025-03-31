@@ -730,7 +730,19 @@
                     </section>
                 </div>
                 <div class="torn-apart__gap">
-                    <img class="torn-apart__image" src="../temp/fixed-separator/fixed-separator.jpg" width="1280" height="544" alt="">
+                    <picture>
+                        <source srcset="../content/torn-apart/torn-apart-mobile@2x.jpg 1.5x,
+                                        ../content/torn-apart/torn-apart-mobile@1x.jpg 1x"
+                                media="(max-width: 740px)"
+                        />
+                        <img class="torn-apart__image"
+                             srcset="../content/torn-apart/torn-apart-desktop@2x.jpg 1.5x"
+                             src="../content/torn-apart/torn-apart-desktop@1x.jpg"
+                             width="1920"
+                             height="816"
+                             alt=""
+                        >
+                    </picture>
                 </div>
                 <div class="torn-apart__content">
                     <div class="partners container">
