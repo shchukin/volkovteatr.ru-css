@@ -10,6 +10,14 @@
     .participation__body {
         margin-top: 40px;
     }
+        .participation__ribbon {
+            display: inline-flex;
+            align-items: stretch;
+            gap: 20px;
+        }
+            .participation__item {
+
+            }
 
 
 @media (1850px <= width) {
@@ -25,6 +33,12 @@
         .participation__body {
             margin-top: 60px;
         }
+            .participation__ribbon {
+                gap: 28px;
+            }
+                .participation__item {
+
+                }
 }
 
 
@@ -47,5 +61,16 @@
 
         .participation__body {
             margin-top: 24px;
+            overflow: visible;
         }
+            .participation__ribbon {
+                display: block;
+            }
+                .participation__item {
+                    margin-top: 24px;
+                }
+
+                .participation__item:first-child {
+                    margin-top: 0;
+                }
 }

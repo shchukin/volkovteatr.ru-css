@@ -1,4 +1,5 @@
 .step {
+    position: relative;
     width: 305px;
     height: 428px;
     padding: 19px 21px 32px;

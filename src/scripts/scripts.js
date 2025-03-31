@@ -288,34 +288,6 @@
             });
         });
 
-
-
-        /* Swiper для участия */
-
-        document.querySelectorAll('.carousel--js-init-participation').forEach(($carousel) => {
-
-            new Swiper($carousel.querySelector('.swiper'), {
-                slidesPerView: "auto",
-                slidesPerGroup: 3,
-                spaceBetween: 20,
-
-                pagination: {
-                    el: $carousel.querySelector('.carousel__pagination'),
-                    type: "fraction",
-                },
-
-                navigation: {
-                    prevEl: $carousel.querySelector('.carousel__button--prev'),
-                    nextEl: $carousel.querySelector('.carousel__button--next'),
-                },
-
-                breakpoints: {
-                    1850: {
-                        spaceBetween: 28,
-                    },
-                },
-            });
-        });
     }
 
 
@@ -1389,6 +1361,44 @@
             return false;
         }
     });
+
+
+    /* Прокрутка Participation */
+
+    const ribbon = document.querySelector('.participation__ribbon');
+    const section = document.querySelector('.participation');
+
+    function updateRibbonPosition() {
+        if (!ribbon || !section) return;
+        const sectionRect = section.getBoundingClientRect();
+        const viewportHeight = window.innerHeight;
+        const ribbonWidth = ribbon.scrollWidth;
+        const containerWidth = section.clientWidth;
+        const overflowWidth = ribbonWidth - containerWidth;
+
+        if (overflowWidth <= 0) {
+            ribbon.style.transform = 'translateX(0)';
+            return;
+        }
+
+        const sectionTop = sectionRect.top;
+        const sectionHeight = sectionRect.height;
+        let progress;
+        if (sectionHeight > viewportHeight) {
+            const maxScroll = sectionHeight - viewportHeight;
+            progress = Math.max(0, Math.min(1, -sectionTop / maxScroll));
+        } else {
+            const start = viewportHeight - sectionHeight - 100;
+            progress = Math.max(0, Math.min(1, (start - sectionTop) / sectionHeight));
+        }
+
+        const translateX = -overflowWidth * progress;
+        ribbon.style.transform = `translateX(${translateX}px)`;
+    }
+
+    window.addEventListener('scroll', updateRibbonPosition);
+    window.addEventListener('load', updateRibbonPosition);
+    window.addEventListener('resize', updateRibbonPosition);
 
 
 })(jQuery);
