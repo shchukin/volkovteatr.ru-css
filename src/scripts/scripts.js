@@ -1372,6 +1372,7 @@
         if (!ribbon || !section) return;
         const sectionRect = section.getBoundingClientRect();
         const viewportHeight = window.innerHeight;
+        const effectiveViewportHeight = viewportHeight + headerHeight;
         const ribbonWidth = ribbon.scrollWidth;
         const containerWidth = section.clientWidth;
         const overflowWidth = ribbonWidth - containerWidth;
@@ -1381,14 +1382,15 @@
             return;
         }
 
-        const sectionTop = sectionRect.top;
+        const sectionTop = sectionRect.top - headerHeight;
         const sectionHeight = sectionRect.height;
         let progress;
-        if (sectionHeight > viewportHeight) {
-            const maxScroll = sectionHeight - viewportHeight;
+
+        if (sectionHeight > effectiveViewportHeight) {
+            const maxScroll = sectionHeight - effectiveViewportHeight;
             progress = Math.max(0, Math.min(1, -sectionTop / maxScroll));
         } else {
-            const start = (viewportHeight - sectionHeight) / 2;
+            const start = (effectiveViewportHeight - sectionHeight) / 2 - 50;
             progress = Math.max(0, Math.min(1, (start - sectionTop) / sectionHeight));
         }
 
