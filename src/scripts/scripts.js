@@ -1370,6 +1370,11 @@
         const $ribbon = $('.participation__ribbon');
 
         function updateRibbonPosition() {
+            // Работаем только на десктопе
+            if (!isDesktop) {
+                $ribbon.css('transform', 'none');
+                return;
+            }
 
             // Верх экрана (плюс высота шапки)
             const scrollStart = 0 + scrolledHeaderHeight;
@@ -1393,9 +1398,9 @@
                 progress = 0;
             }
 
+            // Проставляем смещение в DOM:
             let translateX = -1 * overflowWidth * progress;
             $ribbon.css('transform', 'translateX(' + translateX + 'px)');
-
         }
 
         $(window).on('scroll load resize', updateRibbonPosition);
