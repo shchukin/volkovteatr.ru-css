@@ -1386,7 +1386,7 @@
 
         // Если верхняя граница секции ниже точки начала прокрутки
         if (sectionTop < scrollEnd) {
-            progress = Math.max(0, Math.min(1, (scrollEnd - sectionTop) / (scrollEnd - scrollStart)));
+            progress = Math.max(0, Math.min(1, (scrollEnd - sectionTop - 428) / (scrollEnd - scrollStart - 428)));
         } else {
             progress = 0;
         }
