@@ -1366,34 +1366,34 @@
     /* Прокрутка Participation */
 
     $(document).ready(function() {
-        var $section = $('.participation__body');
-        var $ribbon = $('.participation__ribbon');
+        const $section = $('.participation__body');
+        const $ribbon = $('.participation__ribbon');
 
         function updateRibbonPosition() {
-            const sectionRect = $section[0].getBoundingClientRect();
-            const ribbonWidth = $ribbon[0].scrollWidth;
-            const containerWidth = $section.width();
 
-            const sectionTop = sectionRect.top;
-            const sectionBottom = sectionRect.bottom;
+            // Верх экрана (плюс высота шапки)
+            const scrollStart = 0 + scrolledHeaderHeight;
 
-            const scrollStart = 0 + scrolledHeaderHeight; // Верх экрана (плюс высота шапки)
-            const scrollEnd = $(window).height(); // Низ экрана
+            // Низ экрана
+            const scrollEnd = $(window).height();
 
-            /* overflowWidth -- это то, на сколько нужно прокрутить секцию по горизонтали */
-            const overflowWidth = ribbonWidth - containerWidth;
+            // Координата верха
+            const sectionTop = $section[0].getBoundingClientRect().top;
 
-            /* В progress значение от 0 до 1 -- это и есть нормализованный прогресс прокрутки */
+            // overflowWidth -- это то, на сколько нужно прокрутить секцию по горизонтали (на сколько она не влезла)
+            const overflowWidth = $ribbon.width() - $section.width();
+
+            // Нормализованный прогресс прокрутки (значение от 0 до 1)
             let progress;
 
-            // Если верхняя граница секции ниже точки начала прокрутки
+            // Запускаем обсчёт progress`а
             if (sectionTop < scrollEnd) {
                 progress = Math.max(0, Math.min(1, (scrollEnd - sectionTop - 428) / (scrollEnd - scrollStart - 428)));
             } else {
                 progress = 0;
             }
 
-            var translateX = -overflowWidth * progress;
+            let translateX = -1 * overflowWidth * progress;
             $ribbon.css('transform', 'translateX(' + translateX + 'px)');
 
         }
