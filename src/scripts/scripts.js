@@ -1365,39 +1365,37 @@
 
     /* Прокрутка Participation */
 
-    const section = document.querySelector('.participation__body');
-    const ribbon = document.querySelector('.participation__ribbon');
+    $(document).ready(function() {
+        var $section = $('.participation__body');
+        var $ribbon = $('.participation__ribbon');
 
-    function updateRibbonPosition() {
-        const sectionRect = section.getBoundingClientRect();
-        const viewportHeight = window.innerHeight;
-        const ribbonWidth = ribbon.scrollWidth;
-        const containerWidth = section.clientWidth;
-        const overflowWidth = ribbonWidth - containerWidth;
+        function updateRibbonPosition() {
+            const sectionRect = $section[0].getBoundingClientRect();
+            const viewportHeight = $(window).height();
+            const ribbonWidth = $ribbon[0].scrollWidth;
+            const containerWidth = $section.width();
+            const overflowWidth = ribbonWidth - containerWidth;
 
-        const sectionTop = sectionRect.top;
-        const sectionBottom = sectionRect.bottom;
-        let progress;
+            const sectionTop = sectionRect.top;
+            const sectionBottom = sectionRect.bottom;
+            let progress;
 
-        // Начинаем прокрутку когда верх ribbon касается верха экрана + headerHeight
-        const scrollStart = headerHeight;
-        // Заканчиваем когда низ ribbon выезжает из под низа экрана
-        const scrollEnd = viewportHeight;
+            let scrollStart = 0 + scrolledHeaderHeight; // Верх экрана (плюс высота шапки)
+            let scrollEnd = viewportHeight;         // Низ экрана
 
-        // Если верхняя граница секции ниже точки начала прокрутки
-        if (sectionTop < scrollEnd) {
-            progress = Math.max(0, Math.min(1, (scrollEnd - sectionTop - 428) / (scrollEnd - scrollStart - 428)));
-        } else {
-            progress = 0;
+            // Если верхняя граница секции ниже точки начала прокрутки
+            if (sectionTop < scrollEnd) {
+                progress = Math.max(0, Math.min(1, (scrollEnd - sectionTop - 428) / (scrollEnd - scrollStart - 428)));
+            } else {
+                progress = 0;
+            }
+
+            var translateX = -overflowWidth * progress;
+            $ribbon.css('transform', 'translateX(' + translateX + 'px)');
         }
 
-        const translateX = -overflowWidth * progress;
-        ribbon.style.transform = `translateX(${translateX}px)`;
-    }
-
-    window.addEventListener('scroll', updateRibbonPosition);
-    window.addEventListener('load', updateRibbonPosition);
-    window.addEventListener('resize', updateRibbonPosition);
+        $(window).on('scroll load resize', updateRibbonPosition);
+    });
 
 })(jQuery);
 
