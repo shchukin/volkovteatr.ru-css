@@ -1394,50 +1394,51 @@
     }
 
     $(document).ready(checkVisibility);
-    $(window).on('scroll', throttledCheck);
+    $(window).on('scroll load resize', throttledCheck);
+
+
 
     /* Прокрутка Participation */
 
-    $(document).ready(function() {
-        const $section = $('.participation__body');
-        const $ribbon = $('.participation__ribbon');
+    const $section = $('.participation__body');
+    const $ribbon = $('.participation__ribbon');
 
-        function updateRibbonPosition() {
-            // Работаем только на десктопе
-            if (!isDesktop) {
-                $ribbon.css('transform', 'none');
-                return;
-            }
-
-            // Верх экрана (плюс высота шапки)
-            const scrollStart = 0 + scrolledHeaderHeight;
-
-            // Низ экрана
-            const scrollEnd = $(window).height();
-
-            // Координата верха
-            const sectionTop = $section[0].getBoundingClientRect().top;
-
-            // overflowWidth -- это то, на сколько нужно прокрутить секцию по горизонтали (на сколько она не влезла)
-            const overflowWidth = $ribbon.width() - $section.width();
-
-            // Нормализованный прогресс прокрутки (значение от 0 до 1)
-            let progress;
-
-            // Запускаем обсчёт progress`а
-            if (sectionTop < scrollEnd) {
-                progress = Math.max(0, Math.min(1, (scrollEnd - sectionTop - 428) / (scrollEnd - scrollStart - 428)));
-            } else {
-                progress = 0;
-            }
-
-            // Проставляем смещение в DOM:
-            let translateX = -1 * overflowWidth * progress;
-            $ribbon.css('transform', 'translateX(' + translateX + 'px)');
+    function updateRibbonPosition() {
+        // Работаем только на десктопе
+        if (!isDesktop) {
+            $ribbon.css('transform', 'none');
+            return;
         }
 
-        $(window).on('scroll load resize', updateRibbonPosition);
-    });
+        // Верх экрана (плюс высота шапки)
+        const scrollStart = 0 + scrolledHeaderHeight;
+
+        // Низ экрана
+        const scrollEnd = $(window).height();
+
+        // Координата верха
+        const sectionTop = $section[0].getBoundingClientRect().top;
+
+        // overflowWidth -- это то, на сколько нужно прокрутить секцию по горизонтали (на сколько она не влезла)
+        const overflowWidth = $ribbon.width() - $section.width();
+
+        // Нормализованный прогресс прокрутки (значение от 0 до 1)
+        let progress;
+
+        // Запускаем обсчёт progress`а
+        if (sectionTop < scrollEnd) {
+            progress = Math.max(0, Math.min(1, (scrollEnd - sectionTop - 428) / (scrollEnd - scrollStart - 428)));
+        } else {
+            progress = 0;
+        }
+
+        // Проставляем смещение в DOM:
+        let translateX = -1 * overflowWidth * progress;
+        $ribbon.css('transform', 'translateX(' + translateX + 'px)');
+    }
+
+    $(document).ready(updateRibbonPosition);
+    $(window).on('scroll load resize', updateRibbonPosition);
 
 })(jQuery);
 
