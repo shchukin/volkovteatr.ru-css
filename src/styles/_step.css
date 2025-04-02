@@ -63,7 +63,7 @@
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center center;
-        border-radius: 20px;
+        border-radius: 19px; /* на единицу меньше чтобы по краям не проступал белый бордюр */
         opacity: 0;
         transition: opacity 250ms ease;
     }
@@ -259,7 +259,7 @@
         /*background-size: cover;*/
         /*background-repeat: no-repeat;*/
         /*background-position: center center;*/
-        border-radius: 16px;
+        border-radius: 16px; /* на единицу меньше чтобы по краям не проступал белый бордюр */
         /*opacity: 0;*/
         /*transition: opacity 250ms ease;*/
     }
