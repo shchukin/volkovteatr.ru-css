@@ -1396,6 +1396,8 @@
     $(document).ready(checkVisibility);
     $(window).on('scroll', throttledCheck);
 
+
+    
     /* Прокрутка Participation */
 
     $(document).ready(function() {
