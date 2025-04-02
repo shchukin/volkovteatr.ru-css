@@ -1,0 +1,12 @@
+.slide-up {
+    position: relative;
+    top: 150px;
+    opacity: 0;
+    transition: opacity 1200ms var(--ease-out-quint),
+                top 1200ms var(--ease-out-quint);
+}
+
+.slide-up--animated {
+    top: 0;
+    opacity: 100%;
+}

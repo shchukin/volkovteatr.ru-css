@@ -10,6 +10,12 @@
     .participation__body {
         margin-top: 40px;
     }
+
+    .participation__body.slide-up {
+        transition-delay: 100ms;
+    }
+
+
         .participation__ribbon {
             display: inline-flex;
             align-items: stretch;
