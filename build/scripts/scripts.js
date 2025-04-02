@@ -1426,7 +1426,7 @@
 
         // Запускаем обсчёт progress`а
         if (sectionTop < scrollEnd) {
-            progress = Math.max(0, Math.min(1, (scrollEnd - sectionTop - 428) / (scrollEnd - scrollStart - 428)));
+            progress = Math.max(0, Math.min(1, (scrollEnd - sectionTop - $section.height()) / (scrollEnd - scrollStart - $section.height())));
         } else {
             progress = 0;
         }
