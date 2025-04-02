@@ -1363,6 +1363,39 @@
     });
 
 
+
+    /* Плавное появление элементов на странице slide-up */
+
+
+    const $slideUp = $('.slide-up');
+    let throttleTimeout;
+
+    function checkVisibility() {
+        $slideUp.each(function () {
+            const $el = $(this);
+            if ($el.hasClass('slide-up--animated')) return; // Если уже анимирован, пропустить
+
+            const elementTop = $el.offset().top;
+            const viewportBottom = $(window).scrollTop() + $(window).height();
+
+            if (viewportBottom >= elementTop) {
+                $el.addClass('slide-up--animated');
+            }
+        });
+    }
+
+    function throttledCheck() {
+        if (!throttleTimeout) {
+            throttleTimeout = setTimeout(function () {
+                checkVisibility();
+                throttleTimeout = null;
+            }, 50);
+        }
+    }
+
+    $(document).ready(checkVisibility);
+    $(window).on('scroll', throttledCheck);
+
     /* Прокрутка Participation */
 
     $(document).ready(function() {
