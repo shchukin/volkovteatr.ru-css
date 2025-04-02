@@ -1366,9 +1366,8 @@
 
     /* Плавное появление элементов на странице slide-up */
 
-
     const $slideUp = $('.slide-up');
-    let throttleTimeout;
+    let slideUpThrottleTimeout;
 
     function checkVisibility() {
         $slideUp.each(function () {
@@ -1385,10 +1384,10 @@
     }
 
     function throttledCheck() {
-        if (!throttleTimeout) {
-            throttleTimeout = setTimeout(function () {
+        if (!slideUpThrottleTimeout) {
+            slideUpThrottleTimeout = setTimeout(function () {
                 checkVisibility();
-                throttleTimeout = null;
+                slideUpThrottleTimeout = null;
             }, 50);
         }
     }
