@@ -1365,11 +1365,10 @@
 
     /* Прокрутка Participation */
 
+    const section = document.querySelector('.participation__body');
     const ribbon = document.querySelector('.participation__ribbon');
-    const section = document.querySelector('.participation');
 
     function updateRibbonPosition() {
-        if (!ribbon || !section) return;
         const sectionRect = section.getBoundingClientRect();
         const viewportHeight = window.innerHeight;
         const effectiveViewportHeight = viewportHeight + headerHeight;
@@ -1377,22 +1376,13 @@
         const containerWidth = section.clientWidth;
         const overflowWidth = ribbonWidth - containerWidth;
 
-        if (overflowWidth <= 0) {
-            ribbon.style.transform = 'translateX(0)';
-            return;
-        }
-
         const sectionTop = sectionRect.top - headerHeight;
         const sectionHeight = sectionRect.height;
         let progress;
 
-        if (sectionHeight > effectiveViewportHeight) {
-            const maxScroll = sectionHeight - effectiveViewportHeight;
-            progress = Math.max(0, Math.min(1, -sectionTop / maxScroll));
-        } else {
-            const start = (effectiveViewportHeight - sectionHeight) / 2 - 50;
-            progress = Math.max(0, Math.min(1, (start - sectionTop) / sectionHeight));
-        }
+        const start = effectiveViewportHeight - sectionHeight;
+
+        progress = Math.max(0, Math.min(1, (start - sectionTop) / sectionHeight));
 
         const translateX = -overflowWidth * progress;
         ribbon.style.transform = `translateX(${translateX}px)`;
@@ -1401,7 +1391,6 @@
     window.addEventListener('scroll', updateRibbonPosition);
     window.addEventListener('load', updateRibbonPosition);
     window.addEventListener('resize', updateRibbonPosition);
-
 
 })(jQuery);
 
