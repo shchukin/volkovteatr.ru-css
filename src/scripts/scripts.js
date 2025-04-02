@@ -1371,18 +1371,25 @@
     function updateRibbonPosition() {
         const sectionRect = section.getBoundingClientRect();
         const viewportHeight = window.innerHeight;
-        const effectiveViewportHeight = viewportHeight + headerHeight;
         const ribbonWidth = ribbon.scrollWidth;
         const containerWidth = section.clientWidth;
         const overflowWidth = ribbonWidth - containerWidth;
 
-        const sectionTop = sectionRect.top - headerHeight;
-        const sectionHeight = sectionRect.height;
+        const sectionTop = sectionRect.top;
+        const sectionBottom = sectionRect.bottom;
         let progress;
 
-        const start = effectiveViewportHeight - sectionHeight;
+        // Начинаем прокрутку когда верх ribbon касается верха экрана + headerHeight
+        const scrollStart = headerHeight;
+        // Заканчиваем когда низ ribbon выезжает из под низа экрана
+        const scrollEnd = viewportHeight;
 
-        progress = Math.max(0, Math.min(1, (start - sectionTop) / sectionHeight));
+        // Если верхняя граница секции ниже точки начала прокрутки
+        if (sectionTop < scrollEnd) {
+            progress = Math.max(0, Math.min(1, (scrollEnd - sectionTop) / (scrollEnd - scrollStart)));
+        } else {
+            progress = 0;
+        }
 
         const translateX = -overflowWidth * progress;
         ribbon.style.transform = `translateX(${translateX}px)`;
