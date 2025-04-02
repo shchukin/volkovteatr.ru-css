@@ -1365,43 +1365,46 @@
 
     /* Прокрутка Participation */
 
-    const ribbon = document.querySelector('.participation__ribbon');
-    const section = document.querySelector('.participation');
+    $(document).ready(function() {
+        const $section = $('.participation__body');
+        const $ribbon = $('.participation__ribbon');
 
-    function updateRibbonPosition() {
-        if (!ribbon || !section) return;
-        const sectionRect = section.getBoundingClientRect();
-        const viewportHeight = window.innerHeight;
-        const effectiveViewportHeight = viewportHeight + headerHeight; // Уменьшаем высоту на шапку
-        const ribbonWidth = ribbon.scrollWidth;
-        const containerWidth = section.clientWidth;
-        const overflowWidth = ribbonWidth - containerWidth;
+        function updateRibbonPosition() {
+            // Работаем только на десктопе
+            if (!isDesktop) {
+                $ribbon.css('transform', 'none');
+                return;
+            }
 
-        if (overflowWidth <= 0) {
-            ribbon.style.transform = 'translateX(0)';
-            return;
+            // Верх экрана (плюс высота шапки)
+            const scrollStart = 0 + scrolledHeaderHeight;
+
+            // Низ экрана
+            const scrollEnd = $(window).height();
+
+            // Координата верха
+            const sectionTop = $section[0].getBoundingClientRect().top;
+
+            // overflowWidth -- это то, на сколько нужно прокрутить секцию по горизонтали (на сколько она не влезла)
+            const overflowWidth = $ribbon.width() - $section.width();
+
+            // Нормализованный прогресс прокрутки (значение от 0 до 1)
+            let progress;
+
+            // Запускаем обсчёт progress`а
+            if (sectionTop < scrollEnd) {
+                progress = Math.max(0, Math.min(1, (scrollEnd - sectionTop - 428) / (scrollEnd - scrollStart - 428)));
+            } else {
+                progress = 0;
+            }
+
+            // Проставляем смещение в DOM:
+            let translateX = -1 * overflowWidth * progress;
+            $ribbon.css('transform', 'translateX(' + translateX + 'px)');
         }
 
-        const sectionTop = sectionRect.top - headerHeight; // Корректируем позицию секции
-        const sectionHeight = sectionRect.height;
-        let progress;
-
-        if (sectionHeight > effectiveViewportHeight) {
-            const maxScroll = sectionHeight - effectiveViewportHeight;
-            progress = Math.max(0, Math.min(1, -sectionTop / maxScroll));
-        } else {
-            const start = (effectiveViewportHeight - sectionHeight) / 2 - 50;
-            progress = Math.max(0, Math.min(1, (start - sectionTop) / sectionHeight));
-        }
-
-        const translateX = -overflowWidth * progress;
-        ribbon.style.transform = `translateX(${translateX}px)`;
-    }
-
-    window.addEventListener('scroll', updateRibbonPosition);
-    window.addEventListener('load', updateRibbonPosition);
-    window.addEventListener('resize', updateRibbonPosition);
-
+        $(window).on('scroll load resize', updateRibbonPosition);
+    });
 
 })(jQuery);
 
