@@ -1371,17 +1371,20 @@
 
         function updateRibbonPosition() {
             const sectionRect = $section[0].getBoundingClientRect();
-            const viewportHeight = $(window).height();
             const ribbonWidth = $ribbon[0].scrollWidth;
             const containerWidth = $section.width();
-            const overflowWidth = ribbonWidth - containerWidth;
 
             const sectionTop = sectionRect.top;
             const sectionBottom = sectionRect.bottom;
-            let progress;
 
-            let scrollStart = 0 + scrolledHeaderHeight; // Верх экрана (плюс высота шапки)
-            let scrollEnd = viewportHeight;         // Низ экрана
+            const scrollStart = 0 + scrolledHeaderHeight; // Верх экрана (плюс высота шапки)
+            const scrollEnd = $(window).height(); // Низ экрана
+
+            /* overflowWidth -- это то, на сколько нужно прокрутить секцию по горизонтали */
+            const overflowWidth = ribbonWidth - containerWidth;
+
+            /* В progress значение от 0 до 1 -- это и есть нормализованный прогресс прокрутки */
+            let progress;
 
             // Если верхняя граница секции ниже точки начала прокрутки
             if (sectionTop < scrollEnd) {
@@ -1392,6 +1395,7 @@
 
             var translateX = -overflowWidth * progress;
             $ribbon.css('transform', 'translateX(' + translateX + 'px)');
+
         }
 
         $(window).on('scroll load resize', updateRibbonPosition);
