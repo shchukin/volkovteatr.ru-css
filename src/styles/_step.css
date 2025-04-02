@@ -250,6 +250,23 @@
                 /*width: 18px;*/
                 /*height: 18px;*/
             }
+
+    /* Наведение */
+    .step::after {
+        /*content: "";*/
+        /*position: absolute;*/
+        /*inset: 0;*/
+        /*background-size: cover;*/
+        /*background-repeat: no-repeat;*/
+        /*background-position: center center;*/
+        border-radius: 16px;
+        /*opacity: 0;*/
+        /*transition: opacity 250ms ease;*/
+    }
+
+    .step:hover::after {
+        /*opacity: 100%;*/
+    }
 }
 
 
