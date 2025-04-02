@@ -3,12 +3,12 @@
 }
     .participation__heading {
         margin-top: 0;
-        margin-bottom: 40px;
+        margin-bottom: 0;
         color: #E4BB6B;
     }
 
     .participation__body {
-
+        margin-top: 40px;
     }
         .participation__ribbon {
             display: inline-flex;
@@ -27,11 +27,11 @@
         padding-bottom: 110px;
     }
         .participation__heading {
-            margin-bottom: 60px;
+
         }
 
         .participation__body {
-
+            margin-top: 60px;
         }
             .participation__ribbon {
                 gap: 28px;
@@ -49,9 +49,7 @@
         padding-top: 60px;
     }
         .participation__heading {
-            /*margin-top: 0;*/
-            margin-bottom: 24px;
-            /*color: #E4BB6B;*/
+
         }
             .participation__heading.title,
             .participation__heading .title {
@@ -60,6 +58,7 @@
             }
 
         .participation__body {
+            margin-top: 24px;
             overflow: visible;
         }
             .participation__ribbon {
