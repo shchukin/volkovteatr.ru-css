@@ -15,10 +15,12 @@
             background-color: #E3BB6B;
         }
 
-        .stage__background::after {
-            content: "";
+        .stage__mask {
             position: absolute;
-            inset: 0;
+            left: 0;
+            top: 0;
+            right: 0;
+            height: 100%;
             display: block;
             background-image: url("../images/stage-mask/stage-mask-desktop.svg");
             background-size: cover;
@@ -134,7 +136,7 @@
             /*object-fit: cover;*/
         }
 
-        .stage__background::after {
+        .stage__mask {
             background-image: url("../images/stage-mask/stage-mask-smartphone.svg");
         }
 
