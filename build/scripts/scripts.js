@@ -1440,32 +1440,5 @@
     $(window).on('scroll load resize', updateRibbonPosition);
 
 
-
-    // Cache the elements
-    const $window = $(window);
-    const $mask = $('.stage__mask');
-
-    // Function to handle parallax effect
-    function updateParallax() {
-        // Get scroll position
-        const scrollPosition = $window.scrollTop();
-
-        // Calculate parallax offset (adjust 0.3 to change speed - lower is slower)
-        const parallaxOffset = scrollPosition * 0.3;
-
-        // Apply transform to mask
-        $mask.css({
-            'transform': 'translateY(' + parallaxOffset + 'px)'
-        });
-    }
-
-    // Run on scroll
-    $window.on('scroll', function() {
-        updateParallax();
-    });
-
-    // Run once on load
-    updateParallax();
-
 })(jQuery);
 
