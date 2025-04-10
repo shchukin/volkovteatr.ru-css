@@ -1440,22 +1440,5 @@
     $(window).on('scroll load resize', updateRibbonPosition);
 
 
-
-    /* Параллакс на лендинге 275 */
-
-    const $window = $(window);
-    const $mask = $('.stage__mask');
-
-    function updateParallax() {
-        const scrollPosition = $window.scrollTop();
-        const parallaxOffset = scrollPosition * 0.3;
-        $mask.css({
-            'transform': 'translateY(' + parallaxOffset + 'px)'
-        });
-    }
-
-    $window.on('scroll', updateParallax);
-    $(document).ready(updateParallax);
-
 })(jQuery);
 

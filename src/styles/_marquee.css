@@ -2,6 +2,7 @@
     margin-top: 60px;
     height: 547px;
     pointer-events: none;
+    overflow: hidden;
 }
     /* этот флекс идёт на 100% ширины экрана и центрирует всё, что внутри */
     .marquee__centering {
