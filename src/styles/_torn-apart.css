@@ -9,7 +9,7 @@
 
     /* stylelint-disable */
     .torn-apart__gap {
-        height: calc(100svh - var(--header-collapsed-height)); /* держит высоту для создания дыры */
+        height: calc(100vh - var(--header-collapsed-height)); /* держит высоту для создания дыры */
     }
     /* stylelint-enable */
 
