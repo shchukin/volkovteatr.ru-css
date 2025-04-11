@@ -1443,8 +1443,9 @@
 
 
 
-    // Массив с ID видео ВК (пример)
-    const videoIds = ['8747935_456243171', '8747935_456243170', '8747935_456243163'];
+
+    // Массив с ID видео ВК
+    const videoIds = ['456243171', '456243170', '456243163'];
     let currentVideoIndex = 0;
 
     // Инициализация Magnific Popup
@@ -1460,7 +1461,7 @@
             close: function () {
                 // Очищаем содержимое при закрытии
                 $('#video-container').empty();
-                currentVideoIndex = 0; // Сбрасываем индекс (опционально)
+                currentVideoIndex = 0; // Сбрасываем индекс
             }
         }
     });
@@ -1478,7 +1479,7 @@
         <iframe
             class="video video--inside-popup"
             id="${iframeId}"
-            src="https://vk.com/video_ext.php?oid=-123456789&id=${videoId}&hash=your_hash&hd=1"
+            src="https://vk.com/video_ext.php?oid=-8747935&id=${videoId}&hd=2&js_api=1"
             width="100%"
             height="400"
             frameborder="0"
@@ -1491,18 +1492,28 @@
         // Подключаем VK API для отслеживания событий
         const iframe = document.getElementById(iframeId);
         iframe.onload = function () {
+            console.log('Iframe загружен:', iframeId);
             try {
+                // Проверяем, доступен ли VK
+                if (typeof VK === 'undefined') {
+                    console.error('VK API не загружен');
+                    return;
+                }
                 const player = new VK.Player(iframe);
+                console.log('VK Player инициализирован');
                 player.on('ended', function () {
-                    // По окончанию видео переходим к следующему
+                    console.log('Видео завершено:', videoId);
+                    alert('Видео завершено!'); // Для отладки
                     currentVideoIndex++;
                     if (currentVideoIndex < videoIds.length) {
                         loadVideo(videoIds[currentVideoIndex]);
                     } else {
-                        // Если видео закончились, можно закрыть модал или сбросить
                         $.magnificPopup.close();
-                        currentVideoIndex = 0; // Сбрасываем на первое видео
+                        currentVideoIndex = 0;
                     }
+                });
+                player.on('error', function (e) {
+                    console.error('Ошибка VK Player:', e);
                 });
             } catch (e) {
                 console.error('Ошибка инициализации VK Player:', e);
