@@ -83,7 +83,7 @@
             height: 100svh;
             /* stylelint-enable */
             display: block;
-            background-image: url("../images/stage-mask/stage-mask-desktop.svg");
+            background-image: url("../vectors/stage-mask-desktop.svg");
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center center;
@@ -121,7 +121,7 @@
     }
         /* Маска: */
         .stage__background::after {
-            background-image: url("../images/stage-mask/stage-mask-smartphone.svg");
+            background-image: url("../vectors/stage-mask-smartphone.svg");
         }
 
         .stage__operations {
