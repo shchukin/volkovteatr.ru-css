@@ -1442,6 +1442,8 @@
 
 
 
+
+
     $(document).ready(function () {
         // Массив с ID видео ВК
         const videoIds = ['456243171', '456243170', '456243163'];
@@ -1473,12 +1475,12 @@
             // Создаем уникальный ID для iframe
             const iframeId = 'vk-video-' + Date.now();
 
-            // Встраиваем новое видео с автозапуском
+            // Встраиваем новое видео без автозапуска
             const videoHtml = `
             <iframe
                 class="video video--inside-popup"
                 id="${iframeId}"
-                src="https://vk.com/video_ext.php?oid=-8747935&id=${videoId}&hd=2&js_api=1&autoplay=1"
+                src="https://vk.com/video_ext.php?oid=-8747935&id=${videoId}&hd=2&js_api=1"
                 width="100%"
                 height="400"
                 frameborder="0"
