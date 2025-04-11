@@ -5,7 +5,7 @@
         position: relative;
         display: block;
         /* stylelint-disable */
-        height: 200svh;
+        height: 300svh;
         /* stylelint-enable */
     }
         .stage__sticky-part {
