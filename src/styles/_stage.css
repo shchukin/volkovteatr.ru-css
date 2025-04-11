@@ -5,7 +5,7 @@
         position: relative;
         display: block;
         /* stylelint-disable */
-        height: 300svh;
+        height: 300svh; /* Здесь должно быть 200svh, но клиент хочет, чтобы пользователь подольше задерживался на главном видосе */
         /* stylelint-enable */
     }
         .stage__sticky-part {
