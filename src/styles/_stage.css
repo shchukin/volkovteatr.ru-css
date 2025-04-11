@@ -5,14 +5,14 @@
         position: relative;
         display: block;
         /* stylelint-disable */
-        height: 300svh; /* Здесь должно быть 200svh, но клиент хочет, чтобы пользователь подольше задерживался на главном видосе */
+        height: 300dvh; /* Здесь должно быть 200dvh, но клиент хочет, чтобы пользователь подольше задерживался на главном видосе */
         /* stylelint-enable */
     }
         .stage__sticky-part {
             position: sticky;
             top: 0;
             /* stylelint-disable */
-            height: 100svh;
+            height: 100dvh;
             /* stylelint-enable */
             display: block;
         }
@@ -80,7 +80,7 @@
             top: 0;
             right: 0;
             /* stylelint-disable */
-            height: 100svh;
+            height: 100dvh;
             /* stylelint-enable */
             display: block;
             background-image: url("../vectors/stage-mask-desktop.svg");
