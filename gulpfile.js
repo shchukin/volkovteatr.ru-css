@@ -172,8 +172,8 @@ gulp.task('styles', function () {
         }))
         .pipe(postcss(processors))
         .pipe(base64({
-            // Allow files from /vectors/ only
-            exclude: ['/sprite/', '/images/']
+            maxImageSize: 200 * 1024, // 200KB threshold
+            exclude: ['/sprite/', '/images/'] // Allow files from /vectors/ only
         }))
         .pipe(gulp.dest('build/styles/'))
         .pipe(size())
