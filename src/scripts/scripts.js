@@ -1443,83 +1443,112 @@
 
 
 
+    $(document).ready(function () {
+        // Массив с ID видео ВК
+        const videoIds = ['456243171', '456243170', '456243163'];
+        let currentVideoIndex = 0;
 
-    // Массив с ID видео ВК
-    const videoIds = ['456243171', '456243170', '456243163'];
-    let currentVideoIndex = 0;
-
-    // Инициализация Magnific Popup
-    $('.mfp-video-handler').magnificPopup({
-        type: 'inline',
-        midClick: true,
-        mainClass: 'mfp-fade',
-        callbacks: {
-            open: function () {
-                // Загружаем первое видео при открытии
-                loadVideo(videoIds[currentVideoIndex]);
-            },
-            close: function () {
-                // Очищаем содержимое при закрытии
-                $('#video-container').empty();
-                currentVideoIndex = 0; // Сбрасываем индекс
+        // Инициализация Magnific Popup
+        console.log('Инициализация Magnific Popup');
+        $('.mfp-video-handler').magnificPopup({
+            type: 'inline',
+            midClick: true,
+            mainClass: 'mfp-fade',
+            callbacks: {
+                open: function () {
+                    console.log('Модальное окно открыто');
+                    // Загружаем первое видео
+                    loadVideo(videoIds[currentVideoIndex]);
+                },
+                close: function () {
+                    console.log('Модальное окно закрыто');
+                    // Очищаем содержимое при закрытии
+                    $('#video-container').empty();
+                    currentVideoIndex = 0;
+                }
             }
+        });
+
+        // Функция для загрузки видео
+        function loadVideo(videoId) {
+            // Очищаем контейнер
+            $('#video-container').empty();
+
+            // Создаем уникальный ID для iframe
+            const iframeId = 'vk-video-' + Date.now();
+
+            // Встраиваем новое видео
+            const videoHtml = `
+            <iframe
+                class="video video--inside-popup"
+                id="${iframeId}"
+                src="https://vk.com/video_ext.php?oid=-8747935&id=${videoId}&hd=2&js_api=1"
+                width="100%"
+                height="400"
+                frameborder="0"
+                allowfullscreen
+                allow="autoplay; encrypted-media"
+            ></iframe>
+        `;
+            $('#video-container').html(videoHtml);
+
+            // Подключаем VK API для отслеживания событий
+            const iframe = document.getElementById(iframeId);
+            iframe.onload = function () {
+                console.log('Iframe загружен:', iframeId);
+                console.log('VK объект:', window.VK);
+                try {
+                    // Проверяем, доступен ли VK и VK.VideoPlayer
+                    if (typeof VK === 'undefined' || typeof VK.VideoPlayer === 'undefined') {
+                        console.error('VK API или VK.VideoPlayer не загружен');
+                        // Переход по таймеру
+                        setTimeout(() => {
+                            console.log('Таймер: переход к следующему видео');
+                            alert('Переход по таймеру!');
+                            currentVideoIndex++;
+                            if (currentVideoIndex < videoIds.length) {
+                                loadVideo(videoIds[currentVideoIndex]);
+                            } else {
+                                $.magnificPopup.close();
+                                currentVideoIndex = 0;
+                            }
+                        }, 30000); // Замените на длительность видео
+                        return;
+                    }
+                    const player = new VK.VideoPlayer(iframe);
+                    console.log('VK VideoPlayer инициализирован для видео:', videoId);
+                    player.on('ended', function () {
+                        console.log('Видео завершено:', videoId);
+                        alert('Видео завершено!'); // Для отладки
+                        currentVideoIndex++;
+                        if (currentVideoIndex < videoIds.length) {
+                            loadVideo(videoIds[currentVideoIndex]);
+                        } else {
+                            $.magnificPopup.close();
+                            currentVideoIndex = 0;
+                        }
+                    });
+                    player.on('error', function (e) {
+                        console.error('Ошибка VK VideoPlayer:', e);
+                    });
+                } catch (e) {
+                    console.error('Ошибка инициализации VK VideoPlayer:', e);
+                    // Переход по таймеру в случае ошибки
+                    setTimeout(() => {
+                        console.log('Таймер: переход к следующему видео');
+                        alert('Переход по таймеру!');
+                        currentVideoIndex++;
+                        if (currentVideoIndex < videoIds.length) {
+                            loadVideo(videoIds[currentVideoIndex]);
+                        } else {
+                            $.magnificPopup.close();
+                            currentVideoIndex = 0;
+                        }
+                    }, 30000); // Замените на длительность видео
+                }
+            };
         }
     });
-
-    // Функция для загрузки видео
-    function loadVideo(videoId) {
-        // Очищаем контейнер
-        $('#video-container').empty();
-
-        // Создаем уникальный ID для iframe
-        const iframeId = 'vk-video-' + Date.now();
-
-        // Встраиваем новое видео
-        const videoHtml = `
-        <iframe
-            class="video video--inside-popup"
-            id="${iframeId}"
-            src="https://vk.com/video_ext.php?oid=-8747935&id=${videoId}&hd=2&js_api=1"
-            width="100%"
-            height="400"
-            frameborder="0"
-            allowfullscreen
-            allow="autoplay; encrypted-media"
-        ></iframe>
-    `;
-        $('#video-container').html(videoHtml);
-
-        // Подключаем VK API для отслеживания событий
-        const iframe = document.getElementById(iframeId);
-        iframe.onload = function () {
-            console.log('Iframe загружен:', iframeId);
-            try {
-                // Проверяем, доступен ли VK
-                if (typeof VK === 'undefined') {
-                    console.error('VK API не загружен');
-                    return;
-                }
-                const player = new VK.Player(iframe);
-                console.log('VK Player инициализирован');
-                player.on('ended', function () {
-                    console.log('Видео завершено:', videoId);
-                    alert('Видео завершено!'); // Для отладки
-                    currentVideoIndex++;
-                    if (currentVideoIndex < videoIds.length) {
-                        loadVideo(videoIds[currentVideoIndex]);
-                    } else {
-                        $.magnificPopup.close();
-                        currentVideoIndex = 0;
-                    }
-                });
-                player.on('error', function (e) {
-                    console.error('Ошибка VK Player:', e);
-                });
-            } catch (e) {
-                console.error('Ошибка инициализации VK Player:', e);
-            }
-        };
-    }
 
 })(jQuery);
 
