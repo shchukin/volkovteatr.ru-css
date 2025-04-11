@@ -2,6 +2,8 @@
 
     /* Глобальные константы */
 
+    const $html = $('html');
+
     let isDesktop; /* т.е. не смартфон, а любой десктоп */
     let isMonitor; /* т.е. монитор типа 1920 */
     let responsiveSpacing;
@@ -441,8 +443,6 @@
 
 
     /* Скролл страницы */
-
-    const $html = $('html');
 
     $(window).on('scroll', isPageScrolled);
     $(document).ready(isPageScrolled);
