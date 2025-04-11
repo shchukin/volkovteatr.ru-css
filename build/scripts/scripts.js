@@ -1443,72 +1443,69 @@
 
 
 
-    // Массив с ID видео ВК (пример)
-    const videoIds = ['8747935_456243171', '8747935_456243170', '8747935_456243163'];
-    let currentVideoIndex = 0;
 
-    // Инициализация Magnific Popup
-    $('.mfp-video-handler').magnificPopup({
-        type: 'inline',
-        midClick: true,
-        mainClass: 'mfp-fade',
-        callbacks: {
-            open: function () {
-                // Загружаем первое видео при открытии
-                loadVideo(videoIds[currentVideoIndex]);
-            },
-            close: function () {
-                // Очищаем содержимое при закрытии
-                $('#video-container').empty();
-                currentVideoIndex = 0; // Сбрасываем индекс (опционально)
+    $(document).ready(function () {
+        // Массив с ID видео ВК
+        const videoIds = ['456243171', '456243170', '456243163'];
+        let currentVideoIndex = 0;
+
+        // Инициализация Magnific Popup
+        $('.mfp-video-handler').magnificPopup({
+            type: 'inline',
+            midClick: true,
+            mainClass: 'mfp-fade',
+            callbacks: {
+                open: function () {
+                    // Загружаем первое видео
+                    loadVideo(videoIds[currentVideoIndex]);
+                },
+                close: function () {
+                    // Очищаем содержимое при закрытии
+                    $('#video-container').empty();
+                    currentVideoIndex = 0;
+                }
             }
-        }
-    });
+        });
 
-    // Функция для загрузки видео
-    function loadVideo(videoId) {
-        // Очищаем контейнер
-        $('#video-container').empty();
+        // Функция для загрузки видео
+        function loadVideo(videoId) {
+            // Очищаем контейнер
+            $('#video-container').empty();
 
-        // Создаем уникальный ID для iframe
-        const iframeId = 'vk-video-' + Date.now();
+            // Создаем уникальный ID для iframe
+            const iframeId = 'vk-video-' + Date.now();
 
-        // Встраиваем новое видео
-        const videoHtml = `
-        <iframe
-            class="video video--inside-popup"
-            id="${iframeId}"
-            src="https://vk.com/video_ext.php?oid=-123456789&id=${videoId}&hash=your_hash&hd=1"
-            width="100%"
-            height="400"
-            frameborder="0"
-            allowfullscreen
-            allow="autoplay; encrypted-media"
-        ></iframe>
-    `;
-        $('#video-container').html(videoHtml);
+            // Встраиваем новое видео без автозапуска
+            const videoHtml = `
+            <iframe
+                class="video video--inside-popup"
+                id="${iframeId}"
+                src="https://vk.com/video_ext.php?oid=-8747935&id=${videoId}&hd=2&js_api=1"
+                width="100%"
+                height="400"
+                frameborder="0"
+                allowfullscreen
+                allow="autoplay; encrypted-media"
+            ></iframe>
+        `;
+            $('#video-container').html(videoHtml);
 
-        // Подключаем VK API для отслеживания событий
-        const iframe = document.getElementById(iframeId);
-        iframe.onload = function () {
-            try {
-                const player = new VK.Player(iframe);
+            // Подключаем VK API для отслеживания событий
+            const iframe = document.getElementById(iframeId);
+            iframe.onload = function () {
+                const player = new VK.VideoPlayer(iframe);
                 player.on('ended', function () {
-                    // По окончанию видео переходим к следующему
                     currentVideoIndex++;
                     if (currentVideoIndex < videoIds.length) {
                         loadVideo(videoIds[currentVideoIndex]);
                     } else {
-                        // Если видео закончились, можно закрыть модал или сбросить
                         $.magnificPopup.close();
-                        currentVideoIndex = 0; // Сбрасываем на первое видео
+                        currentVideoIndex = 0;
                     }
                 });
-            } catch (e) {
-                console.error('Ошибка инициализации VK Player:', e);
-            }
-        };
-    }
+            };
+        }
+    });
 
 })(jQuery);
 
