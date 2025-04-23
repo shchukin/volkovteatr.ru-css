@@ -1477,7 +1477,7 @@
             // Встраиваем новое видео без автозапуска
             const videoHtml = `
             <iframe
-                class="gallery-video"
+                class="video-gallery__widget"
                 id="${iframeId}"
                 src="https://vk.com/video_ext.php?oid=-8747935&id=${videoId}&hd=2&js_api=1"
                 width="100%"
