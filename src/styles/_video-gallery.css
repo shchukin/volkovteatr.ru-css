@@ -9,6 +9,14 @@
         width: 100%;
         height: 100%;
     }
+        .video-gallery__widget {
+            vertical-align: top;
+            width: 100%;
+            height: 100%;
+            background-color: #000000;
+            border-radius: var(--window-border-radius);
+        }
+
 
     .video-gallery__counter {
         position: absolute;
