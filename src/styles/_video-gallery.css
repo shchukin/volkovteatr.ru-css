@@ -35,6 +35,12 @@
         white-space: nowrap;
         overflow: hidden;
     }
+
+    .video-gallery__control[disabled] {
+        opacity: 20%;
+        cursor: default;
+    }
+        /* hover */
         .video-gallery__control::before {
             content: "";
             position: absolute;
@@ -45,6 +51,10 @@
 
         .video-gallery__control:hover::before {
             background-color: rgba(255 255 255 / 10%);
+        }
+
+        .video-gallery__control[disabled]::before {
+            display: none;
         }
 
         .video-gallery__control::after {
