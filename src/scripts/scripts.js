@@ -1453,7 +1453,13 @@
             mainClass: 'mfp-fade',
             callbacks: {
                 open: function () {
-                    // Загружаем первое видео и обновляем счетчик
+
+                    if ($(this.ev[0]).hasClass('mfp-video-handler--start-with-random-video')) {
+                        currentVideoIndex = Math.floor(Math.random() * videoIds.length);
+                    } else {
+                        currentVideoIndex = 0;
+                    }
+
                     loadVideo(videoIds[currentVideoIndex]);
                     updateCounter();
                     updateButtonStates();
