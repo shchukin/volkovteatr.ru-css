@@ -186,33 +186,24 @@
 
 
     .volkov {
-        /*position: relative;*/
-        height: auto;
-        /*padding-top: var(--header-height);*/
-        /*background-image: url("../images/volkov/volkov-background-laptop@1x.jpg");*/
-        /*background-size: 1850px 700px;*/
-        /*background-repeat: no-repeat;*/
-        background-position: center top;
+        height: 917px;
+        background-image: url("../images/volkov/volkov-background-smartphone@1x.jpg");
+        background-size: 740px 917px;
     }
 
     @media (min-resolution: 2dppx) {
 
         .volkov {
-            /*background-image: url("../images/volkov/volkov-background-laptop@2x.jpg");*/
+            background-image: url("../images/volkov/volkov-background-smartphone@2x.jpg");
         }
     }
         /* Волков - портрет */
         .volkov__hero {
-            position: static;
+            margin-left: -195px;
+            margin-top: -130px;
             width: 391px;
-            margin-top: 0;
-            margin-left: auto;
-            margin-right: auto;
             height: 464px;
             background-image: url("../images/volkov/volkov-hero-smartphone@1x.png");
-            /*background-size: auto 100%;*/
-            /*background-repeat: no-repeat;*/
-            /*background-position: center center;*/
         }
 
         @media (min-resolution: 2dppx) {
@@ -224,21 +215,16 @@
 
         /* Градиент */
         .volkov__overlay {
-            /*display: block;*/
-            /*position: absolute;*/
-            /*left: 0;*/
-            /*right: 0;*/
-            /*bottom: 0;*/
-            /*height: 30%;*/
-            /*background-image: linear-gradient(transparent, #0B1E3A 70%, #0B1E3A);*/
+            height: 40%;
+            background-image: linear-gradient(transparent, #0B1E3A 70%, #0B1E3A);
         }
             .volkov__content {
-                /*position: relative;*/
-                /*height: 100%;*/
-                padding-top: 40px;
+
             }
                 .volkov__intro {
-                    position: static;
+                    top: 40px;
+                    left: 0;
+                    right: 0;
                     width: auto;
                 }
                     .volkov__heading {
@@ -260,9 +246,10 @@
                     }
 
                 .volkov__quote {
-                    position: static;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
                     width: auto;
-                    margin: 481px 0 0;
                     font-size: 28px;
                     line-height: 34px;
                 }
