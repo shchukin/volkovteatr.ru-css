@@ -22,3 +22,17 @@
         border-right: var(--container-padding) solid transparent;
     }
 }
+
+
+
+.container--smaller {
+
+}
+
+@media (1850px <= width) {
+
+    .container--smaller {
+        width: 1582px;
+    }
+}
+

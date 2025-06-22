@@ -1,8 +1,9 @@
 .volkov {
-    padding-top: 200px;
-    background-image: url("../images/volkov/volkov-laptop.jpg");
-    /*background-size: 1440px 900px;*/
-    background-size: cover;
+    position: relative;
+    height: 700px;
+    padding-top: var(--header-height);
+    background-image: url("../images/volkov/volkov-background-laptop@1x.jpg");
+    background-size: 1850px 700px;
     background-repeat: no-repeat;
     background-position: center center;
 }
@@ -10,42 +11,272 @@
 @media (min-resolution: 2dppx) {
 
     .volkov {
-        background-image: url("../images/volkov/volkov-laptop@2x.jpg");
+        background-image: url("../images/volkov/volkov-background-laptop@2x.jpg");
     }
 }
 
-    .volkov__intro {
-        max-width: 480px;
+
+/* На широких ноутах театр смещённый вправо выглядит немного странно. Подвинем влево: */
+
+@media (1440px <= width) {
+
+    .volkov {
+        background-position: calc(50% - 100px) center;
     }
-        .volkov__heading {
-            font-family: var(--font-heading);
-            font-weight: 500;
-            font-style: italic;
-            font-size: 40px;
-            line-height: 48px;
-            color: #E4BB6B;
-            text-transform: uppercase;
+}
+
+
+    /* Волков - портрет */
+    .volkov__hero {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-top: -220px;
+        margin-left: -213px;
+        width: 426px;
+        height: 500px;
+        background-image: url("../images/volkov/volkov-hero-laptop@1x.png");
+        background-size: auto 100%;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+
+    @media (min-resolution: 2dppx) {
+
+        .volkov__hero {
+            background-image: url("../images/volkov/volkov-hero-laptop@2x.png");
+        }
+    }
+
+    /* Градиент */
+    .volkov__overlay {
+        display: block;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 30%;
+        background-image: linear-gradient(transparent, #0B1E3A 70%, #0B1E3A);
+    }
+        .volkov__content {
+            position: relative;
+            height: 100%;
+        }
+            .volkov__intro {
+                position: absolute;
+                left: 0;
+                top: 40px;
+                width: 380px;
+            }
+                .volkov__heading {
+                    margin-top: 0;
+                    margin-bottom: 0;
+                    font-family: var(--font-heading);
+                    font-weight: 500;
+                    font-style: italic;
+                    font-size: 34px;
+                    line-height: 40px;
+                    color: #E4BB6B;
+                    text-transform: uppercase;
+                }
+
+                .volkov__description {
+                    margin-top: 24px;
+                    font-size: 16px;
+                    line-height: 22px;
+                }
+
+            .volkov__quote {
+                position: absolute;
+                right: 0;
+                bottom: 70px;
+                width: 600px;
+                margin: 0 0 0 auto;
+                font-family: var(--font-quote);
+                font-style: normal;
+                font-weight: normal;
+                font-size: 32px;
+                line-height: 38px;
+            }
+                .volkov__author {
+                    margin-top: 10px;
+                    display: block;
+                    font-family: var(--font);
+                    font-style: italic;
+                    font-size: 16px;
+                    line-height: 22px;
+                    color: #E4BB6B;
+                    text-align: right;
+                }
+
+
+
+
+@media (1850px <= width) {
+
+    .volkov {
+        height: 1050px;
+        background-image: url("../images/volkov/volkov-background-monitor@1x.jpg");
+        background-size: 2560px 1050px;
+        background-position: center center;
+    }
+
+    @media (min-resolution: 2dppx) {
+
+        .volkov {
+            background-image: url("../images/volkov/volkov-background-monitor@2x.jpg");
+        }
+    }
+
+        /* Волков - портрет */
+        .volkov__hero {
+            margin-left: -316px;
+            margin-top: -320px;
+            width: 584px;
+            height: 740px;
+            background-image: url("../images/volkov/volkov-hero-monitor@1x.png");
         }
 
-        .volkov__description {
-            margin-top: 30px;
-            font-size: 18px;
-            line-height: 24px;
+        @media (min-resolution: 2dppx) {
+
+            .volkov__hero {
+                background-image: url("../images/volkov/volkov-hero-monitor@2x.png");
+            }
         }
 
-    .volkov__quote {
-        max-width: 500px;
-        margin-left: auto;
-        font-family: var(--font-quote);
-        font-size: 36px;
-        line-height: 42px;
-    }
-        .volkov__author {
-            margin-top: 10px;
-            display: block;
-            font-family: var(--font);
-            font-style: italic;
-            font-size: 20px;
-            line-height: 24px;
-            color: #E4BB6B;
+        /* Градиент */
+        .volkov__overlay {
+            height: 34%;
+            background-image: linear-gradient(transparent, #0B1E3A 70%, #0B1E3A);
         }
+            .volkov__content {
+
+            }
+                .volkov__intro {
+                    top: 70px;
+                    width: 642px;
+                }
+                    .volkov__heading {
+                        font-size: 56px;
+                        line-height: 67px;
+                    }
+
+                    .volkov__description {
+                        margin-top: 40px;
+                        font-size: 24px;
+                        line-height: 33px;
+                    }
+
+                .volkov__quote {
+                    bottom: 78px;
+                    width: 761px;
+                    font-size: 48px;
+                    line-height: 58px;
+                }
+                    .volkov__author {
+                        margin-top: 16px;
+                        font-size: 24px;
+                        line-height: 33px;
+                    }
+}
+
+
+
+@media (width < 740px) {
+
+
+    .volkov {
+        /*position: relative;*/
+        height: auto;
+        /*padding-top: var(--header-height);*/
+        /*background-image: url("../images/volkov/volkov-background-laptop@1x.jpg");*/
+        /*background-size: 1850px 700px;*/
+        /*background-repeat: no-repeat;*/
+        /*background-position: center center;*/
+    }
+
+    @media (min-resolution: 2dppx) {
+
+        .volkov {
+            /*background-image: url("../images/volkov/volkov-background-laptop@2x.jpg");*/
+        }
+    }
+        /* Волков - портрет */
+        .volkov__hero {
+            /*position: absolute;*/
+            /*left: 50%;*/
+            /*top: 50%;*/
+            margin-top: -232px;
+            margin-left: -195px;
+            width: 391px;
+            height: 464px;
+            background-image: url("../images/volkov/volkov-hero-smartphone@1x.png");
+            /*background-size: auto 100%;*/
+            /*background-repeat: no-repeat;*/
+            /*background-position: center center;*/
+        }
+
+        @media (min-resolution: 2dppx) {
+
+            .volkov__hero {
+                background-image: url("../images/volkov/volkov-hero-smartphone@2x.png");
+            }
+        }
+
+        /* Градиент */
+        .volkov__overlay {
+            /*display: block;*/
+            /*position: absolute;*/
+            /*left: 0;*/
+            /*right: 0;*/
+            /*bottom: 0;*/
+            /*height: 30%;*/
+            /*background-image: linear-gradient(transparent, #0B1E3A 70%, #0B1E3A);*/
+        }
+            .volkov__content {
+                /*position: relative;*/
+                /*height: 100%;*/
+                padding-top: 40px;
+            }
+                .volkov__intro {
+                    position: static;
+                    width: auto;
+                }
+                    .volkov__heading {
+                        /*margin-top: 0;*/
+                        /*margin-bottom: 0;*/
+                        /*font-family: var(--font-heading);*/
+                        /*font-weight: 500;*/
+                        /*font-style: italic;*/
+                        font-size: 32px;
+                        line-height: 38px;
+                        /*color: #E4BB6B;*/
+                        /*text-transform: uppercase;*/
+                    }
+
+                    .volkov__description {
+                        margin-top: 24px;
+                        font-size: 16px;
+                        line-height: 22px;
+                    }
+
+                .volkov__quote {
+                    position: static;
+                    width: auto;
+                    margin: 481px 0 0;
+                    font-size: 28px;
+                    line-height: 34px;
+                }
+                    .volkov__author {
+                        margin-top: 16px;
+                        /*display: block;*/
+                        /*font-family: var(--font);*/
+                        /*font-style: italic;*/
+                        font-size: 18px;
+                        line-height: 25px;
+                        /*color: #E4BB6B;*/
+                        /*text-align: right;*/
+                    }
+}
+
+
