@@ -58,7 +58,7 @@
 
                 }
 
-                .header-volkov__main-site {
+                .header-volkov__language {
 
                 }
 }
@@ -72,59 +72,25 @@
 
     }
         .header__detachable-part {
-            position: static;
-            height: auto;
-            display: none;
+
         }
 
         .burger-expanded .header__detachable-part {
-            display: block;
+
         }
 
         .page-scrolled .header__detachable-part {
-            height: auto;
-            background-color: transparent;
-            backdrop-filter: none;
-            transform: none;
-            /*backface-visibility: hidden; !* улучшаем производительность *!*/
+
         }
             .header-volkov__wrap {
-                height: auto;
-                display: block;
-                padding-top: calc(var(--header-height) + 12px);
+
             }
                 .header-volkov__logo {
-                    display: none;
+
                 }
 
-                .header-volkov__navigation {
-                    margin-top: 0;
-                    display: flex;
-                    width: fit-content;
-                    flex-direction: column;
-                    align-items: stretch;
-                    gap: 0;
-                }
-                    .header-volkov__link {
-                        padding: 14px 0;
-                        /*font-family: var(--font-heading);*/
-                        /*font-weight: 600;*/
-                        /*font-style: italic;*/
-                        /*font-size: 16px;*/
-                        /*line-height: 22px;*/
-                        /*color: #E4BB6B;*/
-                        /*text-transform: uppercase;*/
-                        /*text-decoration: 1px underline transparent;*/
-                        /*text-underline-offset: 4px;*/
-                        /*transition: text-decoration-color var(--transition-hover);*/
-                    }
-
-                    .header-volkov__link:hover {
-                        /*text-decoration-color: currentColor;*/
-                    }
-
-                .header-volkov__main-site {
-
+                .header-volkov__language {
+                    margin-right: -10px;
                 }
 }
 
