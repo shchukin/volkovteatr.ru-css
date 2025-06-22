@@ -1,3 +1,84 @@
 .lang {
+    display: flex;
+    align-items: flex-start;
+}
+    .lang__link {
+        position: relative;
+        padding: 8px;
+        border: none;
+        background-color: transparent;
+        font-family: var(--font-heading);
+        font-size: 17px;
+        line-height: 18px;
+        color: #E4BB6B;
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+        .lang__link::after {
+            content: "";
+            display: block;
+            position: absolute;
+            left: 8px;
+            right: 8px;
+            bottom: 5px;
+            height: 1px;
+            background-color: currentColor;
+            transition: background-color var(--transition-hover);
+        }
 
+        .lang__link:hover::after {
+            background-color: transparent;
+        }
+
+    .lang__link--current {
+        color: #FFFFFF;
+        cursor: default;
+    }
+        .lang__link--current::after {
+            display: none;
+        }
+
+
+
+@media (1850px <= width) {
+
+    .lang {
+        /*display: flex;*/
+        /*align-items: flex-start;*/
+    }
+        .lang__link {
+            /*position: relative;*/
+            padding: 10px;
+            /*border: none;*/
+            /*background-color: transparent;*/
+            /*font-family: var(--font-heading);*/
+            font-size: 18px;
+            line-height: 20px;
+            /*color: #E4BB6B;*/
+            /*text-transform: uppercase;*/
+            /*cursor: pointer;*/
+        }
+            .lang__link::after {
+                /*content: "";*/
+                /*display: block;*/
+                /*position: absolute;*/
+                /*left: 8px;*/
+                /*right: 8px;*/
+                /*bottom: 5px;*/
+                /*height: 1px;*/
+                /*background-color: currentColor;*/
+                /*transition: background-color var(--transition-hover);*/
+            }
+
+            .lang__link:hover::after {
+                /*background-color: transparent;*/
+            }
+
+        .lang__link--current {
+            /*color: #FFFFFF;*/
+            /*cursor: default;*/
+        }
+            .lang__link--current::after {
+                /*display: none;*/
+            }
 }
