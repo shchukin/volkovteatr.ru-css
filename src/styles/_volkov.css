@@ -192,7 +192,7 @@
         /*background-image: url("../images/volkov/volkov-background-laptop@1x.jpg");*/
         /*background-size: 1850px 700px;*/
         /*background-repeat: no-repeat;*/
-        /*background-position: center center;*/
+        background-position: center top;
     }
 
     @media (min-resolution: 2dppx) {
@@ -203,12 +203,11 @@
     }
         /* Волков - портрет */
         .volkov__hero {
-            /*position: absolute;*/
-            /*left: 50%;*/
-            /*top: 50%;*/
-            margin-top: -232px;
-            margin-left: -195px;
+            position: static;
             width: 391px;
+            margin-top: 0;
+            margin-left: auto;
+            margin-right: auto;
             height: 464px;
             background-image: url("../images/volkov/volkov-hero-smartphone@1x.png");
             /*background-size: auto 100%;*/
