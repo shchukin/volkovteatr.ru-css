@@ -1,0 +1,51 @@
+.volkov {
+    padding-top: 200px;
+    background-image: url("../images/volkov/volkov-laptop.jpg");
+    /*background-size: 1440px 900px;*/
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+@media (min-resolution: 2dppx) {
+
+    .volkov {
+        background-image: url("../images/volkov/volkov-laptop@2x.jpg");
+    }
+}
+
+    .volkov__intro {
+        max-width: 480px;
+    }
+        .volkov__heading {
+            font-family: var(--font-heading);
+            font-weight: 500;
+            font-style: italic;
+            font-size: 40px;
+            line-height: 48px;
+            color: #E4BB6B;
+            text-transform: uppercase;
+        }
+
+        .volkov__description {
+            margin-top: 30px;
+            font-size: 18px;
+            line-height: 24px;
+        }
+
+    .volkov__quote {
+        max-width: 500px;
+        margin-left: auto;
+        font-family: var(--font-quote);
+        font-size: 36px;
+        line-height: 42px;
+    }
+        .volkov__author {
+            margin-top: 10px;
+            display: block;
+            font-family: var(--font);
+            font-style: italic;
+            font-size: 20px;
+            line-height: 24px;
+            color: #E4BB6B;
+        }

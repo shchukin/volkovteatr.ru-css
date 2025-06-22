@@ -1,0 +1,138 @@
+.header-volkov {
+    --slide: 500ms ease;
+}
+
+.header-volkov {
+
+}
+    .header__detachable-part {
+        position: fixed;
+        z-index: 300; /* на основном сайте было выше .week-headings */
+        left: 0;
+        right: 0;
+        top: 0;
+        height: var(--header-height);
+        transition: height var(--slide),
+                    background-color var(--slide),
+                    backdrop-filter var(--slide);
+    }
+
+    .page-scrolled .header__detachable-part {
+        height: var(--header-collapsed-height);
+        background-color: rgb(11 30 58 / 70%);
+        backdrop-filter: blur(4px);
+        transform: translate3d(0, 0, 0); /* форсируем 3d acceleration */
+        backface-visibility: hidden; /* улучшаем производительность */
+    }
+        .header-volkov__wrap {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between; /* Навигация внутри будет по центру, всё остальное position: absolute по краям */
+        }
+            .header-volkov__logo {
+
+            }
+
+            .header-volkov__language {
+
+            }
+
+
+@media (1850px <= width) {
+
+    .header-volkov {
+
+    }
+        .header__detachable-part {
+
+        }
+
+        .page-scrolled .header__detachable-part {
+
+        }
+            .header-volkov__wrap {
+
+            }
+                .header-volkov__logo {
+
+                }
+
+                .header-volkov__main-site {
+
+                }
+}
+
+
+
+
+@media (width < 740px) {
+
+    .header-volkov {
+
+    }
+        .header__detachable-part {
+            position: static;
+            height: auto;
+            display: none;
+        }
+
+        .burger-expanded .header__detachable-part {
+            display: block;
+        }
+
+        .page-scrolled .header__detachable-part {
+            height: auto;
+            background-color: transparent;
+            backdrop-filter: none;
+            transform: none;
+            /*backface-visibility: hidden; !* улучшаем производительность *!*/
+        }
+            .header-volkov__wrap {
+                height: auto;
+                display: block;
+                padding-top: calc(var(--header-height) + 12px);
+            }
+                .header-volkov__logo {
+                    display: none;
+                }
+
+                .header-volkov__navigation {
+                    margin-top: 0;
+                    display: flex;
+                    width: fit-content;
+                    flex-direction: column;
+                    align-items: stretch;
+                    gap: 0;
+                }
+                    .header-volkov__link {
+                        padding: 14px 0;
+                        /*font-family: var(--font-heading);*/
+                        /*font-weight: 600;*/
+                        /*font-style: italic;*/
+                        /*font-size: 16px;*/
+                        /*line-height: 22px;*/
+                        /*color: #E4BB6B;*/
+                        /*text-transform: uppercase;*/
+                        /*text-decoration: 1px underline transparent;*/
+                        /*text-underline-offset: 4px;*/
+                        /*transition: text-decoration-color var(--transition-hover);*/
+                    }
+
+                    .header-volkov__link:hover {
+                        /*text-decoration-color: currentColor;*/
+                    }
+
+                .header-volkov__main-site {
+
+                }
+}
+
+
+
+
+
+
+
+
+

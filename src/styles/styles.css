@@ -147,3 +147,10 @@
 @import url("_video-gallery.css");
 
 
+
+/* Компоненты появившиеся при вёрстке лендинга 275 лет */
+@import url("_header-volkov.css");
+@import url("_volkov.css");
+@import url("_lang.css");
+
+
