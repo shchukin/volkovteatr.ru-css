@@ -22,6 +22,10 @@
             width: 3000px;
         }
 
+        .stripes__line-break {
+            display: none;
+        }
+
     .stripes__item--primary {
         position: absolute;
         right: 50%;
@@ -40,7 +44,6 @@
         position: absolute;
         left: 50%;
         bottom: 0;
-        margin-top: 16px;
         background-color: #F8F0E5;
         color: #0B1E3A;
     }
@@ -84,8 +87,45 @@
 
 
 
+@media (width < 740px) {
+
+    .stripes {
+        height: 82px;
+    }
+        .stripes__item {
+            padding: 4px 10px;
+            font-size: 22px;
+            line-height: 26px;
+        }
+            .stripes__item::before {
+                width: 500px;
+            }
+
+            .stripes__line-break {
+                display: inline;
+            }
+
+        .stripes__item--primary {
+
+        }
+            /* Продлеваем полоску */
+            .stripes__item--primary::before {
+
+            }
+
+        .stripes__item--secondary {
+
+        }
+            .stripes__item--secondary::before {
+
+            }
+}
+
+
+
+
 .stripes--founder {
-    margin-top: 70px;
+    margin-top: 60px;
 }
     .stripes--founder .stripes__item--primary {
         margin-right: -276px; /* Вытягиваем относительно центра */
@@ -94,8 +134,6 @@
     .stripes--founder .stripes__item--secondary {
         margin-left: -316px; /* Вытягиваем относительно центра */
     }
-
-
 
 @media (1850px <= width) {
 
@@ -111,3 +149,18 @@
             margin-left: -414px; /* Вытягиваем относительно центра */
         }
     }
+
+@media (width < 740px) {
+
+    .stripes--founder {
+        margin-top: 80px;
+        height: 134px;
+    }
+        .stripes--founder .stripes__item--primary {
+            margin-right: -82px; /* Вытягиваем относительно центра */
+        }
+
+        .stripes--founder .stripes__item--secondary {
+            margin-left: -60px; /* Вытягиваем относительно центра */
+        }
+}
