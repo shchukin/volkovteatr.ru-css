@@ -108,7 +108,7 @@
 
 
 
-    .stripes__item::before {
+            .stripes__item::before {
                 width: 500px;
             }
 
@@ -226,7 +226,7 @@
 /* Вариант с Lorem Ipsum */
 
 .stripes--encyclopedia {
-    margin-top: 132px;
+
 }
     .stripes--encyclopedia .stripes__item--primary {
         margin-right: -380px; /* Вытягиваем относительно центра */
@@ -239,7 +239,7 @@
 @media (1850px <= width) {
 
     .stripes--encyclopedia {
-        margin-top: 180px;
+
     }
 
         .stripes--encyclopedia .stripes__item--primary {
@@ -254,7 +254,6 @@
 @media (width < 740px) {
 
     .stripes--encyclopedia {
-        margin-top: 80px;
         height: 134px;
     }
         .stripes--encyclopedia .stripes__item--primary {

@@ -1,20 +1,41 @@
 .library-section {
-    padding-top: 60px;
+    padding-top: 132px;
     padding-bottom: 140px;
 }
+    .library-section__heading {
+
+    }
+
+    .library-section__content {
+        padding-top: 60px;
+    }
 
 @media (1850px <= width) {
 
     .library-section {
-        padding-top: 80px;
+        padding-top: 180px;
         padding-bottom: 220px;
     }
+        .library-section__heading {
+
+        }
+
+        .library-section__content {
+            padding-top: 80px;
+        }
 }
 
 @media (width < 740px) {
 
     .library-section {
-        padding-top: 60px;
+        padding-top: 80px;
         padding-bottom: 80px;
     }
+        .library-section__heading {
+
+        }
+
+        .library-section__content {
+            padding-top: 60px;
+        }
 }
