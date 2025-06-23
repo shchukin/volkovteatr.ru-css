@@ -123,16 +123,17 @@
 
 
 
+/* Вариант с волковым */
 
 .stripes--founder {
     margin-top: 60px;
 }
     .stripes--founder .stripes__item--primary {
-        margin-right: -276px; /* Вытягиваем относительно центра */
+        margin-right: -296px; /* Вытягиваем относительно центра */
     }
 
     .stripes--founder .stripes__item--secondary {
-        margin-left: -316px; /* Вытягиваем относительно центра */
+        margin-left: -296px; /* Вытягиваем относительно центра */
     }
 
 @media (1850px <= width) {
@@ -140,13 +141,12 @@
     .stripes--founder {
         margin-top: 102px;
     }
-
         .stripes--founder .stripes__item--primary {
-            margin-right: -374px; /* Вытягиваем относительно центра */
+            margin-right: -394px; /* Вытягиваем относительно центра */
         }
 
         .stripes--founder .stripes__item--secondary {
-            margin-left: -414px; /* Вытягиваем относительно центра */
+            margin-left: -394px; /* Вытягиваем относительно центра */
         }
     }
 
@@ -161,6 +161,95 @@
         }
 
         .stripes--founder .stripes__item--secondary {
+            margin-left: -60px; /* Вытягиваем относительно центра */
+        }
+}
+
+
+
+/* Вариант с летописью */
+
+.stripes--chronicle {
+    margin-top: 105px;
+}
+    .stripes--chronicle .stripes__item--primary {
+        margin-right: 10px; /* Вытягиваем относительно центра */
+    }
+
+    .stripes--chronicle .stripes__item--secondary {
+        margin-left: -296px; /* Вытягиваем относительно центра */
+    }
+
+@media (1850px <= width) {
+
+    .stripes--chronicle {
+        margin-top: 140px;
+    }
+        .stripes--chronicle .stripes__item--primary {
+            margin-right: 14px; /* Вытягиваем относительно центра */
+        }
+
+        .stripes--chronicle .stripes__item--secondary {
+            margin-left: -394px; /* Вытягиваем относительно центра */
+        }
+    }
+
+@media (width < 740px) {
+
+    .stripes--chronicle {
+        margin-top: 80px;
+        height: 110px;
+    }
+        .stripes--chronicle .stripes__item--primary {
+            margin-right: -82px; /* Вытягиваем относительно центра */
+        }
+
+        .stripes--chronicle .stripes__item--secondary {
+            margin-left: -124px; /* Вытягиваем относительно центра */
+        }
+}
+
+
+
+/* Вариант с Lorem Ipsum */
+
+.stripes--lorem {
+    margin-top: 60px;
+}
+    .stripes--lorem .stripes__item--primary {
+        margin-right: -276px; /* Вытягиваем относительно центра */
+    }
+
+    .stripes--lorem .stripes__item--secondary {
+        margin-left: -316px; /* Вытягиваем относительно центра */
+    }
+
+@media (1850px <= width) {
+
+    .stripes--lorem {
+        margin-top: 102px;
+    }
+
+        .stripes--lorem .stripes__item--primary {
+            margin-right: -374px; /* Вытягиваем относительно центра */
+        }
+
+        .stripes--lorem .stripes__item--secondary {
+            margin-left: -414px; /* Вытягиваем относительно центра */
+        }
+    }
+
+@media (width < 740px) {
+
+    .stripes--lorem {
+        margin-top: 80px;
+        height: 134px;
+    }
+        .stripes--lorem .stripes__item--primary {
+            margin-right: -82px; /* Вытягиваем относительно центра */
+        }
+
+        .stripes--lorem .stripes__item--secondary {
             margin-left: -60px; /* Вытягиваем относительно центра */
         }
 }
