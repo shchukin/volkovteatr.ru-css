@@ -1,0 +1,113 @@
+.stripes {
+    position: relative;
+    height: 112px;
+}
+    .stripes__item {
+        width: fit-content;
+        padding: 6px 13px;
+        color-scheme: light;
+        font-family: var(--font-heading);
+        font-weight: 600;
+        font-style: italic;
+        font-size: 30px;
+        line-height: 36px;
+        white-space: nowrap;
+        text-transform: uppercase;
+    }
+        .stripes__item::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 3000px;
+        }
+
+    .stripes__item--primary {
+        position: absolute;
+        right: 50%;
+        top: 0;
+        background-color: #E4BB6B;
+        color: #303F64;
+    }
+        /* Продлеваем полоску */
+        .stripes__item--primary::before {
+            right: 100%;
+            margin-right: -2px; /* чтобы при зуме наверняка соприкасалось с основным телом */
+            background-color: #E4BB6B;
+        }
+
+    .stripes__item--secondary {
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        margin-top: 16px;
+        background-color: #F8F0E5;
+        color: #0B1E3A;
+    }
+        .stripes__item--secondary::before {
+            left: 100%;
+            margin-left: -2px; /* чтобы при зуме наверняка соприкасалось с основным телом */
+            background-color: #F8F0E5;
+        }
+
+
+
+@media (1850px <= width) {
+
+    .stripes {
+        height: 152px;
+    }
+        .stripes__item {
+            padding: 8px 16px;
+            font-size: 40px;
+            line-height: 48px;
+        }
+            .stripes__item::before {
+
+            }
+
+        .stripes__item--primary {
+
+        }
+            /* Продлеваем полоску */
+            .stripes__item--primary::before {
+
+            }
+
+        .stripes__item--secondary {
+
+        }
+            .stripes__item--secondary::before {
+
+            }
+}
+
+
+
+.stripes--founder {
+    margin-top: 70px;
+}
+    .stripes--founder .stripes__item--primary {
+        margin-right: -276px; /* Вытягиваем относительно центра */
+    }
+
+    .stripes--founder .stripes__item--secondary {
+        margin-left: -316px; /* Вытягиваем относительно центра */
+    }
+
+
+
+@media (1850px <= width) {
+
+    .stripes--founder {
+        margin-top: 102px;
+    }
+
+        .stripes--founder .stripes__item--primary {
+            margin-right: -374px; /* Вытягиваем относительно центра */
+        }
+
+        .stripes--founder .stripes__item--secondary {
+            margin-left: -414px; /* Вытягиваем относительно центра */
+        }
+    }
