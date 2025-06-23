@@ -229,11 +229,11 @@
 
 }
     .stripes--encyclopedia .stripes__item--primary {
-        margin-right: -380px; /* Вытягиваем относительно центра */
+        margin-right: -300px; /* Вытягиваем относительно центра */
     }
 
     .stripes--encyclopedia .stripes__item--secondary {
-        margin-left: -205px; /* Вытягиваем относительно центра */
+        margin-left: -285px; /* Вытягиваем относительно центра */
     }
 
 @media (1850px <= width) {
