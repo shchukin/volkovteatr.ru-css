@@ -1,17 +1,19 @@
 .encyclopedia-link {
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 14px;
     width: fit-content;
     margin-left: auto;
     margin-right: auto;
-    padding: 24px 48px;
+    padding: 18px 36px;
     background-color: #F8F0E5;
     text-decoration: none;
     transition: background-color var(--transition-hover);
 }
     .encyclopedia-link__emblem {
         flex-shrink: 0;
+        width: 60px;
+        height: 64px;
     }
         .encyclopedia-link__emblem #background {
             fill: #E4BB6B;
@@ -30,16 +32,17 @@
             font-family: var(--font-heading);
             font-weight: bold;
             font-style: italic;
-            font-size: 22px;
-            line-height: 26px;
+            font-size: 18px;
+            line-height: 22px;
             color: #0B1E3A;
             text-transform: uppercase;
             transition: color var(--transition-hover);
         }
 
         .encyclopedia-link__go {
-            margin-top: 8px;
-            font-size: 16px;
+            margin-top: 6px;
+            font-size: 13px;
+            line-height: 18px;
             color: #303F64;
             text-align: center;
             transition: color var(--transition-hover);
@@ -71,3 +74,38 @@
         .encyclopedia-link:hover .encyclopedia-link__go {
             color: #0B1E3A;
         }
+
+
+
+@media (1850px <= width) {
+
+    .encyclopedia-link {
+        gap: 16px;
+        padding: 24px 48px;
+    }
+        .encyclopedia-link__emblem {
+            width: 72px;
+            height: 77px;
+        }
+            .encyclopedia-link__emblem #background {
+
+            }
+
+            .encyclopedia-link__emblem #theater {
+
+            }
+
+        .encyclopedia-link__content {
+
+        }
+            .encyclopedia-link__heading {
+                font-size: 22px;
+                line-height: 26px;
+            }
+
+            .encyclopedia-link__go {
+                margin-top: 8px;
+                font-size: 16px;
+                line-height: 22px;
+            }
+}
