@@ -97,7 +97,18 @@
             font-size: 22px;
             line-height: 26px;
         }
-            .stripes__item::before {
+
+        @media (width < 350px) {
+
+            .stripes__item {
+                font-size: 20px;
+                line-height: 25px;
+            }
+        }
+
+
+
+    .stripes__item::before {
                 width: 500px;
             }
 
@@ -120,6 +131,7 @@
 
             }
 }
+
 
 
 

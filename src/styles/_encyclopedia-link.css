@@ -109,3 +109,76 @@
                 line-height: 22px;
             }
 }
+
+
+
+@media (width < 740px) {
+
+    .encyclopedia-link {
+        gap: 16px;
+        padding: 16px 44px;
+    }
+        .encyclopedia-link__emblem {
+            width: 72px;
+            height: 77px;
+        }
+            .encyclopedia-link__emblem #background {
+
+            }
+
+            .encyclopedia-link__emblem #theater {
+
+            }
+
+        .encyclopedia-link__content {
+
+        }
+            .encyclopedia-link__heading {
+                font-size: 20px;
+                line-height: 23px;
+                text-align: center;
+            }
+
+            .encyclopedia-link__go {
+                margin-top: 10px;
+                font-size: 14px;
+                line-height: 19px;
+            }
+}
+
+@media (width < 400px) {
+
+    .encyclopedia-link {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+
+
+@media (width < 370px) {
+
+    .encyclopedia-link {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+
+
+@media (width < 350px) {
+
+    .encyclopedia-link {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+        .encyclopedia-link__emblem {
+            width: 60px;
+            height: 64px;
+        }
+
+        .encyclopedia-link__heading {
+            font-size: 18px;
+            line-height: 21px;
+        }
+}
+
