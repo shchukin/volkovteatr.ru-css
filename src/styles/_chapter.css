@@ -1,9 +1,21 @@
 .chapter {
-
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: center;
+    gap: 28px;
 }
     .chapter__preview {
 
     }
+
+    .chapter__preview--stretched {
+        margin-left: -160px;
+    }
+        .chapter__image {
+            width: 100%;
+            height: auto;
+            vertical-align: top;
+        }
 
     .chapter__content {
 
