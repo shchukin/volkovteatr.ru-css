@@ -1,0 +1,20 @@
+.library-section {
+    padding-top: 60px;
+    padding-bottom: 140px;
+}
+
+@media (1850px <= width) {
+
+    .library-section {
+        padding-top: 80px;
+        padding-bottom: 220px;
+    }
+}
+
+@media (width < 740px) {
+
+    .library-section {
+        padding-top: 60px;
+        padding-bottom: 80px;
+    }
+}
