@@ -1,0 +1,73 @@
+.encyclopedia-link {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 24px 48px;
+    background-color: #F8F0E5;
+    text-decoration: none;
+    transition: background-color var(--transition-hover);
+}
+    .encyclopedia-link__emblem {
+        flex-shrink: 0;
+    }
+        .encyclopedia-link__emblem #background {
+            fill: #E4BB6B;
+            transition: fill var(--transition-hover);
+        }
+
+        .encyclopedia-link__emblem #theater {
+            fill: #0B1E3A;
+            transition: fill var(--transition-hover);
+        }
+
+    .encyclopedia-link__content {
+        flex-grow: 1;
+    }
+        .encyclopedia-link__heading {
+            font-family: var(--font-heading);
+            font-weight: bold;
+            font-style: italic;
+            font-size: 22px;
+            line-height: 26px;
+            color: #0B1E3A;
+            text-transform: uppercase;
+            transition: color var(--transition-hover);
+        }
+
+        .encyclopedia-link__go {
+            margin-top: 8px;
+            font-size: 16px;
+            color: #303F64;
+            text-align: center;
+            transition: color var(--transition-hover);
+        }
+
+
+.encyclopedia-link:hover {
+    background-color: #E4BB6B;
+    color: #0B1E3A;
+}
+    .encyclopedia-link:hover .encyclopedia-link__emblem {
+        flex-shrink: 0;
+    }
+        .encyclopedia-link:hover .encyclopedia-link__emblem #background {
+            fill: #0B1E3A;
+        }
+
+        .encyclopedia-link:hover .encyclopedia-link__emblem #theater {
+            fill: #E4BB6B;
+        }
+
+    .encyclopedia-link:hover .encyclopedia-link__content {
+
+    }
+        .encyclopedia-link:hover .encyclopedia-link__heading {
+            color: #0B1E3A;
+        }
+
+        .encyclopedia-link:hover .encyclopedia-link__go {
+            color: #0B1E3A;
+        }
