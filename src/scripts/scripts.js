@@ -1555,11 +1555,11 @@
 
 
     document.addEventListener("DOMContentLoaded", function() {
-        const collage = document.querySelector('.mobile-collage');
-        const collageViewport = document.querySelector('.mobile-collage__viewport');
-        const collageScroll = document.querySelector('.mobile-collage__scroll');
-        const collageWrap = document.querySelector('.mobile-collage__wrap');
-        const collageRibbon = document.querySelector('.mobile-collage__ribbon');
+        const collage = document.querySelector('.timeline__widget');
+        const collageViewport = document.querySelector('.timeline__viewport');
+        const collageScroll = document.querySelector('.timeline__scroll');
+        const collageWrap = document.querySelector('.timeline__wrap');
+        const collageRibbon = document.querySelector('.timeline__ribbon');
 
         /* Init */
         let verticalScrollCut = 0;
