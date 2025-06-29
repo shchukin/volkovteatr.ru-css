@@ -14,10 +14,15 @@
     }
         .mobile-collage__scroll {
             height: 100%;
+            overflow: hidden;
+            display: flex;
         }
             .mobile-collage__ribbon {
                 width: 4332px;
                 height: 100%;
+                padding-top: var(--header-collapsed-height);
+                display: flex;
+                align-items: center;
                 transition: transform 100ms ease;
             }
                 .mobile-collage__timeline {
