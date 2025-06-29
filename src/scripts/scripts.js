@@ -1402,6 +1402,7 @@
     const $section = $('.participation__body');
     const $ribbon = $('.participation__ribbon');
 
+
     function updateRibbonPosition() {
         // Работаем только на десктопе
         if (!isDesktop) {
@@ -1436,8 +1437,10 @@
         $ribbon.css('transform', 'translateX(' + translateX + 'px)');
     }
 
-    $(document).ready(updateRibbonPosition);
-    $(window).on('scroll load resize', updateRibbonPosition);
+    if($ribbon.length) {
+        $(document).ready(updateRibbonPosition);
+        $(window).on('scroll load resize', updateRibbonPosition);
+    }
 
 
 
