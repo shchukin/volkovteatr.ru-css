@@ -17,16 +17,18 @@
             overflow: hidden;
         }
             .mobile-collage__ribbon {
-                width: 5000px;
+                width: 4332px;
                 height: 100%;
-                background-color: #F7F8FA;
-                /*background-image: url("../vectors/timeline.svg");*/
-                background-image: url("../temp/collage-desktop@2x.jpg");
-                background-size: cover;
-                background-repeat: no-repeat;
-                background-position: center center;
                 transition: transform 100ms ease;
             }
+                .mobile-collage__timeline {
+                    width: 4332px;
+                    height: 786px;
+                    background-image: url("../vectors/timeline.svg");
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    background-position: left top;
+                }
 
 
     .mobile-collage__viewport--landed {
