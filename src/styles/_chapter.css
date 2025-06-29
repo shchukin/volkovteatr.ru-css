@@ -69,3 +69,40 @@
                 margin-left: 130px;
             }
 }
+
+
+
+@media (width < 740px) {
+
+    .chapter {
+        display: block;
+    }
+        .chapter__preview {
+
+        }
+
+        .chapter__preview--stretched {
+            margin-left: 0;
+        }
+            .chapter__image {
+
+            }
+
+        .chapter__content {
+            margin-top: 38px;
+        }
+            .chapter__text {
+
+            }
+
+            .chapter__quote {
+                margin-top: 36px;
+                margin-left: 0;
+            }
+
+            .chapter__quote--pushed {
+                margin-left: 0;
+            }
+}
+
+
