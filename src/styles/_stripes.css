@@ -1,6 +1,7 @@
 .stripes {
     position: relative;
     height: 112px;
+    overflow: hidden;
 }
     .stripes__item {
         width: fit-content;
