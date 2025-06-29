@@ -1,0 +1,30 @@
+.mobile-collage {
+    position: relative;
+    /*overflow: hidden;*/
+    height: 2000px;
+}
+    .mobile-collage__viewport {
+        position: sticky;
+        top: var(--header-height);
+        height: calc(100vh - var(--header-height));
+    }
+        .mobile-collage__scroll {
+            height: 100%;
+            overflow: hidden;
+        }
+            .mobile-collage__ribbon {
+                height: 100%;
+                background-color: #F7F8FA;
+                /*background-image: url("../vectors/timeline.svg");*/
+                background-image: url("../temp/collage-desktop@2x.jpg");
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center center;
+                aspect-ratio: 576 / 436;
+                transition: transform 100ms ease;
+            }
+
+
+    .mobile-collage__viewport--landed {
+
+    }

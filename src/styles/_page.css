@@ -24,6 +24,6 @@
 
 /* Обрезаем карусели */
 
-.page:not(:has(.week-headings)):not(:has(.stage)) {
+.page:not(:has(.week-headings)):not(:has(.stage)):not(:has(.timeline)) {
     overflow: hidden;
 }
