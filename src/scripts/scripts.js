@@ -1558,6 +1558,7 @@
         const collage = document.querySelector('.mobile-collage');
         const collageViewport = document.querySelector('.mobile-collage__viewport');
         const collageScroll = document.querySelector('.mobile-collage__scroll');
+        const collageWrap = document.querySelector('.mobile-collage__wrap');
         const collageRibbon = document.querySelector('.mobile-collage__ribbon');
 
         /* Init */
@@ -1571,7 +1572,7 @@
         function init() {
             const collageHeight = collage.clientHeight;
             verticalScrollCut = collageHeight - collageViewport.offsetHeight; /* Нижняя точка по вертикали */
-            horizontalScrollCut = collageRibbon.clientWidth - collage.clientWidth; /* Правая точка по горизонтали */
+            horizontalScrollCut = collageRibbon.clientWidth - collage.clientWidth + 2 * collageWrap.getBoundingClientRect().left; /* Правая точка по горизонтали */
             collageTop = collage.getBoundingClientRect().top + window.scrollY; // Абсолютная позиция collage относительно верха документа
         }
 

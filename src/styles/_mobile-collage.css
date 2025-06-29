@@ -15,24 +15,27 @@
         .mobile-collage__scroll {
             height: 100%;
             overflow: hidden;
-            display: flex;
         }
-            .mobile-collage__ribbon {
-                width: 4332px;
+            .mobile-collage__wrap {
+                position: relative;
                 height: 100%;
-                padding-top: var(--header-collapsed-height);
                 display: flex;
-                align-items: center;
-                transition: transform 100ms ease;
             }
-                .mobile-collage__timeline {
+                .mobile-collage__ribbon {
                     width: 4332px;
-                    height: 786px;
-                    background-image: url("../vectors/timeline.svg");
-                    background-size: contain;
-                    background-repeat: no-repeat;
-                    background-position: left top;
+                    height: 100%;
+                    padding-top: var(--header-collapsed-height);
+                    display: flex;
+                    align-items: center;
                 }
+                    .mobile-collage__timeline {
+                        width: 4332px;
+                        height: 786px;
+                        background-image: url("../vectors/timeline.svg");
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                        background-position: left top;
+                    }
 
 
     .mobile-collage__viewport--landed {
