@@ -1,3 +1,7 @@
+.timeline {
+    padding-bottom: 100px;
+}
+
 .mobile-collage {
     position: relative;
     /*overflow: hidden;*/
@@ -5,14 +9,15 @@
 }
     .mobile-collage__viewport {
         position: sticky;
-        top: var(--header-height);
-        height: calc(100vh - var(--header-height));
+        top: 0; /* Момент, когда начинается горизонтальная прокрутка */
+        height: 100vh; /* Когда заканчивается */
     }
         .mobile-collage__scroll {
             height: 100%;
             overflow: hidden;
         }
             .mobile-collage__ribbon {
+                width: 5000px;
                 height: 100%;
                 background-color: #F7F8FA;
                 /*background-image: url("../vectors/timeline.svg");*/
@@ -20,7 +25,6 @@
                 background-size: cover;
                 background-repeat: no-repeat;
                 background-position: center center;
-                aspect-ratio: 576 / 436;
                 transition: transform 100ms ease;
             }
 
