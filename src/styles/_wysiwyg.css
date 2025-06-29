@@ -158,7 +158,7 @@
 .wysiwyg blockquote {
     position: relative;
     margin: 32px auto;
-    padding-left: 38px;
+    padding-left: 36px;
     background-image: url("../vectors/blockquote.svg");
     background-size: 20px 15px;
     background-repeat: no-repeat;
@@ -169,6 +169,10 @@
     line-height: 25px;
     color: #E4BB6B;
     text-transform: uppercase;
+}
+
+.wysiwyg blockquote:has(cite) {
+    border-bottom: 34px solid transparent;
 }
 
 .wysiwyg blockquote:first-child {
@@ -190,79 +194,63 @@
     }
 
     .wysiwyg blockquote::before {
-        top: 0;
+        top: 2px;
         bottom: 50%;
         margin-bottom: 19px;
     }
 
     .wysiwyg blockquote::after {
-        bottom: 0;
+        bottom: 2px;
         top: 50%;
         margin-top: 19px;
     }
 
     .wysiwyg blockquote cite {
-        display: block;
+        position: absolute;
+        right: 0;
+        top: 100%;
         margin-top: 12px;
         font-weight: 600;
         font-style: italic;
-        font-size: 18px;
-        line-height: 24px;
+        font-size: 16px;
+        line-height: 22px;
         color: #B9B9B9;
         text-transform: none;
-        text-align: right;
+        white-space: nowrap;
     }
 
 
 @media (1850px <= width) {
 
     .wysiwyg blockquote {
-        /*position: relative;*/
         margin-top: 40px;
         margin-bottom: 40px;
         padding-left: 48px;
-        /*background-image: url("../vectors/blockquote.svg");*/
-        /*background-size: 26px 20px;*/
-        /*background-repeat: no-repeat;*/
-        /*background-position: left center;*/
-        /*font-weight: 600;*/
-        /*font-style: italic;*/
         font-size: 22px;
         line-height: 31px;
-        /*color: #E4BB6B;*/
-        /*text-transform: uppercase;*/
+    }
+
+    .wysiwyg blockquote:has(cite) {
+        border-bottom-width: 39px;
     }
         .wysiwyg blockquote::before,
         .wysiwyg blockquote::after {
-            /*content: "";*/
-            /*position: absolute;*/
             /*left: 10px;*/
             /*display: block;*/
-            width: 2px;
-            /*background-color: currentColor;*/
-            /*border-radius: 2px;*/
         }
 
         .wysiwyg blockquote::before {
-            /*top: 0;*/
-            /*bottom: 50%;*/
+
         }
 
         .wysiwyg blockquote::after {
-            /*bottom: 0;*/
-            /*top: 50%;*/
+
         }
 
         .wysiwyg blockquote cite {
-            /*display: block;*/
             margin-top: 15px;
-            /*font-weight: 600;*/
-            /*font-style: italic;*/
-            font-size: 22px;
-            line-height: 30px;
-            /*color: #B9B9B9;*/
-            /*text-transform: none;*/
-            /*text-align: right;*/
+            font-size: 18px;
+            line-height: 24px;
         }
 }
 

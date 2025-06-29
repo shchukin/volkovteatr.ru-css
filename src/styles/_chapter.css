@@ -1,15 +1,16 @@
 .chapter {
+    padding-top: 60px;
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     align-items: center;
-    gap: 28px;
+    gap: 20px;
 }
     .chapter__preview {
 
     }
 
     .chapter__preview--stretched {
-        margin-left: -160px;
+        margin-left: -80px;
     }
         .chapter__image {
             width: 100%;
@@ -20,3 +21,51 @@
     .chapter__content {
 
     }
+        .chapter__text {
+
+        }
+
+        .chapter__quote {
+            margin-top: 40px;
+            margin-left: 20px;
+        }
+
+        .chapter__quote--pushed {
+            margin-left: 80px;
+        }
+
+
+
+@media (1850px <= width) {
+
+    .chapter {
+        padding-top: 80px;
+        gap: 28px;
+    }
+        .chapter__preview {
+
+        }
+
+        .chapter__preview--stretched {
+            margin-left: -160px;
+        }
+            .chapter__image {
+
+            }
+
+        .chapter__content {
+
+        }
+            .chapter__text {
+
+            }
+
+            .chapter__quote {
+                margin-top: 80px;
+                margin-left: 32px;
+            }
+
+            .chapter__quote--pushed {
+                margin-left: 130px;
+            }
+}
