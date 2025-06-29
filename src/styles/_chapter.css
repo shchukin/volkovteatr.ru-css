@@ -106,3 +106,55 @@
 }
 
 
+
+.chapter--full-width {
+    border-top: 14px solid transparent;
+    display: block;
+}
+    .chapter--full-width .chapter__preview {
+
+    }
+        .chapter--full-width .chapter__image {
+
+        }
+
+    .chapter--full-width .chapter__content {
+        margin-top: 30px;
+        margin-left: 295px;
+        margin-right: 97px;
+    }
+        .chapter--full-width .chapter__text {
+
+        }
+
+        .chapter--full-width .chapter__quote {
+
+        }
+
+
+
+@media (1850px <= width) {
+
+    .chapter--full-width {
+        border-top-width: 20px;
+    }
+        .chapter--full-width .chapter__preview {
+
+        }
+            .chapter--full-width .chapter__image {
+
+            }
+
+        .chapter--full-width .chapter__content {
+            margin-top: 40px;
+            margin-left: 394px;
+            margin-right: 130px;
+        }
+            .chapter--full-width .chapter__text {
+
+            }
+
+            .chapter--full-width .chapter__quote {
+
+            }
+}
