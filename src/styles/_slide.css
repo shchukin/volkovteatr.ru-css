@@ -17,6 +17,9 @@
     transform: none;
 }
 
+.slide--slower {
+    transition-duration: 2000ms;
+}
 
 @media (1850px <= width) {
 
