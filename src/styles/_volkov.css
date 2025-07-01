@@ -1,4 +1,5 @@
 .volkov {
+    overflow: hidden; /* обрезаем анимации */
     position: relative;
     height: 700px;
     padding-top: var(--header-height);
