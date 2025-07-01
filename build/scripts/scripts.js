@@ -1364,21 +1364,21 @@
 
 
 
-    /* Плавное появление элементов на странице slide-up */
+    /* Плавное появление элементов на странице slide */
 
-    const $slideUp = $('.slide-up');
+    const $slideUp = $('.slide');
     let slideUpThrottleTimeout;
 
     function checkVisibility() {
         $slideUp.each(function () {
             const $el = $(this);
-            if ($el.hasClass('slide-up--animated')) return; // Если уже анимирован, пропустить
+            if ($el.hasClass('slide--animated')) return; // Если уже анимирован, пропустить
 
             const elementTop = $el.offset().top;
             const viewportBottom = $(window).scrollTop() + $(window).height();
 
             if (viewportBottom >= elementTop) {
-                $el.addClass('slide-up--animated');
+                $el.addClass('slide--animated');
             }
         });
     }
@@ -1401,6 +1401,7 @@
 
     const $section = $('.participation__body');
     const $ribbon = $('.participation__ribbon');
+
 
     function updateRibbonPosition() {
         // Работаем только на десктопе
@@ -1436,8 +1437,10 @@
         $ribbon.css('transform', 'translateX(' + translateX + 'px)');
     }
 
-    $(document).ready(updateRibbonPosition);
-    $(window).on('scroll load resize', updateRibbonPosition);
+    if($ribbon.length) {
+        $(document).ready(updateRibbonPosition);
+        $(window).on('scroll load resize', updateRibbonPosition);
+    }
 
 
 
@@ -1453,7 +1456,13 @@
             mainClass: 'mfp-fade',
             callbacks: {
                 open: function () {
-                    // Загружаем первое видео и обновляем счетчик
+
+                    if ($(this.ev[0]).hasClass('mfp-video-handler--start-with-random-video')) {
+                        currentVideoIndex = Math.floor(Math.random() * videoIds.length);
+                    } else {
+                        currentVideoIndex = 0;
+                    }
+
                     loadVideo(videoIds[currentVideoIndex]);
                     updateCounter();
                     updateButtonStates();
@@ -1543,6 +1552,59 @@
             switchToPrevVideo();
         });
     });
+
+
+    document.addEventListener("DOMContentLoaded", function() {
+        const collage = document.querySelector('.timeline__widget');
+        const collageViewport = document.querySelector('.timeline__viewport');
+        const collageScroll = document.querySelector('.timeline__scroll');
+        const collageWrap = document.querySelector('.timeline__wrap');
+        const collageRibbon = document.querySelector('.timeline__ribbon');
+
+        /* Init */
+        let verticalScrollCut = 0;
+        let horizontalScrollCut = 0;
+        let normalizedVerticalScroll = 0;
+        let lastKnownScrollPosition = 0;
+        let ticking = false;
+        let collageTop = 0; // Позиция верхней границы элемента collage
+
+        function init() {
+            const collageHeight = collage.clientHeight;
+            verticalScrollCut = collageHeight - collageViewport.offsetHeight; /* Нижняя точка по вертикали */
+            horizontalScrollCut = collageRibbon.clientWidth - collage.clientWidth + 2 * collageWrap.getBoundingClientRect().left; /* Правая точка по горизонтали */
+            collageTop = collage.getBoundingClientRect().top + window.scrollY; // Абсолютная позиция collage относительно верха документа
+        }
+
+        function updateScroll() {
+            // Нормализуем прокрутку относительно верхней границы collage
+            const relativeScroll = Math.max(0, lastKnownScrollPosition - collageTop);
+            normalizedVerticalScroll = Math.min(1, relativeScroll / verticalScrollCut); /* Значение от 0 до 1 */
+            collageRibbon.style.transform = `translate3d(${-1 * normalizedVerticalScroll * horizontalScrollCut}px, 0, 0)`;
+            ticking = false;
+        }
+
+        function onScroll() {
+            lastKnownScrollPosition = window.scrollY;
+
+            if (!ticking) {
+                window.requestAnimationFrame(updateScroll);
+                ticking = true;
+            }
+        }
+
+        /* Ensure init is called after styles are fully loaded */
+        window.addEventListener('load', init);
+        window.addEventListener('resize', init);
+
+        /* Run */
+        window.addEventListener('scroll', onScroll);
+
+        /* Initial call to setup scroll positions correctly */
+        init();
+        onScroll();
+    });
+
 
 })(jQuery);
 
