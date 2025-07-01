@@ -66,6 +66,14 @@
         .chapter__preview--stretched:last-child {
             margin-right: -160px;
         }
+
+        .chapter__preview.slide--to-right:not(.slide--animated) {
+            transform: rotate(-30deg) translate(-400px, 0);
+        }
+
+        .chapter__preview.slide--to-left:not(.slide--animated) {
+            transform: rotate(30deg) translate(400px, 0);
+        }
             .chapter__image {
 
             }
