@@ -1378,7 +1378,10 @@
             const viewportBottom = $(window).scrollTop() + $(window).height();
 
             if (viewportBottom >= elementTop) {
-                $el.addClass('slide--animated');
+                const delay = parseInt($el.data('delay')) || 0; // Get delay or default to 0
+                setTimeout(() => {
+                    $el.addClass('slide--animated');
+                }, delay);
             }
         });
     }
@@ -1554,12 +1557,16 @@
     });
 
 
+
+    /* Timeline */
+
     document.addEventListener("DOMContentLoaded", function() {
-        const collage = document.querySelector('.timeline__widget');
-        const collageViewport = document.querySelector('.timeline__viewport');
-        const collageScroll = document.querySelector('.timeline__scroll');
-        const collageWrap = document.querySelector('.timeline__wrap');
-        const collageRibbon = document.querySelector('.timeline__ribbon');
+
+        const $collage = document.querySelector('.timeline__widget');
+        const $collageViewport = document.querySelector('.timeline__viewport');
+        const $collageScroll = document.querySelector('.timeline__scroll');
+        const $collageWrap = document.querySelector('.timeline__wrap');
+        const $collageRibbon = document.querySelector('.timeline__ribbon');
 
         /* Init */
         let verticalScrollCut = 0;
@@ -1569,18 +1576,20 @@
         let ticking = false;
         let collageTop = 0; // Позиция верхней границы элемента collage
 
-        function init() {
-            const collageHeight = collage.clientHeight;
-            verticalScrollCut = collageHeight - collageViewport.offsetHeight; /* Нижняя точка по вертикали */
-            horizontalScrollCut = collageRibbon.clientWidth - collage.clientWidth + 2 * collageWrap.getBoundingClientRect().left; /* Правая точка по горизонтали */
-            collageTop = collage.getBoundingClientRect().top + window.scrollY; // Абсолютная позиция collage относительно верха документа
+        function timelineInit() {
+            const collageHeight = $collage.clientHeight;
+            verticalScrollCut = collageHeight - $collageViewport.offsetHeight; /* Нижняя точка по вертикали */
+            horizontalScrollCut = $collageRibbon.clientWidth - $collage.clientWidth + 2 * $collageWrap.getBoundingClientRect().left; /* Правая точка по горизонтали */
+            collageTop = $collage.getBoundingClientRect().top + window.scrollY; // Абсолютная позиция collage относительно верха документа
         }
 
         function updateScroll() {
             // Нормализуем прокрутку относительно верхней границы collage
             const relativeScroll = Math.max(0, lastKnownScrollPosition - collageTop);
             normalizedVerticalScroll = Math.min(1, relativeScroll / verticalScrollCut); /* Значение от 0 до 1 */
-            collageRibbon.style.transform = `translate3d(${-1 * normalizedVerticalScroll * horizontalScrollCut}px, 0, 0)`;
+            if(isDesktop) {
+                $collageRibbon.style.transform = `translate3d(${-1 * normalizedVerticalScroll * horizontalScrollCut}px, 0, 0)`;
+            }
             ticking = false;
         }
 
@@ -1593,15 +1602,16 @@
             }
         }
 
-        /* Ensure init is called after styles are fully loaded */
-        window.addEventListener('load', init);
-        window.addEventListener('resize', init);
+        /* Запускаем timelineInit() только когда шрифты и стили прогрузились: */
+        window.addEventListener('load', timelineInit);
+        window.addEventListener('resize', timelineInit);
 
-        /* Run */
+        /* Основное событие */
         window.addEventListener('scroll', onScroll);
+        window.addEventListener('resize', onScroll);
 
-        /* Initial call to setup scroll positions correctly */
-        init();
+        /* Первичный запуск при открытии страницы */
+        timelineInit();
         onScroll();
     });
 
