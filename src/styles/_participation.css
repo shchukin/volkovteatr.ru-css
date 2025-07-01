@@ -11,7 +11,7 @@
         margin-top: 40px;
     }
 
-    .participation__body.slide-up {
+    .participation__body.slide {
         transition-delay: 100ms;
     }
 

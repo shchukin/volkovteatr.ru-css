@@ -1364,21 +1364,21 @@
 
 
 
-    /* Плавное появление элементов на странице slide-up */
+    /* Плавное появление элементов на странице slide */
 
-    const $slideUp = $('.slide-up');
+    const $slideUp = $('.slide');
     let slideUpThrottleTimeout;
 
     function checkVisibility() {
         $slideUp.each(function () {
             const $el = $(this);
-            if ($el.hasClass('slide-up--animated')) return; // Если уже анимирован, пропустить
+            if ($el.hasClass('slide--animated')) return; // Если уже анимирован, пропустить
 
             const elementTop = $el.offset().top;
             const viewportBottom = $(window).scrollTop() + $(window).height();
 
             if (viewportBottom >= elementTop) {
-                $el.addClass('slide-up--animated');
+                $el.addClass('slide--animated');
             }
         });
     }

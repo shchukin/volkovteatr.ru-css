@@ -1,0 +1,19 @@
+.slide {
+    transform: translate(0, 150px);
+    opacity: 0;
+    transition: opacity 1200ms var(--ease-out-quint),
+                transform 1200ms var(--ease-out-quint);
+}
+
+.slide--to-right {
+    transform: translate(-150px, 0);
+}
+
+.slide--to-left {
+    transform: translate(0150px, 0);
+}
+
+.slide--animated {
+    transform: translate(0);
+    opacity: 100%;
+}
