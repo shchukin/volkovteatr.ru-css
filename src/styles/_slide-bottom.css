@@ -1,8 +1,0 @@
-@keyframes slide-bottom {
-    from { opacity: 30%; transform: translateY(-10px); }
-    to { opacity: 100%; transform: translateY(0); }
-}
-
-:root {
-    --slide-bottom: slide-bottom 1200ms var(--ease-out-quint);
-}

@@ -78,3 +78,28 @@
         --container-padding: 16px;
     }
 }
+
+
+
+
+/* Анимации */
+
+@keyframes slide-bottom {
+    from { opacity: 30%; transform: translateY(-10px); }
+    to { opacity: 100%; transform: translateY(0); }
+}
+
+:root {
+    --slide-bottom: slide-bottom 1200ms var(--ease-out-quint);
+}
+
+
+
+@keyframes slide-left {
+    from { opacity: 30%; transform: translateX(20px); }
+    to { opacity: 100%; transform: translateY(0); }
+}
+
+:root {
+    --slide-left: slide-left 800ms var(--ease-out-quint);
+}
