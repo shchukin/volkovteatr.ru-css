@@ -4,15 +4,19 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
     align-items: center;
     gap: 20px;
-    overflow: hidden; /* обрезаем анимации */
 }
     .chapter__preview {
 
     }
 
-    .chapter__preview--stretched {
+    .chapter__preview--stretched:first-child {
         margin-left: -80px;
     }
+
+    .chapter__preview--stretched:last-child {
+        margin-right: -80px;
+    }
+
         .chapter__image {
             width: 100%;
             height: auto;
@@ -47,8 +51,12 @@
 
         }
 
-        .chapter__preview--stretched {
+        .chapter__preview--stretched:first-child {
             margin-left: -160px;
+        }
+
+        .chapter__preview--stretched:last-child {
+            margin-right: -160px;
         }
             .chapter__image {
 
