@@ -86,3 +86,50 @@
 
         }
 }
+
+
+
+@media (width < 740px) {
+
+    .timeline {
+        padding-bottom: 0;
+    }
+        .timeline__widget {
+            /*position: relative;*/
+            height: auto; /* Speed */
+        }
+            .timeline__viewport {
+                position: static;
+                /*top: 0; !* Момент, когда начинается горизонтальная прокрутка *!*/
+                height: auto; /* Когда заканчивается */
+            }
+                .timeline__scroll {
+                    height: auto;
+                    overflow: visible;
+                    overflow-x: auto;
+                    padding-top: 60px;
+                    padding-bottom: 60px;
+                }
+                    .timeline__wrap {
+                        position: static;
+                        height: auto;
+                        display: block;
+                    }
+                        .timeline__ribbon {
+                            width: 970px;
+                            height: auto;
+                            padding-top: 0;
+                            display: block;
+                        }
+                            .timeline__history {
+                                width: 970px;
+                                height: 1433px;
+                                background-image: url("../vectors/timeline-smartphone.svg");
+                            }
+
+
+        .timeline__viewport--landed {
+
+        }
+}
+
