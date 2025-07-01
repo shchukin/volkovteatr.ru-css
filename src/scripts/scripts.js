@@ -1378,7 +1378,10 @@
             const viewportBottom = $(window).scrollTop() + $(window).height();
 
             if (viewportBottom >= elementTop) {
-                $el.addClass('slide--animated');
+                const delay = parseInt($el.data('delay')) || 0; // Get delay or default to 0
+                setTimeout(() => {
+                    $el.addClass('slide--animated');
+                }, delay);
             }
         });
     }
