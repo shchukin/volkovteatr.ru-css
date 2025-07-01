@@ -1600,14 +1600,14 @@
             }
         }
 
-        /* Ensure timelineInit is called after styles are fully loaded */
+        /* Запускаем timelineInit() только когда шрифты и стили прогрузились: */
         window.addEventListener('load', timelineInit);
         window.addEventListener('resize', timelineInit);
 
-        /* Run */
+        /* Основное событие */
         window.addEventListener('scroll', onScroll);
 
-        /* Initial call to setup scroll positions correctly */
+        /* Первичный запуск при открытии страницы */
         timelineInit();
         onScroll();
     });
