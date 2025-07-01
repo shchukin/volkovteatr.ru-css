@@ -3,28 +3,32 @@
     position: relative;
     height: 700px;
     padding-top: var(--header-height);
-    background-image: url("../images/volkov/volkov-background-laptop@1x.jpg");
-    background-size: 1850px 700px;
-    background-repeat: no-repeat;
-    background-position: center center;
 }
-
-@media (min-resolution: 2dppx) {
-
-    .volkov {
-        background-image: url("../images/volkov/volkov-background-laptop@2x.jpg");
+    .volkov__background {
+        position: absolute;
+        inset: 0;
+        background-image: url("../images/volkov/volkov-background-laptop@1x.jpg");
+        background-size: 1850px 700px;
+        background-repeat: no-repeat;
+        background-position: center center;
     }
-}
 
+    @media (min-resolution: 2dppx) {
 
-/* На широких ноутах театр смещённый вправо выглядит немного странно. Подвинем влево: */
-
-@media (1440px <= width) {
-
-    .volkov {
-        background-position: calc(50% - 100px) center;
+        .volkov__background {
+            background-image: url("../images/volkov/volkov-background-laptop@2x.jpg");
+        }
     }
-}
+
+
+    /* На широких ноутах театр смещённый вправо выглядит немного странно. Подвинем влево: */
+
+    @media (1440px <= width) {
+
+        .volkov__background {
+            background-position: calc(50% - 100px) center;
+        }
+    }
 
 
     /* Волков - портрет */
@@ -117,17 +121,20 @@
 
     .volkov {
         height: 1050px;
-        background-image: url("../images/volkov/volkov-background-monitor@1x.jpg");
-        background-size: 2560px 1050px;
-        background-position: center center;
     }
 
-    @media (min-resolution: 2dppx) {
-
-        .volkov {
-            background-image: url("../images/volkov/volkov-background-monitor@2x.jpg");
+        .volkov__background {
+            background-image: url("../images/volkov/volkov-background-monitor@1x.jpg");
+            background-size: 2560px 1050px;
+            background-position: center center;
         }
-    }
+
+        @media (min-resolution: 2dppx) {
+
+            .volkov__background {
+                background-image: url("../images/volkov/volkov-background-monitor@2x.jpg");
+            }
+        }
 
         /* Волков - портрет */
         .volkov__hero {
@@ -188,16 +195,20 @@
 
     .volkov {
         height: 917px;
-        background-image: url("../images/volkov/volkov-background-smartphone@1x.jpg");
-        background-size: 740px 917px;
     }
 
-    @media (min-resolution: 2dppx) {
-
-        .volkov {
-            background-image: url("../images/volkov/volkov-background-smartphone@2x.jpg");
+        .volkov__background {
+            background-image: url("../images/volkov/volkov-background-smartphone@1x.jpg");
+            background-size: 740px 917px;
         }
-    }
+
+        @media (min-resolution: 2dppx) {
+
+            .volkov__background {
+                background-image: url("../images/volkov/volkov-background-smartphone@2x.jpg");
+            }
+        }
+
         /* Волков - портрет */
         .volkov__hero {
             margin-left: -195px;

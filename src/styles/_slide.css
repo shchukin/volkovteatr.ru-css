@@ -13,6 +13,10 @@
     transform: translate(0150px, 0);
 }
 
+.slide--opacitu-only {
+    transform: none;
+}
+
 .slide--animated {
     transform: translate(0);
     opacity: 100%;
