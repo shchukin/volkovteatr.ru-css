@@ -17,6 +17,14 @@
         margin-right: -80px;
     }
 
+    .chapter__preview.slide--to-right:not(.slide--animated) {
+        transform: rotate(-30deg) translate(-300px, 0);
+    }
+
+    .chapter__preview.slide--to-left:not(.slide--animated) {
+        transform: rotate(30deg) translate(300px, 0);
+    }
+
         .chapter__image {
             width: 100%;
             height: auto;
