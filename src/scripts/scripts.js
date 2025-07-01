@@ -1587,7 +1587,9 @@
             // Нормализуем прокрутку относительно верхней границы collage
             const relativeScroll = Math.max(0, lastKnownScrollPosition - collageTop);
             normalizedVerticalScroll = Math.min(1, relativeScroll / verticalScrollCut); /* Значение от 0 до 1 */
-            $collageRibbon.style.transform = `translate3d(${-1 * normalizedVerticalScroll * horizontalScrollCut}px, 0, 0)`;
+            if(isDesktop) {
+                $collageRibbon.style.transform = `translate3d(${-1 * normalizedVerticalScroll * horizontalScrollCut}px, 0, 0)`;
+            }
             ticking = false;
         }
 
@@ -1606,6 +1608,7 @@
 
         /* Основное событие */
         window.addEventListener('scroll', onScroll);
+        window.addEventListener('resize', onScroll);
 
         /* Первичный запуск при открытии страницы */
         timelineInit();
