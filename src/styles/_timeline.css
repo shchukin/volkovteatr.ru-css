@@ -3,8 +3,7 @@
 }
     .timeline__widget {
         position: relative;
-        /*overflow: hidden;*/
-        height: 3000px; /* Speed */
+        height: 2500px; /* Speed */
     }
         .timeline__viewport {
             position: sticky;
@@ -21,15 +20,15 @@
                     display: flex;
                 }
                     .timeline__ribbon {
-                        width: 4332px;
+                        width: 2723px;
                         height: 100%;
                         padding-top: var(--header-collapsed-height);
                         display: flex;
                         align-items: center;
                     }
                         .timeline__history {
-                            width: 4332px;
-                            height: 700px;
+                            width: 2723px;
+                            height: 440px;
                             background-image: url("../vectors/timeline.svg");
                             background-size: contain;
                             background-repeat: no-repeat;
@@ -40,3 +39,50 @@
     .timeline__viewport--landed {
 
     }
+
+
+
+@media (1850px <= width) {
+
+    .timeline {
+        /*padding-bottom: 100px;*/
+    }
+        .timeline__widget {
+            /*position: relative;*/
+            height: 3000px; /* Speed */
+        }
+            .timeline__viewport {
+                /*position: sticky;*/
+                /*top: 0; !* Момент, когда начинается горизонтальная прокрутка *!*/
+                /*height: 100vh; !* Когда заканчивается *!*/
+            }
+                .timeline__scroll {
+                    /*height: 100%;*/
+                    /*overflow: hidden;*/
+                }
+                    .timeline__wrap {
+                        /*position: relative;*/
+                        /*height: 100%;*/
+                        /*display: flex;*/
+                    }
+                        .timeline__ribbon {
+                            width: 4332px;
+                            /*height: 100%;*/
+                            /*padding-top: var(--header-collapsed-height);*/
+                            /*display: flex;*/
+                            /*align-items: center;*/
+                        }
+                            .timeline__history {
+                                width: 4332px;
+                                height: 700px;
+                                /*background-image: url("../vectors/timeline.svg");*/
+                                /*background-size: contain;*/
+                                /*background-repeat: no-repeat;*/
+                                /*background-position: left top;*/
+                            }
+
+
+        .timeline__viewport--landed {
+
+        }
+}
