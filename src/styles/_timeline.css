@@ -216,29 +216,37 @@
         /*--point-width: 480px; !* должно совпадать с шириной фоновой кривой от (от точки до точки) *!*/
         /*--points-gap: 100px; !* отступ между точками или правый паддинг другими словами *!*/
         /*--total-points: 26; !* значение по-умолчанию, но будет корректироваться скриптом *!*/
+        --points-heigt: 412px;
     }
 
     .timeline {
-        padding-bottom: 60px;
+        padding-bottom: 0;
     }
         .timeline__widget {
             /*position: relative;*/
             height: auto;
+            overflow-x: auto;
         }
             .timeline__viewport {
                 position: static;
-                /*top: 0; !* Момент, когда начинается горизонтальная прокрутка *!*/
-                height: auto; /* Когда заканчивается */
+                width: calc(970px + 2 * var(--container-padding));
+                height: auto;
+                padding-top: 16px; /* чтобы шарики не влияли на скролл */
             }
                 .timeline__scroll {
                     height: auto;
-                    /*overflow: hidden;*/
+                    overflow: visible;
                 }
                     .timeline__wrap {
                         /*position: relative;*/
                         height: auto;
                         display: block;
                     }
+                        .timeline__wrap.container {
+                            max-width: none;
+                            border: none;
+                        }
+
                         .timeline__ribbon {
                             width: auto;
                             height: auto;
@@ -247,7 +255,7 @@
                             /*align-items: center;*/
                         }
                             .timeline__history {
-                                /*position: relative;*/
+                                position: relative;
                                 width: auto;
                                 height: auto;
                                 display: flex;
@@ -257,59 +265,72 @@
                                 /* По-идее фон должен быть на timeline__history, но он странно смотрится на последнем элементуе. Нужно обрезать его справа на 380px */
                                 .timeline__history::before {
                                     /*content: "";*/
-                                    /*position: absolute;*/
-                                    /*inset: 0;*/
-                                    /*right: calc(var(--point-width) - var(--points-gap));*/
-                                    /*background-image: url("../vectors/timeline.svg");*/
-                                    /*background-size: calc(2 * var(--point-width)) 109px;*/
-                                    /*background-repeat: repeat-x;*/
+                                    position: absolute;
+                                    inset: 0 var(--container-padding);
+                                    bottom: var(--points-heigt);
+                                    /*top: calc(var(--point-width) - var(--points-gap));*/
+                                    background-image: url("../vectors/timeline-smartphone.svg");
+                                    background-size: 970px calc(2 * var(--points-heigt));
+                                    background-repeat: repeat-y;
                                     /*background-position: left top;*/
                                 }
 
                                 .timeline__point {
-                                    /*padding-right: var(--points-gap);*/
+                                    padding-right: 0;
                                     /*position: relative;*/
-                                    /*width: var(--point-width);*/
-                                    /*height: 100%;*/
+                                    width: 334px;
+                                    height: var(--points-heigt);
+                                    margin-left: var(--container-padding);
                                     /*flex-shrink: 0;*/
+                                }
+
+                                .timeline__point:nth-child(even) {
+                                    margin-left: auto;
+                                    margin-right: var(--container-padding);
                                 }
 
                                 .timeline__point:last-child {
                                     /*padding-right: 0;*/
                                 }
                                     .timeline__point-inner {
-                                        position: static;
-                                        /*left: 0;*/
-                                        /*right: var(--points-gap);*/
+                                        position: absolute;
+                                        top: 0;
+                                        left: auto;
+                                        right: auto;
                                     }
 
                                     .timeline__point:nth-child(odd) .timeline__point-inner {
-                                        /*top: 100%;*/
-                                        /*padding-top: 20px;*/
+                                        left: 0;
+                                        top: auto;
+                                        padding-top: 24px;
                                     }
 
                                     .timeline__point:nth-child(even) .timeline__point-inner {
-                                        /*bottom: 100%;*/
-                                        /*padding-bottom: 20px;*/
+                                        right: 0;
+                                        bottom: auto;
+                                        padding-top: 24px;
                                     }
                                         .timeline__point-inner::before {
                                             /*content: "";*/
                                             /*position: absolute;*/
-                                            /*left: -6px;*/
+                                            left: auto;
                                             /*display: block;*/
-                                            /*width: 12px;*/
-                                            /*height: 12px;*/
+                                            width: 22px;
+                                            height: 22px;
                                             /*border-radius: 50%;*/
                                             /*background-color: #F8F0E5;*/
-                                            /*box-shadow: 0 0 0 4px rgb(248 240 229 / 50%);*/
+                                            box-shadow: 0 0 0 5px rgb(248 240 229 / 50%);
                                         }
 
                                         .timeline__point:nth-child(odd) .timeline__point-inner::before {
-                                            /*top: -8px;*/
+                                            top: -11px;
+                                            left: -11px;
                                         }
 
                                         .timeline__point:nth-child(even) .timeline__point-inner::before {
-                                            /*bottom: -8px;*/
+                                            top: -11px;
+                                            right: -11px;
+                                            bottom: auto;
                                         }
 
                                         .timeline__year {
