@@ -1560,6 +1560,18 @@
 
     /* Timeline */
 
+    /* Стилям важно знать количество элементов в таймлайне. Передаем это значение в стили через кастомное свойство --total-points: */
+    document.addEventListener('DOMContentLoaded', () => {
+        const timeline = document.querySelector('.timeline');
+        if (timeline) {
+            const totalPoints = timeline.querySelectorAll('.timeline__point').length;
+            timeline.style.setProperty('--total-points', totalPoints);
+        }
+    });
+
+
+    /* Прокрутка таймлайна */
+
     document.addEventListener("DOMContentLoaded", function() {
 
         const $collage = document.querySelector('.timeline__widget');
@@ -1614,6 +1626,7 @@
         timelineInit();
         onScroll();
     });
+
 
 
 })(jQuery);
