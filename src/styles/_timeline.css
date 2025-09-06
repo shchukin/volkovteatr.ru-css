@@ -216,6 +216,7 @@
         /*--point-width: 480px; !* должно совпадать с шириной фоновой кривой от (от точки до точки) *!*/
         /*--points-gap: 100px; !* отступ между точками или правый паддинг другими словами *!*/
         /*--total-points: 26; !* значение по-умолчанию, но будет корректироваться скриптом *!*/
+        --timeline-width: 600px; /* Ширина фоновой картинки, алсо ширина скролла */
         --points-heigt: 270px;
     }
 
@@ -230,7 +231,7 @@
         }
             .timeline__viewport {
                 position: static;
-                width: calc(970px + 2 * var(--container-padding));
+                width: calc(var(--timeline-width) + 2 * var(--container-padding));
                 height: auto;
                 padding-top: 16px; /* чтобы шарики не влияли на скролл */
             }
@@ -271,7 +272,7 @@
                                     bottom: var(--points-heigt);
                                     /*top: calc(var(--point-width) - var(--points-gap));*/
                                     background-image: url("../vectors/timeline-smartphone.svg");
-                                    background-size: 970px calc(2 * var(--points-heigt));
+                                    background-size: 100% calc(2 * var(--points-heigt));
                                     background-repeat: repeat-y;
                                     /*background-position: left top;*/
                                 }
