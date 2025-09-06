@@ -5,7 +5,7 @@
 }
 
 .timeline {
-
+    padding-bottom: 80px;
 }
     .timeline__widget {
         position: relative;
@@ -121,11 +121,6 @@
                                         line-height: 22px;
                                     }
 
-    .timeline__viewport--landed {
-
-    }
-
-
 
 @media (1850px <= width) {
 
@@ -133,6 +128,11 @@
         --point-width: 720px; /* должно совпадать с шириной фоновой кривой от (от точки до точки) */
         --points-gap: 124px; /* отступ между точками или правый паддинг другими словами */
     }
+
+    .timeline {
+        padding-bottom: 120px;
+    }
+
         .timeline__widget {
             height: 8000px; /* Speed */
         }
@@ -206,11 +206,6 @@
                                             font-size: 18px;
                                             line-height: 24px;
                                         }
-
-
-        .timeline__viewport--landed {
-
-        }
 }
 
 
@@ -218,11 +213,17 @@
 @media (width < 740px) {
 
     .timeline {
-        padding-bottom: 0;
+        /*--point-width: 480px; !* должно совпадать с шириной фоновой кривой от (от точки до точки) *!*/
+        /*--points-gap: 100px; !* отступ между точками или правый паддинг другими словами *!*/
+        /*--total-points: 26; !* значение по-умолчанию, но будет корректироваться скриптом *!*/
+    }
+
+    .timeline {
+        padding-bottom: 60px;
     }
         .timeline__widget {
             /*position: relative;*/
-            height: auto; /* Speed */
+            height: auto;
         }
             .timeline__viewport {
                 position: static;
@@ -231,35 +232,108 @@
             }
                 .timeline__scroll {
                     height: auto;
-                    overflow: visible;
-                    overflow-x: auto;
-                    padding-top: 60px;
-                    padding-bottom: 60px;
+                    /*overflow: hidden;*/
                 }
                     .timeline__wrap {
-                        position: static;
+                        /*position: relative;*/
                         height: auto;
                         display: block;
                     }
                         .timeline__ribbon {
-                            width: 970px;
+                            width: auto;
                             height: auto;
                             padding-top: 0;
                             display: block;
+                            /*align-items: center;*/
                         }
                             .timeline__history {
-                                width: 970px;
-                                height: 1433px;
-                                background-image: url("../vectors/timeline-smartphone.svg");
+                                /*position: relative;*/
+                                width: auto;
+                                height: auto;
+                                display: flex;
+                                align-items: flex-start;
+                                flex-direction: column;
                             }
-                                .timeline__point {
-
+                                /* По-идее фон должен быть на timeline__history, но он странно смотрится на последнем элементуе. Нужно обрезать его справа на 380px */
+                                .timeline__history::before {
+                                    /*content: "";*/
+                                    /*position: absolute;*/
+                                    /*inset: 0;*/
+                                    /*right: calc(var(--point-width) - var(--points-gap));*/
+                                    /*background-image: url("../vectors/timeline.svg");*/
+                                    /*background-size: calc(2 * var(--point-width)) 109px;*/
+                                    /*background-repeat: repeat-x;*/
+                                    /*background-position: left top;*/
                                 }
 
+                                .timeline__point {
+                                    /*padding-right: var(--points-gap);*/
+                                    /*position: relative;*/
+                                    /*width: var(--point-width);*/
+                                    /*height: 100%;*/
+                                    /*flex-shrink: 0;*/
+                                }
 
+                                .timeline__point:last-child {
+                                    /*padding-right: 0;*/
+                                }
+                                    .timeline__point-inner {
+                                        position: static;
+                                        /*left: 0;*/
+                                        /*right: var(--points-gap);*/
+                                    }
 
-        .timeline__viewport--landed {
+                                    .timeline__point:nth-child(odd) .timeline__point-inner {
+                                        /*top: 100%;*/
+                                        /*padding-top: 20px;*/
+                                    }
 
-        }
+                                    .timeline__point:nth-child(even) .timeline__point-inner {
+                                        /*bottom: 100%;*/
+                                        /*padding-bottom: 20px;*/
+                                    }
+                                        .timeline__point-inner::before {
+                                            /*content: "";*/
+                                            /*position: absolute;*/
+                                            /*left: -6px;*/
+                                            /*display: block;*/
+                                            /*width: 12px;*/
+                                            /*height: 12px;*/
+                                            /*border-radius: 50%;*/
+                                            /*background-color: #F8F0E5;*/
+                                            /*box-shadow: 0 0 0 4px rgb(248 240 229 / 50%);*/
+                                        }
+
+                                        .timeline__point:nth-child(odd) .timeline__point-inner::before {
+                                            /*top: -8px;*/
+                                        }
+
+                                        .timeline__point:nth-child(even) .timeline__point-inner::before {
+                                            /*bottom: -8px;*/
+                                        }
+
+                                        .timeline__year {
+                                            /*font-weight: bold;*/
+                                            font-size: 20px;
+                                            line-height: 24px;
+                                            /*color: #F8F0E5;*/
+                                        }
+
+                                        .timeline__heading {
+                                            margin-top: 12px;
+                                            /*font-family: var(--font-heading);*/
+                                            /*font-style: italic;*/
+                                            /*font-weight: 600;*/
+                                            font-size: 20px;
+                                            line-height: 24px;
+                                            /*color: #E4BB6B;*/
+                                            /*text-transform: uppercase;*/
+                                        }
+
+                                        .timeline__description {
+                                            margin-top: 12px;
+                                            font-size: 16px;
+                                            line-height: 22px;
+                                        }
 }
 
