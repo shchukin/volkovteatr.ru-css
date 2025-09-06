@@ -222,7 +222,7 @@
 
     .timeline {
         padding-top: 54px;
-        padding-bottom: 0;
+        padding-bottom: 40px;
     }
         .timeline__widget {
             /*position: relative;*/
