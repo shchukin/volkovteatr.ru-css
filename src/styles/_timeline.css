@@ -5,7 +5,7 @@
 }
 
 .timeline {
-    padding-bottom: 100px;
+
 }
     .timeline__widget {
         position: relative;
@@ -46,7 +46,7 @@
                                 inset: 0;
                                 right: calc(var(--point-width) - var(--points-gap));
                                 background-image: url("../vectors/timeline.svg");
-                                background-size: 960px 109px;
+                                background-size: calc(2 * var(--point-width)) 109px;
                                 background-repeat: repeat-x;
                                 background-position: left top;
                             }
@@ -80,21 +80,21 @@
                                     .timeline__point-inner::before {
                                         content: "";
                                         position: absolute;
-                                        left: -8px;
+                                        left: -6px;
                                         display: block;
-                                        width: 16px;
-                                        height: 16px;
+                                        width: 12px;
+                                        height: 12px;
                                         border-radius: 50%;
                                         background-color: #F8F0E5;
-                                        box-shadow: 0 0 0 5px rgb(248 240 229 / 50%);
+                                        box-shadow: 0 0 0 4px rgb(248 240 229 / 50%);
                                     }
 
                                     .timeline__point:nth-child(odd) .timeline__point-inner::before {
-                                        top: -10px;
+                                        top: -8px;
                                     }
 
                                     .timeline__point:nth-child(even) .timeline__point-inner::before {
-                                        bottom: -10px;
+                                        bottom: -8px;
                                     }
 
                                     .timeline__year {
@@ -130,120 +130,79 @@
 @media (1850px <= width) {
 
     .timeline {
-        /*padding-bottom: 100px;*/
         --point-width: 720px; /* должно совпадать с шириной фоновой кривой от (от точки до точки) */
         --points-gap: 124px; /* отступ между точками или правый паддинг другими словами */
     }
         .timeline__widget {
-            /*position: relative;*/
-            height: 3000px; /* Speed */
+            height: 8000px; /* Speed */
         }
             .timeline__viewport {
-                /*position: sticky;*/
-                /*top: 0; !* Момент, когда начинается горизонтальная прокрутка *!*/
-                /*height: 100vh; !* Когда заканчивается *!*/
+
             }
                 .timeline__scroll {
-                    /*height: 100%;*/
-                    /*overflow: hidden;*/
+
                 }
                     .timeline__wrap {
-                        /*position: relative;*/
-                        /*height: 100%;*/
-                        /*display: flex;*/
+
                     }
                         .timeline__ribbon {
-                            /*width: calc(var(--total-points) * var(--point-width) - var(--points-gap)); !* у последнего айтема нет правого отступа *!*/
-                            /*height: 100%;*/
-                            /*padding-top: var(--header-collapsed-height);*/
-                            /*display: flex;*/
-                            /*align-items: center;*/
+
                         }
                             .timeline__history {
-                                /*position: relative;*/
-                                /*width: 100%;*/
                                 height: 163px;
-                                /*display: flex;*/
-                                /*align-items: flex-start;*/
                             }
                                 /* По-идее фон должен быть на timeline__history, но он странно смотрится на последнем элементуе. Нужно обрезать его справа на 380px */
                                 .timeline__history::before {
-                                    /*content: "";*/
-                                    /*position: absolute;*/
-                                    /*inset: 0;*/
-                                    /*right: calc(var(--point-width) - var(--points-gap));*/
                                     background-image: url("../vectors/timeline-monitor.svg");
-                                    background-size: 1440px 163px;
-                                    /*background-repeat: repeat-x;*/
-                                    /*background-position: left top;*/
+                                    background-size: calc(2 * var(--point-width)) 163px;
                                 }
 
                                 .timeline__point {
-                                    /*margin-right: var(--points-gap);*/
-                                    /*position: relative;*/
-                                    /*width: 380px;*/
-                                    /*height: 100%;*/
-                                    /*flex-shrink: 0;*/
+
                                 }
 
                                 .timeline__point:last-child {
-                                    /*margin-right: 0;*/
+
                                 }
                                     .timeline__point-inner {
-                                        /*position: absolute;*/
-                                        /*left: 0;*/
-                                        /*right: 0;*/
+
                                     }
 
                                     .timeline__point:nth-child(odd) .timeline__point-inner {
-                                        /*top: 100%;*/
-                                        /*padding-top: 20px;*/
+                                        padding-top: 26px;
                                     }
 
                                     .timeline__point:nth-child(even) .timeline__point-inner {
-                                        /*bottom: 100%;*/
-                                        /*padding-bottom: 20px;*/
+                                        padding-bottom: 26px;
                                     }
                                         .timeline__point-inner::before {
-                                            /*content: "";*/
-                                            /*position: absolute;*/
-                                            /*left: -8px;*/
-                                            /*display: block;*/
-                                            /*width: 16px;*/
-                                            /*height: 16px;*/
-                                            /*border-radius: 50%;*/
-                                            /*background-color: #F8F0E5;*/
-                                            /*box-shadow: 0 0 0 5px rgb(248 240 229 / 50%);*/
+                                            left: -8px;
+                                            width: 16px;
+                                            height: 16px;
+                                            box-shadow: 0 0 0 5px rgb(248 240 229 / 50%);
                                         }
 
                                         .timeline__point:nth-child(odd) .timeline__point-inner::before {
-                                            /*top: -10px;*/
+                                            top: -10px;
                                         }
 
                                         .timeline__point:nth-child(even) .timeline__point-inner::before {
-                                            /*bottom: -10px;*/
+                                            bottom: -10px;
                                         }
 
                                         .timeline__year {
-                                            /*font-weight: bold;*/
                                             font-size: 22px;
                                             line-height: 26px;
-                                            /*color: #F8F0E5;*/
                                         }
 
                                         .timeline__heading {
-                                            /*margin-top: 8px;*/
-                                            /*font-family: var(--font-heading);*/
-                                            /*font-style: italic;*/
-                                            /*font-weight: 600;*/
+                                            margin-top: 12px;
                                             font-size: 24px;
                                             line-height: 29px;
-                                            /*color: #E4BB6B;*/
-                                            /*text-transform: uppercase;*/
                                         }
 
                                         .timeline__description {
-                                            /*margin-top: 4px;*/
+                                            margin-top: 6px;
                                             font-size: 18px;
                                             line-height: 24px;
                                         }
