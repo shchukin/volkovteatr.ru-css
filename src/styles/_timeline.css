@@ -1,4 +1,10 @@
 .timeline {
+    --point-width: 480px; /* должно совпадать с шириной фоновой кривой от (от точки до точки) */
+    --points-gap: 100px; /* отступ между точками или правый паддинг другими словами */
+    --total-points: 26; /* значение по-умолчанию, но будет корректироваться скриптом */
+}
+
+.timeline {
     padding-bottom: 100px;
 }
     .timeline__widget {
@@ -20,24 +26,34 @@
                     display: flex;
                 }
                     .timeline__ribbon {
-                        width: 12380px;
+                        /*12380*/
+                        width: calc(var(--total-points) * var(--point-width) - var(--points-gap)); /* у последнего айтема нет правого отступа */
                         height: 100%;
                         padding-top: var(--header-collapsed-height);
                         display: flex;
                         align-items: center;
                     }
                         .timeline__history {
+                            position: relative;
                             width: 100%;
                             height: 109px;
                             display: flex;
                             align-items: flex-start;
-                            background-image: url("../vectors/timeline.svg");
-                            background-size: 960px 109px;
-                            background-repeat: repeat-x;
-                            background-position: left top;
                         }
+                            /* По-идее фон должен быть на timeline__history, но он странно смотрится на последнем элементуе. Нужно обрезать его справа на 380px */
+                            .timeline__history::before {
+                                content: "";
+                                position: absolute;
+                                inset: 0;
+                                right: calc(var(--point-width) - var(--points-gap));
+                                background-image: url("../vectors/timeline.svg");
+                                background-size: 960px 109px;
+                                background-repeat: repeat-x;
+                                background-position: left top;
+                            }
+
                             .timeline__point {
-                                margin-right: 100px;
+                                margin-right: var(--points-gap);
                                 position: relative;
                                 width: 380px;
                                 height: 100%;
