@@ -3,7 +3,7 @@
 }
     .timeline__widget {
         position: relative;
-        height: 2500px; /* Speed */
+        height: 6000px; /* Speed */
     }
         .timeline__viewport {
             position: sticky;
@@ -55,35 +55,56 @@
 
                                 .timeline__point:nth-child(odd) .timeline__point-inner {
                                     top: 100%;
+                                    padding-top: 20px;
                                 }
 
                                 .timeline__point:nth-child(even) .timeline__point-inner {
                                     bottom: 100%;
+                                    padding-bottom: 20px;
                                 }
+                                    .timeline__point-inner::before {
+                                        content: "";
+                                        position: absolute;
+                                        left: -8px;
+                                        display: block;
+                                        width: 16px;
+                                        height: 16px;
+                                        border-radius: 50%;
+                                        background-color: #F8F0E5;
+                                        box-shadow: 0 0 0 5px rgb(248 240 229 / 50%);
+                                    }
 
-                                .timeline__year {
-                                    font-weight: bold;
-                                    font-size: 18px;
-                                    line-height: 22px;
-                                    color: #F8F0E5;
-                                }
+                                    .timeline__point:nth-child(odd) .timeline__point-inner::before {
+                                        top: -10px;
+                                    }
 
-                                .timeline__heading {
-                                    margin-top: 8px;
-                                    font-family: var(--font-heading);
-                                    font-style: italic;
-                                    font-weight: 600;
-                                    font-size: 20px;
-                                    line-height: 24px;
-                                    color: #E4BB6B;
-                                    text-transform: uppercase;
-                                }
+                                    .timeline__point:nth-child(even) .timeline__point-inner::before {
+                                        bottom: -10px;
+                                    }
 
-                                .timeline__description {
-                                    margin-top: 4px;
-                                    font-size: 15px;
-                                    line-height: 22px;
-                                }
+                                    .timeline__year {
+                                        font-weight: bold;
+                                        font-size: 18px;
+                                        line-height: 22px;
+                                        color: #F8F0E5;
+                                    }
+
+                                    .timeline__heading {
+                                        margin-top: 8px;
+                                        font-family: var(--font-heading);
+                                        font-style: italic;
+                                        font-weight: 600;
+                                        font-size: 20px;
+                                        line-height: 24px;
+                                        color: #E4BB6B;
+                                        text-transform: uppercase;
+                                    }
+
+                                    .timeline__description {
+                                        margin-top: 4px;
+                                        font-size: 15px;
+                                        line-height: 22px;
+                                    }
 
     .timeline__viewport--landed {
 
