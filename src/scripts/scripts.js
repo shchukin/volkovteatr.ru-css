@@ -1631,9 +1631,33 @@
 
     }
 
+
+    /* счетчики на лендинге */
+    document.querySelectorAll('.counter').forEach(el => {
+        const endVal = parseInt(el.getAttribute('data-end') || el.textContent, 10);
+        el.textContent = '0';
+
+        const myCounter = new countUp.CountUp(el, endVal, {
+            duration: 3,
+            useEasing: true,
+            useGrouping: true,
+            separator: ' ',
+            decimalPlaces: 0
+        });
+
+        if (!myCounter.error) {
+            myCounter.start();
+        } else {
+            el.textContent = endVal; // фоллбэк
+        }
+    });
+
+
     $('#test').on('click', function (){
         $('.separator').toggleClass('separator--animated');
     });
+
+
 
 })(jQuery);
 
