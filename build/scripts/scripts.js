@@ -1632,6 +1632,80 @@
     }
 
 
+    /* Анимация разделителей и счетчиков при появлении блока */
+    const $stats = $('.stats');
+    let statsStarted = false;
+
+    function startStatsAnimations() {
+        if (statsStarted) {
+            return;
+        }
+
+        statsStarted = true;
+        $stats.find('.separator').addClass('separator--animated');
+
+        $stats.find('.counter').each(function() {
+            const endVal = parseInt($(this).attr('data-end') || $(this).text(), 10);
+            $(this).text('0');
+
+            const myCounter = new countUp.CountUp(this, endVal, {
+                duration: 3,
+                useEasing: true,
+                useGrouping: true,
+                separator: ' ',
+                decimalPlaces: 0
+            });
+
+            if (!myCounter.error) {
+                myCounter.start();
+            } else {
+                $(this).text(endVal); // фоллбэк
+            }
+        });
+    }
+
+    if ($stats.length) {
+        if ('IntersectionObserver' in window) {
+            const statsObserver = new IntersectionObserver(function(entries, observer) {
+                $.each(entries, function(_, entry) {
+                    if (entry.isIntersecting) {
+                        startStatsAnimations();
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                root: null,
+                threshold: 0
+            });
+
+            statsObserver.observe($stats[0]);
+        } else {
+            let statsTicking = false;
+
+            function checkStatsBlock() {
+                const rect = $stats[0].getBoundingClientRect();
+                if (rect.top < $(window).height() && rect.bottom > 0) {
+                    startStatsAnimations();
+                    $(window).off('scroll resize', onStatsScroll);
+                }
+                statsTicking = false;
+            }
+
+            function onStatsScroll() {
+                if (!statsTicking) {
+                    window.requestAnimationFrame(checkStatsBlock);
+                    statsTicking = true;
+                }
+            }
+
+            $(window).on('scroll resize', onStatsScroll);
+            onStatsScroll();
+        }
+    }
+
+
+
+
 
 })(jQuery);
 
