@@ -1632,30 +1632,79 @@
     }
 
 
-    /* Анимация разделителя под счетчиком */
-    $('.separator').addClass('separator--animated');
+    /* Анимация разделителей и счетчиков при появлении блока */
+    const $statsItems = $('.stats__item');
 
-
-    /* Счетчики на лендинге */
-
-    document.querySelectorAll('.counter').forEach(el => {
-        const endVal = parseInt(el.getAttribute('data-end') || el.textContent, 10);
-        el.textContent = '0';
-
-        const myCounter = new countUp.CountUp(el, endVal, {
-            duration: 3,
-            useEasing: true,
-            useGrouping: true,
-            separator: ' ',
-            decimalPlaces: 0
-        });
-
-        if (!myCounter.error) {
-            myCounter.start();
-        } else {
-            el.textContent = endVal; // фоллбэк
+    function startStatsItem($item) {
+        if ($item.data('statsAnimated')) {
+            return;
         }
-    });
+
+        $item.data('statsAnimated', true);
+        $item.find('.separator').addClass('separator--animated');
+
+        $item.find('.counter').each(function() {
+            const endVal = parseInt($(this).attr('data-end') || $(this).text(), 10);
+            $(this).text('0');
+
+            const myCounter = new countUp.CountUp(this, endVal, {
+                duration: 3,
+                useEasing: true,
+                useGrouping: true,
+                separator: ' ',
+                decimalPlaces: 0
+            });
+
+            if (!myCounter.error) {
+                myCounter.start();
+            } else {
+                $(this).text(endVal); // фоллбэк
+            }
+        });
+    }
+
+    if ($statsItems.length) {
+        if ('IntersectionObserver' in window) {
+            const statsObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        startStatsItem($(entry.target));
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                root: null,
+                threshold: 0
+            });
+
+            $statsItems.each(function() {
+                statsObserver.observe(this);
+            });
+        } else {
+            let statsTicking = false;
+
+            function checkStatsItems() {
+                $statsItems.each(function() {
+                    const rect = this.getBoundingClientRect();
+                    if (rect.top < window.innerHeight && rect.bottom > 0) {
+                        startStatsItem($(this));
+                    }
+                });
+                statsTicking = false;
+            }
+
+            function onStatsScroll() {
+                if (!statsTicking) {
+                    window.requestAnimationFrame(checkStatsItems);
+                    statsTicking = true;
+                }
+            }
+
+            window.addEventListener('scroll', onStatsScroll);
+            window.addEventListener('resize', onStatsScroll);
+            onStatsScroll();
+        }
+    }
 
 
 
