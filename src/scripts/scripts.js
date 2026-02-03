@@ -1631,7 +1631,9 @@
 
     }
 
-
+    $('#test').on('click', function (){
+        $('.separator').toggleClass('separator--animated');
+    });
 
 })(jQuery);
 
