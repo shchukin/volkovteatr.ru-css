@@ -1666,8 +1666,8 @@
 
     if ($stats.length) {
         if ('IntersectionObserver' in window) {
-            const statsObserver = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
+            const statsObserver = new IntersectionObserver(function(entries, observer) {
+                $.each(entries, function(_, entry) {
                     if (entry.isIntersecting) {
                         startStatsAnimations();
                         observer.unobserve(entry.target);
@@ -1684,10 +1684,9 @@
 
             function checkStatsBlock() {
                 const rect = $stats[0].getBoundingClientRect();
-                if (rect.top < window.innerHeight && rect.bottom > 0) {
+                if (rect.top < $(window).height() && rect.bottom > 0) {
                     startStatsAnimations();
-                    window.removeEventListener('scroll', onStatsScroll);
-                    window.removeEventListener('resize', onStatsScroll);
+                    $(window).off('scroll resize', onStatsScroll);
                 }
                 statsTicking = false;
             }
@@ -1699,8 +1698,7 @@
                 }
             }
 
-            window.addEventListener('scroll', onStatsScroll);
-            window.addEventListener('resize', onStatsScroll);
+            $(window).on('scroll resize', onStatsScroll);
             onStatsScroll();
         }
     }
