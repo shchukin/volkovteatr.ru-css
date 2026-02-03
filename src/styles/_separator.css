@@ -6,6 +6,7 @@
 
 .separator {
     position: relative;
+    width: 215px;
     height: 15px;
 }
     .separator::before,
