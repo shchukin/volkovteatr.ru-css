@@ -1632,7 +1632,12 @@
     }
 
 
-    /* счетчики на лендинге */
+    /* Анимация разделителя под счетчиком */
+    $('.separator').addClass('separator--animated');
+
+
+    /* Счетчики на лендинге */
+
     document.querySelectorAll('.counter').forEach(el => {
         const endVal = parseInt(el.getAttribute('data-end') || el.textContent, 10);
         el.textContent = '0';
@@ -1653,7 +1658,6 @@
     });
 
 
-    $('.separator').addClass('separator--animated');
 
 
 
