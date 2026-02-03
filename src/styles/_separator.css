@@ -1,21 +1,20 @@
 .separator {
-    --bar-animation: 300ms
+    --bar-animation: 500ms;
+    --circle-animation: 300ms;
+    --delay-animation: 200ms;
 }
 
 .separator {
     position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 1px;
-    padding-left: 6px;
-    padding-right: 6px;
+    height: 15px;
 }
     .separator::before,
     .separator::after {
         content: "";
         position: absolute;
-        top: -2px;
+        top: 0;
+        bottom: 0;
+        margin: auto;
         width: 5px;
         height: 5px;
         background-color: #E4BB6B;
@@ -23,41 +22,135 @@
     }
 
     .separator::before {
-        left: 0;
+        left: -2px;
     }
 
     .separator::after {
-        right: 0;
+        right: -2px;
     }
 
+
+
     .separator__bar {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto;
         width: 0;
         height: 1px;
         background-color: #E4BB6B;
         transition: width var(--bar-animation) linear;
     }
 
-    .separator--animated .separator__bar {
-        width: 74px;
+    .separator__bar--left {
+        left: 4px;
     }
+
+    .separator__bar--right {
+        right: 4px;
+    }
+
+    .separator--animated .separator__bar {
+        width: 67px;
+    }
+
+
+    .separator__middle-circle {
+        position: absolute;
+        inset: 0;
+        margin: auto;
+        width: 0;
+        height: 0;
+        border-radius: 50%;
+        background-color: #E4BB6B;
+        transition: width var(--circle-animation) linear calc(var(--bar-animation) + 3 * var(--circle-animation) + 4 * var(--delay-animation)),
+                    height var(--circle-animation) linear calc(var(--bar-animation) + 3 * var(--circle-animation) + 4 * var(--delay-animation));
+    }
+
+    .separator--animated .separator__middle-circle {
+        width: 15px;
+        height: 15px;
+    }
+
 
     .separator__circle-1 {
         position: absolute;
-        top: -3px;
-        width: 7px;
-        height: 7px;
-        background-color: #E4BB6B;
+        inset: 0;
+        margin: auto;
+        width: 0;
+        height: 0;
         border-radius: 50%;
+        background-color: #E4BB6B;
+        transition: width var(--circle-animation) linear calc(var(--bar-animation) + 2 * var(--circle-animation) + 3 * var(--delay-animation)),
+                    height var(--circle-animation) linear calc(var(--bar-animation) + 2 * var(--circle-animation) + 3 * var(--delay-animation));
     }
 
     .separator__circle-1--left {
-        left: 76px;
+        right: 28px;
     }
 
     .separator__circle-1--right {
-        right: 76px;
+        left: 28px;
     }
 
+    .separator--animated .separator__circle-1 {
+        width: 9px;
+        height: 9px;
+    }
+
+
+
+    .separator__circle-2 {
+        position: absolute;
+        inset: 0;
+        margin: auto;
+        width: 0;
+        height: 0;
+        border-radius: 50%;
+        background-color: #E4BB6B;
+        transition: width var(--circle-animation) linear calc(var(--bar-animation) + 1 * var(--circle-animation) + 2 * var(--delay-animation)),
+                    height var(--circle-animation) linear calc(var(--bar-animation) + 1 * var(--circle-animation) + 2 * var(--delay-animation));
+    }
+
+    .separator__circle-2--left {
+        right: 48px;
+    }
+
+    .separator__circle-2--right {
+        left: 48px;
+    }
+
+    .separator--animated .separator__circle-2 {
+        width: 7px;
+        height: 7px;
+    }
+
+
+
+    .separator__circle-3 {
+        position: absolute;
+        inset: 0;
+        margin: auto;
+        width: 0;
+        height: 0;
+        border-radius: 50%;
+        background-color: #E4BB6B;
+        transition: width var(--circle-animation) linear calc(var(--bar-animation) + 1 * var(--delay-animation)),
+                    height var(--circle-animation) linear calc(var(--bar-animation) + 1 * var(--delay-animation));
+    }
+
+    .separator__circle-3--left {
+        right: 64px;
+    }
+
+    .separator__circle-3--right {
+        left: 64px;
+    }
+
+    .separator--animated .separator__circle-3 {
+        width: 5px;
+        height: 5px;
+    }
 
 
 

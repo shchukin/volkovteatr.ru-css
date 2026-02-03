@@ -1653,9 +1653,7 @@
     });
 
 
-    $('#test').on('click', function (){
-        $('.separator').toggleClass('separator--animated');
-    });
+    $('.separator').addClass('separator--animated');
 
 
 

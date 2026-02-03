@@ -14,8 +14,13 @@
     }
 
         .stats__item {
-            min-width: 215px;
+            width: 215px;
         }
+
+        .stats__item--visitors {
+            width: 340px;
+        }
+
             .stats__count {
                 font-family: var(--font-heading);
                 font-weight: 600;
