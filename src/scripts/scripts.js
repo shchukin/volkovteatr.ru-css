@@ -1633,17 +1633,18 @@
 
 
     /* Анимация разделителей и счетчиков при появлении блока */
-    const $statsItems = $('.stats__item');
+    const $stats = $('.stats');
+    let statsStarted = false;
 
-    function startStatsItem($item) {
-        if ($item.data('statsAnimated')) {
+    function startStatsAnimations() {
+        if (statsStarted) {
             return;
         }
 
-        $item.data('statsAnimated', true);
-        $item.find('.separator').addClass('separator--animated');
+        statsStarted = true;
+        $stats.find('.separator').addClass('separator--animated');
 
-        $item.find('.counter').each(function() {
+        $stats.find('.counter').each(function() {
             const endVal = parseInt($(this).attr('data-end') || $(this).text(), 10);
             $(this).text('0');
 
@@ -1663,12 +1664,12 @@
         });
     }
 
-    if ($statsItems.length) {
+    if ($stats.length) {
         if ('IntersectionObserver' in window) {
             const statsObserver = new IntersectionObserver((entries, observer) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
-                        startStatsItem($(entry.target));
+                        startStatsAnimations();
                         observer.unobserve(entry.target);
                     }
                 });
@@ -1677,25 +1678,23 @@
                 threshold: 0
             });
 
-            $statsItems.each(function() {
-                statsObserver.observe(this);
-            });
+            statsObserver.observe($stats[0]);
         } else {
             let statsTicking = false;
 
-            function checkStatsItems() {
-                $statsItems.each(function() {
-                    const rect = this.getBoundingClientRect();
-                    if (rect.top < window.innerHeight && rect.bottom > 0) {
-                        startStatsItem($(this));
-                    }
-                });
+            function checkStatsBlock() {
+                const rect = $stats[0].getBoundingClientRect();
+                if (rect.top < window.innerHeight && rect.bottom > 0) {
+                    startStatsAnimations();
+                    window.removeEventListener('scroll', onStatsScroll);
+                    window.removeEventListener('resize', onStatsScroll);
+                }
                 statsTicking = false;
             }
 
             function onStatsScroll() {
                 if (!statsTicking) {
-                    window.requestAnimationFrame(checkStatsItems);
+                    window.requestAnimationFrame(checkStatsBlock);
                     statsTicking = true;
                 }
             }
