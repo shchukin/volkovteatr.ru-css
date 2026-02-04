@@ -1,6 +1,7 @@
 .stats {
     padding-top: 66px;
     padding-bottom: 140px;
+    overflow: hidden;
 }
     .stats__row {
         display: flex;

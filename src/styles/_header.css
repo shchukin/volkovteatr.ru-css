@@ -72,6 +72,17 @@
                     margin-right: -5px;
                 }
 
+                /* Вообще язык в шапке должен быть сделать как header__action.
+                Но конкретно на лендинге берётся компонент .lang изначально
+                предназначенный для другого использования
+                */
+                .header__lang {
+                    margin-left: 4px;
+                }
+                    .header__lang .lang {
+
+                    }
+
                 .search-expanded .header__action--search {
                     opacity: 0;
                     visibility: hidden;
@@ -273,22 +284,17 @@
 @media (1850px <= width) {
 
     .header {
-        /*height: var(--header-height);*/
+
     }
         .header__detachable-part {
-            /*position: fixed;*/
-            /*z-index: 100;*/
-            /*left: 0;*/
-            /*top: 0;*/
-            /*right: 0;*/
-            /*height: var(--header-height);*/
+
         }
 
         .page-scrolled .header__detachable-part {
 
         }
             .header__wrap {
-                /*position: relative;*/
+
             }
                 .header__logo {
                     top: 36px;
@@ -299,11 +305,6 @@
                 }
 
                 .header__first-line {
-                    /*width: fit-content;*/
-                    /*margin-left: auto;*/
-                    /*display: flex;*/
-                    /*align-items: center;*/
-                    /*gap: 10px;*/
                     top: 28px;
                 }
 
@@ -311,29 +312,22 @@
                     top: -52px;
                 }
                     .header__action {
-                        /*display: block;*/
-                        /*padding: 5px;*/
+
                     }
 
                     .header__action:last-child {
-                        /*margin-right: -5px;*/
+
                     }
                         .header__icon {
-                            /*vertical-align: top;*/
-                            /*fill: #DAC0A3;*/
-                            /*transition: fill var(--transition-hover);*/
+
                         }
 
                         .header__action:hover .header__icon {
-                            /*fill: #FFFFFF;*/
+
                         }
 
                 .header__second-line {
                     top: 68px;
-                    /*width: fit-content;*/
-                    /*margin-left: auto;*/
-                    /*display: flex;*/
-                    /*align-items: center;*/
                     gap: 35px;
                 }
 
@@ -342,49 +336,26 @@
                 }
 
                     .header__shortcuts {
-                        /*display: flex;*/
-                        /*align-items: center;*/
                         gap: 24px;
                     }
                         .header__link {
                             padding: 12px 16px;
-                            /*font-family: var(--font-heading);*/
-                            /*font-weight: bold;*/
-                            /*font-style: italic;*/
                             font-size: 22px;
                             line-height: 26px;
-                            /*color: #E4BB6B;*/
-                            /*text-transform: uppercase;*/
-                            /*text-decoration: 1.5px underline transparent;*/
-                            /*text-underline-offset: 6px;*/
-                            /*transition: text-decoration-color var(--transition-hover);*/
                         }
 
                         .header__link:hover {
-                            /*text-decoration-color: currentColor;*/
+
                         }
 
                     .header__toggle-menu {
-                        /*display: flex;*/
-                        /*align-items: center;*/
-                        /*justify-content: center;*/
                         margin-top: -4px;
                         margin-right: -6px; /* Делаем так, чтобы иконка была по правому краю контейнера */
-                        /*margin-bottom: -4px; !* на 4px выходит за границы шапки *!*/
-                        /*width: 70px;*/
                         height: 50px;
-                        /*border: none;*/
-                        /*padding: 0;*/
-                        /*background-color: transparent;*/
-                        /*cursor: pointer;*/
                     }
                         .header__burger {
-                            /*vertical-align: top;*/
                             width: 58px;
                             padding-top: 4px;
-                            /*height: auto;*/
-                            /*fill: #E4BB6B;*/
-                            /*transition: fill var(--transition-hover);*/
                         }
 
                         .header__burger-cross {
@@ -392,18 +363,11 @@
                         }
 
                         .header__toggle-menu:hover .header__burger {
-                            /*fill: #FFFFFF;*/
+
                         }
 
         .header__dropdown {
-            /*position: fixed;*/
-            /*z-index: 100;*/
-            /*left: 0;*/
-            /*right: 0;*/
-            /*top: var(--header-height);*/
-            /*width: fit-content;*/
-            /*margin-left: auto;*/
-            /*margin-right: auto;*/
+
         }
 
         .page-scrolled .header__dropdown {
@@ -427,21 +391,13 @@
                 }
 
                 .header__profile-link {
-                    /*margin-top: -17px;*/
-                    /*display: block;*/
-                    /*width: fit-content;*/
-                    /*border: 1px solid currentColor;*/
-                    /*border-radius: 4px;*/
                     padding: 13px 9px;
                     font-size: 16px;
                     line-height: 24px;
-                    /*color: #505050;*/
-                    /*text-decoration: none;*/
-                    /*transition: background-color var(--transition-hover);*/
                 }
 
                 .header__profile-link:hover {
-                    /*background-color: rgb(11 30 58 / 10%);*/
+
                 }
 }
 
@@ -476,7 +432,6 @@
             transition: none;
         }
             .header__wrap {
-                /*position: relative;*/
                 display: flex;
                 align-items: stretch;
                 justify-content: space-between;
@@ -497,11 +452,6 @@
                     left: 0;
                     width: 100%;
                     top: 20px;
-                    /*width: fit-content;*/
-                    /*margin-left: auto;*/
-                    /*display: flex;*/
-                    /*align-items: center;*/
-                    /*gap: 10px;*/
                     display: none;
                 }
 
@@ -514,17 +464,14 @@
                     margin-left: 0;
                 }
                     .header__action {
-                        /*display: block;*/
-                        /*padding: 5px;*/
+
                     }
 
                     .header__action:last-child {
-                        /*margin-right: -5px;*/
+
                     }
                         .header__icon {
-                            /*vertical-align: top;*/
-                            /*fill: #DAC0A3;*/
-                            /*transition: fill var(--transition-hover);*/
+
                         }
 
                         .burger-expanded .header__icon,
@@ -533,27 +480,34 @@
                         }
 
                         .header__action:hover .header__icon {
-                            /*fill: #FFFFFF;*/
+
                         }
 
+                /* Вообще язык в шапке должен быть сделать как header__action.
+                  Но конкретно на лендинге берётся компонент .lang изначально
+                  предназначенный для другого использования
+                */
+                .header__lang {
+                    margin-left: 4px;
+                }
+                    .header__lang .lang__link {
+                        padding-left: 8px;
+                        padding-right: 8px;
+                    }
+
+                    .header__lang .lang__link--current {
+                        color: #6073A2;
+                    }
 
 
                 .header__search {
-                    /*position: absolute;*/
                     z-index: 10;
-                    /*right: 0;*/
-                    /*left: 0;*/
-                    /*top: 50%;*/
-                    /*margin-top: -22px;*/
-                    /*align-items: stretch;*/
-                    /*display: none;*/
                     width: 100%;
                     right: auto;
                     background-color: #FFFFFF;
                 }
 
                 .search-expanded .header__search {
-                    /*display: flex;*/
                     animation: none;
                 }
                     .header__search-form {
@@ -561,16 +515,9 @@
                     }
 
                     .header__close-search {
-                        /*display: flex;*/
-                        /*align-items: center;*/
-                        /*justify-content: center;*/
-                        /*padding: 0;*/
-                        /*border: none;*/
                         width: 54px;
                         padding-right: 14px;
                         margin-right: -14px;
-                        /*background-color: transparent;*/
-                        /*cursor: pointer;*/
                     }
                         .header__search-cross {
                             fill: #303F64;
@@ -582,11 +529,6 @@
 
 
                 .header__second-line {
-                    /*width: fit-content;*/
-                    /*margin-left: auto;*/
-                    /*display: flex;*/
-                    /*align-items: center;*/
-                    /*gap: 39px;*/
                     top: 0;
                 }
 
@@ -597,34 +539,17 @@
                         display: none;
                     }
                         .header__link {
-                            /*padding: 12px 12px 13px;*/
-                            /*font-family: var(--font-heading);*/
-                            /*font-weight: bold;*/
-                            /*font-style: italic;*/
-                            /*font-size: 20px;*/
-                            /*line-height: 23px;*/
-                            /*color: #E4BB6B;*/
-                            /*text-transform: uppercase;*/
-                            /*text-decoration: 1.5px underline transparent;*/
-                            /*text-underline-offset: 6px;*/
-                            /*transition: text-decoration-color var(--transition-hover);*/
+
                         }
 
                         .header__link:hover {
-                            /*text-decoration-color: currentColor;*/
+
                         }
 
                     .header__toggle-menu {
-                        /*display: flex;*/
-                        /*align-items: center;*/
-                        /*justify-content: center;*/
                         margin-right: calc(-1 * var(--container-padding) + 2px); /* Делаем так, чтобы иконка была по правому краю контейнера. 2px чтобы не породить горизонтальный скролл (иногда встречается баг на андроиде) */
                         width: 100px;
                         height: var(--header-height);
-                        /*border: none;*/
-                        /*padding: 0;*/
-                        /*background-color: transparent;*/
-                        /*cursor: pointer;*/
                         transition: height var(--slide);
                     }
 
@@ -633,11 +558,7 @@
                     }
 
                         .header__burger {
-                            /*vertical-align: top;*/
                             width: 44px;
-                            /*height: auto;*/
-                            /*fill: #E4BB6B;*/
-                            /*transition: fill var(--transition-hover);*/
                         }
 
                         .burger-expanded .header__burger {
@@ -659,15 +580,8 @@
 
         .header__dropdown {
             position: static;
-            /*z-index: 100;*/
-            /*left: 0;*/
-            /*right: 0;*/
-            /*top: var(--header-height);*/
             margin-top: 0;
             width: auto;
-            /*margin-left: auto;*/
-            /*margin-right: auto;*/
-            /*display: none;*/
             animation: none;
         }
 
@@ -676,7 +590,7 @@
         }
 
         .burger-expanded .header__dropdown {
-            /*display: block;*/
+
         }
             .header__drop-wrap {
                 padding-bottom: 55px;
@@ -684,9 +598,6 @@
                 .header__inner-wrap {
                     margin: 0;
                     padding: 0;
-                    /*background-color: #FFFFFF;*/
-                    /*color-scheme: light;*/
-                    /*color: #0B1E3A;*/
                 }
                     .header__close-menu {
                         display: none;
@@ -703,7 +614,7 @@
                     }
 
                     .header__profile-link:hover {
-                        /*background-color: rgb(11 30 58 / 10%);*/
+
                     }
 
 

@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="ru" itemscope itemtype="https://schema.org/Thing">
+    <head>
+        <meta charset="utf-8">
+        <title>Лендинг с историей</title>
+
+        <!-- favicon -->
+        <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
+        <link rel="mask-icon" href="../favicon/safari-pinned-tab.svg" color="#FFFFFF">
+
+        <!-- manifest -->
+        <link rel="manifest" href="../manifest.json">
+        <meta name="theme-color" content="#FFFFFF">
+        <meta name="msapplication-config" content="../browserconfig.xml">
+        <meta name="msapplication-TileColor" content="#FFFFFF">
+
+        <!-- assets -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../styles/styles.css">
+
+    </head>
+    <body>
+
+        <!--[if IE]>
+            <div class="browser">
+                Вы используете устаревший браузер. Для корректной работы этого сайта и большинства других вам необходимо перейти на современный&nbsp;браузер.
+            </div>
+        <![endif]-->
+
+
+        <div class="header header--zero-height">
+            <div class="header__detachable-part">
+                <div class="header__wrap container">
+                    <div class="header__logo">
+                        <a class="logo" href="#">
+                            Театр Волкова — первый русский
+                        </a>
+                    </div>
+                    <div class="header__first-line">
+                        <a class="header__action header__action--search" href="#">
+                            <svg class="header__icon" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+                                <path d="M19.723 17.837h-.993l-.353-.34a8.14 8.14 0 0 0 1.975-5.32A8.176 8.176 0 0 0 12.176 4 8.176 8.176 0 0 0 4 12.176a8.176 8.176 0 0 0 8.176 8.176 8.14 8.14 0 0 0 5.32-1.975l.34.353v.993L24.127 26 26 24.126l-6.277-6.29Zm-7.547 0a5.653 5.653 0 0 1-5.66-5.66 5.653 5.653 0 0 1 5.66-5.661 5.653 5.653 0 0 1 5.66 5.66 5.653 5.653 0 0 1-5.66 5.66Z"/>
+                            </svg>
+                        </a>
+                        <a class="header__action" href="#">
+                            <svg class="header__icon" xmlns="http://www.w3.org/2000/svg" width="42" height="30" viewBox="0 0 42 30">
+                                <path d="M20.307 6.51c-2.043.202-3.849.657-5.796 1.46-2.959 1.22-6.015 3.255-8.536 5.688-.954.917-1.07 1.113-.922 1.612.136.474 2.167 2.326 4.036 3.692 3.314 2.414 6.744 3.9 10.219 4.424.548.082 1.122.114 2.192.114 1.534 0 2.237-.07 3.623-.373 1.328-.29 3.36-1.018 4.726-1.688 2.437-1.2 5.1-3.084 7.176-5.088.954-.916 1.07-1.112.922-1.618-.136-.468-2.167-2.32-4.036-3.685-2.328-1.694-4.687-2.92-7.163-3.71-1.799-.576-3.101-.797-4.926-.829a28.045 28.045 0 0 0-1.515 0Zm2.115 1.927c2.675.392 4.835 2.238 5.577 4.766 1.031 3.49-1.064 7.155-4.662 8.173-3.558 1.011-7.298-1.043-8.336-4.57-1.225-4.153 1.993-8.375 6.422-8.432a7.11 7.11 0 0 1 .999.063Z"/>
+                                <path fill-rule="evenodd" d="M25.592 18.155c-.654.597-1.18.887-2.056 1.158-.552.169-.68.187-1.482.187-.499 0-1.004-.03-1.18-.072-1.617-.404-2.89-1.381-3.517-2.695-.276-.585-.357-.977-.357-1.719 0-.741.08-1.133.357-1.718.512-1.085 1.537-1.996 2.743-2.454.357-.132.58-.187 1.28-.313.33-.055 1.092-.03 1.57.06a5.247 5.247 0 0 1 .344.074c.395.097.799.233.903.312.018.012-.033.085-.123.184a2.778 2.778 0 0 1-.167.165 2.93 2.93 0 0 0-.391.443c-.752 1.05-.609 2.418.425 3.338.569.513 1.222.773 1.98.792.273.006.56-.019.863-.075l.216-.036-.135.44-.003.012-.005.015a4.047 4.047 0 0 1-.246.607c-.236.468-.567.886-1.02 1.296Z"/>
+                            </svg>
+                        </a>
+                        <div class="header__lang">
+                            <div class="lang">
+                                <button class="lang__link lang__link--current" type="button">РУС</button>
+                                <button class="lang__link" type="button">ENG</button>
+                            </div>
+                        </div>
+                        <div class="header__search">
+                            <div class="header__search-form">
+                                <form class="search-filter search-filter--header">
+                                    <input class="search-filter__widget" type="text" placeholder="Поиск">
+                                    <button class="search-filter__submit" type="button">
+                                        <svg class="search-filter__magnifier" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+                                            <path d="M19.375 17.5h-.988l-.35-.337A8.089 8.089 0 0 0 20 11.875a8.125 8.125 0 0 0-8.125-8.125 8.125 8.125 0 0 0-8.125 8.125A8.125 8.125 0 0 0 11.875 20a8.089 8.089 0 0 0 5.288-1.962l.337.35v.987l6.25 6.238 1.863-1.863-6.238-6.25Zm-7.5 0a5.617 5.617 0 0 1-5.625-5.625 5.617 5.617 0 0 1 5.625-5.625 5.617 5.617 0 0 1 5.625 5.625 5.617 5.617 0 0 1-5.625 5.625Z"></path>
+                                        </svg>
+                                    </button>
+                                </form>
+                            </div>
+                            <button class="header__close-search">
+                                <span class="visuallyhidden">Закрыть</span>
+                                <svg class="header__search-cross" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                    <path d="m12 13.4-2.917 2.925a.956.956 0 0 1-.704.275.956.956 0 0 1-.704-.275.948.948 0 0 1-.275-.7c0-.283.092-.517.275-.7L10.6 12 7.675 9.108a.957.957 0 0 1-.275-.704c0-.285.092-.52.275-.704a.948.948 0 0 1 .7-.275c.283 0 .517.092.7.275L12 10.625 14.892 7.7a.957.957 0 0 1 .704-.275c.285 0 .52.092.704.275.2.2.3.438.3.713 0 .275-.1.504-.3.687L13.375 12l2.925 2.917c.183.184.275.419.275.704s-.092.52-.275.704c-.2.2-.438.3-.713.3a.894.894 0 0 1-.687-.3L12 13.4Z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="header__second-line">
+                        <div class="header__shortcuts">
+                            <a class="header__link" href="#">Визит в театр</a>
+                            <a class="header__link" href="#">Репертуар</a>
+                        </div>
+                        <button class="header__toggle-menu">
+                            <svg class="header__burger" width="58" height="26" viewBox="0 0 58 26" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="58" height="6"/>
+                                <rect y="10" width="58" height="6"/>
+                                <rect x="15" y="20" width="43" height="6"/>
+                            </svg>
+                            <svg class="header__burger-cross" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                                <path d="M20 2.014 17.986 0 10 7.986 2.014 0 0 2.014 7.986 10 0 17.986 2.014 20 10 12.014 17.986 20 20 17.986 12.014 10 20 2.014Z"/>
+                            </svg>
+                            <span class="visuallyhidden">Показать меню</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="header__dropdown">
+                <div class="header__drop-wrap container">
+                    <div class="header__inner-wrap">
+                        <button class="header__close-menu" type="button">
+                            <svg class="header__nav-cross" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                                <path d="M20 2.014 17.986 0 10 7.986 2.014 0 0 2.014 7.986 10 0 17.986 2.014 20 10 12.014 17.986 20 20 17.986 12.014 10 20 2.014Z"/>
+                            </svg>
+                            <span class="visuallyhidden">Закрыть меню</span>
+                        </button>
+                        <div class="header__navigation">
+                            <nav class="nav nav--header">
+                                <div class="nav__section">
+                                    <div class="nav__item">
+                                        <a class="nav__link" href="news.html">Новости</a>
+                                    </div>
+                                    <div class="nav__item">
+                                        <a class="nav__link" href="#">Репертуар</a>
+                                    </div>
+                                    <div class="nav__item">
+                                        <a class="nav__link" href="#">Труппа</a>
+                                    </div>
+                                    <div class="nav__item">
+                                        <a class="nav__link" href="#">О Театре</a>
+                                        <div class="nav__sub-nav">
+                                            <a class="nav__sub-link" href="#">Первый русский театр</a>
+                                            <a class="nav__sub-link" href="#">Люди театра</a>
+                                            <a class="nav__sub-link" href="equipment.html">Параметры сцены</a>
+                                            <a class="nav__sub-link" href="documents.html">Документы</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nav__section">
+                                    <div class="nav__item">
+                                        <a class="nav__link" href="#">Проекты и события</a>
+                                        <div class="nav__sub-nav">
+                                            <a class="nav__sub-link" href="#">275 лет</a>
+                                            <a class="nav__sub-link" href="#">Волковский фестиваль</a>
+                                            <a class="nav__sub-link" href="#">БТР</a>
+                                            <a class="nav__sub-link" href="#">Режиссерская лаборатория</a>
+                                            <a class="nav__sub-link" href="#">Наши гастроли</a>
+                                            <a class="nav__sub-link" href="#">Конкурсы</a>
+                                            <a class="nav__sub-link" href="#">Выставки</a>
+                                            <a class="nav__sub-link" href="#">Центр Дмитревского</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nav__section">
+                                    <div class="nav__item">
+                                        <a class="nav__link" href="#">
+                                            Визит в театр
+                                        </a>
+                                        <div class="nav__sub-nav">
+                                            <a class="nav__sub-link" href="#">Экскурсии</a>
+                                            <a class="nav__sub-link" href="#">Фотосессия</a>
+                                            <a class="nav__sub-link" href="#">Сувениры</a>
+                                            <a class="nav__sub-link" href="#">Театральный буфет</a>
+                                            <a class="nav__sub-link" href="#">Покупка и возврат билетов</a>
+                                            <a class="nav__sub-link" href="#">Групповая заявка</a>
+                                            <a class="nav__sub-link" href="#">План зала</a>
+                                            <a class="nav__sub-link" href="#">Правила посещения театра</a>
+                                            <a class="nav__sub-link" href="#">Пушкинская карта</a>
+                                            <a class="nav__sub-link" href="#">3D тур по театру</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nav__section">
+                                    <div class="nav__item nav__item--contacts">
+                                        <a class="nav__link" href="#">
+                                            Контакты
+                                        </a>
+                                    </div>
+                                    <div class="nav__item nav__item--encyclopedia">
+                                        <a class="nav__link" href="#">
+                                            Волковская энциклопедия
+                                        </a>
+                                    </div>
+                                </div>
+                            </nav>
+                        </div>
+                        <a class="header__profile-link" href="#">
+                            Войти в личный кабинет
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="page">
+            <div class="torn-apart">
+                <div class="torn-apart__content">
+                    <div class="volkov">
+                        <div class="volkov__background slide slide--slower slide--opacity-only">
+
+                        </div>
+                        <div class="volkov__hero slide slide--slower" data-delay="100">
+
+                        </div>
+                        <div class="volkov__overlay">
+
+                        </div>
+                        <div class="volkov__content container container--smaller">
+                            <div class="volkov__intro">
+                                <h1 class="volkov__heading slide slide--slower slide--to-right" data-delay="200">
+                                    Lorem ipsum magna nunc in sit amet
+                                </h1>
+                                <div class="volkov__description slide slide--slower slide--to-right" data-delay="300">
+                                    Lorem ipsum dolor sit amet consectetur. Turpis pretium morbi nisi nec. Auctor ipsum tempor quisque convallis aliquam cras morbi.
+                                </div>
+                            </div>
+                            <blockquote class="volkov__quote slide slide--slower slide--to-left" data-delay="400">
+                                Lorem ipsum dolor sit amet consectetur. Cursus tellus ornare sit accumsan sit nulla nec sollicitudin suspendisse. Egestas nec metus nunc viverra maecenas ut
+                                <cite class="volkov__author">Федор Волков</cite>
+                            </blockquote>
+                        </div>
+                    </div>
+                    <div class="stripes stripes--founder">
+                        <div class="stripes__item stripes__item--primary slide slide--to-right">Федор Волков —<br class="stripes__line-break"> Основатель <span class="desktop-only">первого</span> театра</div>
+                        <div class="stripes__item stripes__item--secondary slide slide--to-left" data-delay="150">Первый русский<br class="stripes__line-break"> актер</div>
+                    </div>
+                    <div class="detailed-history">
+                        <div class="detailed-history__wrap container">
+                            <div class="chapter">
+                                <div class="chapter__preview slide slide--to-right">
+                                    <img class="chapter__image"
+                                         srcset="../temp/chapter/chapter-a@2x.jpg 1.5x"
+                                         src="../temp/chapter/chapter-a@1x.jpg"
+                                         alt=""
+                                    >
+                                </div>
+                                <div class="chapter__content">
+                                    <div class="chapter__text slide slide--to-left">
+                                        <div class="wysiwyg">
+                                            <p>Фёдор Волков родился в 1729 году в купеческой семье в Костроме. Он рано лишился отца и оказался с братьями в Ярославле, когда его мать повторно вышла замуж – за местного купца Федора Полушкина, владельца кожевенных заводов. Посланный отчимом на учёбу в Москву и Петербург Федор Волков открыл для себя мир европейских театральных традиций, и эта страсть стала делом всей жизни.</p>
+                                        </div>
+                                    </div>
+                                    <div class="chapter__quote chapter__quote--pushed slide slide--to-left">
+                                        <div class="wysiwyg">
+                                            <blockquote>
+                                                Ходил он несколько раз на театр, чтобы обстоятельно рассмотреть оного архитектуру, махины и прочие украшения; и как острый его разум все понимать был способен, то сделал он всему чертежи, рисунки и модели…
+                                                <cite>Федор Волков</cite>
+                                            </blockquote>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="chapter">
+                                <div class="chapter__content">
+                                    <div class="chapter__text slide slide--to-right">
+                                        <div class="wysiwyg">
+                                            <p>После смерти отчима Волков становится хозяином его кожевенных и серно-купоросных заводов, но вкладывает полученное им наследство не в промышленное дело, а в свои творческие проекты. Первым из них становится на царские врата и иконостас для домовой церкви— храма Николы Надеина в Ярославле.</p>
+                                        </div>
+                                    </div>
+                                    <div class="chapter__quote slide slide--to-right">
+                                        <div class="wysiwyg">
+                                            <blockquote>
+                                                Волков ставит и интерпретирует сюжет Евхаристии
+                                                (?- Благодарения Богу и Причащения) как высокую духовную драму. Но ставит свой первый спектакль он чувственно. Ставит с полным пониманием природы конфликта, действия, природы драматического узла, находясь перед важнейшей для себя проблемой — самоопределения, выбора пути
+                                                <cite>Федор Волков</cite>
+                                            </blockquote>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="chapter__preview chapter__preview--stretched slide slide--to-left">
+                                    <img class="chapter__image"
+                                         srcset="../temp/chapter/chapter-b@2x.jpg 1.5x"
+                                         src="../temp/chapter/chapter-b@1x.jpg"
+                                         alt=""
+                                    >
+                                </div>
+                            </div>
+                            <div class="chapter">
+                                <div class="chapter__preview chapter__preview--stretched slide slide--to-right">
+                                    <img class="chapter__image"
+                                         srcset="../temp/chapter/chapter-a@2x.jpg 1.5x"
+                                         src="../temp/chapter/chapter-a@1x.jpg"
+                                         alt=""
+                                    >
+                                </div>
+                                <div class="chapter__content">
+                                    <div class="chapter__text slide slide--to-left">
+                                        <div class="wysiwyg">
+                                            <p>Фёдор Волков родился в 1729 году в купеческой семье в Костроме. Он рано лишился отца и оказался с братьями в Ярославле, когда его мать повторно вышла замуж – за местного купца Федора Полушкина, владельца кожевенных заводов. Посланный отчимом на учёбу в Москву и Петербург Федор Волков открыл для себя мир европейских театральных традиций, и эта страсть стала делом всей жизни.</p>
+                                        </div>
+                                    </div>
+                                    <div class="chapter__quote chapter__quote--pushed slide slide--to-left">
+                                        <div class="wysiwyg">
+                                            <div class="wysiwyg">
+                                                <blockquote>
+                                                    Ходил он несколько раз на театр, чтобы обстоятельно рассмотреть оного архитектуру, махины и прочие украшения; и как острый его разум все понимать был способен, то сделал он всему чертежи, рисунки и модели…
+                                                    <cite>Федор Волков</cite>
+                                                </blockquote>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="chapter">
+                                <div class="chapter__content">
+                                    <div class="chapter__text slide slide--to-right">
+                                        <div class="wysiwyg">
+                                            <p>После смерти отчима Волков становится хозяином его кожевенных и серно-купоросных заводов, но вкладывает полученное им наследство не в промышленное дело, а в свои творческие проекты. Первым из них становится на царские врата и иконостас для домовой церкви— храма Николы Надеина в Ярославле.</p>
+                                        </div>
+                                    </div>
+                                    <div class="chapter__quote slide slide--to-right">
+                                        <div class="wysiwyg">
+                                            <blockquote>
+                                                Волков ставит и интерпретирует сюжет Евхаристии
+                                                (?- Благодарения Богу и Причащения) как высокую духовную драму. Но ставит свой первый спектакль он чувственно. Ставит с полным пониманием природы конфликта, действия, природы драматического узла, находясь перед важнейшей для себя проблемой — самоопределения, выбора пути
+                                                <cite>Федор Волков</cite>
+                                            </blockquote>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="chapter__preview slide slide--to-left">
+                                    <img class="chapter__image"
+                                         srcset="../temp/chapter/chapter-c@2x.jpg 1.5x"
+                                         src="../temp/chapter/chapter-c@1x.jpg"
+                                         alt=""
+                                    >
+                                </div>
+                            </div>
+                            <div class="chapter chapter--full-width">
+                                <div class="chapter__preview slide">
+                                    <img class="chapter__image"
+                                         srcset="../temp/chapter/chapter-d@2x.jpg 1.5x"
+                                         src="../temp/chapter/chapter-d@1x.jpg"
+                                         alt=""
+                                    >
+                                </div>
+                                <div class="chapter__content slide">
+                                    <div class="chapter__text slide">
+                                        <div class="wysiwyg">
+                                            <p>Главным проектом Волкова становится создание собственного театра — он собирает команду единомышленников и открывает первый в России профессиональный театр с постоянной труппой  и собственным зданием — настоящий культурный прорыв для своего времени. Вместе они переоборудовали амбар на берегу Волги и играли ставили трагедии, комедии и духовные драмы, а публика впервые увидела спектакли на русском языке.</p>
+                                            <p>О необычном театре быстро узнали в столице. По приглашению императрицы Волков с труппой отправился  в Петербург, где 18 марта 1752 года в резиденции императрицы Елизаветы Петровны в Большом театре Зимнего дворца играет перед императрицей спектакль по духовной драме Димитрия Ростовского.</p>
+                                            <p>Фёдор Волков не ограничивался только сценой: он организовал в Москве грандиозный маскарад “Торжествующая Минерва” в честь коронации Екатерины II — первое в России масштабное уличное шоу, которое собрало тысячи зрителей и стало яркой страницей в истории русского театра. Огромное напряжение сил, затраченных Волковым, привели к роковому концу. После сильной простуды началась горячка, болезнь оказалась смертельной. В апреле 1763 Волков скончался.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="stripes stripes--chronicle">
+                        <div class="stripes__item stripes__item--primary slide slide--to-right">Летопись театра</div>
+                        <div class="stripes__item stripes__item--secondary slide slide--to-left" data-delay="150">Ключевые моменты<br class="stripes__line-break"> трехвековой истории</div>
+                    </div>
+                    <div class="timeline">
+                        <div class="timeline__widget hide-scrollbar">
+                            <div class="timeline__viewport">
+                                <div class="timeline__scroll">
+                                    <div class="timeline__wrap container">
+                                        <div class="timeline__ribbon">
+                                            <div class="timeline__history">
+                                                <div class="timeline__point">
+                                                    <div class="timeline__point-inner">
+                                                        <div class="timeline__year">1750</div>
+                                                        <div class="timeline__heading">Основание Первого русского театра в Ярославле</div>
+                                                        <div class="timeline__description">Купеческий сын Фёдор Волков открывает первый профессиональный репертуарный театр России в переоборудованном кожевенном амбаре.</div>
+                                                    </div>
+                                                </div>
+                                                <div class="timeline__point">
+                                                    <div class="timeline__point-inner">
+                                                        <div class="timeline__year">1752</div>
+                                                        <div class="timeline__heading">Волков и его труппа едут в Санкт-Петербург</div>
+                                                        <div class="timeline__description">Приказом императрицы Елизаветы Петровны ярославские комедианты вызываются в Санкт-Петербург, Волкова отправляют на обучение в Шляхетный корпус.</div>
+                                                    </div>
+                                                </div>
+                                                <div class="timeline__point">
+                                                    <div class="timeline__point-inner">
+                                                        <div class="timeline__year">1756</div>
+                                                        <div class="timeline__heading">Императорский театр в Петербурге, пожар в Ярославле</div>
+                                                        <div class="timeline__description">Волков принимает участие в создании первого русского государственного императорского театра. В Ярославле театральное здание сгорает в пожаре.</div>
+                                                    </div>
+                                                </div>
+                                                <div class="timeline__point">
+                                                    <div class="timeline__point-inner">
+                                                        <div class="timeline__year">1763</div>
+                                                        <div class="timeline__heading">Маскарад «Торжествующая Минерва» в Москве</div>
+                                                        <div class="timeline__description">Волков устраивает грандиозное уличное шествие в честь коронации Екатерины II с участием 4 тысяч человек. В этом же году он умирает.</div>
+                                                    </div>
+                                                </div>
+                                                <div class="timeline__point">
+                                                    <div class="timeline__point-inner">
+                                                        <div class="timeline__year">1780-1810-е</div>
+                                                        <div class="timeline__heading">Спектакли под покровительством губернаторов</div>
+                                                        <div class="timeline__description">Спектакли в Ярославле продолжают играться в домах ярославских губернаторов Алексея Мельгунова, Михаила Голицына, князя Дмитрия Урусова.</div>
+                                                    </div>
+                                                </div>
+                                                <div class="timeline__point">
+                                                    <div class="timeline__point-inner">
+                                                        <div class="timeline__year">1819</div>
+                                                        <div class="timeline__heading">Строительство театрального здания Петром Паньковым</div>
+                                                        <div class="timeline__description">Архитектор Паньков на собственные средства строит деревянное здание в стиле классицизма, позже перестроенное в каменное.</div>
+                                                    </div>
+                                                </div>
+                                                <div class="timeline__point">
+                                                    <div class="timeline__point-inner">
+                                                        <div class="timeline__year">1856</div>
+                                                        <div class="timeline__heading">Гастроли Михаила Щепкина в Ярославле</div>
+                                                        <div class="timeline__description">Великий русский актёр Михаил Щепкин выступает в 1856 и 1858 годах в Ярославле, предлагает поставить памятник основателю театра Волкову.</div>
+                                                    </div>
+                                                </div>
+                                                <div class="timeline__point">
+                                                    <div class="timeline__point-inner">
+                                                        <div class="timeline__year">1882 — 1917</div>
+                                                        <div class="timeline__heading">Ярославский городской театр</div>
+                                                        <div class="timeline__description">Здание театра выкуплено городом, капитально реконструировано и сдается антрепренёрам на конкурсной основе.</div>
+                                                    </div>
+                                                </div>
+                                                <div class="timeline__point">
+                                                    <div class="timeline__point-inner">
+                                                        <div class="timeline__year">1900</div>
+                                                        <div class="timeline__heading">Торжества в честь 150-летия театра</div>
+                                                        <div class="timeline__description">На юбилейные Волковские торжества в 1900 году были приглашены лучшие силы императорских театров.</div>
+                                                    </div>
+                                                </div>
+                                                <div class="timeline__point">
+                                                    <div class="timeline__point-inner">
+                                                        <div class="timeline__year">1911</div>
+                                                        <div class="timeline__heading">Здание по проекту Николая Спирина, присвоение имени Волкова</div>
+                                                        <div class="timeline__description">Открытие нового здания по проекту «Танцующие в круге» молодого архитектора Николая Спирина. Городская Дума присваивает театру имя Волкова.</div>
+                                                    </div>
+                                                </div>
+                                                <div class="timeline__point">
+                                                    <div class="timeline__point-inner">
+                                                        <div class="timeline__year">1920</div>
+                                                        <div class="timeline__heading">Советский имени Волкова театр</div>
+                                                        <div class="timeline__description">Во главе крепкого и сильного актерского коллектива становятся художественные руководители Б. Е. Бертельс, И. А. Ростовцев, Д. М. Манский.</div>
+                                                    </div>
+                                                </div>
+                                                <div class="timeline__point">
+                                                    <div class="timeline__point-inner">
+                                                        <div class="timeline__year">1941-1945</div>
+                                                        <div class="timeline__heading">Театр в годы Великой Отечественной войны</div>
+                                                        <div class="timeline__description">Театр не прекращает работу, многие сотрудники уходят на фронт или выступают передовой в составе фронтовых бригад. Театр в годы ВОВ играет 31 премьеру.</div>
+                                                    </div>
+                                                </div>
+                                                <div class="timeline__point">
+                                                    <div class="timeline__point-inner">
+                                                        <div class="timeline__year">1950</div>
+                                                        <div class="timeline__heading">Торжества в честь 200-летия театра</div>
+                                                        <div class="timeline__description">В связи с 200-летием со дня основания" театр награжден Орденом Трудового Красного Знамени.</div>
+                                                    </div>
+                                                </div>
+                                                <div class="timeline__point">
+                                                    <div class="timeline__point-inner">
+                                                        <div class="timeline__year">1960-1978</div>
+                                                        <div class="timeline__heading">Театром руководит Фирс Шишигин</div>
+                                                        <div class="timeline__description">С 1960 года по 1978 год руководство театром осуществлял народный артист СССР, лауреат Государственных премий Фирс Ефимович Шишигин.</div>
+                                                    </div>
+                                                </div>
+                                                <div class="timeline__point">
+                                                    <div class="timeline__point-inner">
+                                                        <div class="timeline__year">1964-1967</div>
+                                                        <div class="timeline__heading">Капитальная реконструкция здания театра.</div>
+                                                        <div class="timeline__description">Сценическая часть здания была коренным образом перестроена и переоборудована. Театр открылся после ремонта спектаклем «Фёдор Волков» 1 августа 1967.</div>
+                                                    </div>
+                                                </div>
+                                                <div class="timeline__point">
+                                                    <div class="timeline__point-inner">
+                                                        <div class="timeline__year">1966</div>
+                                                        <div class="timeline__heading">Присвоение театру звания «академический»</div>
+                                                        <div class="timeline__description">«За выдающиеся заслуги в развитии советского театрального искусства» Театру Волкова присвоено почетное наименование — академического.</div>
+                                                    </div>
+                                                </div>
+                                                <div class="timeline__point">
+                                                    <div class="timeline__point-inner">
+                                                        <div class="timeline__year">1970</div>
+                                                        <div class="timeline__heading">Переход в подчинение Минкульта РСФСР</div>
+                                                        <div class="timeline__description">В 1970 году театр из подчинения Управления культуры Ярославского облисполкома переходит в ведение Министерства культуры РСФСР.</div>
+                                                    </div>
+                                                </div>
+                                                <div class="timeline__point">
+                                                    <div class="timeline__point-inner">
+                                                        <div class="timeline__year">1983-1987</div>
+                                                        <div class="timeline__heading">Театром руководит Глеб Дроздов</div>
+                                                        <div class="timeline__description">С 1983 года по 1987 год театром руководит режиссер Глеб Дроздов, ориентированный на борьбу с «академизмом», театр зрелища и представления.</div>
+                                                    </div>
+                                                </div>
+                                                <div class="timeline__point">
+                                                    <div class="timeline__point-inner">
+                                                        <div class="timeline__year">1990е</div>
+                                                        <div class="timeline__heading">Театр на рубеже тысячелетий</div>
+                                                        <div class="timeline__description">В начале 90-х годов театр возглавляет режиссер Владимир Воронцов, с 1996 года — Владимир Боголепов. Театр берет курс на классическую драматургию.</div>
+                                                    </div>
+                                                </div>
+                                                <div class="timeline__point">
+                                                    <div class="timeline__point-inner">
+                                                        <div class="timeline__year">2000</div>
+                                                        <div class="timeline__heading">Торжества в честь 250-летия театра, Волковский фестиваль</div>
+                                                        <div class="timeline__description">В торжественном вечере к 250-летию театра принимает участие Президент России В.В. Путин. Проводится первый Международный Волковский фестиваль.</div>
+                                                    </div>
+                                                </div>
+                                                <div class="timeline__point">
+                                                    <div class="timeline__point-inner">
+                                                        <div class="timeline__year">2000-е</div>
+                                                        <div class="timeline__heading">Зарубежные гастроли театра</div>
+                                                        <div class="timeline__description">В 2002 г. состоялись зарубежные гастроли в Хельсинки, Копенгаген и Берлин. В 2003-м и 2006-м театр гастролировал в Египте и Японии. В 2005-м гастроли волковцев прошли в Дании и Аргентине.</div>
+                                                    </div>
+                                                </div>
+                                                <div class="timeline__point">
+                                                    <div class="timeline__point-inner">
+                                                        <div class="timeline__year">2009</div>
+                                                        <div class="timeline__heading">Первый фестиваль «Будущее театральной России»</div>
+                                                        <div class="timeline__description">Театр Волкова и ЯГТИ им. Ф. Шишигина учреждают фестиваль дипломных спектаклей вузов России при поддержке Минкульта РФ и Правительства Ярославской области.</div>
+                                                    </div>
+                                                </div>
+                                                <div class="timeline__point">
+                                                    <div class="timeline__point-inner">
+                                                        <div class="timeline__year">2009-2010, 2019-2022</div>
+                                                        <div class="timeline__heading">Театр под руководством Сергея Пускепалиса</div>
+                                                        <div class="timeline__description">Заслуженный артист России Пускепалис дважды становится во главе театра: с 2009 по 2010 гг. как главный режиссёр, а с 2019 по 2022 гг. — как художественный руководитель.</div>
+                                                    </div>
+                                                </div>
+                                                <div class="timeline__point">
+                                                    <div class="timeline__point-inner">
+                                                        <div class="timeline__year">2018</div>
+                                                        <div class="timeline__heading">Открытие Года театра в России</div>
+                                                        <div class="timeline__description">В театре проходит церемония открытия Года театра в России с участием президента РФ Владимира Путина и более 200 гостей из 45 регионов.</div>
+                                                    </div>
+                                                </div>
+                                                <div class="timeline__point">
+                                                    <div class="timeline__point-inner">
+                                                        <div class="timeline__year">2019</div>
+                                                        <div class="timeline__heading">Признание особо ценным объектом культурного наследия</div>
+                                                        <div class="timeline__description">16 сентября 2019 года Президент России В.В. Путин подписал Указ об отнесении Театра Волкова к особо ценным объектам культурного наследия народов Российской Федерации.</div>
+                                                    </div>
+                                                </div>
+                                                <div class="timeline__point">
+                                                    <div class="timeline__point-inner">
+                                                        <div class="timeline__year">2025</div>
+                                                        <div class="timeline__heading">Торжества в честь 275-летия театра</div>
+                                                        <div class="timeline__description">Состоялась мировая премьера мистерии «Федор Волков. Восхождение» в постановке Валерия Кириллова. Весь Ярославль на неделю становится театральными подмостками.</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="stripes stripes--chronicle">
+                        <div class="stripes__item stripes__item--primary slide slide--to-right">Театр в цифрах</div>
+                        <div class="stripes__item stripes__item--secondary slide slide--to-left" data-delay="150">Lorem ipsum dolor sit<br class="stripes__line-break"> amet consectetur</div>
+                    </div>
+                    <div class="stats container container--smaller clearfix">
+                        <div class="stats__row">
+                            <div class="stats__item">
+                                <div class="stats__count">
+                                    <span class="counter">275</span>
+                                </div>
+                                <div class="stats__bar">
+                                    <div class="separator" aria-hidden="true">
+                                        <div class="separator__bar      separator__bar--left"></div>
+                                        <div class="separator__circle-3 separator__circle-3--left"></div>
+                                        <div class="separator__circle-2 separator__circle-2--left"></div>
+                                        <div class="separator__circle-1 separator__circle-1--left"></div>
+                                        <div class="separator__middle-circle"></div>
+                                        <div class="separator__circle-1 separator__circle-1--right"></div>
+                                        <div class="separator__circle-2 separator__circle-2--right"></div>
+                                        <div class="separator__circle-3 separator__circle-3--right"></div>
+                                        <div class="separator__bar      separator__bar--right"></div>
+                                    </div>
+                                </div>
+                                <div class="stats__label">
+                                    лет истории
+                                </div>
+                            </div>
+                            <div class="stats__item stats__item--visitors">
+                                <div class="stats__count">
+                                    <span class="counter">192000</span>+
+                                </div>
+                                <div class="stats__bar">
+                                    <div class="separator" aria-hidden="true">
+                                        <div class="separator__bar      separator__bar--left"></div>
+                                        <div class="separator__circle-3 separator__circle-3--left"></div>
+                                        <div class="separator__circle-2 separator__circle-2--left"></div>
+                                        <div class="separator__circle-1 separator__circle-1--left"></div>
+                                        <div class="separator__middle-circle"></div>
+                                        <div class="separator__circle-1 separator__circle-1--right"></div>
+                                        <div class="separator__circle-2 separator__circle-2--right"></div>
+                                        <div class="separator__circle-3 separator__circle-3--right"></div>
+                                        <div class="separator__bar      separator__bar--right"></div>
+                                    </div>
+                                </div>
+                                <div class="stats__label">
+                                    зрителей в год
+                                </div>
+                            </div>
+                            <div class="stats__item">
+                                <div class="stats__count">
+                                    <span class="counter">144</span>+
+                                </div>
+                                <div class="stats__bar">
+                                    <div class="separator" aria-hidden="true">
+                                        <div class="separator__bar      separator__bar--left"></div>
+                                        <div class="separator__circle-3 separator__circle-3--left"></div>
+                                        <div class="separator__circle-2 separator__circle-2--left"></div>
+                                        <div class="separator__circle-1 separator__circle-1--left"></div>
+                                        <div class="separator__middle-circle"></div>
+                                        <div class="separator__circle-1 separator__circle-1--right"></div>
+                                        <div class="separator__circle-2 separator__circle-2--right"></div>
+                                        <div class="separator__circle-3 separator__circle-3--right"></div>
+                                        <div class="separator__bar      separator__bar--right"></div>
+                                    </div>
+                                </div>
+                                <div class="stats__label">
+                                    спектакля в год
+                                </div>
+                            </div>
+                        </div>
+                        <div class="stats__row">
+                            <div class="stats__item">
+                                <div class="stats__count">
+                                    <span class="counter">240</span>+
+                                </div>
+                                <div class="stats__bar">
+                                    <div class="separator" aria-hidden="true">
+                                        <div class="separator__bar      separator__bar--left"></div>
+                                        <div class="separator__circle-3 separator__circle-3--left"></div>
+                                        <div class="separator__circle-2 separator__circle-2--left"></div>
+                                        <div class="separator__circle-1 separator__circle-1--left"></div>
+                                        <div class="separator__middle-circle"></div>
+                                        <div class="separator__circle-1 separator__circle-1--right"></div>
+                                        <div class="separator__circle-2 separator__circle-2--right"></div>
+                                        <div class="separator__circle-3 separator__circle-3--right"></div>
+                                        <div class="separator__bar      separator__bar--right"></div>
+                                    </div>
+                                </div>
+                                <div class="stats__label">
+                                    мест в большом  зале
+                                </div>
+                            </div>
+                            <div class="stats__item">
+                                <div class="stats__count">
+                                    <span class="counter">34</span>
+                                </div>
+                                <div class="stats__bar">
+                                    <div class="separator" aria-hidden="true">
+                                        <div class="separator__bar      separator__bar--left"></div>
+                                        <div class="separator__circle-3 separator__circle-3--left"></div>
+                                        <div class="separator__circle-2 separator__circle-2--left"></div>
+                                        <div class="separator__circle-1 separator__circle-1--left"></div>
+                                        <div class="separator__middle-circle"></div>
+                                        <div class="separator__circle-1 separator__circle-1--right"></div>
+                                        <div class="separator__circle-2 separator__circle-2--right"></div>
+                                        <div class="separator__circle-3 separator__circle-3--right"></div>
+                                        <div class="separator__bar      separator__bar--right"></div>
+                                    </div>
+                                </div>
+                                <div class="stats__label">
+                                    мест в камерном  зале
+                                </div>
+                            </div>
+                            <div class="stats__item">
+                                <div class="stats__count">
+                                    <span class="counter">7</span>
+                                </div>
+                                <div class="stats__bar">
+                                    <div class="separator" aria-hidden="true">
+                                        <div class="separator__bar      separator__bar--left"></div>
+                                        <div class="separator__circle-3 separator__circle-3--left"></div>
+                                        <div class="separator__circle-2 separator__circle-2--left"></div>
+                                        <div class="separator__circle-1 separator__circle-1--left"></div>
+                                        <div class="separator__middle-circle"></div>
+                                        <div class="separator__circle-1 separator__circle-1--right"></div>
+                                        <div class="separator__circle-2 separator__circle-2--right"></div>
+                                        <div class="separator__circle-3 separator__circle-3--right"></div>
+                                        <div class="separator__bar      separator__bar--right"></div>
+                                    </div>
+                                </div>
+                                <div class="stats__label">
+                                    участников фестиваля
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="torn-apart__gap">
+                    <picture>
+                        <source srcset="../content/torn-apart/torn-apart-mobile@2x.jpg 1.5x,
+                                        ../content/torn-apart/torn-apart-mobile@1x.jpg 1x"
+                                media="(max-width: 740px)"
+                        />
+                        <img class="torn-apart__image"
+                             srcset="../content/torn-apart/torn-apart-desktop@2x.jpg 1.5x"
+                             src="../content/torn-apart/torn-apart-desktop@1x.jpg"
+                             width="1920"
+                             height="816"
+                             alt=""
+                        >
+                    </picture>
+                </div>
+                <div class="torn-apart__content">
+                    <div class="library-section">
+                        <div class="library-section__heading">
+                            <div class="stripes stripes--encyclopedia">
+                                <div class="stripes__item stripes__item--primary slide slide--to-right">Волковская<br class="stripes__line-break"> энциклопедия</div>
+                                <div class="stripes__item stripes__item--secondary slide slide--to-left" data-delay="150">Lorem ipsum dolor sit<br class="stripes__line-break"> amet consectetur</div>
+                            </div>
+                        </div>
+                        <div class="library-section__content container">
+                            <a class="encyclopedia-link" href="#">
+                                <svg class="encyclopedia-link__emblem" xmlns="http://www.w3.org/2000/svg" width="72" height="77" viewBox="0 0 72 77">
+                                    <path id="background" d="M40.29 0C23.295 0 9.534 13.675 9.534 30.554v1.108l-3.11 1.93v1.52L3.98 36.796v3.819l.622-.288v10.185c-1.7 1.15-3.357 2.505-4.601 3.942V77h72V30.554C72 13.675 58.238 0 41.243 0h-.953Z"/>
+                                    <path id="theater" d="M21.72 39.014c-3.067 1.108-4.518 3.9-4.518 6.118 3.357-1.478 6.218-2.381 10.28-3.203 0-2.135-2.694-4.024-5.762-2.916ZM1.948 56.055c1.12-.82 2.073-1.478 3.565-2.135v-1.806c-1.824 1.108-3.275 2.34-3.98 3.038v1.232c.125-.123.29-.206.415-.329ZM70.342 73.263H1.492v2.094h68.85v-2.094ZM52.85 63.12h3.399l-.58-14.703a39.604 39.604 0 0 0-2.28-.164l-.54 14.866ZM58.736 63.119h3.399l-.54-13.963a39.404 39.404 0 0 0-2.32-.328l-.54 14.291ZM64.87 63.12h3.4l-.498-12.649a41.048 41.048 0 0 0-2.404-.575L64.87 63.12ZM2.819 57.124a6.364 6.364 0 0 0-.54.287l-.29 7.31h1.368l-.29-7.761c-.083.082-.165.123-.248.164ZM3.855 64.68l1.575-.042-.332-8.5c-.29.123-.621.205-.953.37l-.29 8.172ZM14.383 52.36l-.455 11.991 2.113-.082-.497-12.279c-.373.124-.787.247-1.16.37ZM18.528 51.128l-.497 13.1 2.57-.082-.497-13.429c-.498.123-1.037.246-1.576.41ZM23.71 49.937l-.54 14.086 2.985-.082-.539-14.332c-.663.123-1.285.205-1.906.328ZM29.264 49.074l-.58 14.784 3.44-.123-.58-14.948c-.746.082-1.492.164-2.28.287ZM70.3 46.282c-4.145-2.464-10.652-4.394-18.362-5.01v3.244c7.13.493 13.678 1.971 18.362 4.107v-2.341ZM34.321 42.01c-8.166 1.233-16.58 3.573-22.217 6.818v1.848c5.927-2.629 14.383-4.518 22.217-5.503V42.01ZM11.44 72.565v-7.433l-5.222.164v7.269h1.906v-4.6h1.16v4.6h2.156ZM34.321 72.564v-8.172l-22.176.698v7.474h4.02v-4.886l1.742-.041v4.927h2.943v-5.01l2.155-.082v5.093h3.192V67.39l2.487-.041v5.215h5.637ZM51.938 63.818v8.747h4.228v-5.626h2.611v5.626h3.565v-5.626h2.57v5.626h5.43v-8.747H51.938ZM50.528 72.565v-8.706l-14.756.493v8.213h5.513v-5.462l3.44-.082v5.544h5.803ZM3.15 68.047l.705-.041v4.558h1.658v-7.228l-4.02.124v7.104H3.15v-4.517Z"/>
+                                    <path id="theater" d="m6.218 64.597 1.906-.082v-4.517l1.16-.123v4.6l2.115-.042V48.581c0-7.063 3.813-13.921 10.984-16.016 7.006-2.053 13.389 2.752 13.389 9.733v21.355l5.513-.164v-6.694l3.44-.247v6.817l5.803-.205V26.282l.954-.164v-1.971l-7.047 1.15v-2.464l-6.88 1.108v-2.135L22.175 24.27l-10.819 6.694v1.601l-3.233 2.013v1.437l-2.487 1.643v1.56l.58-.37v25.75Zm36.6-23.777h.084c1.16-.082 2.155.821 2.155 1.971 0 1.068-.87 1.971-1.948 1.971h-.083a1.976 1.976 0 0 1-2.073-1.971c0-1.068.83-1.93 1.866-1.971ZM8 50.963c0-.246.166-.493.373-.616.456-.246 1.036.123 1.036.616v.493c0 .287-.166.534-.456.657-.456.205-.953-.164-.953-.657v-.493Z"/>
+                                </svg>
+                                <div class="encyclopedia-link__content">
+                                    <div class="encyclopedia-link__heading">Волковская энциклопедия</div>
+                                    <div class="encyclopedia-link__go">перейти на сайт</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <footer class="footer-275">
+                        <div class="footer-275__wrap container">
+                            <div class="footer-275__primary-section">
+                                <div class="footer-275__logo">
+                                    <a class="logo logo--smaller" href="#">
+                                        Театр Волкова — первый русский
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="footer-275__secondary-section">
+                                <div class="footer-275__legalities">
+                                    <div class="footer-275__item">
+                                        2023 © Все права защищены
+                                    </div>
+                                    <div class="footer-275__item">
+                                        <a class="link link--inverted-text-alike" href="#">Политика конфиденциальности</a>
+                                    </div>
+                                </div>
+                                <a class="footer-275__developer red-star red-star--inverted" href="https://redstar.agency">
+                                    разработано в&nbsp;<b class="red-star__logo">Редстар</b>
+                                </a>
+                            </div>
+                        </div>
+                    </footer>
+                </div>
+            </div>
+        </div>
+
+        <!-- Уведомления -->
+        <div class="notifications-center">
+            <div class="alert alert--success" data-js-alert-success style="display: none;">
+                <div class="alert__label">
+                    Ваша заявка получена. Спасибо за обращение!
+                </div>
+                <button class="alert__dismiss" type="button">
+                    Закрыть
+                </button>
+            </div>
+            <div class="alert alert--danger" data-js-alert-failure style="display: none;">
+                <div class="alert__label">
+                    Во время отправки данных произошла ошибка.<br class="desktop-only">
+                    Проверьте ваше соединение и попробуйте позже.
+                </div>
+                <button class="alert__dismiss" type="button">
+                    Закрыть
+                </button>
+            </div>
+        </div>
+
+        <!-- jQuery dependant -->
+        <script src="../vendors/jquery/jquery-3.7.1.min.js"></script>
+        <script src="../vendors/magnific-popup/jquery.magnific-popup.min.js"></script>
+        <script src="../vendors/slick/slick.min.js"></script>
+        <script src="../vendors/inputmask/jquery.inputmask.min.js"></script>
+        <script src="../vendors/inputmask.phone/inputmask.phone.extensions.min.js"></script>
+        <script src="../vendors/inputmask.phone/phone-codes/phone-ru.min.js"></script>
+
+        <!-- Vanilla JS -->
+        <script src="../vendors/swiper/swiper-bundle.min.js"></script>
+        <script src="../vendors/photoswipe/photoswipe.umd.min.js"></script>
+        <script src="../vendors/photoswipe/photoswipe-lightbox.umd.min.js"></script>
+        <script src="../vendors/countup/countUp.umd.js"></script>
+
+        <!-- Scripts -->
+        <script src="../scripts/scripts.js"></script>
+
+    </body>
+</html>
