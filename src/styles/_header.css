@@ -72,17 +72,6 @@
                     margin-right: -5px;
                 }
 
-                /* Вообще язык в шапке должен быть сделать как header__action.
-                Но конкретно на лендинге берётся компонент .lang изначально
-                предназначенный для другого использования
-                */
-                .header__lang {
-                    margin-left: 4px;
-                }
-                    .header__lang .lang {
-
-                    }
-
                 .search-expanded .header__action--search {
                     opacity: 0;
                     visibility: hidden;
@@ -150,7 +139,6 @@
             .page-scrolled .header__second-line {
                 top: 21px;
             }
-
                 .header__shortcuts {
                     display: flex;
                     align-items: center;
@@ -172,6 +160,17 @@
 
                     .header__link:hover {
                         text-decoration-color: currentColor;
+                    }
+
+                /* Вообще язык в шапке должен быть сделать как header__action.
+                   Но конкретно на лендинге берётся компонент .lang изначально
+                   предназначенный для другого использования
+                */
+                .header__lang {
+                    margin-left: 4px;
+                }
+                    .header__lang .lang {
+
                     }
 
                 .header__toggle-menu {
@@ -483,23 +482,6 @@
 
                         }
 
-                /* Вообще язык в шапке должен быть сделать как header__action.
-                  Но конкретно на лендинге берётся компонент .lang изначально
-                  предназначенный для другого использования
-                */
-                .header__lang {
-                    margin-left: 4px;
-                }
-                    .header__lang .lang__link {
-                        padding-left: 8px;
-                        padding-right: 8px;
-                    }
-
-                    .header__lang .lang__link--current {
-                        color: #6073A2;
-                    }
-
-
                 .header__search {
                     z-index: 10;
                     width: 100%;
@@ -545,6 +527,25 @@
                         .header__link:hover {
 
                         }
+
+
+                    /* Вообще язык в шапке должен быть сделать как header__action.
+                       Но конкретно на лендинге берётся компонент .lang изначально
+                       предназначенный для другого использования
+                    */
+                    .header__lang {
+                        /*margin-left: 4px;*/
+                        margin-right: -28px;
+                    }
+                        .header__lang .lang__link {
+                            padding-left: 8px;
+                            padding-right: 8px;
+                        }
+
+                        .burger-expanded .header__lang .lang__link--current {
+                            color: #6073A2;
+                        }
+
 
                     .header__toggle-menu {
                         margin-right: calc(-1 * var(--container-padding) + 2px); /* Делаем так, чтобы иконка была по правому краю контейнера. 2px чтобы не породить горизонтальный скролл (иногда встречается баг на андроиде) */
